@@ -1,4 +1,4 @@
-import Square from "./tictactoe";
+import Board from "./tictactoe";
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
       <div className="flex flex-col items-center justify-between p-24">
         Dungeons & DragonBalls Wiki!
       </div>
-      <Square />
+      <Board />
     </main>
   );
 }
