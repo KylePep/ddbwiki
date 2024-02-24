@@ -8,9 +8,7 @@ function Square({ value, onSquareClick }) {
   );
 }
 
- function Board({xIsNext, squares, onPlay}) {
-  // const [xIsNext, setXIsNext] = useState(true);
-  // const [squares, setSquares] = useState(Array(9).fill(null));
+function Board({xIsNext, squares, onPlay}) {
 
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)){
@@ -22,7 +20,7 @@ function Square({ value, onSquareClick }) {
     } else {
       nextSquares[i] = "O";
     }
-   onPlay(nextSquares);
+  onPlay(nextSquares);
   }
 
   const winner = calculateWinner(squares);
