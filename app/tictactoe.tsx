@@ -78,7 +78,7 @@ export default function Game(){
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button className='bg-gray-500 hover:bg-gray-700 py-1 px-2 mb-1 min-w-40' onClick={() => jumpTo(move)}>{description}</button>
       </li>
     )
   }
