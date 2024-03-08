@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`mx-4 md:mx-48 xl:mx-96 bg-gray-300`}>
+      <body className={`mx-4 md:mx-48 xl:mx-96 bg-gray-300 px-10`}>
         <Nav/>
         {children}
         </body>

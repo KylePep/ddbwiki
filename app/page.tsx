@@ -4,7 +4,7 @@ import Board from "./tictactoe";
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-10">
+    <main className="">
       <div className="flex flex-col items-center">
         <h1 className="pb-4">
         Welcome to the Dungeons and DragonBalls Wiki!
