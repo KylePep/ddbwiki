@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function HomeContent() {
+export default function CharacterStats() {
   return (
     <div className='my-8'>
-      <h1>The RPG system that the dragon ball movies will utilize.</h1>
+      <h1 className=''>The RPG system that the dragon ball movies will utilize.</h1>
       <div className='my-4 '>
-      <h2>A Character based system:</h2>
+      <h2 className='font-bold'>A Character based system:</h2>
       <ul>
         <li>It prioritizes the player character as well as {`NPC's`} and Bosses</li>
         <li>There will be less focus on the world and the characters interactions within it.</li>
@@ -13,7 +13,7 @@ export default function HomeContent() {
       </ul>
       </div>
       <div>
-        <h2>Character Stats:</h2>
+        <h2 className='font-bold'>Character Stats:</h2>
         <ul>
           <li>Spirit - The mental fortitude a character has.</li>
           <li>Power - The amount of force a character can use.</li>
@@ -21,7 +21,7 @@ export default function HomeContent() {
           <li>Ki - The amount of spiritual power a character has access to.</li>
           <li>Agility - The amount of speed a character can use.</li>
         </ul>
-        <h3 className='mt-2'>Example Class Priorities:</h3>
+        <h3 className='mt-2 font-bold'>Example Class Priorities:</h3>
         <ul>
           <li>Damage Class - Power | Ki</li>
           <li>Tank Class - Toughness | Agility</li>

@@ -17,13 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`mx-4 md:mx-48 xl:mx-96 bg-gray-300 px-10`}>
+      <body className={` bg-gray-300`}>
         <Nav/>
+        <div className="mx-4 md:mx-48 xl:mx-96 px-10">
         {children}
-        </body>
-        <footer className="min-h-20 grid justify-items-center items-center"><div>
+        </div>
+        <footer className="min-h-20 mt-16 bg-gray-400 grid justify-items-center items-center"><div>
           Kyle Peppersack
           </div> </footer>
+        </body>
     </html>
   );
 }

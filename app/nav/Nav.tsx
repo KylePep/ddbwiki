@@ -15,7 +15,7 @@ export default function Nav() {
         Dungeons & DragonBalls Wiki!
         </Link>
       </div>
-      <div className="flex justify-between px-10 font-bold mb-10">
+      <div className="flex justify-between bg-orange-600 px-10 py-3 font-bold mb-7">
         <Link href={"/origins"}>{pathName !== "/origins" ? `Origins` : `ORIGINS`}</Link>
         <Link href={"/archetypes"}>{pathName !=="/archetypes" ? `Archetypes` : `ARCHETYPES`}</Link>
         <Link href={"/moves"}>{pathName !=="/moves" ? `Moves` : `MOVES`}</Link>

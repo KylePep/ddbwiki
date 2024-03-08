@@ -1,8 +1,8 @@
 'use client'
 import Link from "next/link";
 import Board from "./tictactoe";
-import HomeContent from "./components/HomeContent";
 import SpecialResources from "./components/SpecialResources";
+import CharacterStats from "./components/CharacterStats";
 
 export default function Home() {
   return (
@@ -21,7 +21,7 @@ export default function Home() {
           {`Don't forget that you are so much happier when you are coding.`}
         </h4>
       </div>
-      <HomeContent/>
+      <CharacterStats/>
       <SpecialResources/>
       {/* <Board /> */}
     </main>
