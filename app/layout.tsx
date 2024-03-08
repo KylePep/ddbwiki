@@ -21,6 +21,9 @@ export default function RootLayout({
         <Nav/>
         {children}
         </body>
+        <footer className="min-h-20 grid justify-items-center items-center"><div>
+          Kyle Peppersack
+          </div> </footer>
     </html>
   );
 }

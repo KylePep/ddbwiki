@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-export default function formsPage() {
+export default function formPage() {
   return (
     <main>
       <div>

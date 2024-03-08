@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Board from "./tictactoe";
 import HomeContent from "./components/HomeContent";
+import SpecialResources from "./components/SpecialResources";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         </h4>
       </div>
       <HomeContent/>
+      <SpecialResources/>
       {/* <Board /> */}
     </main>
   );
