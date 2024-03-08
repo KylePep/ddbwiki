@@ -5,17 +5,6 @@ import Board from "./tictactoe";
 export default function Home() {
   return (
     <main className="min-h-screen px-10">
-      <div className="flex flex-col items-center justify-between px-24 py-12 text-lg font-black">
-        <Link href={"/"}>
-        Dungeons & DragonBalls Wiki!
-        </Link>
-      </div>
-      <div className="flex justify-between px-10 font-bold mb-10">
-        <Link href={"/origins"}>Origins</Link>
-        <Link href={"/archetypes"}>Archetypes</Link>
-        <Link href={"/moves"}>Moves</Link>
-        <Link href={"/forms"}>Forms</Link>
-      </div>
       <div className="flex flex-col items-center">
         <h1 className="pb-4">
         Welcome to the Dungeons and DragonBalls Wiki!
@@ -27,7 +16,7 @@ export default function Home() {
           This application is being developed with the intent to record my notes and development of the assests of the world in a way that can translate to the actual game. If you are seeing this that means you are here before the official release of what is Dungeons and DragonBalls. <i> Lucky you -.-</i>
         </h3>
         <h4>
-          Don't forget that you are so much happier when you are coding.
+          {`Don't forget that you are so much happier when you are coding.`}
         </h4>
 
       </div>
