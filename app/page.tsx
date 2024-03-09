@@ -3,6 +3,7 @@ import Link from "next/link";
 import Board from "./tictactoe";
 import SpecialResources from "./components/SpecialResources";
 import CharacterStats from "./components/CharacterStats";
+import SparkingMeter from "./components/SparkingMeter";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       </div>
       <CharacterStats/>
       <SpecialResources/>
+      <SparkingMeter/>
       {/* <Board /> */}
     </main>
   );
