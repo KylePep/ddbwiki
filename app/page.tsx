@@ -4,6 +4,7 @@ import Board from "./tictactoe";
 import SpecialResources from "./components/SpecialResources";
 import CharacterStats from "./components/CharacterStats";
 import SparkingMeter from "./components/SparkingMeter";
+import CharacterAttributes from "./components/CharacterAttributes";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <CharacterStats/>
       <SpecialResources/>
       <SparkingMeter/>
+      <CharacterAttributes/>
       {/* <Board /> */}
     </main>
   );
