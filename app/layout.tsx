@@ -24,7 +24,7 @@ export default function RootLayout({
         </div>
         <footer className="min-h-20 mt-16 bg-gray-400 grid justify-items-center items-center"><div>
           Kyle Peppersack
-          </div> </footer>
+          </div> <p>R.I.P Akira Toriyama</p></footer>
         </body>
     </html>
   );
