@@ -10,7 +10,7 @@ export default function Nav() {
 
   return (
     <nav>
-      <div className="flex flex-col items-center justify-between py-12 text-lg font-black">
+      <div className="flex flex-col items-center py-12 text-lg font-black">
         <Link href={"/"}>
         Dungeons & DragonBalls Wiki!
         </Link>
