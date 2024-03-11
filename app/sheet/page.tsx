@@ -10,36 +10,47 @@ export default function page() {
             Character Sheet
           </p>
 
-          <form >
+          <form className='grid grid-rows-1 grid-flow-col'>
             <div>
-              <label htmlFor="name">Name </label>
-                <div>
-                  <input type="text" name="name" id="name"  />
+              <div>
+                <label htmlFor="name">Name </label>
+                  <div>
+                    <input type="text" name="name" id="name"  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="name">Origin </label>
+                  <div>
+                    <select name="origin" id="origin">
+                      <option value="saiyan">Saiyan</option>
+                      <option value="halfSaiyan">Half Saiyan</option>
+                      <option value="earthling">Earthling</option>
+                      <option value="namekian">Namekian</option>
+                    </select>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="name">Archetype </label>
+                  <div>
+                    <select name="archetype" id="archetype">
+                      <option value="warrior">Warrior</option>
+                      <option value="support">Support</option>
+                      <option value="striker">Striker</option>
+                      <option value="tank">Tank</option>
+                    </select>
+                </div>
               </div>
             </div>
 
-            <div>
-              <label htmlFor="name">Origin </label>
-                <div>
-                  <select name="origin" id="origin">
-                    <option value="saiyan">Saiyan</option>
-                    <option value="halfSaiyan">Half Saiyan</option>
-                    <option value="earthling">Earthling</option>
-                    <option value="namekian">Namekian</option>
-                  </select>
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="name">Archetype </label>
-                <div>
-                  <select name="archetype" id="archetype">
-                    <option value="warrior">Warrior</option>
-                    <option value="support">Support</option>
-                    <option value="striker">Striker</option>
-                    <option value="tank">Tank</option>
-                  </select>
-              </div>
+            <div className='flex flex-col gap-2'>
+              -STATS-
+              <input type="number" name="" id="" />
+              <input type="number" name="" id="" />
+              <input type="number" name="" id="" />
+              <input type="number" name="" id="" />
+              <input type="number" name="" id="" />
             </div>
 
           </form>
