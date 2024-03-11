@@ -9,8 +9,8 @@ export default function Nav() {
   const pathName = usePathname() 
 
   return (
-    <nav>
-      <div className="flex flex-col items-center py-12 text-lg font-black">
+    <nav className='sticky top-0 z-50'>
+      <div className="flex flex-col items-center py-12 text-lg font-black bg-gray-200">
         <Link href={"/"}>
         Dungeons & DragonBalls Wiki!
         </Link>
