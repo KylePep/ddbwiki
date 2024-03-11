@@ -21,14 +21,14 @@ export default function Dice() {
         
         <div className='flex flex-col items-center justify-center min-h-20'>
           <div className='mb-3'>{selectedDie}</div>
-          <button onClick={rollDie} className='bg-gray-400 hover:bg-gray-300 px-4 py-1 mb-3 rounded-md font-bold'>ROLL</button>
+          <button onClick={rollDie} className='bg-blue-400 hover:bg-blue-300 px-4 py-1 mb-3 rounded-md font-bold'>ROLL</button>
         <div>{result!== null ? `- ${result} -` : 'Roll your die!'}</div>
         </div>
         <div className='grid grid-rows-3 gap-1 grid-flow-col'>
           {['D4','D6','D8','D10','D12','D20'].map(dieType => (
             <button 
             key={dieType}
-            className={`bg-gray-400 hover:bg-gray-300 py-1 text-center rounded ${selectedDie === dieType ? 'border-solid border-2 border-orange-500' : ''}`}
+            className={`bg-orange-400 hover:bg-orange-300 py-1 text-center rounded ${selectedDie === dieType ? 'border-solid border-2 border-blue-500' : ''}`}
             onClick={()=> selectDie(dieType)}
             >
               {dieType}
