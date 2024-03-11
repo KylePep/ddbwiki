@@ -12,6 +12,7 @@ export default function Dice() {
 
   const selectDie = (selectDie: string)=> {
     setSelectedDie(selectDie)
+    setResult(null)
   }
 
   return (
@@ -20,16 +21,19 @@ export default function Dice() {
         
         <div className='flex flex-col items-center justify-center min-h-20'>
           <div className='mb-3'>{selectedDie}</div>
-          <button onClick={rollDie} className='bg-gray-100 hover:bg-gray-200 px-4 py-1 mb-3 rounded-md'>Roll</button>
-        <div>{result!== null ? `Result: `+ result : 'Roll your die!'}</div>
+          <button onClick={rollDie} className='bg-gray-400 hover:bg-gray-300 px-4 py-1 mb-3 rounded-md font-bold'>ROLL</button>
+        <div>{result!== null ? `- ${result} -` : 'Roll your die!'}</div>
         </div>
         <div className='grid grid-rows-3 gap-1 grid-flow-col'>
-          <button onClick={()=> setSelectedDie('D4')} className='bg-gray-400 hover:bg-gray-300 py-1 text-center rounded border-solid border-2 border-orange-500'>D4</button>
-          <button onClick={()=> setSelectedDie('D6')} className='bg-gray-400 hover:bg-gray-300 py-1 text-center rounded'>D6</button>
-          <button onClick={()=> setSelectedDie('D8')} className='bg-gray-400 hover:bg-gray-300 py-1 text-center rounded'>D8</button>
-          <button onClick={()=> setSelectedDie('D10')} className='bg-gray-400 hover:bg-gray-300 py-1 text-center rounded'>D10</button>
-          <button onClick={()=> setSelectedDie('D12')} className='bg-gray-400 hover:bg-gray-300 py-1 text-center rounded'>D12</button>
-          <button onClick={()=> setSelectedDie('D20')} className='bg-gray-400 hover:bg-gray-300 py-1 text-center rounded'>D20</button>
+          {['D4','D6','D8','D10','D12','D20'].map(dieType => (
+            <button 
+            key={dieType}
+            className={`bg-gray-400 hover:bg-gray-300 py-1 text-center rounded ${selectedDie === dieType ? 'border-solid border-2 border-orange-500' : ''}`}
+            onClick={()=> selectDie(dieType)}
+            >
+              {dieType}
+            </button>
+          ))}
         </div>
       </div>
     </>
