@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 
 export default function Dice() {
   const [selectedDie, setSelectedDie] = useState('D4')
-  const [result, setResult] = useState(null)
+  const [result, setResult] = useState<number | null>(null)
 
   const rollDie = ()=> {
     const maxNumber = parseInt(selectedDie.slice(1))
     const randomNumber = Math.floor(Math.random()*maxNumber) + 1
+    
     setResult(randomNumber)
   }
 
