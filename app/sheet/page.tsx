@@ -1,10 +1,14 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import { MdEdit } from "react-icons/md";
+import Modal from '../components/Modal';
 
 
 export default function page() {
+  const [toggle, setToggle] = useState(false)
   return (
-    <div>
+    <>
       <div>
         <div className='bg-gray-100  px-8 py-4 rounded'>
 
@@ -16,7 +20,9 @@ export default function page() {
                   <div className='my-5 text-lg text-center font-bold'>
                         Brokcul
                   </div>
-                  <MdEdit className=''/>
+                  <button onClick={(e) => {setToggle(true)}}>
+                    <MdEdit className=''/>
+                  </button>
                 </div>
               </div>
           <form className='grid grid-rows-1 grid-flow-col'>
@@ -48,7 +54,7 @@ export default function page() {
               <div>
                 <label htmlFor="level" className='font-bold'>Level </label>
                   <div>
-                    <input className='ps-2' type="number" name="level" id="level" min={1} max={5}/>
+                    <input className='ps-2' type="number" name="level" id="level" min={1} max={5} placeholder='1'/>
                 </div>
               </div>
             </div>
@@ -127,7 +133,7 @@ export default function page() {
                 </div>
                 <div className='flex flex-col'>
                   <label className='font-bold' >Description</label>
-                  <textarea className='resize-none me-10 px-4' name="description" id="description" cols={30} rows={4}></textarea>
+                  <textarea className='resize-none me-10 px-4' name="description" id="description" cols={30} rows={4} placeholder='Provide a brief description of your character here...'></textarea>
                 </div>
               </div>
             </div>
@@ -137,27 +143,30 @@ export default function page() {
               <p  className='text-center font-bold'>
               Stats
               </p>
+              <p className='text-center'>
+                - +2 -
+              </p>
               
               <div className='grid grid-rows-3 grid-flow-col gap-2'>                
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="name">Spirit </label>
-                  <input type="number" name="spirit" id="spirit" min={1} max={5}  />
+                  <input type="number" name="spirit" id="spirit" min={1} max={5} placeholder='3' />
                 </div>
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="name">Power </label>
-                  <input type="number" name="power" id="power" min={1} max={5} />
+                  <input type="number" name="power" id="power" min={1} max={5} placeholder='3' />
                 </div>
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="name">Toughness </label>
-                  <input type="number" name="toughness" id="toughness" min={1} max={5} />
+                  <input type="number" name="toughness" id="toughness" min={1} max={5} placeholder='3' />
                 </div>
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="name">Ki </label>
-                  <input type="number" name="ki" id="ki" min={1} max={5} />
+                  <input type="number" name="ki" id="ki" min={1} max={5} placeholder='3' />
                 </div>
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="name">Agility </label>
-                  <input type="number" name="agility" id="agility" min={1} max={5} />
+                  <input type="number" name="agility" id="agility" min={1} max={5} placeholder='3' />
                 </div>
               </div>
               <div className='mt-3 '>
@@ -193,6 +202,7 @@ export default function page() {
 
         </div>
       </div>
-    </div>
+      {toggle && <Modal setToggle = {setToggle} />}
+    </>
   )
 }
