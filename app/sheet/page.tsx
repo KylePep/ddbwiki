@@ -7,6 +7,8 @@ import Modal from '../components/Modal';
 
 export default function page() {
   const [toggle, setToggle] = useState(false)
+  const [name, setName] = useState('Name')
+
   return (
     <>
       <div>
@@ -18,7 +20,7 @@ export default function page() {
               <div className='flex flex-col items-center'>
                 <div className='flex items-center gap-2'>
                   <div className='my-5 text-lg text-center font-bold'>
-                        Brokcul
+                        {name}
                   </div>
                   <button onClick={(e) => {setToggle(true)}}>
                     <MdEdit className=''/>
@@ -33,7 +35,7 @@ export default function page() {
               <div>
                 <label htmlFor="name" className='font-bold'>Name </label>
                   <div>
-                    <input className='ps-2' type="text" name="name" id="name" minLength={1} maxLength={20}  placeholder='Kakarot'/>
+                    <input onChange={(e) => setName(e.target.value)} className='ps-2' type="text" name="name" id="name" minLength={1} maxLength={20}/>
                 </div>
               </div>
             </div>
@@ -202,7 +204,7 @@ export default function page() {
 
         </div>
       </div>
-      {toggle && <Modal setToggle = {setToggle} />}
+      {toggle && <Modal name = {name} setToggle = {setToggle} />}
     </>
   )
 }
