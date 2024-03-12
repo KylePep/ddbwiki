@@ -1,4 +1,6 @@
 import React from 'react'
+import { MdEdit } from "react-icons/md";
+
 
 export default function page() {
   return (
@@ -9,9 +11,17 @@ export default function page() {
               <p className='mb-5 text-lg font-bold'>
                 Dungeons & DragonBalls Character sheet
               </p>
+              <div className='flex flex-col items-center'>
+                <div className='flex items-center gap-2'>
+                  <div className='my-5 text-lg text-center font-bold'>
+                        Brokcul
+                  </div>
+                  <MdEdit className=''/>
+                </div>
+              </div>
           <form className='grid grid-rows-1 grid-flow-col'>
-            <div>
-            <div className='flex gap-2'>
+            <div className='pe-6'>
+            <div className='grid grid-cols-2 grid-flow-row gap-2'>
 
             <div>
               <div>
@@ -34,7 +44,16 @@ export default function page() {
                 </div>
               </div>
 
+            <div>
               <div>
+                <label htmlFor="level" className='font-bold'>Level </label>
+                  <div>
+                    <input className='ps-2' type="number" name="level" id="level" min={1} max={5}/>
+                </div>
+              </div>
+            </div>
+
+            <div>
                 <label htmlFor="name" className='font-bold'>Archetype </label>
                   <div>
                     <select name="archetype" id="archetype">
@@ -45,8 +64,41 @@ export default function page() {
                     </select>
                 </div>
               </div>
-            </div>
+
               <div>
+                <label htmlFor="pronouns" className='font-bold'>Pronouns </label>
+                  <div>
+                    <select className='ps-1' name="pronouns" id="pronouns">
+                      <option value="masculine">he | him</option>
+                      <option value="feminine">she | her</option>
+                      <option value="neither">they | them</option>
+                    </select>
+                </div>
+              </div>
+
+            <div className='flex'>
+                  <div>
+                <label htmlFor="bodyType" className='font-bold'>Body Type </label>
+                    <select name="bodyType" id="bodyType">
+                      <option value="masculine">Masculine</option>
+                      <option value="feminine">Feminine</option>
+                      <option value="neither">Neither</option>
+                    </select>
+                </div>
+                  <div>
+                <label htmlFor="height" className='font-bold'>Height </label>
+                    <select name="height" id="height">
+                      <option value="average">Average</option>
+                      <option value="short">Short</option>
+                      <option value="veryShort">Very Short</option>
+                      <option value="tall">Tall</option>
+                      <option value="veryTall">Very Tall</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+
+              <div className='mt-4'>
                 <div>
                     <p className='font-bold'>Moves</p>
                   <div className='bg-white me-10 py-2'>
@@ -75,44 +127,44 @@ export default function page() {
                 </div>
                 <div className='flex flex-col'>
                   <label className='font-bold' >Description</label>
-                  <textarea className='resize-none me-10' name="description" id="description" cols={30} rows={4}></textarea>
+                  <textarea className='resize-none me-10 px-4' name="description" id="description" cols={30} rows={4}></textarea>
                 </div>
               </div>
             </div>
 
 
-            <div className='flex flex-col border-solid border-s-2 border-black-500 '>
+            <div className='flex flex-col border-solid border-s-2 border-black-500 ps-6'>
               <p  className='text-center font-bold'>
               Stats
               </p>
               
               <div className='grid grid-rows-3 grid-flow-col gap-2'>                
-                <div className='flex flex-col w-10 m-auto'>
-                  <label htmlFor="name">Spirit </label>
+                <div className='flex flex-col '>
+                  <label className='text-center' htmlFor="name">Spirit </label>
                   <input type="number" name="spirit" id="spirit" min={1} max={5}  />
                 </div>
-                <div className='flex flex-col w-10 m-auto'>
-                  <label htmlFor="name">Power </label>
+                <div className='flex flex-col '>
+                  <label className='text-center' htmlFor="name">Power </label>
                   <input type="number" name="power" id="power" min={1} max={5} />
                 </div>
-                <div className='flex flex-col w-10 m-auto'>
-                  <label htmlFor="name">Toughness </label>
+                <div className='flex flex-col '>
+                  <label className='text-center' htmlFor="name">Toughness </label>
                   <input type="number" name="toughness" id="toughness" min={1} max={5} />
                 </div>
-                <div className='flex flex-col w-10 m-auto'>
-                  <label htmlFor="name">Ki </label>
+                <div className='flex flex-col '>
+                  <label className='text-center' htmlFor="name">Ki </label>
                   <input type="number" name="ki" id="ki" min={1} max={5} />
                 </div>
-                <div className='flex flex-col w-10 m-auto'>
-                  <label htmlFor="name">Agility </label>
+                <div className='flex flex-col '>
+                  <label className='text-center' htmlFor="name">Agility </label>
                   <input type="number" name="agility" id="agility" min={1} max={5} />
                 </div>
               </div>
-              <div>
+              <div className='mt-3 '>
                 <p className='text-center font-bold'>Equipment</p>
                 <div>
                     <p className='text-center'>Head</p>
-                  <div className='bg-white me-10 py-2'>
+                  <div className='bg-white py-2 pe-2'>
                     <ul>
                       <li>Saiyan Scouter</li>
                     </ul>
@@ -120,9 +172,17 @@ export default function page() {
                 </div>
                 <div>
                     <p className='text-center'>Body</p>
-                  <div className='bg-white me-10 py-2'>
+                  <div className='bg-white py-2'>
                     <ul>
                       <li>Saiyan Armor</li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                    <p className='text-center'>Weapon</p>
+                  <div className='bg-white py-2'>
+                    <ul>
+                      <li>-None-</li>
                     </ul>
                   </div>
                 </div>
