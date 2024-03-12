@@ -13,6 +13,7 @@ export default function page() {
     <>
       <div>
         <div className='bg-gray-100  px-8 py-4 rounded'>
+          <form action="">
 
               <p className='mb-5 text-lg font-bold'>
                 Dungeons & DragonBalls Character sheet
@@ -22,12 +23,10 @@ export default function page() {
                   <div className='my-5 text-lg text-center font-bold'>
                         {name}
                   </div>
-                  <button onClick={(e) => {setToggle(true)}}>
-                    <MdEdit className=''/>
-                  </button>
+                    <MdEdit onClick={(e) => {setToggle(true)}} className='hover:cursor-pointer'/>
                 </div>
               </div>
-          <form className='grid grid-rows-1 grid-flow-col'>
+          <div className='grid grid-rows-1 grid-flow-col'>
             <div className='pe-6'>
             <div className='grid grid-cols-2 grid-flow-row gap-2'>
 
@@ -199,9 +198,10 @@ export default function page() {
                 </div>
               </div>
             </div>
+          </div>
+          <button className='bg-blue-400 hover:bg-blue-200 rounded-md my-4 px-4 py-2'>Create Character</button>
 
-          </form>
-
+        </form>
         </div>
       </div>
       {toggle && <Modal name = {name} setToggle = {setToggle} />}
