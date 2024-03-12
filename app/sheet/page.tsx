@@ -7,21 +7,47 @@ import Modal from '../components/Modal';
 
 export default function page() {
   const [toggle, setToggle] = useState(false)
-  const [name, setName] = useState('Name')
+  const [form, setForm] = useState({name: "kai", level: 1, origin: "saiyan", archetype: "warrior", bodyType: "Masculine", height: "average", description: "", stats:{spirit: 3, ki: 3, power: 3, agility: 3, toughness: 3}, equipment:{head:"Scouter", body: "Saiyan Armor", weapon: "none"}, inventory:[], forms:["Great Ape"], pronouns:"he | him"})
+
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    if (name !== "stats" && name !== "equipment" && name != "inventory" && name !== "forms"){
+      setForm(prevForm => ({
+        ...prevForm,
+        [name]: value
+      }))
+    } else {
+      const category = name.split(".")[0]
+      const field = name.split(".")[1]
+
+      setForm(prevForm => ({
+        ...prevForm,
+        [category]: {
+          ...prevForm[category],
+          [field]: value
+        }
+      }))
+    }
+  }
+
+  const submitForm = (e: React.FormEvent) =>{
+    e.preventDefault()
+    console.log(form)
+  }
 
   return (
     <>
       <div>
         <div className='bg-gray-100  px-8 py-4 rounded'>
-          <form action="">
+          <form onSubmit={submitForm}>
 
               <p className='mb-5 text-lg font-bold'>
-                Dungeons & DragonBalls Character sheet
+                Dungeons & DragonBalls Character Sheet
               </p>
               <div className='flex flex-col items-center'>
                 <div className='flex items-center gap-2'>
                   <div className='my-5 text-lg text-center font-bold'>
-                        {name}
+                        {form.name}
                   </div>
                     <MdEdit onClick={(e) => {setToggle(true)}} className='hover:cursor-pointer'/>
                 </div>
@@ -34,7 +60,7 @@ export default function page() {
               <div>
                 <label htmlFor="name" className='font-bold'>Name </label>
                   <div>
-                    <input onChange={(e) => setName(e.target.value)} className='ps-2' type="text" name="name" id="name" minLength={1} maxLength={20}/>
+                    <input onChange={handleChange} value={form.name}  className='ps-2' type="text" name="name" id="name" minLength={1} maxLength={20}/>
                 </div>
               </div>
             </div>
@@ -42,7 +68,7 @@ export default function page() {
             <div>
                 <label htmlFor="name" className='font-bold'>Origin </label>
                   <div>
-                    <select name="origin" id="origin">
+                    <select onChange={handleChange} value={form.origin} name="origin" id="origin">
                       <option value="saiyan">Saiyan</option>
                       <option value="halfSaiyan">Half Saiyan</option>
                       <option value="earthling">Earthling</option>
@@ -55,7 +81,7 @@ export default function page() {
               <div>
                 <label htmlFor="level" className='font-bold'>Level </label>
                   <div>
-                    <input className='ps-2' type="number" name="level" id="level" min={1} max={5} placeholder='1'/>
+                    <input onChange={handleChange} value={form.level} className='ps-2' type="number" name="level" id="level" min={1} max={5} placeholder='1'/>
                 </div>
               </div>
             </div>
@@ -63,7 +89,7 @@ export default function page() {
             <div>
                 <label htmlFor="name" className='font-bold'>Archetype </label>
                   <div>
-                    <select name="archetype" id="archetype">
+                    <select onChange={handleChange} value={form.archetype} name="archetype" id="archetype">
                       <option value="warrior">Warrior</option>
                       <option value="support">Support</option>
                       <option value="striker">Striker</option>
@@ -75,7 +101,7 @@ export default function page() {
               <div>
                 <label htmlFor="pronouns" className='font-bold'>Pronouns </label>
                   <div>
-                    <select className='ps-1' name="pronouns" id="pronouns">
+                    <select onChange={handleChange} value={form.pronouns} className='ps-1' name="pronouns" id="pronouns">
                       <option value="masculine">he | him</option>
                       <option value="feminine">she | her</option>
                       <option value="neither">they | them</option>
@@ -86,7 +112,7 @@ export default function page() {
             <div className='flex'>
                   <div>
                 <label htmlFor="bodyType" className='font-bold'>Body Type </label>
-                    <select name="bodyType" id="bodyType">
+                    <select onChange={handleChange} value={form.bodyType} name="bodyType" id="bodyType">
                       <option value="masculine">Masculine</option>
                       <option value="feminine">Feminine</option>
                       <option value="neither">Neither</option>
@@ -94,7 +120,7 @@ export default function page() {
                 </div>
                   <div>
                 <label htmlFor="height" className='font-bold'>Height </label>
-                    <select name="height" id="height">
+                    <select onChange={handleChange} value={form.height} name="height" id="height">
                       <option value="average">Average</option>
                       <option value="short">Short</option>
                       <option value="veryShort">Very Short</option>
@@ -199,12 +225,12 @@ export default function page() {
               </div>
             </div>
           </div>
-          <button className='bg-blue-400 hover:bg-blue-200 rounded-md my-4 px-4 py-2'>Create Character</button>
+          <button type='submit' className='bg-blue-400 hover:bg-blue-200 rounded-md my-4 px-4 py-2'>Create Character</button>
 
         </form>
         </div>
       </div>
-      {toggle && <Modal name = {name} setToggle = {setToggle} />}
+      {toggle && <Modal name = {form.name} setToggle = {setToggle} />}
     </>
   )
 }
