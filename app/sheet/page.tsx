@@ -6,12 +6,14 @@ export default function page() {
       <div>
         Build a character
         <div className='bg-gray-100 min-h-96 px-4 py-2 rounded'>
-          <p>
-            Character Sheet
-          </p>
+
 
           <form className='grid grid-rows-1 grid-flow-col'>
+            
             <div>
+              <p>
+                Character Sheet
+              </p>
               <div>
                 <label htmlFor="name">Name </label>
                   <div>
@@ -46,11 +48,28 @@ export default function page() {
 
             <div className='flex flex-col gap-2'>
               -STATS-
-              <input type="number" name="" id="" />
-              <input type="number" name="" id="" />
-              <input type="number" name="" id="" />
-              <input type="number" name="" id="" />
-              <input type="number" name="" id="" />
+              <div className='grid grid-rows-3 grid-flow-col gap-2'>                
+                <div className='flex flex-col'>
+                  <label htmlFor="name">Spirit </label>
+                  <input type="number" name="spirit" id="spirit" min={1} max={5}  />
+                </div>
+                <div className='flex flex-col'>
+                  <label htmlFor="name">Power </label>
+                  <input type="number" name="power" id="power" value={3} />
+                </div>
+                <div className='flex flex-col'>
+                  <label htmlFor="name">Toughness </label>
+                  <input type="number" name="toughness" id="toughness" value={3} />
+                </div>
+                <div className='flex flex-col'>
+                  <label htmlFor="name">Ki </label>
+                  <input type="number" name="ki" id="ki" value={3} />
+                </div>
+                <div className='flex flex-col'>
+                  <label htmlFor="name">Agility </label>
+                  <input type="number" name="agility" id="agility" value={3} />
+                </div>
+              </div>
             </div>
 
           </form>
