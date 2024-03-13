@@ -13,5 +13,127 @@
     "moves":["Ki Blast"], 
     "inventory":["Scouter", "Saiyan Armor"], 
     "forms":["Great Ape"]
-  }
+  },
+  "ORIGIN_TYPES":[
+    {
+      "id": 1,
+      "title": "Saiyan",
+      "description": "A Race of space barbarians with the power to transform into Great Apes. Huge appetites.",
+      "racialTraits": "+Power, -Spirit",
+      "forms": "Great Ape"
+  },
+    {
+      "id": 2,
+      "title": "Half Saiyan",
+      "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with interest in battle. Huge Appetites.",
+      "racialTraits": "+Ki, -Toughness",
+      "forms": "Great Ape"
+  },
+  {
+    "id": 3,
+    "title": "Earthling",
+    "description": "Humans capable of harnessing Ki.",
+    "racialTraits": "+Spirit, -Ki",
+    "forms": "Technology(item)"
+},
+{
+  "id": 4,
+  "title": "Namekian",
+  "description": "Humanoids with plant and slug-like characteristics, including green skin and antennae. Can survive on only water.",
+  "racialTraits": "+Toughness, -Agility, Regeneration",
+  "forms": ""
+}
+],
+  "ARCHETYPE_TYPES":[
+    {
+      "id": 1,
+      "title": "Warrior",
+      "examples": "Goku | Vegeta",
+      "description": "The battle hungry archetype geared for high intensity combat."
+    },
+    {
+      "id": 2,
+      "title": "Support",
+      "examples": "Hercule | Chiaotzu | Krillin",
+      "description": "The comic relief archetype, helpful distractions and buff to the party."
+    },
+    {
+      "id": 3,
+      "title": "Striker",
+      "examples": "Gohan | Trunks",
+      "description": "An archetype capable of altering the battlefield and negating villains abilities."
+    },
+    {
+      "id": 4,
+      "title": "Tank",
+      "examples": "Piccolo | Tien",
+      "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others."
+    }
+  ],
+  "MOVE_TYPES":[
+    {
+      "id": 1,
+      "title": "Kamehameha",
+      "type": "attack",
+      "style": "energy",
+      "description": "An energy wave. The signature attack of the students of the Turtle School."
+    },
+    {
+      "id": 2,
+      "title": "Special Beam Cannon",
+      "type": "attack",
+      "style": "energy",
+      "description": "A concentrated beam attack that takes a long time to charge."
+    },
+    {
+      "id": 3,
+      "title": "Taunt",
+      "type": "support",
+      "style": "physical",
+      "description": "Making a funny face and a rude noise, draws the attention of the target."
+    }
+  ],
+  "FORM_TYPES":[
+    {
+      "id": 1,
+      "title": "Great Ape",
+      "type": "form",
+      "description": "A Saiyan or Half Saiyan tranforms during a full moon or similar conditions, Becoming the great Ape. This power is saved for particularly difficult to conquer planets."
+    },
+    {
+      "id": 2,
+      "title": "Super Saiyan",
+      "type": "alteration",
+      "description": "A Saiyan or Half Saiyan becomes a Super Saiyan. Their power is amplified many times over, their eyes become teal and their hair a spiky gold."
+    },
+    {
+      "id": 3,
+      "title": "Potential Unlocked",
+      "type": "aura",
+      "description": "Granted by an Elder Guru a characters latent ability is unlocked."
+    }
+  ],
+  "ITEM_TYPES":[
+    {
+      "id": 1,
+      "title": "Saiyan Armor",
+      "type": "equipment",
+      "subType": "body",
+      "description": "Armor worn by Saiyans."
+    },
+    {
+      "id": 2,
+      "title": "Scouter",
+      "type": "equipment",
+      "subType": "head",
+      "description": "A device worn on the head used to identify power levels, notoriously faulty."
+    },
+    {
+      "id": 3,
+      "title": "Senzu Bean",
+      "type": "item",
+      "subType": "consumable",
+      "description": "Revitalized the character that consumes it."
+    }
+  ]
 }
