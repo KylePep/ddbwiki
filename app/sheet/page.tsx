@@ -11,7 +11,10 @@ export default function page() {
 
   const handleChange = (e) => {
     const {name, value} = e.target;
-    if (name !== "stats" && name !== "equipment" && name != "inventory" && name !== "forms"){
+
+    const nestedField = name.split("."); // Split the field name by dot to access nested objects
+
+    if (nestedField.length === 1) {
       setForm(prevForm => ({
         ...prevForm,
         [name]: value
@@ -19,6 +22,8 @@ export default function page() {
     } else {
       const category = name.split(".")[0]
       const field = name.split(".")[1]
+
+      console.log(category, field)
 
       setForm(prevForm => ({
         ...prevForm,
@@ -160,7 +165,7 @@ export default function page() {
                 </div>
                 <div className='flex flex-col'>
                   <label className='font-bold' >Description</label>
-                  <textarea className='resize-none me-10 px-4' name="description" id="description" cols={30} rows={4} placeholder='Provide a brief description of your character here...'></textarea>
+                  <textarea onChange={handleChange} value={form.description} className='resize-none me-10 px-4' name="description" id="description" cols={30} rows={4} placeholder='Provide a brief description of your character here...'></textarea>
                 </div>
               </div>
             </div>
@@ -176,50 +181,44 @@ export default function page() {
               
               <div className='grid grid-rows-3 grid-flow-col gap-2'>                
                 <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="name">Spirit </label>
-                  <input type="number" name="spirit" id="spirit" min={1} max={5} placeholder='3' />
+                  <label className='text-center' htmlFor="spirit">Spirit </label>
+                  <input onChange={handleChange} value={form.stats.spirit} className='ps-2' type="number" name="stats.spirit" id="spirit" min={1} max={5}/>
                 </div>
                 <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="name">Power </label>
-                  <input type="number" name="power" id="power" min={1} max={5} placeholder='3' />
+                  <label className='text-center' htmlFor="power">Power </label>
+                  <input onChange={handleChange} value={form.stats.power} type="number" name="stats.power" id="power" min={1} max={5}/>
                 </div>
                 <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="name">Toughness </label>
-                  <input type="number" name="toughness" id="toughness" min={1} max={5} placeholder='3' />
+                  <label className='text-center' htmlFor="toughness">Toughness </label>
+                  <input onChange={handleChange} value={form.stats.toughness} type="number" name="stats.toughness" id="toughness" min={1} max={5}/>
                 </div>
                 <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="name">Ki </label>
-                  <input type="number" name="ki" id="ki" min={1} max={5} placeholder='3' />
+                  <label className='text-center' htmlFor="ki">Ki </label>
+                  <input onChange={handleChange} value={form.stats.ki} type="number" name="stats.ki" id="ki" min={1} max={5}/>
                 </div>
                 <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="name">Agility </label>
-                  <input type="number" name="agility" id="agility" min={1} max={5} placeholder='3' />
+                  <label className='text-center' htmlFor="agility">Agility </label>
+                  <input onChange={handleChange} value={form.stats.agility} type="number" name="stats.agility" id="agility" min={1} max={5}/>
                 </div>
               </div>
               <div className='mt-3 '>
                 <p className='text-center font-bold'>Equipment</p>
                 <div>
                     <p className='text-center'>Head</p>
-                  <div className='bg-white py-2 pe-2'>
-                    <ul>
-                      <li>Saiyan Scouter</li>
-                    </ul>
+                  <div className='bg-white py-2 px-4'>
+                    {form.equipment.head}
                   </div>
                 </div>
                 <div>
                     <p className='text-center'>Body</p>
-                  <div className='bg-white py-2'>
-                    <ul>
-                      <li>Saiyan Armor</li>
-                    </ul>
+                  <div className='bg-white py-2 px-4'>
+                    {form.equipment.body}
                   </div>
                 </div>
                 <div>
                     <p className='text-center'>Weapon</p>
-                  <div className='bg-white py-2'>
-                    <ul>
-                      <li>-None-</li>
-                    </ul>
+                  <div className='bg-white py-2 px-4'>
+                    {form.equipment.weapon}
                   </div>
                 </div>
               </div>
