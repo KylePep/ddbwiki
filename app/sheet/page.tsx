@@ -7,33 +7,63 @@ import Modal from '../components/Modal';
 
 export default function page() {
   const [toggle, setToggle] = useState(false)
-  const [form, setForm] = useState({name: "kai", level: 1, origin: "saiyan", archetype: "warrior", bodyType: "Masculine", height: "average", description: "", stats:{spirit: 3, ki: 3, power: 3, agility: 3, toughness: 3}, equipment:{head:"Scouter", body: "Saiyan Armor", weapon: "none"}, inventory:[], forms:["Great Ape"], pronouns:"he | him"})
+  const [form, setForm] = useState({
+    name: "Aspara", 
+    level: 1, 
+    origin: "saiyan", 
+    archetype: "warrior", 
+    pronouns:"he | him",
+    bodyType: "Masculine", 
+    height: "average", 
+    description: "", 
+    stats:{mod: 3, spirit: 3, ki: 3, power: 3, agility: 3, toughness: 3}, 
+    equipment:{head:"Scouter", body: "Saiyan Armor", weapon: "none"}, 
+    moves:["Ki Blast"], inventory:["Scouter", "Saiyan Armor"], 
+    forms:["Great Ape"]
+  })
 
   const handleChange = (e) => {
-    const {name, value} = e.target;
-
-    const nestedField = name.split("."); // Split the field name by dot to access nested objects
-
+    const { name, value } = e.target;
+  
+    const nestedField = name.split(".");
+  
     if (nestedField.length === 1) {
       setForm(prevForm => ({
         ...prevForm,
         [name]: value
-      }))
+      }));
     } else {
-      const category = name.split(".")[0]
-      const field = name.split(".")[1]
-
-      console.log(category, field)
-
-      setForm(prevForm => ({
-        ...prevForm,
-        [category]: {
-          ...prevForm[category],
-          [field]: value
-        }
-      }))
+      const category = name.split(".")[0];
+      const field = name.split(".")[1];
+  
+      if (category !== 'stats') {
+        setForm(prevForm => ({
+          ...prevForm,
+          [category]: {
+            ...prevForm[category],
+            [field]: value
+          }
+        }));
+      } else {
+        setForm(prevForm => {
+          let modStat = prevForm.stats[field] < value ? -1 : prevForm.stats[field] > value ? +1 : 0;
+          
+          if (modStat === -1 && prevForm.stats.mod === 0) {
+            return prevForm; // Do not update the form
+          }
+  
+          return {
+            ...prevForm,
+            [category]: {
+              ...prevForm[category],
+              [field]: value,
+              mod: prevForm.stats.mod + modStat
+            }
+          };
+        });
+      }
     }
-  }
+  };
 
   const submitForm = (e: React.FormEvent) =>{
     e.preventDefault()
@@ -141,8 +171,9 @@ export default function page() {
                     <p className='font-bold'>Moves</p>
                   <div className='bg-white me-10 py-2'>
                     <ul>
-                      <li>Ki Blast</li>
-                      <li>Kamehameha</li>
+                      {form.moves.map((move: any)=> (
+                      <li key={move}>{move}</li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -158,8 +189,9 @@ export default function page() {
                     <p className='font-bold'>Inventory</p>
                   <div className='bg-white me-10 py-2'>
                     <ul>
-                      <li>Scouter</li>
-                      <li>Power Pole</li>
+                      {form.inventory.map((item: any)=>(
+                      <li key={item}>{item}</li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -176,7 +208,7 @@ export default function page() {
               Stats
               </p>
               <p className='text-center'>
-                - +2 -
+                - {form.stats.mod} -
               </p>
               
               <div className='grid grid-rows-3 grid-flow-col gap-2'>                
