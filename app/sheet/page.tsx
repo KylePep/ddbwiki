@@ -3,24 +3,12 @@
 import React, { useState } from 'react'
 import { MdEdit } from "react-icons/md";
 import Modal from '../components/Modal';
+import { CHARACTER_TYPES } from "../../shared/constants/index";
 
 
 export default function page() {
   const [toggle, setToggle] = useState(false)
-  const [form, setForm] = useState({
-    name: "Aspara", 
-    level: 1, 
-    origin: "saiyan", 
-    archetype: "warrior", 
-    pronouns:"he | him",
-    bodyType: "Masculine", 
-    height: "average", 
-    description: "", 
-    stats:{mod: 3, spirit: 3, ki: 3, power: 3, agility: 3, toughness: 3}, 
-    equipment:{head:"Scouter", body: "Saiyan Armor", weapon: "none"}, 
-    moves:["Ki Blast"], inventory:["Scouter", "Saiyan Armor"], 
-    forms:["Great Ape"]
-  })
+  const [form, setForm] = useState(CHARACTER_TYPES)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -72,6 +60,10 @@ export default function page() {
 
   return (
     <>
+    
+    <div>
+    </div>
+
       <div>
         <div className='bg-gray-100  px-8 py-4 rounded'>
           <form onSubmit={submitForm}>
@@ -214,25 +206,46 @@ export default function page() {
               <div className='grid grid-rows-3 grid-flow-col gap-2'>                
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="spirit">Spirit </label>
-                  <input onChange={handleChange} value={form.stats.spirit} className='ps-2' type="number" name="stats.spirit" id="spirit" min={1} max={5}/>
+                  <input onChange={handleChange} value={form.stats.spirit} className='text-center' type="number" name="stats.spirit" id="spirit" min={1} max={5}/>
+                  <div className='flex flex-row m-auto gap-2'>
+                  </div>
                 </div>
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="power">Power </label>
-                  <input onChange={handleChange} value={form.stats.power} type="number" name="stats.power" id="power" min={1} max={5}/>
+                  <input onChange={handleChange} value={form.stats.power} className='text-center' type="number" name="stats.power" id="power" min={1} max={5}/>
                 </div>
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="toughness">Toughness </label>
-                  <input onChange={handleChange} value={form.stats.toughness} type="number" name="stats.toughness" id="toughness" min={1} max={5}/>
+                  <input onChange={handleChange} value={form.stats.toughness} className='text-center' type="number" name="stats.toughness" id="toughness" min={1} max={5}/>
                 </div>
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="ki">Ki </label>
-                  <input onChange={handleChange} value={form.stats.ki} type="number" name="stats.ki" id="ki" min={1} max={5}/>
+                  <input onChange={handleChange} value={form.stats.ki} className='text-center' type="number" name="stats.ki" id="ki" min={1} max={5}/>
                 </div>
                 <div className='flex flex-col '>
                   <label className='text-center' htmlFor="agility">Agility </label>
-                  <input onChange={handleChange} value={form.stats.agility} type="number" name="stats.agility" id="agility" min={1} max={5}/>
+                  <input onChange={handleChange} value={form.stats.agility} className='text-center' type="number" name="stats.agility" id="agility" min={1} max={5}/>
                 </div>
               </div>
+
+              <div>
+                    <p className='text-center'>Health</p>
+                  <div className='bg-white text-center py-2 px-4'>
+                        5 / 5
+                  </div>
+                </div>
+              <div>
+                    <p className='text-center'>Sparking</p>
+                  <div className='bg-white text-center py-2 px-4'>
+                        0 / 5
+                  </div>
+                </div>
+              <div>
+                    <p className='text-center'>{form.archetype} counter</p>
+                  <div className='bg-white text-center py-2 px-4'>
+                        3 / 3
+                  </div>
+                </div>
               <div className='mt-3 '>
                 <p className='text-center font-bold'>Equipment</p>
                 <div>

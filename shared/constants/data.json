@@ -1,0 +1,17 @@
+{
+  "CHARACTER_TYPES":{
+    "name": "Aspara", 
+    "level": 1, 
+    "origin": "saiyan", 
+    "archetype": "warrior", 
+    "pronouns":"he | him",
+    "bodyType": "Masculine", 
+    "height": "average", 
+    "description": "", 
+    "stats":{"mod": 3, "spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3}, 
+    "equipment":{"head":"Scouter", "body": "Saiyan Armor", "weapon": "none"}, 
+    "moves":["Ki Blast"], 
+    "inventory":["Scouter", "Saiyan Armor"], 
+    "forms":["Great Ape"]
+  }
+}
