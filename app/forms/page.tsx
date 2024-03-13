@@ -1,11 +1,12 @@
 'use client'
 
+import { FORM_TYPES } from '@/shared/constants'
 import React from 'react'
 
 export default function formPage() {
   return (
     <main>
-      <div>
+      <div className='mb-3'>
         <h1>Transformations are a change to a characters state that is reflected in the changing of stats or the manifestation fo passive or active abilities</h1>
         <div>Transformations can be an aura, the alteration of a physical characteristic or a full body change</div>
         <h2 className='font-bold'>Auras</h2>
@@ -18,6 +19,15 @@ export default function formPage() {
         <p>Great Ape</p>
         <p>Forms are at the high end. These changes have the most risk for reward, if the user {`can't`} keep up with the demand for a resource, exhaustion can set in fast and leave the user vulnerable.</p>
       </div>
+      <ul>
+      {FORM_TYPES.map((move: any)=>(
+          <li key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
+                <h2 className='font-bold'>{move.title}</h2>
+                <h3>Type: {move.type}</h3>
+                <p>Description {move.description}</p>
+          </li>
+              ))}
+      </ul>
     </main>
   )
 }

@@ -11,7 +11,7 @@ export default function movesPage() {
         <ul>
           {MOVE_TYPES.map((move: any)=>(
           <li key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
-                <h2>Title: {move.title}</h2>
+                <h2 className="font-bold">{move.title}</h2>
                 <h3>Type: {move.type}</h3>
                 <h4>Style: {move.style}</h4>
                 <p>Description {move.description}</p>
