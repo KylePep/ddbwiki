@@ -134,6 +134,57 @@
       "type": "item",
       "subType": "consumable",
       "description": "Revitalized the character that consumes it."
+    },
+    {
+      "id": 4,
+      "title": "Turtle Hermit Gi",
+      "type": "equipment",
+      "subType": "body",
+      "description": "Uniform worn by the turtle school."
+    },
+    {
+      "id": 5,
+      "title": "Power Pole",
+      "type": "equipment",
+      "subType": "weapon",
+      "description": "A pole capable of extending to great lengths."
+    }
+  ],
+  "ENEMY_TYPES": [
+    {
+      "id": 1,
+      "title": "Saibamen",
+      "type": "Basic"
+    },
+    {
+      "id": 2,
+      "title": "Pirate Robot",
+      "type": "Basic"
+    },
+    {
+      "id": 3,
+      "title": "Red Ribbon Soldier",
+      "type": "Basic"
+    },
+    {
+      "id": 4,
+      "title": "Red Ribbon Robot",
+      "type": "Basic"
+    },
+    {
+      "id": 5,
+      "title": "Raditz",
+      "type": "Boss"
+    },
+    {
+      "id": 6,
+      "title": "Nappa",
+      "type": "Boss"
+    },
+    {
+      "id": 7,
+      "title": "Vegeta",
+      "type": "Boss"
     }
   ]
 }

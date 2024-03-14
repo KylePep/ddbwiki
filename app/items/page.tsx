@@ -10,8 +10,9 @@ export default function page() {
           {ITEM_TYPES.map((move: any)=>(
           <li key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className="font-bold">{move.title}</h2>
-                <h3>Type: {move.type}</h3>
-                <h4>Sub Type: {move.subType}</h4>
+                <h3>Type: {move.type} 
+                <span> - {move.subType}</span>
+                </h3>
                 <p>Description: {move.description}</p>
           </li>
               ))}

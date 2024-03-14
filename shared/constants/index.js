@@ -6,3 +6,4 @@ export const ARCHETYPE_TYPES = data.ARCHETYPE_TYPES
 export const FORM_TYPES = data.FORM_TYPES
 export const ITEM_TYPES = data.ITEM_TYPES
 export const MOVE_TYPES = data.MOVE_TYPES
+export const ENEMY_TYPES = data.ENEMY_TYPES
