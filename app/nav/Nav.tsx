@@ -21,6 +21,7 @@ export default function Nav() {
         <Link href={"/moves"}>{pathName !=="/moves" ? `Moves` : `MOVES`}</Link>
         <Link href={"/items"}>{pathName !=="/items" ? `Items` : `ITEMS`}</Link>
         <Link href={"/forms"}>{pathName !=="/forms" ? `Forms` : `FORMS`}</Link>
+        <Link href={"/enemies"}>{pathName !=="/enemies" ? `Enemies` : `ENEMIES`}</Link>
         <Link href={"/sheet"}>{pathName !== "/sheet" ? `Sheets` : `SHEETS`}</Link>
       </div>
     </nav>

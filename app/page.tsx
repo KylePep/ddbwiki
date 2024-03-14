@@ -17,7 +17,7 @@ export default function Home() {
         <h2 className="pb-3">
           Here you can learn all about the interactive experience that indulges in the world of DragonBall!
         </h2>
-        <h3>
+        <h3 className="mb-5">
           <p className="mb-3 text-xl font-bold">ToDo List:</p>
           <ul className="list-decimal">
             <li>
