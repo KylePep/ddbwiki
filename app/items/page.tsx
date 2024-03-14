@@ -12,7 +12,7 @@ export default function page() {
                 <h2 className="font-bold">{move.title}</h2>
                 <h3>Type: {move.type}</h3>
                 <h4>Sub Type: {move.subType}</h4>
-                <p>Description {move.description}</p>
+                <p>Description: {move.description}</p>
           </li>
               ))}
         </ul>
