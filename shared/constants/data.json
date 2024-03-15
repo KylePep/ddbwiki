@@ -44,263 +44,67 @@
   "forms": ""
 }
 ],
-  "ARCHETYPE_TYPES":[
+"ARCHETYPE_TYPES":[
+  {
+    "id": 1,
+    "title": "Warrior",
+    "examples": "Goku | Vegeta",
+    "description": "The battle hungry archetype geared for high intensity combat."
+  },
+  {
+    "id": 2,
+    "title": "Support",
+    "examples": "Hercule | Chiaotzu | Krillin",
+    "description": "The comic relief archetype, helpful distractions and buff to the party."
+  },
+  {
+    "id": 3,
+    "title": "Striker",
+    "examples": "Gohan | Trunks",
+    "description": "An archetype capable of altering the battlefield and negating villains abilities."
+  },
+  {
+    "id": 4,
+    "title": "Tank",
+    "examples": "Piccolo | Tien",
+    "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others."
+  }
+],
+  "ENEMY_TYPES": [
     {
       "id": 1,
-      "title": "Warrior",
-      "examples": "Goku | Vegeta",
-      "description": "The battle hungry archetype geared for high intensity combat."
+      "title": "Saibamen",
+      "type": "Basic"
     },
     {
       "id": 2,
-      "title": "Support",
-      "examples": "Hercule | Chiaotzu | Krillin",
-      "description": "The comic relief archetype, helpful distractions and buff to the party."
+      "title": "Pirate Robot",
+      "type": "Basic"
     },
     {
       "id": 3,
-      "title": "Striker",
-      "examples": "Gohan | Trunks",
-      "description": "An archetype capable of altering the battlefield and negating villains abilities."
+      "title": "Red Ribbon Soldier",
+      "type": "Basic"
     },
     {
       "id": 4,
-      "title": "Tank",
-      "examples": "Piccolo | Tien",
-      "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others."
-    }
-  ],
-  "MOVE_TYPES":[
-    {
-      "id": 1,
-      "title": "Kamehameha",
-      "type": "attack",
-      "style": "energy",
-      "description": "An energy wave. The signature attack of the students of the Turtle School."
-    },
-    {
-      "id": 2,
-      "title": "Special Beam Cannon",
-      "type": "attack",
-      "style": "energy",
-      "description": "A concentrated beam attack that takes a long time to charge."
-    },
-    {
-      "id": 3,
-      "title": "Taunt",
-      "type": "support",
-      "style": "physical",
-      "description": "Making a funny face and a rude noise, draws the attention of the target."
-    },
-    {
-      "id": 4,
-      "title": "Meteor Combination",
-      "type": "attack",
-      "style": "physical",
-      "description": "Goku's combination attack"
+      "title": "Red Ribbon Robot",
+      "type": "Basic"
     },
     {
       "id": 5,
-      "title": "Energy Wave",
-      "type": "attack",
-      "style": "energy",
-      "description": "A basic energy wave attack"
+      "title": "Raditz",
+      "type": "Boss"
     },
     {
       "id": 6,
-      "title": "After-image Technique",
-      "type": "support",
-      "style": "physical",
-      "description": "Increases evasion for X turns"
+      "title": "Nappa",
+      "type": "Boss"
     },
     {
       "id": 7,
-      "title": "Spirit Bomb",
-      "type": "attack",
-      "style": "energy",
-      "description": "Takes a while to charge up but then unleashes a powerful attack"
-    },
-    {
-      "id": 8,
-      "title": "Rush",
-      "type": "attack",
-      "style": "physical",
-      "description": "A quick melee attack"
-    },
-    {
-      "id": 9,
-      "title": "Masenko",
-      "type": "attack",
-      "style": "energy",
-      "description": "Demon clan energy wave"
-    },
-    {
-      "id": 10,
-      "title": "Blast Barrage",
-      "type": "attack",
-      "style": "energy",
-      "description": "Unleash a barrage of energy blasts at the opponent"
-    },
-    {
-      "id": 11,
-      "title": "Anger",
-      "type": "support",
-      "style": "physical",
-      "description": "Tap into dormant anger"
-    },
-    {
-      "id": 12,
-      "title": "Miracle Full Force",
-      "type": "attack",
-      "style": "physical, energy",
-      "description": "Rage filled combo attack"
-    },
-    {
-      "id": 13,
-      "title": "Evil Assault",
-      "type": "attack",
-      "style": "physical",
-      "description": "Demon clan melee attack"
-    },
-    {
-      "id": 14,
-      "title": "Destructive Wave",
-      "type": "attack",
-      "style": "energy",
-      "description": "Demon clan energy wave"
-    },
-    {
-      "id": 15,
-      "title": "Light Grenade",
-      "type": "attack",
-      "style": "energy",
-      "description": "Fire an explosive energy ball at the target"
-    },
-    {
-      "id": 16,
-      "title": "Super Explosive Wave",
-      "type": "attack",
-      "style": "energy",
-      "description": "Attack all enemies with an explosive wave."
-    },
-    {
-      "id": 17,
-      "title": "Regeneration",
-      "type": "support",
-      "style": "energy",
-      "description": "Regenerate limbs"
-    },
-    {
-      "id": 18,
-      "title": "Hellzone Grenade",
-      "type": "attack",
-      "style": "energy",
-      "description": "Bigger version of light grenade"
-    },
-    {
-      "id": 19,
-      "title": "Fierce Attack",
-      "type": "attack",
-      "style": "energy",
-      "description": "Tien Ki attack"
-    },
-    {
-      "id": 20,
-      "title": "Tri Beam",
-      "type": "attack",
-      "style": "energy",
-      "description": "An energy beam fired in the shape of a triangle"
-    },
-    {
-      "id": 21,
-      "title": "Multi-Form Attack",
-      "type": "attack",
-      "style": "physical",
-      "description": "Arms? or several selfs?"
-    },
-    {
-      "id": 22,
-      "title": "Solar Flare",
-      "type": "support",
-      "style": "energy",
-      "description": "Emit a blinding light infront of self to blind a target at close range"
-    },
-    {
-      "id": 23,
-      "title": "Evil Containment Wave",
-      "type": "support",
-      "style": "energy",
-      "description": "attempt to capture an opponent inside of a container"
-    },
-    {
-      "id": 24,
-      "title": "Rengeki",
-      "type": "attack",
-      "style": "physical",
-      "description": "Krillin Melee attack"
-    },
-    {
-      "id": 25,
-      "title": "Scatter Energy Wave",
-      "type": "attack",
-      "style": "energy",
-      "description": "Fire an energy wave that surprises the enemy by splitting apart into several projectiles"
-    },
-    {
-      "id": 26,
-      "title": "Destructo-Disc",
-      "type": "attack",
-      "style": "energy",
-      "description": "Release an energy disc capable of cutting anything at the opponent"
-    },
-    {
-      "id": 27,
-      "title": "Y-Yajirobe?!",
-      "type": "support",
-      "style": "physical",
-      "description": "Yajirobe springs into action attack at the most opportune, least risky time for a devastating strike."
-    },
-    {
-      "id": 28,
-      "title": "Wolf Hurricane",
-      "type": "attack",
-      "style": "physical",
-      "description": "Yamcha melee attack"
-    },
-    {
-      "id": 29,
-      "title": "Wolf Fang Fist",
-      "type": "attack",
-      "style": "physical",
-      "description": "Embody a fierce wolf and unleash a barrage of strikes"
-    },
-    {
-      "id": 30,
-      "title": "Spriti Ball",
-      "type": "attack",
-      "style": "energy",
-      "description": "An ball of energy the user has complete control over."
-    },
-    {
-      "id": 31,
-      "title": "Neo Wolf Fang Fist",
-      "type": "attack",
-      "style": "physical",
-      "description": "Ultimate version of wolf fang fist"
-    },
-    {
-      "id": 32,
-      "title": "Guard",
-      "type": "support",
-      "style": "physical",
-      "description": "Guard an incoming attack"
-    },
-    {
-      "id": 33,
-      "title": "Neo Tri-Beam",
-      "type": "attack",
-      "style": "energy",
-      "description": "Ultimate tri beam attack"
+      "title": "Vegeta",
+      "type": "Boss"
     }
   ],
   "FORM_TYPES":[
@@ -358,43 +162,6 @@
       "type": "equipment",
       "subType": "weapon",
       "description": "A pole capable of extending to great lengths."
-    }
-  ],
-  "ENEMY_TYPES": [
-    {
-      "id": 1,
-      "title": "Saibamen",
-      "type": "Basic"
-    },
-    {
-      "id": 2,
-      "title": "Pirate Robot",
-      "type": "Basic"
-    },
-    {
-      "id": 3,
-      "title": "Red Ribbon Soldier",
-      "type": "Basic"
-    },
-    {
-      "id": 4,
-      "title": "Red Ribbon Robot",
-      "type": "Basic"
-    },
-    {
-      "id": 5,
-      "title": "Raditz",
-      "type": "Boss"
-    },
-    {
-      "id": 6,
-      "title": "Nappa",
-      "type": "Boss"
-    },
-    {
-      "id": 7,
-      "title": "Vegeta",
-      "type": "Boss"
     }
   ]
 }

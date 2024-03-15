@@ -27,8 +27,8 @@ export default function movesPage() {
   return (
     <main>
       <div>
-        <h1 className='mb-3'>A list of moves in D&DB {sortedBy}</h1>
-        <div className="flex justify-between my-3 font-bold bg-blue-400 px-4 py-2 rounded-md">
+        <h1 className='mb-3'>The moves a character can perform on their adventure in Dungeons and DragonBalls!</h1>
+        <div className="flex justify-between my-3 font-bold bg-blue-400 px-4 py-2 rounded-md ">
           {["Attack", "Support", "Physical", "Energy"].map((sort: any) => (
             <button className="hover:text-white" onClick={()=>sortBy(sort)} key={sort}>{sort}</button>
           ))}
@@ -36,7 +36,6 @@ export default function movesPage() {
         <div>
           {MOVES.map((move: any)=>(
           <div key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
-                {move.id}
                 <h2 className="font-bold">{move.title}</h2>
                 <h3>Type: {move.type}</h3>
                 <h4>Style: {move.style}</h4>
