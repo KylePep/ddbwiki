@@ -5,6 +5,19 @@ import React, { useState } from 'react'
 
 export default function movesPage() {
   const [sortedBy, setSortedBy] = useState("none")
+  let MOVES = MOVE_TYPES
+
+  if(sortedBy == "none"){
+    MOVES = MOVE_TYPES
+  } else if (sortedBy == "Attack"){
+    MOVES = MOVE_TYPES.filter((m)=> m.type == "attack")
+  } else if (sortedBy == "Support"){
+    MOVES = MOVE_TYPES.filter((m)=>m.type == "support")
+  } else if (sortedBy == "Physical"){
+    MOVES = MOVE_TYPES.filter((m)=>m.style == "physical")
+  } else if (sortedBy == "Energy"){
+    MOVES = MOVE_TYPES.filter((m)=>m.style == "energy")
+  }
 
   const sortBy = ( sortBy: string) =>{
     if (sortedBy === sortBy) sortBy = "none"
@@ -21,8 +34,9 @@ export default function movesPage() {
           ))}
         </div>
         <div>
-          {MOVE_TYPES.map((move: any)=>(
+          {MOVES.map((move: any)=>(
           <div key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
+                {move.id}
                 <h2 className="font-bold">{move.title}</h2>
                 <h3>Type: {move.type}</h3>
                 <h4>Style: {move.style}</h4>

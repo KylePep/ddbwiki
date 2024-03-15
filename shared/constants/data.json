@@ -233,13 +233,6 @@
       "description": "attempt to capture an opponent inside of a container"
     },
     {
-      "id": 23,
-      "title": "Neo Tri-Beam",
-      "type": "attack",
-      "style": "energy",
-      "description": "Ultimate tri beam attack"
-    },
-    {
       "id": 24,
       "title": "Rengeki",
       "type": "attack",
@@ -301,6 +294,13 @@
       "type": "support",
       "style": "physical",
       "description": "Guard an incoming attack"
+    },
+    {
+      "id": 33,
+      "title": "Neo Tri-Beam",
+      "type": "attack",
+      "style": "energy",
+      "description": "Ultimate tri beam attack"
     }
   ],
   "FORM_TYPES":[
