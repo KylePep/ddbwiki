@@ -10,7 +10,8 @@ export default function page() {
           {ENEMY_TYPES.map((move: any)=>(
           <li key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className="font-bold">{move.title}</h2>
-                <h3>Type: {move.type}</h3>
+                <h3><span className='font-semibold'>Type: </span>{move.type}</h3>
+                <h4><span className='font-semibold'>Description: </span></h4>
           </li>
               ))}
         </ul>

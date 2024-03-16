@@ -37,9 +37,9 @@ export default function movesPage() {
           {MOVES.map((move: any)=>(
           <div key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className="font-bold">{move.title}</h2>
-                <h3>Type: {move.type}</h3>
-                <h4>Style: {move.style}</h4>
-                <p>Description {move.description}</p>
+                <h3><span className="font-semibold">Type: </span>{move.type}</h3>
+                <h4><span className="font-semibold">Style: </span> {move.style}</h4>
+                <p><span className="font-semibold">Description: </span>{move.description}</p>
           </div>
               ))}
         </div>
