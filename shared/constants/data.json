@@ -14,35 +14,43 @@
     "inventory":["Scouter", "Saiyan Armor"], 
     "forms":["Great Ape"]
   },
-  "ORIGIN_TYPES":[
-    {
-      "id": 1,
-      "title": "Saiyan",
-      "description": "A Race of space barbarians with the power to transform into Great Apes. Huge appetites.",
-      "racialTraits": "+Power, -Spirit",
-      "forms": "Great Ape"
+"ORIGIN_TYPES":[
+  {
+    "id": 1,
+    "title": "Saiyan",
+    "description": "A Race of space barbarians with the power to transform into Great Apes. Huge appetites.",
+    "positiveTrait": "power",
+    "negativeTrait": "spirit",
+    "forms": "Great Ape",
+    "moves": ["this"]
   },
-    {
-      "id": 2,
-      "title": "Half Saiyan",
-      "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with interest in battle. Huge Appetites.",
-      "racialTraits": "+Ki, -Toughness",
-      "forms": "Great Ape"
+  {
+    "id": 2,
+    "title": "Half Saiyan",
+    "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with interest in battle. Huge Appetites.",
+    "positiveTrait": "ki",
+    "negativeTrait": "toughness",
+    "forms": "Great Ape",
+    "moves": ["that"]
   },
   {
     "id": 3,
     "title": "Earthling",
     "description": "Humans capable of harnessing Ki.",
-    "racialTraits": "+Spirit, -Ki",
-    "forms": "Technology(item)"
-},
-{
-  "id": 4,
-  "title": "Namekian",
-  "description": "Humanoids with plant and slug-like characteristics, including green skin and antennae. Can survive on only water.",
-  "racialTraits": "+Toughness, -Agility, Regeneration",
-  "forms": ""
-}
+    "positiveTrait": "spirit",
+    "negativeTrait": "kit",
+    "forms": "Technology(item)",
+    "moves": ["other"]
+  },
+  {
+    "id": 4,
+    "title": "Namekian",
+    "description": "Humanoids with plant and slug-like characteristics, including green skin and antennae. Can survive on only water. Regeneration",
+    "positiveTrait": "toughness",
+    "negativeTrait": "agility",
+    "forms": "",
+    "moves": ["Regeneration"]
+  }
 ],
 "ARCHETYPE_TYPES":[
   {
