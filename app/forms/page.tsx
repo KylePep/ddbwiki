@@ -19,15 +19,15 @@ export default function formPage() {
         <p>Great Ape</p>
         <p>Forms are at the high end. These changes have the most risk for reward, if the user {`can't`} keep up with the demand for a resource, exhaustion can set in fast and leave the user vulnerable.</p>
       </div>
-      <ul>
+      <div>
       {FORM_TYPES.map((move: any)=>(
-          <li key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
+          <div key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className='font-bold'>{move.title}</h2>
                 <h3><span className='font-semibold'>Type: </span>{move.type}</h3>
                 <p><span className='font-semibold'>Description: </span>{move.description}</p>
-          </li>
+          </div>
               ))}
-      </ul>
+      </div>
     </main>
   )
 }

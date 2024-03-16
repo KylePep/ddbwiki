@@ -7,15 +7,15 @@ export default function archetypesPage() {
   return (
     <main>
           <h1 className='mb-4'>The classes of Dungeons & DragonBalls</h1>
-      <ul>
+      <div>
       {ARCHETYPE_TYPES.map((arch: any)=>(
-          <li key={arch.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
+          <div key={arch.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className='font-bold'>{arch.title}</h2>
                 <h3>{arch.examples}</h3>
                 <p><span className='font-semibold'>Description: </span> {arch.description}</p>
-          </li>
+          </div>
               ))}
-      </ul>
+      </div>
     </main>
   )
 }
