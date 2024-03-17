@@ -21,7 +21,7 @@
     "description": "A Race of space barbarians with the power to transform into Great Apes. Huge appetites.",
     "positiveTrait": "power",
     "negativeTrait": "spirit",
-    "forms": "Great Ape",
+    "forms": [1],
     "moves": []
   },
   {
@@ -30,16 +30,16 @@
     "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with interest in battle. Huge Appetites.",
     "positiveTrait": "ki",
     "negativeTrait": "toughness",
-    "forms": "Great Ape",
+    "forms": [1],
     "moves": []
   },
   {
     "id": 3,
     "title": "Earthling",
-    "description": "Humans capable of harnessing Ki.",
+    "description": "Humans capable of harnessing Ki. Technology(item)",
     "positiveTrait": "spirit",
     "negativeTrait": "kit",
-    "forms": "Technology(item)",
+    "forms": [],
     "moves": []
   },
   {
