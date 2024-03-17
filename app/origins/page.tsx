@@ -19,13 +19,13 @@ export default function originsPage() {
   return (
     <main>
       <div>
-        <h1 className='mb-3'>
+        <h1 className='mb-3 text-lg'>
         In Dungeons and DragonBalls, Origins are the heritage of characters and their backgrounds. Origins have traits and may have transformations.
         </h1>
           <div>
           {ORIGIN_TYPES.map((origin: any)=>(
           <div key={origin.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
-                <h2 className='font-bold mb-1'>{origin.title}</h2>
+                <h2 className='font-bold mb-1 text-lg'>{origin.title}</h2>
                 <p className='capitalize'><span className='font-semibold'>Description: </span> {origin.description}</p>
                 <h3 className='capitalize'><span className='font-semibold'>Origin traits: </span> + {origin.positiveTrait} | - {origin.negativeTrait}</h3>
                 { origin.forms.length != 0 ? (

@@ -57,25 +57,29 @@
     "id": 1,
     "title": "Warrior",
     "examples": "Goku | Vegeta",
-    "description": "The battle hungry archetype geared for high intensity combat."
+    "description": "The battle hungry archetype geared for high intensity combat.",
+    "moves": [5]
   },
   {
     "id": 2,
     "title": "Support",
     "examples": "Hercule | Chiaotzu | Krillin",
-    "description": "The comic relief archetype, helpful distractions and buff to the party."
+    "description": "The comic relief archetype, helpful distractions and buff to the party.",
+    "moves": [3]
   },
   {
     "id": 3,
     "title": "Striker",
     "examples": "Gohan | Trunks",
-    "description": "An archetype capable of altering the battlefield and negating villains abilities."
+    "description": "An archetype capable of altering the battlefield and negating villains abilities.",
+    "moves": [8]
   },
   {
     "id": 4,
     "title": "Tank",
     "examples": "Piccolo | Tien",
-    "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others."
+    "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others.",
+    "moves": [32]
   }
 ],
   "ENEMY_TYPES": [
