@@ -9,10 +9,10 @@ interface filterListProps{
 function FilterList({LIST_TYPE, categoryFilterArr} : filterListProps) {
   const [sortedBy, setSortedBy] = useState("none")
   
-  const filters = categoryFilterArr.map(str=> {
+  const filterLables = categoryFilterArr.map(str=> {
     const words = str.split('.')
-    console.log(filters)
-    return words[1]
+    const word = words[1].charAt(0).toUpperCase() + words[1].slice(1)
+    return word
   })
 
   // let LIST = LIST_TYPE
@@ -40,7 +40,7 @@ function FilterList({LIST_TYPE, categoryFilterArr} : filterListProps) {
 
   return (
     <div className="flex justify-around my-3 font-bold bg-blue-400 px-4 py-2 rounded-md ">
-    {filters.map((sort: any, i) => (
+    {filterLables.map((sort: any, i) => (
       <button className="hover:text-white" onClick={()=>sortBy(sort)} key={i}>{sort}</button>
     ))}
   </div>

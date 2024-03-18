@@ -1,7 +1,7 @@
 'use client'
 import { ITEM_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
-import FilterList from '../components/filterList'
+import FilterList from '../components/FilterList'
 
 export default function page() {
   const [sortedBy, setSortedBy] = useState("none")
@@ -37,7 +37,8 @@ export default function page() {
             <button className="hover:text-white" onClick={()=>sortBy(sort)} key={sort}>{sort}</button>
           ))}
         </div>
-        <FilterList LIST_TYPE={ITEM_TYPES} categoryFilterArr={["type.item", "type.head", "subType.body", "subType.weapon", "subType.consumable"]} />
+        <FilterList LIST_TYPE={ITEM_TYPES} categoryFilterArr={[ "type.equipment", "type.item", "type.head", "subType.body", "subType.weapon", "subType.consumable"
+          ]} />
         <div>
           {ITEMS.map((move: any)=>(
           <div key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
