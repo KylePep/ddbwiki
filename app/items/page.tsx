@@ -31,7 +31,7 @@ export default function page() {
 <main>
 <div>
         <h1 className='mb-3'>Items to be equipped or used during your adventures in Dungeons and DragonBalls!</h1>
-        <div className="flex justify-between my-3 font-bold bg-blue-400 px-4 py-2 rounded-md ">
+        <div className="flex justify-around my-3 font-bold bg-blue-400 px-4 py-2 rounded-md ">
           {["Equipment", "Item", "Head", "Body", "Weapon", "Consumable"].map((sort: any) => (
             <button className="hover:text-white" onClick={()=>sortBy(sort)} key={sort}>{sort}</button>
           ))}
