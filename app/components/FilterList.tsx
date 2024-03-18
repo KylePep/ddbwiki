@@ -1,4 +1,4 @@
-import { split } from 'postcss/lib/list'
+
 import React, { useState } from 'react'
 
 interface filterListProps{
@@ -15,23 +15,33 @@ function FilterList({LIST_TYPE, categoryFilterArr} : filterListProps) {
     return word
   })
 
-  // let LIST = LIST_TYPE
+  let LIST = LIST_TYPE
 
-  // if(sortedBy == "none"){
-  //   LIST = LIST_TYPE
-  // } else if (sortedBy == "Equipment"){
-  //   LIST = LIST_TYPE.filter((m)=> m.type == "equipment")
-  // } else if (sortedBy == "Item"){
-  //   LIST = LIST_TYPE.filter((m)=>m.type == "item")
-  // } else if (sortedBy == "Head"){
-  //   LIST = LIST_TYPE.filter((m)=>m.subType == "head")
-  // } else if (sortedBy == "Body"){
-  //   LIST = LIST_TYPE.filter((m)=>m.subType == "body")
-  // } else if (sortedBy == "Weapon"){
-  //   LIST = LIST_TYPE.filter((m)=>m.subType == "weapon")
-  // } else if (sortedBy == "Consumable"){
-  //   LIST = LIST_TYPE.filter((m)=>m.subType == "consumable")
-  // }
+if (sortedBy !== "none"){
+    categoryFilterArr.forEach(str => {
+      const words = str.split('.')
+      const category = words[0]
+      const filter = words[1]
+    if (sortedBy.toLowerCase() === filter){
+        LIST = LIST_TYPE.filter((l) => l[category] == filter)
+        console.log('[Cat]', category, '[Filt]er', filter, '[LIST]',LIST)
+    }
+  });
+} else {
+  LIST = LIST_TYPE
+}
+
+// if(sortedBy == "none"){
+//   MOVES = MOVE_TYPES
+// } else if (sortedBy == "Attack"){
+//   MOVES = MOVE_TYPES.filter((m)=> m.type == "attack")
+// } else if (sortedBy == "Support"){
+//   MOVES = MOVE_TYPES.filter((m)=>m.type == "support")
+// } else if (sortedBy == "Physical"){
+//   MOVES = MOVE_TYPES.filter((m)=>m.style == "physical")
+// } else if (sortedBy == "Energy"){
+//   MOVES = MOVE_TYPES.filter((m)=>m.style == "energy")
+// }
 
   const sortBy = ( sortBy: string) =>{
     if (sortedBy === sortBy) sortBy = "none"
