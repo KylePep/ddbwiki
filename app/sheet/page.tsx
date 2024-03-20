@@ -1,17 +1,20 @@
 'use client'
 
 import React, { useState } from 'react'
-import { MdEdit } from "react-icons/md";
 import Modal from '../components/Modal';
 import { CHARACTER_TYPES } from "../../shared/constants/index";
 import Stats from './Stats';
 import Points from './Points';
 import Equipment from './Equipment';
 import Attributes from './Attributes';
+import Moves from './Moves';
+import Forms from './Forms';
+import Items from './Items';
+import Description from './Description';
+import Name from './Name';
 
 
 export default function page() {
-  const [toggle, setToggle] = useState(false)
   const [form, setForm] = useState(CHARACTER_TYPES)
 
   const handleChange = (e) => {
@@ -76,14 +79,7 @@ export default function page() {
                 Dungeons & DragonBalls Character Sheet
               </p>
               {/* NAME */}
-              <div className='flex flex-col items-center'>
-                <div className='flex items-center gap-2'>
-                  <div className='my-5 text-lg text-center font-bold'>
-                        {form.name}
-                  </div>
-                    <MdEdit onClick={(e) => {setToggle(true)}} className='hover:cursor-pointer'/>
-                </div>
-              </div>
+                <Name form={form}/>
               {/* NAME */}
               <div className='grid grid-rows-1 grid-flow-col'>
             <div className='pe-6'>
@@ -91,38 +87,15 @@ export default function page() {
                 <Attributes form={form} handleChange={handleChange}/>
 
               <div className='mt-4'>
-                <div>
-                    <p className='font-bold'>Moves</p>
-                  <div className='bg-white me-10 py-2'>
-                    <ul>
-                      {form.moves.map((move: any)=> (
-                      <li key={move}>{move}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div>
-                    <p className='font-bold'>Forms</p>
-                  <div className='bg-white me-10 py-2'>
-                    <ul>
-                      <li>Great Ape</li>
-                    </ul>
-                  </div>
-                </div>
-                <div>
-                    <p className='font-bold'>Inventory</p>
-                  <div className='bg-white me-10 py-2'>
-                    <ul>
-                      {form.inventory.map((item: any)=>(
-                      <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className='flex flex-col'>
-                  <label className='font-bold' >Description</label>
-                  <textarea onChange={handleChange} value={form.description} className='resize-none me-10 px-4' name="description" id="description" cols={30} rows={4} placeholder='Provide a brief description of your character here...'></textarea>
-                </div>
+
+                  <Moves form={form} /> 
+
+                  <Forms form={form} />
+
+                  <Items form={form}/>
+
+                <Description form={form} handleChange={handleChange}/>
+
               </div>
             </div>
 
@@ -142,7 +115,7 @@ export default function page() {
         </form>
         </div>
       </div>
-      {toggle && <Modal name = {form.name} setToggle = {setToggle} />}
+
     </>
   )
 }
