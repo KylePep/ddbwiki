@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import Modal from '../components/Modal';
 import { CHARACTER_TYPES } from "../../shared/constants/index";
 import Stats from './Stats';
 import Points from './Points';
@@ -66,22 +65,17 @@ export default function page() {
   }
 
   return (
-    <>
-    
-    <div>
-    </div>
-
-      <div>
-        <div className='bg-gray-100  px-8 py-4 rounded'>
-          <form onSubmit={submitForm}>
+  <div className='bg-gray-100  px-8 py-4 rounded-md'>
 
               <p className='mb-5 text-lg font-bold'>
                 Dungeons & DragonBalls Character Sheet
               </p>
-              {/* NAME */}
+
+          <form onSubmit={submitForm}>
+
                 <Name form={form}/>
-              {/* NAME */}
-              <div className='grid grid-rows-1 grid-flow-col'>
+
+          <div className='grid grid-rows-1 grid-flow-col'>
             <div className='pe-6'>
 
                 <Attributes form={form} handleChange={handleChange}/>
@@ -101,6 +95,7 @@ export default function page() {
 
 
             <div className='flex flex-col border-solid border-s-2 border-black-500 ps-6'>
+
                 <Stats form={form} handleStatsChange={handleChange}/>
 
                 <Points form={form}/>
@@ -112,10 +107,7 @@ export default function page() {
 
           <button type='submit' className='bg-blue-400 hover:bg-blue-200 rounded-md my-4 px-4 py-2'>Create Character</button>
 
-        </form>
-        </div>
-      </div>
-
-    </>
+      </form>
+  </div>
   )
 }

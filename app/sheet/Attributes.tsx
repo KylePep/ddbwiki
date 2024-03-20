@@ -1,4 +1,6 @@
 import React from 'react'
+import { ORIGIN_TYPES } from '@/shared/constants'
+import { ARCHETYPE_TYPES } from '@/shared/constants'
 interface formProps{
   form: any
   handleChange: any
@@ -7,7 +9,7 @@ interface formProps{
 export default function Attributes({form, handleChange}:formProps) {
   return (
     <div>
-           <div className='grid grid-cols-2 grid-flow-row gap-2'>
+    <div className='grid grid-cols-2 grid-flow-row gap-2'>
 
 <div>
   <div>
@@ -22,10 +24,9 @@ export default function Attributes({form, handleChange}:formProps) {
     <label htmlFor="name" className='font-bold'>Origin </label>
       <div>
         <select onChange={handleChange} value={form.origin} name="origin" id="origin">
-          <option value="saiyan">Saiyan</option>
-          <option value="halfSaiyan">Half Saiyan</option>
-          <option value="earthling">Earthling</option>
-          <option value="namekian">Namekian</option>
+          {ORIGIN_TYPES.map((origin: any)=> (
+        <option key={origin.title}>{origin.title}</option>
+        ))}
         </select>
     </div>
   </div>
@@ -42,11 +43,10 @@ export default function Attributes({form, handleChange}:formProps) {
 <div>
     <label htmlFor="name" className='font-bold'>Archetype </label>
       <div>
-        <select onChange={handleChange} value={form.archetype} name="archetype" id="archetype">
-          <option value="warrior">Warrior</option>
-          <option value="support">Support</option>
-          <option value="striker">Striker</option>
-          <option value="tank">Tank</option>
+      <select onChange={handleChange} value={form.archetype} name="archetype" id="archetype">
+          {ARCHETYPE_TYPES.map((arch: any)=> (
+        <option key={arch.title}>{arch.title}</option>
+        ))}
         </select>
     </div>
   </div>

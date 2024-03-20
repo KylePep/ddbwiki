@@ -2,8 +2,8 @@
   "CHARACTER_TYPES":{
     "name": "Aspara", 
     "level": 1, 
-    "origin": "saiyan", 
-    "archetype": "warrior", 
+    "origin": "Saiyan", 
+    "archetype": "Warrior", 
     "pronouns":"he | him",
     "bodyType": "Masculine", 
     "height": "average", 
@@ -48,7 +48,7 @@
     "description": "Humanoids with plant and slug-like characteristics, including green skin and antennae. Can survive on only water. Regeneration",
     "positiveTrait": "toughness",
     "negativeTrait": "agility",
-    "forms": "",
+    "forms": [],
     "moves": [17]
   }
 ],
