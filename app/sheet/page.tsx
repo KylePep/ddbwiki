@@ -5,6 +5,8 @@ import { MdEdit } from "react-icons/md";
 import Modal from '../components/Modal';
 import { CHARACTER_TYPES } from "../../shared/constants/index";
 import Stats from './Stats';
+import Points from './Points';
+import Equipment from './Equipment';
 
 
 export default function page() {
@@ -197,51 +199,15 @@ export default function page() {
 
 
             <div className='flex flex-col border-solid border-s-2 border-black-500 ps-6'>
-              {/* STATS */}
-                  <Stats form={form} handleStatsChange={handleChange}/>
-              {/* StTATS*/}
+                <Stats form={form} handleStatsChange={handleChange}/>
 
-              <div>
-                    <p className='text-center'>Health</p>
-                  <div className='bg-white text-center py-2 px-4'>
-                        5 / 5
-                  </div>
-                </div>
-              <div>
-                    <p className='text-center'>Sparking</p>
-                  <div className='bg-white text-center py-2 px-4'>
-                        0 / 5
-                  </div>
-                </div>
-              <div>
-                    <p className='text-center'>{form.archetype} counter</p>
-                  <div className='bg-white text-center py-2 px-4'>
-                        3 / 3
-                  </div>
-                </div>
-              <div className='mt-3 '>
-                <p className='text-center font-bold'>Equipment</p>
-                <div>
-                    <p className='text-center'>Head</p>
-                  <div className='bg-white py-2 px-4'>
-                    {form.equipment.head}
-                  </div>
-                </div>
-                <div>
-                    <p className='text-center'>Body</p>
-                  <div className='bg-white py-2 px-4'>
-                    {form.equipment.body}
-                  </div>
-                </div>
-                <div>
-                    <p className='text-center'>Weapon</p>
-                  <div className='bg-white py-2 px-4'>
-                    {form.equipment.weapon}
-                  </div>
-                </div>
-              </div>
+                <Points form={form}/>
+
+                <Equipment form={form}/>
+
             </div>
           </div>
+
           <button type='submit' className='bg-blue-400 hover:bg-blue-200 rounded-md my-4 px-4 py-2'>Create Character</button>
 
         </form>
