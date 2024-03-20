@@ -2,25 +2,11 @@
 
 import { FORM_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
+import FilterList from '../components/FilterList'
 
 export default function formPage() {
-  const [sortedBy, setSortedBy] = useState("none")
-  let FORMS = FORM_TYPES
+  const [list, setList] = useState(FORM_TYPES)
 
-  if(sortedBy == "none"){
-    FORMS = FORM_TYPES
-  } else if (sortedBy == "Form"){
-    FORMS = FORM_TYPES.filter((m)=> m.type == "form")
-  } else if (sortedBy == "Alteration"){
-    FORMS = FORM_TYPES.filter((m)=>m.type == "alteration")
-  } else if (sortedBy == "Aura"){
-    FORMS = FORM_TYPES.filter((m)=>m.type == "aura")
-  } 
-
-  const sortBy = ( sortBy: string) =>{
-    if (sortedBy === sortBy) sortBy = "none"
-    setSortedBy(sortBy)
-  }
   return (
     <main>
       <div className='mb-3'>
@@ -36,13 +22,9 @@ export default function formPage() {
         <p>Great Ape</p>
         <p>Forms are at the high end. These changes have the most risk for reward, if the user {`can't`} keep up with the demand for a resource, exhaustion can set in fast and leave the user vulnerable.</p>
       </div>
-      <div className="flex justify-around my-3 font-bold bg-blue-400 px-4 py-2 rounded-md ">
-          {["Form", "Alteration", "Aura"].map((sort: any) => (
-            <button className="hover:text-white" onClick={()=>sortBy(sort)} key={sort}>{sort}</button>
-          ))}
-        </div>
+      <FilterList LIST_TYPE={FORM_TYPES} list={list} setList={setList} categoryFilterArr={["type.form", "type.alteration", "type.aura"]} />
       <div>
-      {FORMS.map((form: any)=>(
+      {list.map((form: any)=>(
           <div key={form.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className='font-bold'>{form.title}</h2>
                 <h3><span className='font-semibold'>Type: </span>{form.type}</h3>
