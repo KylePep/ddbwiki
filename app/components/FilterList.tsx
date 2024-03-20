@@ -37,7 +37,7 @@ function FilterList({LIST_TYPE, categoryFilterArr, setList, list} : filterListPr
     if (sortBy !== "none"){
       categoryFilterArr.forEach(str => {
         const words = str.split('.')
-        const category = words[0]
+        const category = words[0] as keyof ListItem;
         const filter = words[1]
       if (sortBy.toLowerCase() === filter){
           newList = LIST_TYPE.filter((l) => l[category] == filter)
@@ -53,25 +53,16 @@ function FilterList({LIST_TYPE, categoryFilterArr, setList, list} : filterListPr
   return (
     <div>
       <div className="flex justify-around my-3 font-bold bg-blue-400 px-4 py-2 rounded-md ">
-      {filterLables.map((sort: any, i) => (
-        <button className="hover:text-white" onClick={()=>sortBy(sort)} key={i}>{sort}</button>
+      {filterLables.map((sort: string, i) => (
+        <button 
+        className={`hover:text-white ${sortedBy === sort ? 'capitalize' : ''}`}
+        onClick={()=>sortBy(sort)} 
+        key={i}
+        >
+          {sortedBy != `${sort}` ? `${sort}` : `${sort.toUpperCase()}`}
+          </button>
       ))}
-    </div>
-    <div className='flex justify-between'>
-    <div>{sortedBy}</div>
-        <div>
-
-      {list.map((sort: any, i) => (
-        <div className=""key={i}>{sort.title}</div>
-      ))}
-        </div>
-        <div>
-      {LIST_TYPE.map((sort: any, i) => (
-        <div className="text-red-500"key={i}>{sort.title}</div>
-      ))}
-
-        </div>
-    </div>
+      </div>
     </div>
     )
 }
