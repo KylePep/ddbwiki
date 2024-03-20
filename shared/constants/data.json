@@ -7,7 +7,7 @@
     "pronouns":"he | him",
     "bodyType": "Masculine", 
     "height": "average", 
-    "description": "", 
+    "description": "description", 
     "stats":{"mod": 3, "spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3}, 
     "equipment":{"head":"Scouter", "body": "Saiyan Armor", "weapon": "none"}, 
     "moves":["Ki Blast"], 
