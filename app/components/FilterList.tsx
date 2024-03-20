@@ -1,19 +1,20 @@
 
 import React, { useState } from 'react'
 
-interface ListItem {
-  id: number;
-  title: string;
-  type: string;
-  subType: string;
-  description: string;
-}
+// interface ListItem {
+//   id: number;
+//   title: string;
+//   type: string;
+//   subType?: string;
+//   style?: string;
+//   description: string;
+// }
 
 interface filterListProps{
-  LIST_TYPE: ListItem[],
+  LIST_TYPE: any[],
   categoryFilterArr: string[],
-  setList: (list: ListItem[]) => any,
-  list: (ListItem[])
+  setList: (list: any[]) => any,
+  list: any[]
 }
 
 function FilterList({LIST_TYPE, categoryFilterArr, setList, list} : filterListProps) {
@@ -37,7 +38,7 @@ function FilterList({LIST_TYPE, categoryFilterArr, setList, list} : filterListPr
     if (sortBy !== "none"){
       categoryFilterArr.forEach(str => {
         const words = str.split('.')
-        const category = words[0] as keyof ListItem;
+        const category = words[0] as keyof object;
         const filter = words[1]
       if (sortBy.toLowerCase() === filter){
           newList = LIST_TYPE.filter((l) => l[category] == filter)
