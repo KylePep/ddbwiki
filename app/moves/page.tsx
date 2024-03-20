@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 
 export default function movesPage() {
   const [sortedBy, setSortedBy] = useState("none")
+  const [list, setList] = useState(MOVE_TYPES)
   let MOVES = MOVE_TYPES
 
   if(sortedBy == "none"){
