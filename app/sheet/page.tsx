@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { MdEdit } from "react-icons/md";
 import Modal from '../components/Modal';
 import { CHARACTER_TYPES } from "../../shared/constants/index";
+import Stats from './Stats';
 
 
 export default function page() {
@@ -37,7 +38,7 @@ export default function page() {
           let modStat = prevForm.stats[field] < value ? -1 : prevForm.stats[field] > value ? +1 : 0;
           
           if (modStat === -1 && prevForm.stats.mod === 0) {
-            return prevForm; // Do not update the form
+            return prevForm; 
           }
   
           return {
@@ -196,37 +197,9 @@ export default function page() {
 
 
             <div className='flex flex-col border-solid border-s-2 border-black-500 ps-6'>
-              <p  className='text-center font-bold'>
-              Stats
-              </p>
-              <p className='text-center'>
-                - {form.stats.mod} -
-              </p>
-              
-              <div className='grid grid-rows-3 grid-flow-col gap-2'>                
-                <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="spirit">Spirit </label>
-                  <input onChange={handleChange} value={form.stats.spirit} className='text-center' type="number" name="stats.spirit" id="spirit" min={1} max={5}/>
-                  <div className='flex flex-row m-auto gap-2'>
-                  </div>
-                </div>
-                <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="power">Power </label>
-                  <input onChange={handleChange} value={form.stats.power} className='text-center' type="number" name="stats.power" id="power" min={1} max={5}/>
-                </div>
-                <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="toughness">Toughness </label>
-                  <input onChange={handleChange} value={form.stats.toughness} className='text-center' type="number" name="stats.toughness" id="toughness" min={1} max={5}/>
-                </div>
-                <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="ki">Ki </label>
-                  <input onChange={handleChange} value={form.stats.ki} className='text-center' type="number" name="stats.ki" id="ki" min={1} max={5}/>
-                </div>
-                <div className='flex flex-col '>
-                  <label className='text-center' htmlFor="agility">Agility </label>
-                  <input onChange={handleChange} value={form.stats.agility} className='text-center' type="number" name="stats.agility" id="agility" min={1} max={5}/>
-                </div>
-              </div>
+              {/* STATS */}
+                  <Stats form={form} handleStatsChange={handleChange}/>
+              {/* StTATS*/}
 
               <div>
                     <p className='text-center'>Health</p>
