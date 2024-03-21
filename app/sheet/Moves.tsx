@@ -1,11 +1,15 @@
 
 import { ARCHETYPE_TYPES, MOVE_TYPES, ORIGIN_TYPES } from '@/shared/constants'
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../components/Modal'
 interface formProps{
   form: any
 }
 
 export default function Moves({form}:formProps) {
+  const [toggle, setToggle] = useState(false)
+  const [content, setContent] = useState('')
+
   const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
   const archetype = ARCHETYPE_TYPES.find((a) => a.title === form.archetype)
 
@@ -29,7 +33,7 @@ export default function Moves({form}:formProps) {
 
       { movesList.length ? (
               movesList.map((move: any) => (
-                <li key={move.id}>{move.title}</li>
+                <li className='hover:cursor-pointer hover:text-gray-500' onClick={(e)=> {setToggle(true), setContent( move)}} key={move.id}>{move.title}</li>
               ))
       ) : (
         <li>-No Moves-</li>
@@ -38,6 +42,8 @@ export default function Moves({form}:formProps) {
 
     </ul>
   </div>
+  {toggle && <Modal type="describe"  content = {content} setToggle = {setToggle} />}
+
 </div>
   )
 }

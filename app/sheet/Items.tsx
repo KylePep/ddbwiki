@@ -1,10 +1,15 @@
+'use client'
 import { ARCHETYPE_TYPES, ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../components/Modal'
 interface formProps{
   form: any
 }
 
 export default function Items({form}:formProps) {
+  const [toggle, setToggle] = useState(false)
+  const [content, setContent] = useState('')
+
   const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
   const archetype = ARCHETYPE_TYPES.find((a) => a.title === form.archetype)
 
@@ -20,14 +25,19 @@ export default function Items({form}:formProps) {
 
   return (
     <div>
-    <p className='font-bold'>Inventory</p>
-  <div className='bg-white me-10 py-2'>
-    <ul>
-      {itemsList.map((item: any)=>(
-      <li key={item.id}>{item.title}</li>
-      ))}
-    </ul>
-  </div>
+      <p className='font-bold'>Inventory</p>
+    <div className='bg-white me-10 py-2'>
+      <ul>
+        {itemsList.map((item: any)=>(
+        <li className='hover:cursor-pointer hover:text-gray-500' onClick={(e)=> {setToggle(true), setContent( item)}} key={item.id}>{item.title}
+        
+        </li>
+        ))}
+      </ul>
+    </div>
+
+  {toggle && <Modal type="describe"  content = {content} setToggle = {setToggle} />}
+
 </div>
   )
 }

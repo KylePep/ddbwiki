@@ -1,10 +1,13 @@
 import { FORM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
-import React from 'react'
+import React, { useState } from 'react'
+import Modal from '../components/Modal'
 interface formProps{
   form: any
 }
 
 export default function Forms({form}:formProps) {
+  const [toggle, setToggle] = useState(false)
+  const [content, setContent] = useState('')
 
   const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
 
@@ -23,7 +26,7 @@ export default function Forms({form}:formProps) {
     <ul>
       {formsList.length ? (
         formsList.map((form: any)=>(
-          <li className=''  key={form.id}>{form.title}</li>
+          <li className='hover:cursor-pointer hover:text-gray-500' onClick={(e)=> {setToggle(true), setContent(form)}}  key={form.id}>{form.title}</li>
         ))
 
       ):(
@@ -31,6 +34,7 @@ export default function Forms({form}:formProps) {
       )}
     </ul>
   </div>
+  {toggle && <Modal type="describe"  content = {content} setToggle = {setToggle} />}
 </div>
   )
 }

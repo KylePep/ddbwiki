@@ -21,7 +21,7 @@ export default function Name({form}:formProps) {
         <MdEdit onClick={(e) => {setToggle(true)}} className='hover:cursor-pointer'/>
     </div>
   </div>
-  {toggle && <Modal name = {form.name} setToggle = {setToggle} />}
+  {toggle && <Modal type='name' content = {form.name} setToggle = {setToggle} />}
   </>
   )
 }
