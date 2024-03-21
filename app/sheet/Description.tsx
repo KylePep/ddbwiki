@@ -5,7 +5,8 @@ interface formProps{
 }
 
 export default function Description({form, handleChange}:formProps) {
-  const autoDescription = `${form.name} is a ${form.origin} ${form.archetype}.`
+  const pronouns = form.pronouns.split('|')
+  const autoDescription = `${form.name} is a ${form.origin} ${form.archetype}, ${pronouns[0]} is ${form.height} and ${form.bodyType}`
 
   const generateDescription = () => {
     form.description = autoDescription;

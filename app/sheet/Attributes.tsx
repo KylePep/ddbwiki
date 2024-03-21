@@ -55,9 +55,9 @@ export default function Attributes({form, handleChange}:formProps) {
     <label htmlFor="pronouns" className='font-bold'>Pronouns </label>
       <div>
         <select onChange={handleChange} value={form.pronouns} className='ps-1' name="pronouns" id="pronouns">
-          <option value="masculine">he | him</option>
-          <option value="feminine">she | her</option>
-          <option value="neither">they | them</option>
+          <option value="he|him">he | him</option>
+          <option value="she|her">she | her</option>
+          <option value="they|them">they | them</option>
         </select>
     </div>
   </div>
