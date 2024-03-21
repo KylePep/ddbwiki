@@ -16,9 +16,9 @@ export default function Moves({form}:formProps) {
   
   const movesList = moves.map((om) => {
     const moveById = MOVE_TYPES.find((m) => m.id === om)
-    return moveById?.title
-  }
-  )
+    return moveById
+  })
+
   console.log('[origin]', origin,'[arch]', archetype,'[MOVES]', moves, '[MOVES LIST]', movesList)
 
   return (
@@ -29,7 +29,7 @@ export default function Moves({form}:formProps) {
 
       { movesList.length ? (
               movesList.map((move: any) => (
-                <li key={move}>{move}</li>
+                <li key={move.id}>{move.title}</li>
               ))
       ) : (
         <li>-No Moves-</li>

@@ -4,10 +4,10 @@
     "level": 1, 
     "origin": "Saiyan", 
     "archetype": "Warrior", 
-    "pronouns":"he | him",
+    "pronouns":"he|him",
     "bodyType": "Masculine", 
     "height": "average", 
-    "description": "description", 
+    "description": "", 
     "stats":{"mod": 3, "spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3}, 
     "equipment":{"head":"Scouter", "body": "Saiyan Armor", "weapon": "none"}, 
     "moves":["Ki Blast"], 
@@ -22,7 +22,8 @@
     "positiveTrait": "power",
     "negativeTrait": "spirit",
     "forms": [1],
-    "moves": []
+    "moves": [],
+    "startingItems": [1,2]
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
     "positiveTrait": "ki",
     "negativeTrait": "toughness",
     "forms": [1],
-    "moves": []
+    "moves": [],
+    "startingItems": [4,3]
   },
   {
     "id": 3,
@@ -40,7 +42,8 @@
     "positiveTrait": "spirit",
     "negativeTrait": "kit",
     "forms": [],
-    "moves": []
+    "moves": [],
+    "startingItems": [4,3]
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "positiveTrait": "toughness",
     "negativeTrait": "agility",
     "forms": [],
-    "moves": [17]
+    "moves": [17],
+    "startingItems": [6]
   }
 ],
 "ARCHETYPE_TYPES":[
@@ -58,28 +62,32 @@
     "title": "Warrior",
     "examples": "Goku | Vegeta",
     "description": "The battle hungry archetype geared for high intensity combat.",
-    "moves": [5]
+    "moves": [5],
+    "startingItems": []
   },
   {
     "id": 2,
     "title": "Support",
     "examples": "Hercule | Chiaotzu | Krillin",
     "description": "The comic relief archetype, helpful distractions and buff to the party.",
-    "moves": [3]
+    "moves": [3],
+    "startingItems": []
   },
   {
     "id": 3,
     "title": "Striker",
     "examples": "Gohan | Trunks",
     "description": "An archetype capable of altering the battlefield and negating villains abilities.",
-    "moves": [8]
+    "moves": [8],
+    "startingItems": []
   },
   {
     "id": 4,
     "title": "Tank",
     "examples": "Piccolo | Tien",
     "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others.",
-    "moves": [32]
+    "moves": [32],
+    "startingItems": []
   }
 ],
   "ENEMY_TYPES": [
@@ -174,6 +182,13 @@
       "type": "equipment",
       "subType": "weapon",
       "description": "A pole capable of extending to great lengths."
+    },
+    {
+      "id": 6,
+      "title": "Demon Clan Clothes",
+      "type": "equipment",
+      "subType": "body",
+      "description": "A purple outfit with shoulder padded cape."
     }
   ]
 }

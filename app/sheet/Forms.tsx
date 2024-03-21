@@ -13,7 +13,7 @@ export default function Forms({form}:formProps) {
 
   const formsList = originForms.map((fl)=> {
       const formById = FORM_TYPES.find((f)=> f.id == fl)
-      return formById?.title
+      return formById
   })
 
   return (
@@ -23,7 +23,7 @@ export default function Forms({form}:formProps) {
     <ul>
       {formsList.length ? (
         formsList.map((form: any)=>(
-          <li key={form}>{form}</li>
+          <li className=''  key={form.id}>{form.title}</li>
         ))
 
       ):(

@@ -1,16 +1,30 @@
+import { ARCHETYPE_TYPES, ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
 import React from 'react'
 interface formProps{
   form: any
 }
 
 export default function Items({form}:formProps) {
+  const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
+  const archetype = ARCHETYPE_TYPES.find((a) => a.title === form.archetype)
+
+  const originItems = origin ? origin.startingItems : []
+  const archItems = archetype ? archetype.startingItems : []
+
+  const items = originItems.concat(archItems)
+  
+  const itemsList = items.map((il) => {
+    const itemsById = ITEM_TYPES.find((i) => i.id === il)
+    return itemsById
+  })
+
   return (
     <div>
     <p className='font-bold'>Inventory</p>
   <div className='bg-white me-10 py-2'>
     <ul>
-      {form.inventory.map((item: any)=>(
-      <li key={item}>{item}</li>
+      {itemsList.map((item: any)=>(
+      <li key={item.id}>{item.title}</li>
       ))}
     </ul>
   </div>
