@@ -9,13 +9,16 @@ type ToggleProps = {
 }
 
 export default function Modal({ type, content, setToggle}: ToggleProps){
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget){
+      setToggle(false)
+    }
+  }
   return(
-    <div  className="fixed bg-black/15 w-full h-full z-20 left-0 top-0">
+    <div onClick={handleClick} className="fixed bg-black/15 w-full h-full z-20 left-0 top-0">
       <div className="absolute bg-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-6 rounded-lg">
         <div className="flex flex-col items-end">
-      <FaRegWindowClose onClick={(e)=>{
-        setToggle(false)
-      }} className="hover:cursor-pointer text-red-500 mb-3"/>
+      <FaRegWindowClose onClick={(e)=>{setToggle(false)}} className="hover:cursor-pointer text-red-500 mb-3"/>
         </div>
         { type === "name" &&
           <div className="grid grid-flow-col grid-row-2 gap-6 p-6">
