@@ -7,22 +7,22 @@ interface formProps{
 export default function Equipment({form}:formProps) {
   return (
     <div>
-                    <div className='mt-3 '>
-                <p className='text-center font-bold'>Equipment</p>
+                    <div className=''>
+                <p className='text-center font-bold mb-2'>Equipment</p>
                 <div>
-                    <p className='text-center'>Head</p>
+                    <p className='text-center font-bold'>Head</p>
                   <div className='bg-white py-2 px-4'>
                     {form.equipment.head}
                   </div>
                 </div>
                 <div>
-                    <p className='text-center'>Body</p>
+                    <p className='text-center font-bold'>Body</p>
                   <div className='bg-white py-2 px-4'>
                     {form.equipment.body}
                   </div>
                 </div>
                 <div>
-                    <p className='text-center'>Weapon</p>
+                    <p className='text-center font-bold'>Weapon</p>
                   <div className='bg-white py-2 px-4'>
                     {form.equipment.weapon}
                   </div>
