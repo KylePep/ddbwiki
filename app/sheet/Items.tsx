@@ -24,7 +24,7 @@ export default function Items({form}:formProps) {
   })
 
   return (
-    <div>
+    <div className='bg-gray-300 p-2 rounded-md mb-3'>
       <p className='font-bold'>Inventory</p>
     <div className='bg-white me-10 py-2'>
       <ul>

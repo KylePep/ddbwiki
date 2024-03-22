@@ -7,7 +7,7 @@ interface formProps{
 export default function Equipment({form}:formProps) {
   return (
     <div>
-                    <div className=''>
+                    <div className='bg-gray-300 p-2 rounded-md'>
                 <p className='text-center font-bold mb-2'>Equipment</p>
                 <div>
                     <p className='text-center font-bold'>Head</p>
