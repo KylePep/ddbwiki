@@ -26,7 +26,7 @@ export default function Forms({form}:formProps) {
     <ul>
       {formsList.length ? (
         formsList.map((form: any)=>(
-          <li className='hover:cursor-pointer hover:text-gray-500' onClick={(e)=> {setToggle(true), setContent(form)}}  key={form.id}>{form.title}</li>
+          <li className='hover:cursor-pointer hover:text-gray-800' onClick={(e)=> {setToggle(true), setContent(form)}}  key={form.id}>{form.title}</li>
         ))
 
       ):(

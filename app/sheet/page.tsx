@@ -75,8 +75,8 @@ export default function page() {
 
                 <Name form={form}/>
 
-          <div className='grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-2'>
-            <div className='flex flex-col justify-between pe-0 md:pe-6 '>
+          <div className='flex flex-col md:flex-row'>
+            <div className='flex flex-col pe-0 md:pe-6 basis-2/3'>
 
                 <Attributes form={form} handleChange={handleChange}/>
 
@@ -90,7 +90,7 @@ export default function page() {
             </div>
 
 
-            <div className='flex flex-col border-none md:border-solid border-s-2 border-black-500 ps-0 md:ps-6'>
+            <div className='flex flex-col border-none md:border-solid border-s-2 border-black-500 ps-0 md:ps-6 basis-1/3'>
 
                 <Stats form={form} handleStatsChange={handleChange}/>
 

@@ -29,8 +29,9 @@ export default function Items({form}:formProps) {
     <div className='bg-white me-10 py-2 w-full'>
       <ul>
         {itemsList.map((item: any)=>(
-        <li className='hover:cursor-pointer hover:text-gray-500' onClick={(e)=> {setToggle(true), setContent( item)}} key={item.id}>{item.title}
-        
+        <li className='group hover:cursor-pointer hover:text-gray-800'  key={item.id}> <span className='font-bold'>E</span> {item.title}
+        <span className='invisible group-hover:visible text-black me-2'> <button className='bg-blue-200 hover:bg-blue-300 px-1 rounded'>Equip</button></span> 
+        <span className='invisible group-hover:visible text-black'><button onClick={(e)=> {setToggle(true), setContent( item)}} className='bg-blue-200 hover:bg-blue-300 px-1 rounded'>Info</button></span>
         </li>
         ))}
       </ul>
