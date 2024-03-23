@@ -9,7 +9,7 @@ interface formProps{
 export default function Attributes({form, handleChange}:formProps) {
   return (
     <div>
-    <div className='grid grid-cols-3 grid-flow-row gap-2 bg-gray-300 p-2 rounded-md'>
+    <div className='grid grid-cols-3 grid-flow-row gap-2 bg-gray-300 p-2 rounded-md mb-3'>
 
 
 <div>
@@ -22,7 +22,7 @@ export default function Attributes({form, handleChange}:formProps) {
 <div className=''>
     <label htmlFor="name" className='font-bold'>Origin </label>
       <div>
-        <select onChange={handleChange} value={form.origin} name="origin" id="origin">
+        <select className='w-full' onChange={handleChange} value={form.origin} name="origin" id="origin">
           {ORIGIN_TYPES.map((origin: any)=> (
         <option key={origin.title}>{origin.title}</option>
         ))}
@@ -34,7 +34,7 @@ export default function Attributes({form, handleChange}:formProps) {
 <div className=''>
     <label htmlFor="name" className='font-bold'>Archetype </label>
       <div>
-      <select onChange={handleChange} value={form.archetype} name="archetype" id="archetype">
+      <select className='w-full' onChange={handleChange} value={form.archetype} name="archetype" id="archetype">
           {ARCHETYPE_TYPES.map((arch: any)=> (
         <option key={arch.title}>{arch.title}</option>
         ))}
@@ -52,7 +52,7 @@ export default function Attributes({form, handleChange}:formProps) {
   <div>
     <label htmlFor="pronouns" className='font-bold'>Pronouns </label>
       <div>
-        <select onChange={handleChange} value={form.pronouns} className='ps-1' name="pronouns" id="pronouns">
+        <select  onChange={handleChange} value={form.pronouns} className='ps-1 w-full' name="pronouns" id="pronouns">
           <option value="he|him">he | him</option>
           <option value="she|her">she | her</option>
           <option value="they|them">they | them</option>
@@ -64,7 +64,7 @@ export default function Attributes({form, handleChange}:formProps) {
       <div>
     <label htmlFor="bodyType" className='font-bold'>Body Type </label>
       <div>
-          <select onChange={handleChange} value={form.bodyType} name="bodyType" id="bodyType">
+          <select className='w-full' onChange={handleChange} value={form.bodyType} name="bodyType" id="bodyType">
             <option value="masculine">Masculine</option>
             <option value="feminine">Feminine</option>
             <option value="neither">Neither</option>
@@ -75,7 +75,7 @@ export default function Attributes({form, handleChange}:formProps) {
       <div>
         <label htmlFor="height" className='font-bold'>Height </label>
           <div>
-              <select onChange={handleChange} value={form.height} name="height" id="height">
+              <select className='w-full' onChange={handleChange} value={form.height} name="height" id="height">
                 <option value="average">Average</option>
                 <option value="short">Short</option>
                 <option value="veryShort">Very Short</option>

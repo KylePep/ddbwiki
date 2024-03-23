@@ -65,9 +65,9 @@ export default function page() {
   }
 
   return (
-  <div className='bg-gray-100  px-8 py-4 rounded-md'>
+  <div className='bg-gray-100 px-8 py-4 rounded-md'>
 
-              <p className='mb-5 text-lg font-bold'>
+              <p className='mb-2 md:mb-5 text-lg font-bold'>
                 Dungeons & DragonBalls Character Sheet
               </p>
 
@@ -75,7 +75,7 @@ export default function page() {
 
                 <Name form={form}/>
 
-          <div className='grid grid-rows-2 md:grid-rows-1 grid-flow-col'>
+          <div className='grid grid-rows-2 md:grid-rows-1 grid-flow-col gap-2'>
             <div className='flex flex-col justify-between pe-0 md:pe-6 '>
 
                 <Attributes form={form} handleChange={handleChange}/>
@@ -90,7 +90,7 @@ export default function page() {
             </div>
 
 
-            <div className='flex flex-col border-none md:border-solid border-s-2 border-black-500 ps-0 md:ps-6 '>
+            <div className='flex flex-col border-none md:border-solid border-s-2 border-black-500 ps-0 md:ps-6'>
 
                 <Stats form={form} handleStatsChange={handleChange}/>
 
