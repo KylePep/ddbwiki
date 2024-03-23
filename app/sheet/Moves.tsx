@@ -33,7 +33,9 @@ export default function Moves({form}:formProps) {
 
       { movesList.length ? (
               movesList.map((move: any) => (
-                <li className='hover:cursor-pointer hover:text-gray-800' onClick={(e)=> {setToggle(true), setContent( move)}} key={move.id}>{move.title}</li>
+                <li className='group hover:cursor-pointer hover:text-gray-800'  key={move.id}>{move.title}
+                <span className='invisible group-hover:visible text-black ms-2'><button onClick={(e)=> {setToggle(true), setContent( move)}} className='bg-blue-200 hover:bg-blue-300 px-1 rounded'>Info</button></span>
+                </li>
               ))
       ) : (
         <li>-No Moves-</li>
