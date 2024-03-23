@@ -1,3 +1,4 @@
+import { ITEM_TYPES } from '@/shared/constants'
 import React from 'react'
 
 interface formProps{
@@ -5,6 +6,11 @@ interface formProps{
 }
 
 export default function Equipment({form}:formProps) {
+  const equipment = form.equipment
+  const equipmentList =equipment.map((e) =>{
+    const itemById = ITEM_TYPES.find((i)=> i.id === e)
+    return itemById
+  })
   return (
     <div>
                     <div className='bg-gray-300 p-2 rounded-md'>
@@ -12,19 +18,19 @@ export default function Equipment({form}:formProps) {
                 <div>
                     <p className='text-center font-bold'>Head</p>
                   <div className='bg-white py-2 px-4'>
-                    {form.equipment.head}
+                    {equipmentList[0].title}
                   </div>
                 </div>
                 <div>
                     <p className='text-center font-bold'>Body</p>
                   <div className='bg-white py-2 px-4'>
-                    {form.equipment.body}
+                    {equipmentList[1].title}
                   </div>
                 </div>
                 <div>
                     <p className='text-center font-bold'>Weapon</p>
                   <div className='bg-white py-2 px-4'>
-                    {form.equipment.weapon}
+                    {equipmentList[2].title}
                   </div>
                 </div>
               </div>

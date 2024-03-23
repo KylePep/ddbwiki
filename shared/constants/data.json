@@ -9,7 +9,7 @@
     "height": "average", 
     "description": "", 
     "stats":{"mod": 3, "spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3}, 
-    "equipment":{"head":"Scouter", "body": "Saiyan Armor", "weapon": "none"}, 
+    "equipment":[1, 2, 0], 
     "moves":["Ki Blast"], 
     "inventory":["Scouter", "Saiyan Armor"], 
     "forms":["Great Ape"]
@@ -148,6 +148,13 @@
     }
   ],
   "ITEM_TYPES":[
+    {
+      "id": 0,
+      "title": "None",
+      "type": "none",
+      "subType": "none",
+      "description": "No item"
+    },
     {
       "id": 1,
       "title": "Saiyan Armor",
