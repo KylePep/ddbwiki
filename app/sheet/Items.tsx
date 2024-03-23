@@ -26,7 +26,7 @@ export default function Items({form}:formProps) {
   return (
     <div className='bg-gray-300 p-2 rounded-md mb-3'>
       <p className='font-bold'>Inventory</p>
-    <div className='bg-white me-10 py-2'>
+    <div className='bg-white me-10 py-2 w-full'>
       <ul>
         {itemsList.map((item: any)=>(
         <li className='hover:cursor-pointer hover:text-gray-500' onClick={(e)=> {setToggle(true), setContent( item)}} key={item.id}>{item.title}

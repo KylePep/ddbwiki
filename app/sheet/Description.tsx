@@ -29,8 +29,8 @@ export default function Description({form, handleChange}:formProps) {
 
   return (
     <div className='flex flex-col bg-gray-300 p-2 rounded-md'>
-    <label onClick={generateDescription} className='font-bold'>Description <span className='ms-2'><button className='bg-blue-300 rounded px-1 font-medium hover:text-white'>Generate</button></span></label>
-    <textarea onChange={handleChange} value={form.description} className='resize-none me-10 px-4' name="description" id="description" cols={30} rows={4}  placeholder='Provide a brief description of your character here...'></textarea>
+    <label onClick={generateDescription} className='font-bold'>Description <span className='ms-2'><button className='bg-blue-300 rounded px-1 font-medium hover:text-white mb-1'>Generate</button></span></label>
+    <textarea onChange={handleChange} value={form.description} className='resize-none me-10 px-4 w-full' name="description" id="description" cols={30} rows={4}  placeholder='Provide a brief description of your character here...'></textarea>
   </div>
   )
 }

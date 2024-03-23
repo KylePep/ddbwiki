@@ -15,7 +15,7 @@ export default function Attributes({form, handleChange}:formProps) {
 <div>
     <label htmlFor="name" className='font-bold'>Name </label>
       <div>
-        <input onChange={handleChange} value={form.name}  className='w-full' type="text" name="name" id="name" minLength={1} maxLength={20}/>
+        <input onChange={handleChange} value={form.name}  className='w-full ps-2' type="text" name="name" id="name" minLength={1} maxLength={20}/>
     </div>
 </div>
 

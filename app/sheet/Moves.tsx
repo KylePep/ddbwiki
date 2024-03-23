@@ -28,7 +28,7 @@ export default function Moves({form}:formProps) {
   return (
   <div className='bg-gray-300 p-2 rounded-md mb-3'>
     <p className='font-bold'>Moves</p>
-  <div className='bg-white me-10 py-2'>
+  <div className='bg-white me-10 py-2 w-full'>
     <ul>
 
       { movesList.length ? (

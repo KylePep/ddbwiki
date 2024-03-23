@@ -75,26 +75,22 @@ export default function page() {
 
                 <Name form={form}/>
 
-          <div className='grid grid-rows-1 grid-flow-col'>
-            <div className='pe-6'>
+          <div className='grid grid-rows-2 md:grid-rows-1 grid-flow-col'>
+            <div className='flex flex-col justify-between pe-0 md:pe-6 '>
 
                 <Attributes form={form} handleChange={handleChange}/>
 
-              <div className='mt-4'>
+                <Moves form={form} /> 
 
-                  <Moves form={form} /> 
+                <Forms form={form} />
 
-                  <Forms form={form} />
-
-                  <Items form={form}/>
+                <Items form={form}/>
 
                 <Description form={form} handleChange={handleChange}/>
-
-              </div>
             </div>
 
 
-            <div className='flex flex-col border-solid border-s-2 border-black-500 ps-6'>
+            <div className='flex flex-col border-none md:border-solid border-s-2 border-black-500 ps-0 md:ps-6 '>
 
                 <Stats form={form} handleStatsChange={handleChange}/>
 

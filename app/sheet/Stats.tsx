@@ -7,7 +7,7 @@ interface formProps {
 
 export default function Stats({form, handleStatsChange}: formProps) {
   return (
-    <div className='bg-gray-300 py-1 px-2 rounded-md mb-3'>
+    <div className='bg-gray-300 p-2 rounded-md mb-3'>
 
               <p  className='text-center font-bold'>
                 Stats

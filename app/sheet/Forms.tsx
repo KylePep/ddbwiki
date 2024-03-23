@@ -22,7 +22,7 @@ export default function Forms({form}:formProps) {
   return (
     <div className='bg-gray-300 p-2 rounded-md mb-3'>
     <p className='font-bold'>Forms</p>
-  <div className='bg-white me-10 py-2'>
+  <div className='bg-white me-10 py-2 w-full'>
     <ul>
       {formsList.length ? (
         formsList.map((form: any)=>(
