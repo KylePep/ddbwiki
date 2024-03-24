@@ -40,13 +40,20 @@ export default function Items({form, handleChange}:formProps) {
     if(item.type != "equipment"){
       return
     }
+    console.log('[ITEM]', item, equippedList)
     if(item.subType === 'head'){
-      
+      equippedList[0] = item
     } else if (item.subType === 'body'){
-
+      equippedList[1] = item
     } else {
-
+      equippedList[2] = item
     }
+    handleChange({
+      target: {
+        name: 'equipment',
+        value: equippedList
+      }
+    } as React.ChangeEvent<any>);
   })
 
   return (

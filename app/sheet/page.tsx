@@ -96,7 +96,7 @@ export default function page() {
 
                 <Points form={form}/>
 
-                <Equipment form={form}/>
+                <Equipment form={form} handleChange={handleChange}/>
 
             </div>
           </div>

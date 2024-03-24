@@ -9,10 +9,10 @@
     "height": "average", 
     "description": "", 
     "stats":{"mod": 3, "spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3}, 
-    "equipment":[1, 2, 0], 
-    "moves":["Ki Blast"], 
+    "equipment":[0, 0, 0], 
+    "moves":[], 
     "inventory":[], 
-    "forms":["Great Ape"]
+    "forms":[]
   },
 "ORIGIN_TYPES":[
   {
@@ -23,7 +23,8 @@
     "negativeTrait": "spirit",
     "forms": [1],
     "moves": [],
-    "startingItems": [1,2]
+    "startingItems": [1,2],
+    "startingEquipment": [1,2,0]
   },
   {
     "id": 2,
@@ -33,7 +34,8 @@
     "negativeTrait": "toughness",
     "forms": [1],
     "moves": [],
-    "startingItems": [4,3]
+    "startingItems": [4,3],
+    "startingEquipment": [0,4,0]
   },
   {
     "id": 3,
@@ -43,7 +45,8 @@
     "negativeTrait": "kit",
     "forms": [],
     "moves": [],
-    "startingItems": [4,3]
+    "startingItems": [4,3],
+    "startingEquipment": [0,4,0]
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
     "negativeTrait": "agility",
     "forms": [],
     "moves": [17],
-    "startingItems": [6]
+    "startingItems": [6],
+    "startingEquipment": [0,6,0]
   }
 ],
 "ARCHETYPE_TYPES":[

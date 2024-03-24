@@ -1,16 +1,37 @@
-import { ITEM_TYPES } from '@/shared/constants'
-import React from 'react'
+import { ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
+import React, { useEffect } from 'react'
 
 interface formProps{
   form: any
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export default function Equipment({form}:formProps) {
-  const equipment = form.equipment
-  const equipmentList =equipment.map((e: any) =>{
-    const itemById = ITEM_TYPES.find((i)=> i.id === e)
-    return itemById
-  })
+export default function Equipment({form, handleChange}:formProps) {
+
+
+  useEffect(()=> {
+  const origin = ORIGIN_TYPES.find((o)=>o.title === form.origin)
+
+  const originEquipment = origin ? origin.startingEquipment : []
+
+  const equipmentList = originEquipment.map((e: any) =>{
+      const itemById = ITEM_TYPES.find((i)=> i.id === e)
+      return itemById
+    })
+
+  if (JSON.stringify(form.equipment) !== JSON.stringify(equipmentList)) {
+      handleChange({
+        target: {
+          name: 'equipment',
+          value: equipmentList
+        }
+      } as React.ChangeEvent<any>);
+    }
+
+    },[form.origin, form.equipment])
+
+    const equipmentList = form.equipment
+
   return (
     <div>
                     <div className='bg-gray-300 p-2 rounded-md'>
@@ -18,19 +39,19 @@ export default function Equipment({form}:formProps) {
                 <div>
                     <p className='text-center font-bold'>Head</p>
                   <div className='bg-white py-2 px-4'>
-                    {equipmentList[0].title}
+                    {equipmentList[0]?.title}
                   </div>
                 </div>
                 <div>
                     <p className='text-center font-bold'>Body</p>
                   <div className='bg-white py-2 px-4'>
-                    {equipmentList[1].title}
+                    {equipmentList[1]?.title}
                   </div>
                 </div>
                 <div>
                     <p className='text-center font-bold'>Weapon</p>
                   <div className='bg-white py-2 px-4'>
-                    {equipmentList[2].title}
+                    {equipmentList[2]?.title}
                   </div>
                 </div>
               </div>
