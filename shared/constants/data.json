@@ -11,7 +11,7 @@
     "stats":{"mod": 3, "spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3}, 
     "equipment":[1, 2, 0], 
     "moves":["Ki Blast"], 
-    "inventory":["Scouter", "Saiyan Armor"], 
+    "inventory":[], 
     "forms":["Great Ape"]
   },
 "ORIGIN_TYPES":[

@@ -4,9 +4,10 @@ import React, { useState } from 'react'
 import Modal from '../components/Modal'
 interface formProps{
   form: any
+  handleChange: any
 }
 
-export default function Moves({form}:formProps) {
+export default function Moves({form, handleChange}:formProps) {
   const [toggle, setToggle] = useState(false)
   const [content, setContent] = useState('')
 

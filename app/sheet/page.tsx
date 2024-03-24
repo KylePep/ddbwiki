@@ -80,11 +80,11 @@ export default function page() {
 
                 <Attributes form={form} handleChange={handleChange}/>
 
-                <Moves form={form} /> 
+                <Moves form={form} handleChange={handleChange} /> 
 
-                <Forms form={form} />
+                <Forms form={form} handleChange={handleChange} />
 
-                <Items form={form}/>
+                <Items form={form} handleChange={handleChange}/>
 
                 <Description form={form} handleChange={handleChange}/>
             </div>
