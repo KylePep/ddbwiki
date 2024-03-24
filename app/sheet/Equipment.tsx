@@ -1,5 +1,5 @@
 import { ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 interface formProps{
   form: any
@@ -7,7 +7,7 @@ interface formProps{
 }
 
 export default function Equipment({form, handleChange}:formProps) {
-
+  const [equipmentList, setEquipmentList] = useState(form.equipment)
 
   useEffect(()=> {
   const origin = ORIGIN_TYPES.find((o)=>o.title === form.origin)
@@ -16,21 +16,30 @@ export default function Equipment({form, handleChange}:formProps) {
 
   const equipmentList = originEquipment.map((e: any) =>{
       const itemById = ITEM_TYPES.find((i)=> i.id === e)
-      return itemById
+      return itemById?.id
     })
-
-  if (JSON.stringify(form.equipment) !== JSON.stringify(equipmentList)) {
+    
+    // if (JSON.stringify(form.equipment) !== JSON.stringify(equipmentList)) {
       handleChange({
         target: {
           name: 'equipment',
           value: equipmentList
         }
       } as React.ChangeEvent<any>);
-    }
+    // }
 
-    },[form.origin, form.equipment])
+    },[form.origin])
 
-    const equipmentList = form.equipment
+    useEffect(()=> {
+      const equipment = form.equipment
+    
+      const equipmentList = equipment.map((e: any) =>{
+          const itemById = ITEM_TYPES.find((i)=> i.id === e)
+          return itemById
+        })
+        setEquipmentList(equipmentList)
+    
+        },[form.equipment])
 
   return (
     <div>

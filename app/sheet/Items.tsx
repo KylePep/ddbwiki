@@ -40,13 +40,13 @@ export default function Items({form, handleChange}:formProps) {
     if(item.type != "equipment"){
       return
     }
-    console.log('[ITEM]', item, equippedList)
+    console.log('[ITEM]', item, '[ITEM LIST]',  equippedList)
     if(item.subType === 'head'){
-      equippedList[0] = item
+      equippedList[0] = item.id
     } else if (item.subType === 'body'){
-      equippedList[1] = item
+      equippedList[1] = item.id
     } else {
-      equippedList[2] = item
+      equippedList[2] = item.id
     }
     handleChange({
       target: {
