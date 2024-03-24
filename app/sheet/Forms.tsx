@@ -1,5 +1,5 @@
 import { FORM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from '../components/Modal'
 interface formProps{
   form: any
@@ -10,15 +10,28 @@ export default function Forms({form, handleChange}:formProps) {
   const [toggle, setToggle] = useState(false)
   const [content, setContent] = useState('')
 
-  const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
+  useEffect(()=>{
+    const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
+  
+    const originForms = origin ? origin.forms : []
+    console.log(originForms)
+  
+    const formsList = originForms.map((fl)=> {
+        const formById = FORM_TYPES.find((f)=> f.id == fl)
+        return formById
+    })
 
-  const originForms = origin ? origin.forms : []
-  console.log(originForms)
+    handleChange({
+      target: {
+        name:"forms",
+        value: formsList
+      }
+    } as React.ChangeEvent<any> )
 
-  const formsList = originForms.map((fl)=> {
-      const formById = FORM_TYPES.find((f)=> f.id == fl)
-      return formById
-  })
+  }, [form.origin])
+
+  const formsList = form.forms
+
 
   return (
     <div className='bg-gray-300 p-2 rounded-md mb-3'>

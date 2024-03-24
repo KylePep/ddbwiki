@@ -1,30 +1,41 @@
 
 import { ARCHETYPE_TYPES, MOVE_TYPES, ORIGIN_TYPES } from '@/shared/constants'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modal from '../components/Modal'
 interface formProps{
   form: any
-  handleChange: any
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export default function Moves({form, handleChange}:formProps) {
   const [toggle, setToggle] = useState(false)
   const [content, setContent] = useState('')
 
-  const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
-  const archetype = ARCHETYPE_TYPES.find((a) => a.title === form.archetype)
+  useEffect(()=>{
 
-  const originMoves = origin ? origin.moves : []
-  const archMoves = archetype ? archetype.moves : []
-
-  const moves = originMoves.concat(archMoves)
+    const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
+    const archetype = ARCHETYPE_TYPES.find((a) => a.title === form.archetype)
   
-  const movesList = moves.map((om) => {
-    const moveById = MOVE_TYPES.find((m) => m.id === om)
-    return moveById
-  })
+    const originMoves = origin ? origin.moves : []
+    const archMoves = archetype ? archetype.moves : []
+  
+    const moves = originMoves.concat(archMoves)
+    
+    const updatedMovesList = moves.map((om) => {
+      const moveById = MOVE_TYPES.find((m) => m.id === om)
+      return moveById
+    })
 
-  console.log('[origin]', origin,'[arch]', archetype,'[MOVES]', moves, '[MOVES LIST]', movesList)
+    handleChange({
+      target: {
+        name: "moves",
+        value: updatedMovesList
+      }
+    } as React.ChangeEvent<any> )
+
+  }, [form.origin, form.archetype])
+
+  const movesList = form.moves
 
   return (
   <div className='bg-gray-300 p-2 rounded-md mb-3'>

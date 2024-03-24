@@ -7,7 +7,7 @@ interface formProps{
 
 export default function Equipment({form}:formProps) {
   const equipment = form.equipment
-  const equipmentList =equipment.map((e) =>{
+  const equipmentList =equipment.map((e: any) =>{
     const itemById = ITEM_TYPES.find((i)=> i.id === e)
     return itemById
   })
