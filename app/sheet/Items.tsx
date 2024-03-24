@@ -36,16 +36,23 @@ export default function Items({form, handleChange}:formProps) {
   
   const itemsList = form.inventory
   const equippedList = form.equipment
+
   const toggleEquip = ((item: any)=>{
     if(item.type != "equipment"){
       return
     }
-    console.log('[ITEM]', item, '[ITEM LIST]',  equippedList)
+    
     if(item.subType === 'head'){
+      if(equippedList[0] == item.id) equippedList[0] = 0;
+      else 
       equippedList[0] = item.id
     } else if (item.subType === 'body'){
+      if(equippedList[1] == item.id) equippedList[1] = 0;
+      else
       equippedList[1] = item.id
     } else {
+      if(equippedList[2] == item.id) equippedList[2] = 0;
+      else
       equippedList[2] = item.id
     }
     handleChange({
@@ -54,6 +61,7 @@ export default function Items({form, handleChange}:formProps) {
         value: equippedList
       }
     } as React.ChangeEvent<any>);
+    console.log('[ITEM]', item, '[ITEM LIST]',  equippedList, form.equipment)
   })
 
   return (

@@ -7,7 +7,7 @@ interface formProps{
 }
 
 export default function Equipment({form, handleChange}:formProps) {
-  const [equipmentList, setEquipmentList] = useState(form.equipment)
+  const [equipmentDisplay, setEquipmentDisplay] = useState([""])
 
   useEffect(()=> {
   const origin = ORIGIN_TYPES.find((o)=>o.title === form.origin)
@@ -19,27 +19,25 @@ export default function Equipment({form, handleChange}:formProps) {
       return itemById?.id
     })
     
-    // if (JSON.stringify(form.equipment) !== JSON.stringify(equipmentList)) {
       handleChange({
         target: {
           name: 'equipment',
           value: equipmentList
         }
       } as React.ChangeEvent<any>);
-    // }
 
     },[form.origin])
 
     useEffect(()=> {
       const equipment = form.equipment
-    
-      const equipmentList = equipment.map((e: any) =>{
+      console.log('[UseEffect Equip]', equipment)
+      const updatedList = equipment.map((e: any) =>{
           const itemById = ITEM_TYPES.find((i)=> i.id === e)
-          return itemById
+          return itemById?.title
         })
-        setEquipmentList(equipmentList)
+        setEquipmentDisplay(updatedList)
     
-        },[form.equipment])
+        },[form])
 
   return (
     <div>
@@ -48,19 +46,19 @@ export default function Equipment({form, handleChange}:formProps) {
                 <div>
                     <p className='text-center font-bold'>Head</p>
                   <div className='bg-white py-2 px-4'>
-                    {equipmentList[0]?.title}
+                    {equipmentDisplay[0]}
                   </div>
                 </div>
                 <div>
                     <p className='text-center font-bold'>Body</p>
                   <div className='bg-white py-2 px-4'>
-                    {equipmentList[1]?.title}
+                    {equipmentDisplay[1]}
                   </div>
                 </div>
                 <div>
                     <p className='text-center font-bold'>Weapon</p>
                   <div className='bg-white py-2 px-4'>
-                    {equipmentList[2]?.title}
+                    {equipmentDisplay[2]}
                   </div>
                 </div>
               </div>
