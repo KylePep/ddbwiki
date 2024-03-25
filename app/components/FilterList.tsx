@@ -43,7 +43,6 @@ function FilterList({LIST_TYPE, categoryFilterArr, setList, list} : filterListPr
       if (sortBy.toLowerCase() === filter){
           newList = LIST_TYPE.filter((l) => l[category] == filter)
           setList(newList)
-          console.log('[Sort]', sortedBy, '[Cat]', category, '[Filter]', filter, '[LIST]',list)
         }
     });
   } else {

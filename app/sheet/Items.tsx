@@ -61,7 +61,6 @@ export default function Items({form, handleChange}:formProps) {
         value: equippedList
       }
     } as React.ChangeEvent<any>);
-    console.log('[ITEM]', item, '[ITEM LIST]',  equippedList, form.equipment)
   })
 
   return (

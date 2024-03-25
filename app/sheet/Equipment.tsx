@@ -30,7 +30,6 @@ export default function Equipment({form, handleChange}:formProps) {
 
     useEffect(()=> {
       const equipment = form.equipment
-      console.log('[UseEffect Equip]', equipment)
       const updatedList = equipment.map((e: any) =>{
           const itemById = ITEM_TYPES.find((i)=> i.id === e)
           return itemById?.title
