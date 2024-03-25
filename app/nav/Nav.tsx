@@ -15,14 +15,19 @@ export default function Nav() {
         Dungeons & DragonBalls Wiki!
         </Link>
       </div>
-      <div className="flex justify-between bg-orange-600 px-10 md:px-48 xl:px-96  py-3 font-bold mb-7">
-        <Link href={"/origins"}>{pathName !== "/origins" ? `Origins` : `ORIGINS`}</Link>
-        <Link href={"/archetypes"}>{pathName !=="/archetypes" ? `Archetypes` : `ARCHETYPES`}</Link>
-        <Link href={"/moves"}>{pathName !=="/moves" ? `Moves` : `MOVES`}</Link>
-        <Link href={"/items"}>{pathName !=="/items" ? `Items` : `ITEMS`}</Link>
-        <Link href={"/forms"}>{pathName !=="/forms" ? `Forms` : `FORMS`}</Link>
-        <Link href={"/enemies"}>{pathName !=="/enemies" ? `Enemies` : `ENEMIES`}</Link>
-        <Link href={"/sheet"}>{pathName !== "/sheet" ? `Sheets` : `SHEETS`}</Link>
+      <div className="bg-orange-600 px-10 md:px-48 xl:px-96  py-3 font-bold mb-7">
+        <div className='flex justify-between mb-1'>
+          <Link href={"/origins"}>{pathName !== "/origins" ? `Origins` : `ORIGINS`}</Link>
+          <Link href={"/archetypes"}>{pathName !=="/archetypes" ? `Archetypes` : `ARCHETYPES`}</Link>
+          <Link href={"/moves"}>{pathName !=="/moves" ? `Moves` : `MOVES`}</Link>
+          <Link href={"/items"}>{pathName !=="/items" ? `Items` : `ITEMS`}</Link>
+          <Link href={"/forms"}>{pathName !=="/forms" ? `Forms` : `FORMS`}</Link>
+        </div>
+        <div className='flex justify-around'>
+          <Link href={"/enemies"}>{pathName !=="/enemies" ? `Enemies` : `ENEMIES`}</Link>
+          <Link href={"/world"}>{pathName !== "/world" ? `World` : `WORLD`}</Link>
+          <Link href={"/sheet"}>{pathName !== "/sheet" ? `Sheets` : `SHEETS`}</Link>
+        </div>
       </div>
     </nav>
   )
