@@ -10,11 +10,16 @@ export default function page() {
         <p>An adventure is an automated experience. 
           Think of it like a series of rooms. The simplest of adventures would be a one room that leads to a single room that then leads to a single room.
         </p>
-        <h4>Adventures</h4>
+        <h4 className='font-bold mt-3'>Adventures</h4>
         <p>Although this is an expectable way to play it {`wouldn't`} be the most fun.</p>
         <p>A more complex adventure can feature rooms with multiple doors, that lead to rooms with even more doors.</p>
-        <h4>Rooms</h4>
-        <p>Within a room</p>
+        <h4 className='font-bold mt-3'>Rooms</h4>
+        <p>Within a room there will be events such as; battles, investigations, dilemmas and resource opportunities!</p>
+        <h4 className='font-bold mt-3'>Doors</h4>
+        <p>Doors can be locked or unlocked depending on previous decisions by you and your team of Zfighters during an adventure. Doors lead to other rooms, but may lead to rooms further down the adventure than a different door would, like a hallway.</p>
+        <p>Doors are mostly one way, {`'locking'`} behind your group in most cases directing your team to continue onward. An exception may be in the case of an optional door. Like a sub quest.</p>
+        <h4 className='font-bold mt-3'>Moving through Doors</h4>
+        <p>Typically the decision to move through a door will be left to the group in the form of a vote. Teams are unable to split up. Instances where the team {`isn't`} able to choose may be the result of other decisions made that forced them to move through a door.</p>
       </div>
     </main>
   )
