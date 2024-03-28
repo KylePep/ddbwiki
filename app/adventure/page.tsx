@@ -3,9 +3,8 @@ import React from 'react'
 export default function page() {
   return (
     <main>
-      <h1>Here you can find out about the Adventures that await you in Dungeons & DragonBalls!</h1>
-      <div className='bg-white rounded'>
-        <h2>Adventure</h2>
+      <h1 className='mb-3'>Here you can find out about the Adventures that await you in Dungeons & DragonBalls!</h1>
+      <div className='bg-white rounded my-2 p-3'>
         <h3>An adventure is a series of events that will help you and up to 2 friends explore the world of DragonBall. In an adventure you will be faced with tough decisions and powerful enemies! With the sparking power of the Zfighters you can rise to the occasion and become the strongest!</h3>
         <p>An adventure is an automated experience. 
           Think of it like a series of rooms. The simplest of adventures would be a one room that leads to a single room that then leads to a single room.
@@ -20,6 +19,10 @@ export default function page() {
         <p>Doors are mostly one way, {`'locking'`} behind your group in most cases directing your team to continue onward. An exception may be in the case of an optional door. Like a sub quest.</p>
         <h4 className='font-bold mt-3'>Moving through Doors</h4>
         <p>Typically the decision to move through a door will be left to the group in the form of a vote. Teams are unable to split up. Instances where the team {`isn't`} able to choose may be the result of other decisions made that forced them to move through a door.</p>
+      </div>
+      <div className='bg-white my-2 rounded p-3'>
+        <p>Example of Adventure data</p>
+        <div className='font-bold'>{`[A,B,C,D,E]`}</div>
       </div>
     </main>
   )
