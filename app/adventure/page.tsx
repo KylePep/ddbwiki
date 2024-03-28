@@ -22,7 +22,14 @@ export default function page() {
       </div>
       <div className='bg-white my-2 rounded p-3'>
         <p>Example of Adventure data</p>
-        <div className='font-bold'>{`[A,B,C,D,E]`}</div>
+        <div className='font-bold'>{`['aId','bId','cId','dId','eId']`}</div>
+        <p>The adventure is recorded as an array of roomIds that can be grabbed individually from the database as the players proceed.</p>
+        <div className='font-bold my-2'>{`Room: { Id: A, doors: [b,c], dialogue: dialogueId, eventType: 'event', setting: 'setting', NPC: ['npcId', 'npcId', 'npcId'] }`}</div>
+
+        <div className='font-bold my-2'>Dialogue: {`{ chapter: [{id: 1, content: 'First talky', responseId: 1, doors: [2,3] },`}</div>
+        <div className='font-bold my-2'>{`{ chapter: [{id: 2, content: 'Talk then talk', responseId: 2, doors: [3] },`}</div>
+        <div className='font-bold my-2'>{`{ chapter: [{id: 3, content: 'Last of Talking', responseId: 3, door: [0] }],`}</div>
+        <div className='font-bold my-2'>{` responses: [['Yes%2', 'No%3','Remain Silent%2'],['I don't wanna%3', 'Make me%3'],['Well fine then%0']] }`}</div>
       </div>
     </main>
   )
