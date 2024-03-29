@@ -24,12 +24,33 @@ export default function page() {
         <p>Example of Adventure data</p>
         <div className='font-bold'>{`['aId','bId','cId','dId','eId']`}</div>
         <p>The adventure is recorded as an array of roomIds that can be grabbed individually from the database as the players proceed.</p>
-        <div className='font-bold my-2'>{`Room: { Id: A, doors: [b,c], dialogue: dialogueId, eventType: 'event', setting: 'setting', NPC: ['npcId', 'npcId', 'npcId'] }`}</div>
+        <div className='font-bold my-4'>Room: 
+        <p>{`{`}</p>
+          <ul>
+            <li>Id: a,</li>
+            <li>doors: [b,c], </li>
+            <li>dialogue: dialogueId, </li>
+            <li>{`eventType: 'event',`}</li>
+            <li>{`setting: 'setting',`}</li>
+            <li>{`NPC: ['npcId', 'npcId', 'npcId']`} </li>
+          </ul>
+          <p>{`}`}</p>
+        </div>
 
-        <div className='font-bold my-2'>Dialogue: {`{ chapter: [{id: 1, content: 'First talky', responseId: 1, doors: [2,3] },`}</div>
-        <div className='font-bold my-2'>{`{ chapter: [{id: 2, content: 'Talk then talk', responseId: 2, doors: [3] },`}</div>
-        <div className='font-bold my-2'>{`{ chapter: [{id: 3, content: 'Last of Talking', responseId: 3, door: [0] }],`}</div>
-        <div className='font-bold my-2'>{` responses: [['Yes%2', 'No%3','Remain Silent%2'],['I don't wanna%3', 'Make me%3'],['Well fine then%0']] }`}</div>
+        <p className='font-bold mb-2'>Dialogue:</p>
+        <p className='font-bold'>{`{`}</p>
+        <ul>
+          <div className='font-bold'>{` id: dialogueId,`}</div>
+          <p className='font-bold mt-2'>chapterData:</p>
+          <div className='font-bold mb-2'>{`[ { id: 1, content: 'First talky', responseId: 1, doors: [2,3] },`}</div>
+          <div className='font-bold my-2'>{`{ id: 2, content: 'Talk then talk', responseId: 2, doors: [3] },`}</div>
+          <div className='font-bold my-2'>{`{ id: 3, content: 'Last of Talking', responseId: 3, door: [0] } ],`}</div>
+          <p className='font-bold mt-2'>responsesData: </p>
+          <div className='font-bold mb-2'>{`[['Yes|2', 'No|3','Remain Silent|2'],`}</div>
+          <div className='font-bold mb-2'>{`['I don't wanna|3', 'Make me|3'], `}</div>
+          <div className='font-bold mb-2'>{`['Well fine then|0']]`}</div>
+        </ul>
+        <p className='font-bold'>{`}`}</p>
       </div>
     </main>
   )
