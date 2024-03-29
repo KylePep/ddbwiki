@@ -51,6 +51,7 @@ export default function page() {
           <div className='font-bold mb-2'>{`['Well fine then|0']]`}</div>
         </ul>
         <p className='font-bold'>{`}`}</p>
+        <p className='mt-4'>This example data shows how an rooms would relate to an adventure and dialogue would relate to a room.<br/>The event type would decide what kind of room it is, a battle room or one for decision making. <br /> The setting is a string for player reference. <br /> The list of NPCs is also primarily for player reference, to quickly be reminded who is involved in the given room. </p>
       </div>
     </main>
   )
