@@ -4,6 +4,12 @@ export default function page() {
   return (
     <main>
       <h1 className='mb-3'>Here you can find out about the Adventures that await you in Dungeons & DragonBalls!</h1>
+      <div className='bg-blue-300 rounded p-2 flex justify-around'>
+        <button className='font-bold hover:text-white'>Tree of Might</button>
+        <button className='font-bold hover:text-white'>Strongest on Earth</button>
+        <button className='font-bold hover:text-white'>Lord Slug</button>
+        <button className='font-bold hover:text-white'>Garlic Jr.</button>
+      </div>
       <div className='bg-white rounded my-2 p-3'>
         <h3>An adventure is a series of events that will help you and up to 2 friends explore the world of DragonBall. In an adventure you will be faced with tough decisions and powerful enemies! With the sparking power of the Zfighters you can rise to the occasion and become the strongest!</h3>
         <p>An adventure is an automated experience. 
