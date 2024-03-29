@@ -34,9 +34,15 @@ export default function page(url:URL) {
         <button className='font-bold hover:text-white'>Garlic Jr.</button>
         </Link>
       </div>
-      <h1>
-      This is the {data} page
+      <h1 className='font-bold text-xl text-center bg-white rounded p-4'>
+      {data}
       </h1>
+      <div className='bg-white rounded p-4 my-2'>
+        <p>{data} summary</p>
+      </div>
+      <p>
+      There will need to be an entire dataType created for adventures and the other dataTypes outlined in the adventure page
+      </p>
     </div>
   )
 }
