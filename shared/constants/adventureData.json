@@ -1,19 +1,19 @@
 {
   "ADVENTURE_TYPES": [
     {
-      "id": 1,
+      "id": "treeOfMight",
       "title": "Tree Of Might"
     },
     {
-      "id": 2,
+      "id": "worldsStrongest",
       "title": "World's Strongest"
     },
     {
-      "id": 3,
+      "id": "lordSlug",
       "title": "Lord Slug"
     },
     {
-      "id": 4,
+      "id": "garlicJr",
       "title": "Garlic Jr."
     }
   ]

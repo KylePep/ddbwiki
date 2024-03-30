@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import { ADVENTURE_TYPES } from '@/shared/constants'
 
 type URL = {
   params: {
@@ -8,7 +9,11 @@ type URL = {
 }
 
 const fetchDetails = (slug:string) => {
-  return slug
+  const data = ADVENTURE_TYPES.find((a) => a.id = slug)
+  if (!data){
+    return null
+  }
+  return data
 }
 
 export default function page(url:URL) {
@@ -34,15 +39,24 @@ export default function page(url:URL) {
         <button className='font-bold hover:text-white'>Garlic Jr.</button>
         </Link>
       </div>
-      <h1 className='font-bold text-xl text-center bg-white rounded p-4'>
-      {data}
-      </h1>
-      <div className='bg-white rounded p-4 my-2'>
-        <p>{data} summary</p>
-      </div>
-      <p>
-      There will need to be an entire dataType created for adventures and the other dataTypes outlined in the adventure page
-      </p>
+      
+      { 
+        data ?
+        
+          <div>
+          <h1 className='font-bold text-xl text-center bg-white rounded p-4'>
+            {data.title}
+            </h1>
+            <div className='bg-white rounded p-4 my-2'>
+              <p>{data.title} summary</p>
+            </div>
+            <p>
+            There will need to be an entire dataType created for adventures and the other dataTypes outlined in the adventure page
+            </p>
+          </div>
+          :
+          <div> This adventure does not exist.</div>
+      }
     </div>
   )
 }
