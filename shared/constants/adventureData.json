@@ -2,19 +2,23 @@
   "ADVENTURE_TYPES": [
     {
       "id": "treeOfMight",
-      "title": "Tree Of Might"
+      "title": "Tree Of Might",
+      "summary": "Big tree, big fruit, big gains."
     },
     {
       "id": "worldsStrongest",
-      "title": "World's Strongest"
+      "title": "World's Strongest",
+      "summary": "Science doesn't want you to know this one trick, It's Goku!"
     },
     {
       "id": "lordSlug",
-      "title": "Lord Slug"
+      "title": "Lord Slug",
+      "summary": "Who's that Piccolo? It's Lord SLug! OH NO!"
     },
     {
       "id": "garlicJr",
-      "title": "Garlic Jr."
+      "title": "Garlic Jr.",
+      "summary": "'Garlic is my father, please, call me junior.'"
     }
   ]
 }

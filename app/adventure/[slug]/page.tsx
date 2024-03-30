@@ -9,7 +9,7 @@ type URL = {
 }
 
 const fetchDetails = (slug:string) => {
-  const data = ADVENTURE_TYPES.find((a) => a.id = slug)
+  const data = ADVENTURE_TYPES.find((a) => a.id == slug)
   if (!data){
     return null
   }
@@ -48,7 +48,8 @@ export default function page(url:URL) {
             {data.title}
             </h1>
             <div className='bg-white rounded p-4 my-2'>
-              <p>{data.title} summary</p>
+              <p>summary of the {data.title} adventure.</p>
+              <p>{data.summary}</p>
             </div>
             <p>
             There will need to be an entire dataType created for adventures and the other dataTypes outlined in the adventure page
