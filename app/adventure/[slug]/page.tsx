@@ -48,7 +48,7 @@ export default function page(url:URL) {
             {data.title}
             </h1>
             <div className='bg-white rounded p-4 my-2'>
-              <p>summary of the {data.title} adventure.</p>
+              <p className='font-bold'>summary:</p>
               <p>{data.summary}</p>
             </div>
             <p>
