@@ -3,22 +3,34 @@
     {
       "id": "treeOfMight",
       "title": "Tree Of Might",
-      "summary": "Big tree, big fruit, big gains."
+      "summary": "Big tree, big fruit, big gains.",
+      "players": 3,
+      "villain": "Turles",
+      "primaryLocation": "Earth, Forest"
     },
     {
       "id": "worldsStrongest",
       "title": "World's Strongest",
-      "summary": "Science doesn't want you to know this one trick, It's Goku!"
+      "summary": "Science doesn't want you to know this one trick, It's Goku!",
+      "players": 3,
+      "villain": "Dr. Wheeler",
+      "primaryLocation": "Earth, Mountains"
     },
     {
       "id": "lordSlug",
       "title": "Lord Slug",
-      "summary": "Who's that Piccolo? It's Lord SLug! OH NO!"
+      "summary": "Who's that Piccolo? It's Lord SLug! OH NO!",
+      "players": 3,
+      "villain": "Lord Slug",
+      "primaryLocation": "Earth, City"
     },
     {
       "id": "garlicJr",
       "title": "Garlic Jr.",
-      "summary": "'Garlic is my father, please, call me junior.'"
+      "summary": "'Garlic is my father, please, call me junior.'",
+      "players": 3,
+      "villain": "Garlic Jr",
+      "primaryLocation": "Earth, Palace"
     }
   ]
 }

@@ -50,6 +50,9 @@ export default function page(url:URL) {
             <div className='bg-white rounded p-4 my-2'>
               <p className='font-bold'>summary:</p>
               <p>{data.summary}</p>
+              <p className='font-bold'>Player Count: <span className='font-normal'>{data.players}</span></p>
+              <p className='font-bold'>Villain: <span className='font-normal'>{data.villain}</span></p>
+              <p className='font-bold'>Location: <span className='font-normal'>{data.primaryLocation}</span></p>
             </div>
             <p>
             There will need to be an entire dataType created for adventures and the other dataTypes outlined in the adventure page
