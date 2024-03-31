@@ -1,0 +1,111 @@
+{
+  "ENEMY_TYPES": [
+    {
+      "id": 1,
+      "title": "Amond",
+      "adventure": ["treeOfMight"],
+      "type": "Henchmen",
+      "archetype": "Commander",
+      "origin": "Mercenary",
+      "allegiance": "Turles Crusher Corps",
+      "description": "an atrocious criminal who rampaged throughout the entire galaxy. After being arrested by the Galactic Patrol he was freed by the Saiyan Turles.",
+      "uniqueMoves": ["Planet Bomb", "Tornado Disc"],
+      "equipment": ["Saiyan Armor", "Scouter"]
+    },
+    {
+      "id": 2,
+      "title": "Daiz",
+      "adventure": ["treeOfMight"],
+      "type": "Henchmen",
+      "archetype": "Soldier",
+      "origin": "Mercenary",
+      "allegiance": "Turles Crusher Corps",
+      "description": "The prince of Pukinpa Dynasty on planet Kabocha. After attempting to defend his planet from Turles he then got recruited into the Turles Crusher Corps.",
+      "uniqueMoves": ["Meteor Ball", "Combined Energy Wave"],
+      "equipment": ["Saiyan Armor", "Scouter"]
+    },
+    {
+      "id": 3,
+      "title": "Cacao",
+      "adventure": ["treeOfMight"],
+      "type": "Henchmen",
+      "archetype": "Soldier",
+      "origin": "Mercenary",
+      "allegiance": "Turles Crusher Corps",
+      "description": "He was turned into a battle Cyborg to fight in an interstellar war. After this, he became a galactic lone-wolf bounty hunter. He joined the Crusher Corp hoping to strengthen his cyborg body by eating the fruit of the tree of might.",
+      "uniqueMoves": ["Cosmic Attack", "Combined Energy Wave", "Hikou"],
+      "equipment": ["Jetpack", "Scouter"]
+    },
+    {
+      "id": 4,
+      "title": "Rasin",
+      "adventure": ["treeOfMight"],
+      "type": "Henchmen",
+      "archetype": "Soldier",
+      "origin": "Mercenary",
+      "allegiance": "Turles Crusher Corps",
+      "description": "",
+      "uniqueMoves": ["Planet Bomb", "Tornado Disc"],
+      "equipment": ["Saiyan Armor", "Scouter"]
+    },
+    {
+      "id": 5,
+      "title": "Lakasei",
+      "adventure": ["treeOfMight"],
+      "type": "Henchmen",
+      "archetype": "Soldier",
+      "origin": "Mercenary",
+      "allegiance": "Turles Crusher Corps",
+      "description": "",
+      "uniqueMoves": ["Planet Bomb", "Tornado Disc"],
+      "equipment": ["Saiyan Armor", "Scouter"]
+    },
+    {
+      "id": 6,
+      "adventure": ["treeOfMight"],
+      "title": "Turles",
+      "type": "Boss",
+      "archetype": "Leader",
+      "origin": "Saiyan",
+      "allegiance": "Turles Crusher Corps",
+      "description": "",
+      "uniqueMoves": ["Planet Bomb", "Tornado Disc"],
+      "equipment": ["Saiyan Armor", "Scouter"]
+    },
+    {
+      "id": 991,
+      "title": "Saibamen",
+      "type": "basic"
+    },
+    {
+      "id": 992,
+      "title": "Pirate Robot",
+      "type": "basic"
+    },
+    {
+      "id": 993,
+      "title": "Red Ribbon Soldier",
+      "type": "basic"
+    },
+    {
+      "id": 994,
+      "title": "Red Ribbon Robot",
+      "type": "basic"
+    },
+    {
+      "id": 995,
+      "title": "Raditz",
+      "type": "boss"
+    },
+    {
+      "id": 996,
+      "title": "Nappa",
+      "type": "boss"
+    },
+    {
+      "id": 997,
+      "title": "Vegeta",
+      "type": "boss"
+    }
+  ]
+}

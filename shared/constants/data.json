@@ -94,43 +94,6 @@
     "startingItems": []
   }
 ],
-  "ENEMY_TYPES": [
-    {
-      "id": 1,
-      "title": "Saibamen",
-      "type": "basic"
-    },
-    {
-      "id": 2,
-      "title": "Pirate Robot",
-      "type": "basic"
-    },
-    {
-      "id": 3,
-      "title": "Red Ribbon Soldier",
-      "type": "basic"
-    },
-    {
-      "id": 4,
-      "title": "Red Ribbon Robot",
-      "type": "basic"
-    },
-    {
-      "id": 5,
-      "title": "Raditz",
-      "type": "boss"
-    },
-    {
-      "id": 6,
-      "title": "Nappa",
-      "type": "boss"
-    },
-    {
-      "id": 7,
-      "title": "Vegeta",
-      "type": "boss"
-    }
-  ],
   "FORM_TYPES":[
     {
       "id": 1,
