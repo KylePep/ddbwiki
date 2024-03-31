@@ -8,7 +8,7 @@
       "archetype": "Commander",
       "origin": "Mercenary",
       "allegiance": "Turles Crusher Corps",
-      "description": "an atrocious criminal who rampaged throughout the entire galaxy. After being arrested by the Galactic Patrol he was freed by the Saiyan Turles.",
+      "description": "An atrocious criminal who rampaged throughout the entire galaxy. After being arrested by the Galactic Patrol he was freed by the Saiyan Turles.",
       "uniqueMoves": ["Planet Bomb", "Tornado Disc"],
       "equipment": ["Saiyan Armor", "Scouter"]
     },
@@ -44,8 +44,8 @@
       "archetype": "Soldier",
       "origin": "Mercenary",
       "allegiance": "Turles Crusher Corps",
-      "description": "",
-      "uniqueMoves": ["Planet Bomb", "Tornado Disc"],
+      "description": "Revived from fossils by Turles and extract from the Tree of Might, The once extinct Beenz people are extremely intelligent. Along with Lakasei, they built Turles' spaceship and the rest of their ordnance.",
+      "uniqueMoves": ["Continuous Energy Bullet", "Gemini Shot", "Fusion"],
       "equipment": ["Saiyan Armor", "Scouter"]
     },
     {
@@ -56,8 +56,8 @@
       "archetype": "Soldier",
       "origin": "Mercenary",
       "allegiance": "Turles Crusher Corps",
-      "description": "",
-      "uniqueMoves": ["Planet Bomb", "Tornado Disc"],
+      "description": "Revived from fossils by Turles and extract from the Tree of Might, The once extinct Beenz people are extremely intelligent. Along with Rasin, they built Turles' spaceship and the rest of their ordnance.",
+      "uniqueMoves": ["Continuous Energy Bullet", "Gemini Shot", "Fusion"],
       "equipment": ["Saiyan Armor", "Scouter"]
     },
     {
@@ -65,47 +65,12 @@
       "adventure": ["treeOfMight"],
       "title": "Turles",
       "type": "Boss",
-      "archetype": "Leader",
+      "archetype": "Space Pirate",
       "origin": "Saiyan",
       "allegiance": "Turles Crusher Corps",
-      "description": "",
-      "uniqueMoves": ["Planet Bomb", "Tornado Disc"],
+      "description": "A low-class Saiyan warrior. Turles is merciless, prideful and confident. His heart is a ball of pure evil, he lacks all empathy and doesn't care about the differences between good and evil.",
+      "uniqueMoves": ["Kill Driver", "Sudden Storm", "Force Explosion", "Meteor Burts", "Rock Crusher", "Calamity Blaster", "Ki Smoke Bomb", "Energy Charge"],
       "equipment": ["Saiyan Armor", "Scouter"]
-    },
-    {
-      "id": 991,
-      "title": "Saibamen",
-      "type": "basic"
-    },
-    {
-      "id": 992,
-      "title": "Pirate Robot",
-      "type": "basic"
-    },
-    {
-      "id": 993,
-      "title": "Red Ribbon Soldier",
-      "type": "basic"
-    },
-    {
-      "id": 994,
-      "title": "Red Ribbon Robot",
-      "type": "basic"
-    },
-    {
-      "id": 995,
-      "title": "Raditz",
-      "type": "boss"
-    },
-    {
-      "id": 996,
-      "title": "Nappa",
-      "type": "boss"
-    },
-    {
-      "id": 997,
-      "title": "Vegeta",
-      "type": "boss"
     }
   ]
 }
