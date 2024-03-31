@@ -25,6 +25,7 @@ export default function Nav() {
         </div>
         <div className='flex justify-around'>
           <Link href={"/enemies"}>{pathName !=="/enemies" ? `Enemies` : `ENEMIES`}</Link>
+          <Link href={"/combat"}>{pathName !=="/combat" ? `Combat` : `COMBAT`}</Link>
           <Link href={"/world"}>{pathName !== "/world" ? `World` : `WORLD`}</Link>
           <Link href={"/adventure"}>{pathName !== "/adventure" ? `Adventure` : `ADVENTURE`}</Link>
           <Link href={"/sheet"}>{pathName !== "/sheet" ? `Sheets` : `SHEETS`}</Link>
