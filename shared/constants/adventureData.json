@@ -2,7 +2,7 @@
   "ADVENTURE_TYPES": [
     {
       "id": "treeOfMight",
-      "title": "Tree Of Might",
+      "title": "The Tree Of Might",
       "summary": "Big tree, big fruit, big gains.",
       "players": "2-3",
       "villain": "Turles",
@@ -13,7 +13,7 @@
     },
     {
       "id": "worldsStrongest",
-      "title": "World's Strongest",
+      "title": "The World's Strongest",
       "summary": "Science doesn't want you to know this one trick, It's Goku!",
       "players": "1-3",
       "villain": "Dr. Wheeler",
@@ -34,8 +34,8 @@
       "act3Summary":"The elder Namekian's youth is restored and Lord Slug begins the final battle."
     },
     {
-      "id": "garlicJr",
-      "title": "Garlic Jr.",
+      "id": "deadZone",
+      "title": "Dead Zone",
       "summary": "'Garlic is my father, please, call me junior.'",
       "players": "2-3",
       "villain": "Garlic Jr",

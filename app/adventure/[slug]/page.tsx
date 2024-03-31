@@ -35,8 +35,8 @@ export default function page(url:URL) {
         <Link href={`/adventure/lordSlug`}>
         <button className='font-bold hover:text-white'>Lord Slug</button>
         </Link>
-        <Link href={`/adventure/garlicJr`}>
-        <button className='font-bold hover:text-white'>Garlic Jr.</button>
+        <Link href={`/adventure/deadZone`}>
+        <button className='font-bold hover:text-white'>Dead Zone</button>
         </Link>
       </div>
       
