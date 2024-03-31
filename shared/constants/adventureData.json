@@ -6,7 +6,10 @@
       "summary": "Big tree, big fruit, big gains.",
       "players": 3,
       "villain": "Turles",
-      "primaryLocation": "Earth, Forest"
+      "primaryLocation": "Earth, Forest",
+      "act1Summary":"Turles and his team show up on Earth.",
+      "act2Summary":"Tree Grows while everyone fights.",
+      "act3Summary":"Turles gets super strong from the fruit and appears unbeatable."
     },
     {
       "id": "worldsStrongest",
@@ -14,7 +17,10 @@
       "summary": "Science doesn't want you to know this one trick, It's Goku!",
       "players": 3,
       "villain": "Dr. Wheeler",
-      "primaryLocation": "Earth, Mountains"
+      "primaryLocation": "Earth, Mountains",
+      "act1Summary":"Friends get kidnapped, mistakenly.",
+      "act2Summary":"Friend Rescue attempt, while investigating.",
+      "act3Summary":"Dr.Wheeler is revealed to be an enormous brain in a battle robot."
     },
     {
       "id": "lordSlug",
@@ -22,7 +28,10 @@
       "summary": "Who's that Piccolo? It's Lord SLug! OH NO!",
       "players": 3,
       "villain": "Lord Slug",
-      "primaryLocation": "Earth, City"
+      "primaryLocation": "Earth, City",
+      "act1Summary":"A huge asteroid is about to hit Earth, whipping it out.",
+      "act2Summary":"The asteroid is actually a ship. Out pours an invading army and an elderly Namekian.",
+      "act3Summary":"The elder Namekian's youth is restored and Lord Slug begins the final battle."
     },
     {
       "id": "garlicJr",
@@ -30,7 +39,10 @@
       "summary": "'Garlic is my father, please, call me junior.'",
       "players": 3,
       "villain": "Garlic Jr",
-      "primaryLocation": "Earth, Palace"
+      "primaryLocation": "Earth, Palace",
+      "act1Summary":"Piccolo goes missing. Then Gohan gets kidnapped.",
+      "act2Summary":"Garlic Jr is revealed and his plans for the dead zone.",
+      "act3Summary":"Garlic Jr becomes immortal and opens the dead zone."
     }
   ]
 }
