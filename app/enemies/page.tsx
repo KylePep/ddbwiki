@@ -24,14 +24,14 @@ export default function page() {
     <main>
       <div>
         <h1 className='mb-3'>A list of enemies in D&DB</h1>
-        <FilterList LIST_TYPE={ENEMY_TYPES} list={list} setList={setList} categoryFilterArr={["type.basic", "type.boss"]}/>
+        <FilterList LIST_TYPE={ENEMY_TYPES} list={list} setList={setList} categoryFilterArr={["type.henchmen", "type.boss"]}/>
         <div>
           {list.map((enemy: any)=>(
           <div key={enemy.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className="font-bold text-xl">{enemy.title}</h2>
                 <h3><span className='font-semibold'>Adventure </span>{enemy.adventure}</h3>
-                <h3><span className='font-semibold'>Type: </span>{enemy.type}</h3>
-                <h3><span className='font-semibold'>Archetype: </span> {enemy.archetype}<span className='font-semibold'> Origin:  </span> {enemy.origin}</h3>
+                <h3 className='capitalize'><span className='font-semibold'>Type: </span>{enemy.type}</h3>
+                <h3 className='capitalize'><span className='font-semibold'>Archetype: </span> {enemy.archetype}<span className='font-semibold'> Origin:  </span> {enemy.origin}</h3>
                 <h3><span className='font-semibold'>Allegiance: </span>{enemy.allegiance}</h3>
                 <h4><span className='font-semibold'>Description: </span>{enemy.description}</h4>
                 <div className='grid grid-cols-2 gap-2 mt-2'>
