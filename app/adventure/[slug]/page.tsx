@@ -48,8 +48,15 @@ export default function page(url:URL) {
             {data.title}
             </h1>
             <div className='bg-white rounded p-4 my-2'>
-              <p className='font-bold'>summary:</p>
-              <p>{data.summary}</p>
+              <div>
+                <p className='font-bold'>summary:</p>
+                <p>{data.summary}</p>
+                <ul>
+                  <li>Act 1: {data.act1Summary}</li>
+                  <li>Act 2: {data.act2Summary}</li>
+                  <li>Act 3: {data.act3Summary}</li>
+                </ul>
+              </div>
               <p className='font-bold'>Player Count: <span className='font-normal'>{data.players}</span></p>
               <p className='font-bold'>Villain: <span className='font-normal'>{data.villain}</span></p>
               <p className='font-bold'>Location: <span className='font-normal'>{data.primaryLocation}</span></p>
