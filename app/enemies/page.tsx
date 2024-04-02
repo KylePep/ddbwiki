@@ -42,7 +42,8 @@ export default function page() {
                 <h3 className='capitalize'><span className='font-semibold'>Type: </span>{enemy.type}</h3>
                 <h3 className='capitalize'><span className='font-semibold'> Origin:  </span> {enemy.origin} <span className='font-semibold'>Archetype: </span> {enemy.archetype}</h3>
                 <h3><span className='font-semibold'>Allegiance: </span>{enemy.allegiance}</h3>
-                <h4><span className='font-semibold'>Description: </span>{enemy.description}</h4>
+                <h4><span className='font-semibold'>Appearance: </span>{enemy.appearance}</h4>
+                <h4><span className='font-semibold'>Background: </span>{enemy.background}</h4>
                 <div className='grid grid-cols-2 gap-2 mt-2'>
                 <ul><span className='font-semibold'>Unique Moves:</span>
                   { enemy.uniqueMoves.map((move: any)=>(
