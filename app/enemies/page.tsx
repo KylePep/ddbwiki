@@ -32,12 +32,12 @@ export default function page() {
                 <h3><span className='font-semibold'>Adventure </span>{enemy.adventure}</h3>
                 <h3 className='capitalize'><span className='font-bold'>Base Level: </span>{enemy.baseLevel}</h3>
                 <h3 className='font-bold'>Base Stats:</h3>
-                <div className='flex justify-around'>
-                  <p>Spirit - {enemy.baseStats.spirit}</p>
-                  <p>Ki - {enemy.baseStats.ki}</p>
-                  <p>Power - {enemy.baseStats.power}</p>
-                  <p>Agility - {enemy.baseStats.agility}</p>
-                  <p>Toughness - {enemy.baseStats.toughness}</p>
+                <div className='flex justify-around font-bold'>
+                  <p>Spirit - <span className='font-normal'>{enemy.baseStats.spirit}</span></p>
+                  <p>Ki - <span className='font-normal'>{enemy.baseStats.ki}</span></p>
+                  <p>Power - <span className='font-normal'>{enemy.baseStats.power}</span></p>
+                  <p>Agility - <span className='font-normal'>{enemy.baseStats.agility}</span></p>
+                  <p>Toughness - <span className='font-normal'>{enemy.baseStats.toughness}</span></p>
                 </div>
                 <h3 className='capitalize'><span className='font-semibold'>Type: </span>{enemy.type}</h3>
                 <h3 className='capitalize'><span className='font-semibold'>Archetype: </span> {enemy.archetype}<span className='font-semibold'> Origin:  </span> {enemy.origin}</h3>
