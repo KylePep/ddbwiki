@@ -30,6 +30,15 @@ export default function page() {
           <div key={enemy.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className="font-bold text-xl">{enemy.title}</h2>
                 <h3><span className='font-semibold'>Adventure </span>{enemy.adventure}</h3>
+                <h3 className='capitalize'><span className='font-bold'>Base Level: </span>{enemy.baseLevel}</h3>
+                <h3 className='font-bold'>Base Stats:</h3>
+                <div className='flex justify-around'>
+                  <p>Spirit - {enemy.baseStats.spirit}</p>
+                  <p>Ki - {enemy.baseStats.ki}</p>
+                  <p>Power - {enemy.baseStats.power}</p>
+                  <p>Agility - {enemy.baseStats.agility}</p>
+                  <p>Toughness - {enemy.baseStats.toughness}</p>
+                </div>
                 <h3 className='capitalize'><span className='font-semibold'>Type: </span>{enemy.type}</h3>
                 <h3 className='capitalize'><span className='font-semibold'>Archetype: </span> {enemy.archetype}<span className='font-semibold'> Origin:  </span> {enemy.origin}</h3>
                 <h3><span className='font-semibold'>Allegiance: </span>{enemy.allegiance}</h3>
