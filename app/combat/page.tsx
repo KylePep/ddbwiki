@@ -22,6 +22,10 @@ export default function page() {
         </p>
       </div>
       <div className='my-4 bg-white rounded p-4'>
+          <p className='font-bold'>ATTACKING</p>
+          <p>To attack the opponent you must first select the action or move you want to attempt to perform. Then the target. Based on the stats of the move, such as accuracy and the opponents defenses, the attack will either hit or miss. On a miss the attack will either be prevented entirely or unique consequences will occur. On a hit, the move is considered a success then any damage or extra effects are evaluated and applied.</p>
+      </div>
+      <div className='my-4 bg-white rounded p-4'>
         <p>Example Battle Window</p>
         <div className='bg-gray-500 border border-solid border-black rounded p-4'>
           <div className='text-lg font-bold text-center bg-gray-400 border border-solid border-black p-10'>
