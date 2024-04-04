@@ -21,17 +21,6 @@ export default function Home() {
           <p className="mb-3 text-xl font-bold">ToDo List:</p>
           <ul className="list-decimal">
             <li>
-              <p className="font-bold">
-              Create a filter component capable of being used on several pages
-              </p>
-              <ul className="list-disc">
-                <li>LIST_TYPE</li>
-                <li>Filter Categories</li>
-                <li>Filter Options</li>
-                <li>Return new list</li>
-              </ul>
-            </li>
-            <li>
               <p className="font-bold">Enemies</p>
               <ul className="list-disc">
                 <li>Bosses</li>
@@ -52,8 +41,23 @@ export default function Home() {
                 <li>Origins</li>
                 <li>Archetypes</li>
                 <li>Moves</li>
+                <li>Enemies</li>
                 <li>Items</li>
                 <li>Forms</li>
+              </ul>
+            </li>
+          </ul>
+          <p className="font-bold text-xl my-3">Done:</p>
+          <ul>
+            <li>
+              <p className="font-bold">
+              Create a filter component capable of being used on several pages
+              </p>
+              <ul className="list-disc">
+                <li>LIST_TYPE</li>
+                <li>Filter Categories</li>
+                <li>Filter Options</li>
+                <li>Return new list</li>
               </ul>
             </li>
           </ul>
