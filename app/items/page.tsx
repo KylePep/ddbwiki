@@ -11,6 +11,18 @@ export default function page() {
 <main>
 <div>
         <h1 className='mb-3'>Items to be equipped or used during your adventures in Dungeons and DragonBalls!</h1>
+        <div className='my-4 bg-white rounded p-4'>
+          <p className='mb-3'>
+          An item is either an equipment or consumable.
+          </p>
+          <ul className='mb-3'>
+            <li className='mb-3'>An equipment is directly assigned to the character, like body armor or clothing, and {`it's`} bonuses are consistently applied.</li>
+            <li>A Consumable is something carried ona character and can be used or consumed in or out of combat. It requires a bonus action, unless specified otherwise.</li>
+          </ul>
+          <p>
+            Items can enhance the way you play and make your characters even more expressive.
+          </p>
+        </div>
         <FilterList LIST_TYPE={items} list={list} setList={setList} categoryFilterArr={[ "type.equipment", "type.item", "subType.head", "subType.body", "subType.weapon", "subType.consumable"
           ]} />
         <div>
