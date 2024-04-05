@@ -19,7 +19,7 @@ export default function movesPage() {
                 <h2 className="font-bold">{move.title}</h2>
                 <h3><span className="font-semibold">Type: </span>{move.type}</h3>
                 <h4><span className="font-semibold">Sub Type: </span> {move.subType}</h4>
-                <div className="flex justify-around">
+                <div className="flex justify-between">
                   <p><span className="font-semibold">Damage: </span>{move.damage}</p>
                   <p><span className="font-semibold">Cost: </span>{move.cost}</p>
                   <p><span className="font-semibold">Accuracy: </span>{move.accuracy}</p>

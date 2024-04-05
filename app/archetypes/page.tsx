@@ -21,7 +21,7 @@ export default function archetypesPage() {
                 <p className='mb-2'><span className='font-semibold'>Description: </span> {arch.description}</p>
                 { arch.moves.length != 0 && (
                   <div className='mb-2'>
-                  <h5 className='font-semibold mb-1'>Origin Moves:</h5>
+                  <h5 className='font-semibold mb-1'>Archetype Moves:</h5>
                   <ul>
                     {arch.moves.map((move: any) => (
                       <li key={move}>{moveName(move)}</li>

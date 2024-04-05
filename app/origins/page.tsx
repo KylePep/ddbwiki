@@ -1,6 +1,6 @@
 'use client'
 
-import { FORM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
+import { FORM_TYPES, ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
 import { MOVE_TYPES } from '@/shared/constants'
 import React from 'react'
 
@@ -14,6 +14,11 @@ export default function originsPage() {
   const formName = ((formNumber: number)=>{
     const form =  FORM_TYPES.find((f) => f.id == formNumber)
     return form?.title
+  })
+
+  const itemName = ((itemNumber: number)=> {
+    const item = ITEM_TYPES.find((i)=> i.id == itemNumber)
+    return item?.title
   })
 
   return (
@@ -49,6 +54,26 @@ export default function originsPage() {
                 </ul>
                   </>
                 )}
+                { origin.startingItems != 0 ? (
+                  <h4><span className='font-semibold'>Starting Items: </span>
+                  <ul>
+                    {origin.startingItems.map((item: any) => (
+                      <li key={item}>{itemName(item)}</li>
+                    ))}
+                  </ul>
+                  </h4>
+                ): ( <h4>No starting Items</h4> )
+              }
+                {/* { origin.startingEquipment != 0 ? (
+                  <h4><span className='font-semibold'>Starting Equipment: </span>
+                  <ul>
+                    {origin.startingEquipment.map((item: any) => (
+                      <li key={item}>{itemName(item)}</li>
+                    ))}
+                  </ul>
+                  </h4>
+                ): ( <h4>No starting Equipment</h4> )
+              } */}
           </div>
               ))}
             <h3>***More can be added, but these are the starters***</h3>
