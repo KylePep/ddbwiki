@@ -32,7 +32,12 @@ export default function page() {
                 <h3><span className='font-semibold'>Type: </span>{item.type} 
                 <span> - {item.subType}</span>
                 </h3>
+                <div>
+                  <h4><span className='font-semibold'>Activation: </span>{item.effectTrigger}</h4>
+                  <h4><span className='font-semibold'>Effect: </span>{item.effect}</h4>
+                </div>
                 <p><span className='font-semibold'>Description: </span>{item.description}</p>
+                <p><span className='font-semibold'>Lore: </span>{item.lore}</p>
           </div>
               ))}
         </div>

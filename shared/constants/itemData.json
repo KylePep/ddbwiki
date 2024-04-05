@@ -5,49 +5,70 @@
       "title": "None",
       "type": "none",
       "subType": "none",
-      "description": "No item"
+      "effectTrigger": "passive",
+      "effect": "effect",
+      "description": "No item",
+      "lore": "No item"
     },
     {
       "id": 1,
       "title": "Saiyan Armor",
       "type": "equipment",
       "subType": "body",
-      "description": "Armor worn by Saiyans."
+      "effectTrigger": "passive",
+      "effect": "Defense +1",
+      "description": "When equipped, the character gets a +1 to defense.",
+      "lore": "Armor worn by Saiyan Warriors, featuring broad shoulder pads and pointed fauld."
     },
     {
       "id": 2,
       "title": "Scouter",
       "type": "equipment",
       "subType": "head",
-      "description": "A device worn on the head used to identify power levels, notoriously faulty."
+      "effectTrigger": "passive",
+      "effect": "Accuracy +1, Spirit -1",
+      "description": "When equipped, the character gets a +1 to accuracy and a -1 to spirit.",
+      "lore": "A device worn on the ear by Saiyan Warriors. A piece of colored glass covers an eye and a metal housing covers the ear. Used to identify power levels but is notoriously faulty."
     },
     {
       "id": 3,
       "title": "Senzu Bean",
       "type": "item",
       "subType": "consumable",
-      "description": "Revitalized the character that consumes it."
+      "effectTrigger": "use",
+      "effect": "Health Max, Arch Counter Max",
+      "description": "Hp becomes set to full, archetype counters become set to max.",
+      "lore": "A mystical bean cultivated by Korin atop Korin, especially rare and helpful during battles for the fate of the earth."
     },
     {
       "id": 4,
       "title": "Turtle Hermit Gi",
       "type": "equipment",
       "subType": "body",
-      "description": "Uniform worn by the turtle school."
+      "effectTrigger": "passive",
+      "effect": "Agility +1",
+      "description": "When equipped, the character gets a +1 to agility.",
+      "lore": "An orange gi worn by the students of the Turtle School, trained by Master Roshi."
     },
     {
       "id": 5,
       "title": "Power Pole",
       "type": "equipment",
       "subType": "weapon",
-      "description": "A pole capable of extending to great lengths."
+      "effectTrigger": "use",
+      "effect": "PowerPoleMove, Physical Attack Accuracy +1",
+      "description": "When equipped, the character gets the -PowerPoleMove- and +1 to physical attack accuracy.",
+      "lore": "A simple red pole contained by a red sheathe worn on the back, when called upon the Power Pole can extend to extreme heights."
     },
     {
       "id": 6,
       "title": "Demon Clan Clothes",
       "type": "equipment",
       "subType": "body",
-      "description": "A purple outfit with shoulder padded cape."
+      "effectTrigger": "passive",
+      "effect": "Defense +2, agility -1",
+      "description": "When equipped, the character gets a +2 to defense and a -1 to agility.",
+      "lore": "The outfit worn by the demon clan. A purple gi, pointed brown shoes and a weighted cape with broad shoulder pads. The increased weight is said to aid in training."
     }
   ]
 }
