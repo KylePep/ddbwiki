@@ -5,6 +5,8 @@
       "title": "Kamehameha",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "An energy wave. The signature attack of the students of the Turtle School."
     },
     {
@@ -12,6 +14,8 @@
       "title": "Special Beam Cannon",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "A concentrated beam attack that takes a long time to charge."
     },
     {
@@ -19,6 +23,8 @@
       "title": "Taunt",
       "type": "support",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Making a funny face and a rude noise, draws the attention of the target."
     },
     {
@@ -26,6 +32,8 @@
       "title": "Meteor Combination",
       "type": "attack",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Goku's combination attack"
     },
     {
@@ -33,6 +41,8 @@
       "title": "Energy Wave",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "A basic energy wave attack"
     },
     {
@@ -40,6 +50,8 @@
       "title": "After-image Technique",
       "type": "support",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Increases evasion for X turns"
     },
     {
@@ -47,6 +59,8 @@
       "title": "Spirit Bomb",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Takes a while to charge up but then unleashes a powerful attack"
     },
     {
@@ -54,6 +68,8 @@
       "title": "Rush",
       "type": "attack",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "A quick melee attack"
     },
     {
@@ -61,6 +77,8 @@
       "title": "Masenko",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Demon clan energy wave"
     },
     {
@@ -68,6 +86,8 @@
       "title": "Blast Barrage",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Unleash a barrage of energy blasts at the opponent"
     },
     {
@@ -75,6 +95,8 @@
       "title": "Anger",
       "type": "support",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Tap into dormant anger"
     },
     {
@@ -82,6 +104,8 @@
       "title": "Miracle Full Force",
       "type": "attack",
       "subType": "physical, energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Rage filled combo attack"
     },
     {
@@ -89,6 +113,8 @@
       "title": "Evil Assault",
       "type": "attack",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Demon clan melee attack"
     },
     {
@@ -96,6 +122,8 @@
       "title": "Destructive Wave",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Demon clan energy wave"
     },
     {
@@ -103,6 +131,8 @@
       "title": "Light Grenade",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Fire an explosive energy ball at the target"
     },
     {
@@ -110,6 +140,8 @@
       "title": "Super Explosive Wave",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Attack all enemies with an explosive wave."
     },
     {
@@ -117,6 +149,8 @@
       "title": "Regeneration",
       "type": "support",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Regenerate limbs"
     },
     {
@@ -124,6 +158,8 @@
       "title": "Hellzone Grenade",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Bigger version of light grenade"
     },
     {
@@ -131,6 +167,8 @@
       "title": "Fierce Attack",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Tien Ki attack"
     },
     {
@@ -138,6 +176,8 @@
       "title": "Tri Beam",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "An energy beam fired in the shape of a triangle"
     },
     {
@@ -145,6 +185,8 @@
       "title": "Multi-Form Attack",
       "type": "attack",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Arms? or several selfs?"
     },
     {
@@ -152,6 +194,8 @@
       "title": "Solar Flare",
       "type": "support",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Emit a blinding light infront of self to blind a target at close range"
     },
     {
@@ -159,6 +203,8 @@
       "title": "Evil Containment Wave",
       "type": "support",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "attempt to capture an opponent inside of a container"
     },
     {
@@ -166,6 +212,8 @@
       "title": "Rengeki",
       "type": "attack",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Krillin Melee attack"
     },
     {
@@ -173,6 +221,8 @@
       "title": "Scatter Energy Wave",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Fire an energy wave that surprises the enemy by splitting apart into several projectiles"
     },
     {
@@ -180,6 +230,8 @@
       "title": "Destructo-Disc",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Release an energy disc capable of cutting anything at the opponent"
     },
     {
@@ -187,6 +239,8 @@
       "title": "Y-Yajirobe?!",
       "type": "support",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Yajirobe springs into action attack at the most opportune, least risky time for a devastating strike."
     },
     {
@@ -194,6 +248,8 @@
       "title": "Wolf Hurricane",
       "type": "attack",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Yamcha melee attack"
     },
     {
@@ -201,6 +257,8 @@
       "title": "Wolf Fang Fist",
       "type": "attack",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Embody a fierce wolf and unleash a barrage of strikes"
     },
     {
@@ -208,6 +266,8 @@
       "title": "Spriti Ball",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "An ball of energy the user has complete control over."
     },
     {
@@ -215,6 +275,8 @@
       "title": "Neo Wolf Fang Fist",
       "type": "attack",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Ultimate version of wolf fang fist"
     },
     {
@@ -222,6 +284,8 @@
       "title": "Guard",
       "type": "support",
       "subType": "physical",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Guard an incoming attack"
     },
     {
@@ -229,6 +293,8 @@
       "title": "Neo Tri-Beam",
       "type": "attack",
       "subType": "energy",
+      "damage": 1,
+      "accuracy": 1,
       "description": "Ultimate tri beam attack"
     }
   ]
