@@ -8,6 +8,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "An energy wave. The signature attack of the students of the Turtle School."
     },
     {
@@ -18,6 +19,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "A concentrated beam attack that takes a long time to charge."
     },
     {
@@ -28,6 +30,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Making a funny face and a rude noise, draws the attention of the target."
     },
     {
@@ -38,6 +41,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Goku's combination attack"
     },
     {
@@ -48,6 +52,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "A basic energy wave attack"
     },
     {
@@ -58,6 +63,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Increases evasion for X turns"
     },
     {
@@ -68,6 +74,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Takes a while to charge up but then unleashes a powerful attack"
     },
     {
@@ -78,6 +85,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "A quick melee attack"
     },
     {
@@ -88,6 +96,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Demon clan energy wave"
     },
     {
@@ -98,6 +107,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Unleash a barrage of energy blasts at the opponent"
     },
     {
@@ -108,6 +118,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Tap into dormant anger"
     },
     {
@@ -118,6 +129,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Rage filled combo attack"
     },
     {
@@ -128,6 +140,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Demon clan melee attack"
     },
     {
@@ -138,6 +151,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Demon clan energy wave"
     },
     {
@@ -148,6 +162,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Fire an explosive energy ball at the target"
     },
     {
@@ -158,6 +173,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Attack all enemies with an explosive wave."
     },
     {
@@ -168,6 +184,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Regenerate limbs"
     },
     {
@@ -178,6 +195,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Bigger version of light grenade"
     },
     {
@@ -188,6 +206,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Tien Ki attack"
     },
     {
@@ -198,6 +217,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "An energy beam fired in the shape of a triangle"
     },
     {
@@ -208,6 +228,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Arms? or several selfs?"
     },
     {
@@ -218,6 +239,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Emit a blinding light infront of self to blind a target at close range"
     },
     {
@@ -228,6 +250,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "attempt to capture an opponent inside of a container"
     },
     {
@@ -238,6 +261,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Krillin Melee attack"
     },
     {
@@ -248,6 +272,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Fire an energy wave that surprises the enemy by splitting apart into several projectiles"
     },
     {
@@ -258,6 +283,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Release an energy disc capable of cutting anything at the opponent"
     },
     {
@@ -268,6 +294,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Yajirobe springs into action attack at the most opportune, least risky time for a devastating strike."
     },
     {
@@ -278,6 +305,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Yamcha melee attack"
     },
     {
@@ -288,6 +316,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Embody a fierce wolf and unleash a barrage of strikes"
     },
     {
@@ -298,6 +327,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "An ball of energy the user has complete control over."
     },
     {
@@ -308,6 +338,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Ultimate version of wolf fang fist"
     },
     {
@@ -318,6 +349,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Guard an incoming attack"
     },
     {
@@ -328,6 +360,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
+      "cost": 1,
       "description": "Ultimate tri beam attack"
     }
   ]
