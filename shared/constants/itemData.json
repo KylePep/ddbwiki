@@ -69,7 +69,7 @@
       "effectTrigger": "use",
       "effect": "PowerPoleMove",
       "description": "Power Pole is a weapon equipment that grants its wielder the PowerPoleMove move.",
-      "descriptionParams": "When equipped, the character gets the -PowerPoleMove- and +1 to physical attack accuracy.",
+      "descriptionParams": "When equipped, the character can use the -PowerPoleMove- move.",
       "extraDescription": "A simple red pole contained by a red sheathe worn on the back, when called upon the Power Pole can extend to extreme heights."
     },
     {

@@ -28,15 +28,16 @@ export default function page() {
         <div>
           {list.map((item: any)=>(
             <div key={item.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
-                <h2 className="font-bold">{item.title}</h2>
+                <h2 className="font-bold">{item.displayName}</h2>
                 <p className='mb-2'>{item.description}</p>
-                <h3 className='mb-2'><span className='font-semibold'>Type: </span>{item.type} <span> - {item.subType}</span></h3>
+                <p className='mb-2 mx-8'>{item.extraDescription}</p>
+
                 <div>
-                  <p><span className='font-semibold'>Details: </span>{item.effectTrigger}</p>
-                  <ul>
-                    <h4><span className='font-semibold'>Effect: </span>{item.effect}</h4>
-                    <p><span className='font-semibold'>Effect Description: </span>{item.effectDescription}</p>
-                  </ul>
+                    <p className='border-solid border-2 border-b-black'><span className='font-semibold'>Details </span></p>
+                    <h3 className='my-2'><span className='font-semibold'>Type: </span>{item.type} <span> - {item.subType}</span></h3>
+                    <h3 className='font-semibold'>Effect:</h3>
+                    <p>{item.effect}</p>
+                    <p>{item.descriptionParams}</p>
                 </div>
           </div>
               ))}
