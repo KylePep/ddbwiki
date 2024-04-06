@@ -27,17 +27,17 @@ export default function page() {
           ]} />
         <div>
           {list.map((item: any)=>(
-          <div key={item.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
+            <div key={item.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className="font-bold">{item.title}</h2>
-                <h3><span className='font-semibold'>Type: </span>{item.type} 
-                <span> - {item.subType}</span>
-                </h3>
+                <p className='mb-2'>{item.description}</p>
+                <h3 className='mb-2'><span className='font-semibold'>Type: </span>{item.type} <span> - {item.subType}</span></h3>
                 <div>
-                  <h4><span className='font-semibold'>Activation: </span>{item.effectTrigger}</h4>
-                  <h4><span className='font-semibold'>Effect: </span>{item.effect}</h4>
+                  <p><span className='font-semibold'>Details: </span>{item.effectTrigger}</p>
+                  <ul>
+                    <h4><span className='font-semibold'>Effect: </span>{item.effect}</h4>
+                    <p><span className='font-semibold'>Effect Description: </span>{item.effectDescription}</p>
+                  </ul>
                 </div>
-                <p><span className='font-semibold'>Description: </span>{item.description}</p>
-                <p><span className='font-semibold'>Lore: </span>{item.lore}</p>
           </div>
               ))}
         </div>
