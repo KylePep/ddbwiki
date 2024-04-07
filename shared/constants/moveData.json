@@ -2,7 +2,8 @@
   "MOVE_TYPES":[
     {
       "id": 1,
-      "title": "Kamehameha",
+      "name": "kamehameha",
+      "displayName": "Kamehameha",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -13,7 +14,8 @@
     },
     {
       "id": 2,
-      "title": "Special Beam Cannon",
+      "name": "specialBeamCannon",
+      "displayName": "Special Beam Cannon",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -24,7 +26,8 @@
     },
     {
       "id": 3,
-      "title": "Taunt",
+      "name": "taunt",
+      "displayName": "Taunt",
       "type": "support",
       "subType": "physical",
       "damage": 1,
@@ -35,7 +38,8 @@
     },
     {
       "id": 4,
-      "title": "Meteor Combination",
+      "name": "meteorCombo",
+      "displayName": "Meteor Combination",
       "type": "attack",
       "subType": "physical",
       "damage": 1,
@@ -46,7 +50,8 @@
     },
     {
       "id": 5,
-      "title": "Energy Wave",
+      "name": "energyWave",
+      "displayName": "Energy Wave",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -57,7 +62,8 @@
     },
     {
       "id": 6,
-      "title": "After-image Technique",
+      "name": "afterImageTech",
+      "displayName": "After-image Technique",
       "type": "support",
       "subType": "physical",
       "damage": 1,
@@ -68,7 +74,8 @@
     },
     {
       "id": 7,
-      "title": "Spirit Bomb",
+      "name": "spiritBomb",
+      "displayName": "Spirit Bomb",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -79,7 +86,8 @@
     },
     {
       "id": 8,
-      "title": "Rush",
+      "name": "rush",
+      "displayName": "Rush",
       "type": "attack",
       "subType": "physical",
       "damage": 1,
@@ -90,7 +98,8 @@
     },
     {
       "id": 9,
-      "title": "Masenko",
+      "name": "masenko",
+      "displayName": "Masenko",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -101,7 +110,8 @@
     },
     {
       "id": 10,
-      "title": "Blast Barrage",
+      "name": "blastBarrage",
+      "displayName": "Blast Barrage",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -112,7 +122,8 @@
     },
     {
       "id": 11,
-      "title": "Anger",
+      "name": "anger",
+      "displayName": "Anger",
       "type": "support",
       "subType": "physical",
       "damage": 1,
@@ -123,7 +134,8 @@
     },
     {
       "id": 12,
-      "title": "Miracle Full Force",
+      "name": "miracleFullForce",
+      "displayName": "Miracle Full Force",
       "type": "attack",
       "subType": "physical, energy",
       "damage": 1,
@@ -134,7 +146,8 @@
     },
     {
       "id": 13,
-      "title": "Evil Assault",
+      "name": "evilAssault",
+      "displayName": "Evil Assault",
       "type": "attack",
       "subType": "physical",
       "damage": 1,
@@ -145,7 +158,8 @@
     },
     {
       "id": 14,
-      "title": "Destructive Wave",
+      "name": "destructiveWave",
+      "displayName": "Destructive Wave",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -156,7 +170,8 @@
     },
     {
       "id": 15,
-      "title": "Light Grenade",
+      "name": "lightGrenade",
+      "displayName": "Light Grenade",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -167,7 +182,8 @@
     },
     {
       "id": 16,
-      "title": "Super Explosive Wave",
+      "name": "superExplosiveWave",
+      "displayName": "Super Explosive Wave",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -178,7 +194,8 @@
     },
     {
       "id": 17,
-      "title": "Regeneration",
+      "name": "regeneration",
+      "displayName": "Regeneration",
       "type": "support",
       "subType": "energy",
       "damage": 1,
@@ -189,7 +206,8 @@
     },
     {
       "id": 18,
-      "title": "Hellzone Grenade",
+      "name": "hellzoneGrenade",
+      "displayName": "Hellzone Grenade",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -200,7 +218,8 @@
     },
     {
       "id": 19,
-      "title": "Fierce Attack",
+      "name": "fierceAttack",
+      "displayName": "Fierce Attack",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -211,7 +230,8 @@
     },
     {
       "id": 20,
-      "title": "Tri Beam",
+      "name": "triBeam",
+      "displayName": "Tri Beam",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -222,7 +242,8 @@
     },
     {
       "id": 21,
-      "title": "Multi-Form Attack",
+      "name": "multiFormAttack",
+      "displayName": "Multi-Form Attack",
       "type": "attack",
       "subType": "physical",
       "damage": 1,
@@ -233,7 +254,8 @@
     },
     {
       "id": 22,
-      "title": "Solar Flare",
+      "name": "solarFlare",
+      "displayName": "Solar Flare",
       "type": "support",
       "subType": "energy",
       "damage": 1,
@@ -244,7 +266,8 @@
     },
     {
       "id": 23,
-      "title": "Evil Containment Wave",
+      "name": "evilContainmentWave",
+      "displayName": "Evil Containment Wave",
       "type": "support",
       "subType": "energy",
       "damage": 1,
@@ -255,7 +278,8 @@
     },
     {
       "id": 24,
-      "title": "Rengeki",
+      "name": "rengeki",
+      "displayName": "Rengeki",
       "type": "attack",
       "subType": "physical",
       "damage": 1,
@@ -266,7 +290,8 @@
     },
     {
       "id": 25,
-      "title": "Scatter Energy Wave",
+      "name": "scatterEnergyWave",
+      "displayName": "Scatter Energy Wave",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -277,7 +302,8 @@
     },
     {
       "id": 26,
-      "title": "Destructo-Disc",
+      "name": "destructoDisc",
+      "displayName": "Destructo-Disc",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -288,7 +314,8 @@
     },
     {
       "id": 27,
-      "title": "Y-Yajirobe?!",
+      "name": "yYajirobe",
+      "displayName": "Y-Yajirobe?!",
       "type": "support",
       "subType": "physical",
       "damage": 1,
@@ -299,7 +326,8 @@
     },
     {
       "id": 28,
-      "title": "Wolf Hurricane",
+      "name": "wolfHurricane",
+      "displayName": "Wolf Hurricane",
       "type": "attack",
       "subType": "physical",
       "damage": 1,
@@ -310,7 +338,8 @@
     },
     {
       "id": 29,
-      "title": "Wolf Fang Fist",
+      "name": "wolfFangeFist",
+      "displayName": "Wolf Fang Fist",
       "type": "attack",
       "subType": "physical",
       "damage": 1,
@@ -321,7 +350,8 @@
     },
     {
       "id": 30,
-      "title": "Spriti Ball",
+      "name": "spiritBall",
+      "displayName": "Sprit Ball",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
@@ -332,7 +362,8 @@
     },
     {
       "id": 31,
-      "title": "Neo Wolf Fang Fist",
+      "name": "neoWolfFangFist",
+      "displayName": "Neo Wolf Fang Fist",
       "type": "attack",
       "subType": "physical",
       "damage": 1,
@@ -343,7 +374,8 @@
     },
     {
       "id": 32,
-      "title": "Guard",
+      "name": "guard",
+      "displayName": "Guard",
       "type": "support",
       "subType": "physical",
       "damage": 1,
@@ -354,7 +386,8 @@
     },
     {
       "id": 33,
-      "title": "Neo Tri-Beam",
+      "name": "neoTriBeam",
+      "displayName": "Neo Tri-Beam",
       "type": "attack",
       "subType": "energy",
       "damage": 1,
