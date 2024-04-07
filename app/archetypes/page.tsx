@@ -5,9 +5,9 @@ import React from 'react'
 
 export default function archetypesPage() {
 
-  const moveName = ((moveNumber: number)=>{
-    const move =  MOVE_TYPES.find((m) => m.id == moveNumber)
-    return move?.title
+  const moveName = ((moveName: string)=>{
+    const move =  MOVE_TYPES.find((m) => m.name == moveName)
+    return move?.displayName
   })
 
   return (
