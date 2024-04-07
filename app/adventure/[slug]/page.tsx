@@ -60,6 +60,12 @@ export default function page(url:URL) {
               <p className='font-bold'>Player Count: <span className='font-normal'>{data.players}</span></p>
               <p className='font-bold'>Villain: <span className='font-normal'>{data.villain}</span></p>
               <p className='font-bold'>Location: <span className='font-normal'>{data.primaryLocation}</span></p>
+              <p className='font-bold'>Battles:</p>
+              <ul>
+                {data.battles.map((battle: any) => (
+                  <li key={battle}>{battle}</li>
+                ))}
+              </ul>
             </div>
             <p>
             There will need to be an entire dataType created for adventures and the other dataTypes outlined in the adventure page

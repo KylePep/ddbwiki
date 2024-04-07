@@ -9,7 +9,8 @@
       "primaryLocation": "Earth, Forest",
       "act1Summary":"Turles and his team show up on Earth.",
       "act2Summary":"Tree Grows while everyone fights.",
-      "act3Summary":"Turles gets super strong from the fruit and appears unbeatable."
+      "act3Summary":"Turles gets super strong from the fruit and appears unbeatable.",
+      "battles": ["Rasin and Lakasei", "Amond", "Cacao", "Daiz and Cacao", "Rasin", "Lakasei", "Turles part1", "Turles part2", "Great Ape Gohan", "Great Ape Gohan resolution", "Amond, Daiz, Cacao, Rasin, Lakasei", "Turles part3", "Turles part4", "Turles part5", "Turles part6"]
     },
     {
       "id": "worldsStrongest",
@@ -20,7 +21,8 @@
       "primaryLocation": "Earth, Mountains",
       "act1Summary":"Friends get kidnapped, mistakenly.",
       "act2Summary":"Friend Rescue attempt, while investigating.",
-      "act3Summary":"Dr.Wheeler is revealed to be an enormous brain in a battle robot."
+      "act3Summary":"Dr.Wheeler is revealed to be an enormous brain in a battle robot.",
+      "battles": []
     },
     {
       "id": "lordSlug",
@@ -31,7 +33,8 @@
       "primaryLocation": "Earth, City",
       "act1Summary":"A huge asteroid is about to hit Earth, whipping it out.",
       "act2Summary":"The asteroid is actually a ship. Out pours an invading army and an elderly Namekian.",
-      "act3Summary":"The elder Namekian's youth is restored and Lord Slug begins the final battle."
+      "act3Summary":"The elder Namekian's youth is restored and Lord Slug begins the final battle.",
+      "battles": []
     },
     {
       "id": "deadZone",
@@ -42,7 +45,8 @@
       "primaryLocation": "Earth, Palace",
       "act1Summary":"Piccolo goes missing. Then Gohan gets kidnapped.",
       "act2Summary":"Garlic Jr is revealed and his plans for the dead zone.",
-      "act3Summary":"Garlic Jr becomes immortal and opens the dead zone."
+      "act3Summary":"Garlic Jr becomes immortal and opens the dead zone.",
+      "battles": []
     }
   ]
 }
