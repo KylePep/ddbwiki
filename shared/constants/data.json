@@ -17,99 +17,110 @@
 "ORIGIN_TYPES":[
   {
     "id": 1,
-    "title": "Saiyan",
+    "name": "",
+    "displayName": "Saiyan",
     "description": "A Race of space barbarians with the power to transform into Great Apes. Huge appetites.",
     "positiveTrait": "power",
     "negativeTrait": "spirit",
-    "forms": [1],
+    "forms": ["greatApe"],
     "moves": [],
-    "startingItems": [1,2],
-    "startingEquipment": [2,1,0]
+    "startingItems": ["scouter","saiyanArmor"],
+    "startingEquipment": ["scouter","saiyanArmor","none"]
   },
   {
     "id": 2,
-    "title": "Half Saiyan",
+    "name": "",
+    "displayName": "Half Saiyan",
     "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with interest in battle. Huge Appetites.",
     "positiveTrait": "ki",
     "negativeTrait": "toughness",
-    "forms": [1],
+    "forms": ["greatApe"],
     "moves": [],
-    "startingItems": [4,3],
-    "startingEquipment": [0,4,0]
+    "startingItems": ["turleHermitGi", "senzuBean"],
+    "startingEquipment": ["none","turleHermitGi","none"]
   },
   {
     "id": 3,
-    "title": "Earthling",
+    "name": "",
+    "displayName": "Earthling",
     "description": "Humans capable of harnessing Ki. Technology(item)",
     "positiveTrait": "spirit",
     "negativeTrait": "kit",
     "forms": [],
     "moves": [],
-    "startingItems": [4,3],
-    "startingEquipment": [0,4,0]
+    "startingItems": ["turleHermitGi", "senzuBean"],
+    "startingEquipment": ["none","turleHermitGi","none"]
   },
   {
     "id": 4,
-    "title": "Namekian",
+    "name": "",
+    "displayName": "Namekian",
     "description": "Humanoids with plant and slug-like characteristics, including green skin and antennae. Can survive on only water. Regeneration",
     "positiveTrait": "toughness",
     "negativeTrait": "agility",
     "forms": [],
-    "moves": [17],
-    "startingItems": [6],
-    "startingEquipment": [0,6,0]
+    "moves": ["regeneration"],
+    "startingItems": ["demonClanClothes"],
+    "startingEquipment": ["none","demonClanClothes","none"]
   }
 ],
 "ARCHETYPE_TYPES":[
   {
     "id": 1,
-    "title": "Warrior",
+    "name": "",
+    "displayName": "Warrior",
     "examples": "Goku | Vegeta",
     "description": "The battle hungry archetype geared for high intensity combat.",
-    "moves": [5],
+    "moves": ["energyWave"],
     "startingItems": []
   },
   {
     "id": 2,
-    "title": "Support",
+    "name": "",
+    "displayName": "Support",
     "examples": "Hercule | Chiaotzu | Krillin",
     "description": "The comic relief archetype, helpful distractions and buff to the party.",
-    "moves": [3],
+    "moves": ["taunt"],
     "startingItems": []
   },
   {
     "id": 3,
-    "title": "Striker",
+    "name": "",
+    "displayName": "Striker",
     "examples": "Gohan | Trunks",
     "description": "An archetype capable of altering the battlefield and negating villains abilities.",
-    "moves": [8],
+    "moves": ["rush"],
     "startingItems": []
   },
   {
     "id": 4,
-    "title": "Tank",
+    "name": "",
+    "displayName": "Tank",
     "examples": "Piccolo | Tien",
     "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others.",
-    "moves": [32],
+    "moves": ["guard"],
     "startingItems": []
   }
 ],
   "FORM_TYPES":[
     {
       "id": 1,
-      "title": "Great Ape",
+      "name": "greatApe",
+      "displayName": "Great Ape",
       "type": "form",
       "description": "A Saiyan or Half Saiyan tranforms during a full moon or similar conditions, Becoming the great Ape. This power is saved for particularly difficult to conquer planets."
     },
     {
       "id": 2,
-      "title": "Super Saiyan",
+      "name": "superSaiyan",
+      "displayName": "Super Saiyan",
       "type": "alteration",
       "description": "A Saiyan or Half Saiyan becomes a Super Saiyan. Their power is amplified many times over, their eyes become teal and their hair a spiky gold."
     },
     {
       "id": 3,
-      "title": "Potential Unlocked",
+      "name": "potentialUnlocked",     
+      "displayName": "Potential Unlocked",
       "type": "aura",
       "description": "Granted by an Elder Guru a characters latent ability is unlocked."
     }
