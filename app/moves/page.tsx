@@ -16,7 +16,7 @@ export default function movesPage() {
         <div>
           {list.map((move: any)=>(
           <div key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
-                <h2 className="font-bold">{move.title}</h2>
+                <h2 className="font-bold">{move.displayName}</h2>
                 <h3><span className="font-semibold">Type: </span>{move.type}</h3>
                 <h4><span className="font-semibold">Sub Type: </span> {move.subType}</h4>
                 <div className="flex justify-between">
