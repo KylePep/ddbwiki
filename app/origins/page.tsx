@@ -6,19 +6,19 @@ import React from 'react'
 
 export default function originsPage() {
 
-  const moveName = ((moveNumber: number)=>{
-    const move =  MOVE_TYPES.find((m) => m.id == moveNumber)
-    return move?.title
+  const moveName = ((moveName: string)=>{
+    const move =  MOVE_TYPES.find((m) => m.name == moveName)
+    return move?.displayName
   })
 
-  const formName = ((formNumber: number)=>{
-    const form =  FORM_TYPES.find((f) => f.id == formNumber)
-    return form?.title
+  const formName = ((formName: string)=>{
+    const form =  FORM_TYPES.find((f) => f.name == formName)
+    return form?.displayName
   })
 
-  const itemName = ((itemNumber: number)=> {
-    const item = ITEM_TYPES.find((i)=> i.id == itemNumber)
-    return item?.title
+  const itemName = ((itemName: string)=> {
+    const item = ITEM_TYPES.find((i)=> i.name == itemName)
+    return item?.displayName
   })
 
   return (
