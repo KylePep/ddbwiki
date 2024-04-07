@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { ADVENTURE_TYPES } from '@/shared/constants'
+import { ADVENTURE_TYPES, ENEMY_TYPES } from '@/shared/constants'
 
 type URL = {
   params: {
@@ -15,6 +15,11 @@ const fetchDetails = (slug:string) => {
   }
   return data
 }
+
+const enemyName = ((enemyId: number)=>{
+  const enemy =  ENEMY_TYPES.find((e) => e.id == enemyId)
+  return enemy?.title
+})
 
 export default function page(url:URL) {
   const data = fetchDetails(url.params.slug)
@@ -58,7 +63,14 @@ export default function page(url:URL) {
                 </ul>
               </div>
               <p className='font-bold'>Player Count: <span className='font-normal'>{data.players}</span></p>
-              <p className='font-bold'>Villain: <span className='font-normal'>{data.villain}</span></p>
+              <p className='font-bold'>Villain: <span className='font-normal'>{enemyName(data.villain)}</span></p>
+
+              <p className='font-bold'>Opponents:</p>
+              <ul>
+                {data.opponents?.map((opponent: any) => (
+                  <li key={opponent}>{enemyName(opponent)}</li>
+                ))}
+              </ul>
               <p className='font-bold'>Location: <span className='font-normal'>{data.primaryLocation}</span></p>
               <p className='font-bold'>Battles:</p>
               <ul>
@@ -67,9 +79,6 @@ export default function page(url:URL) {
                 ))}
               </ul>
             </div>
-            <p>
-            There will need to be an entire dataType created for adventures and the other dataTypes outlined in the adventure page
-            </p>
           </div>
           :
           <div> This adventure does not exist.</div>
