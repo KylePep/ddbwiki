@@ -3,7 +3,8 @@
     {
       "id": 1,
       "adventure": ["The Tree of Might"],
-      "title": "Amond",
+      "name": "amond",
+      "displayName": "Amond",
       "baseLevel": 2,
       "baseStats": {"spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3},
       "type": "henchmen",
@@ -21,7 +22,8 @@
     {
       "id": 2,
       "adventure": ["The Tree of Might"],
-      "title": "Daiz",
+      "name": "daiz",
+      "displayName": "Daiz",
       "baseLevel": 1,
       "baseStats": {"spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3},
       "type": "henchmen",
@@ -39,7 +41,8 @@
     {
       "id": 3,
       "adventure": ["The Tree of Might"],
-      "title": "Cacao",
+      "name": "cacao",
+      "displayName": "Cacao",
       "baseLevel": 1,
       "baseStats": {"spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3},
       "type": "henchmen",
@@ -57,7 +60,8 @@
     {
       "id": 4,
       "adventure": ["The Tree of Might"],
-      "title": "Rasin",
+      "name": "rasin",
+      "displayName": "Rasin",
       "baseLevel": 1,
       "baseStats": {"spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3},
       "type": "henchmen",
@@ -75,7 +79,8 @@
     {
       "id": 5,
       "adventure": ["The Tree of Might"],
-      "title": "Lakasei",
+      "name": "lakasei",
+      "displayName": "Lakasei",
       "baseLevel": 1,
       "baseStats": {"spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3},
       "type": "henchmen",
@@ -93,7 +98,8 @@
     {
       "id": 6,
       "adventure": ["The Tree of Might"],
-      "title": "Turles",
+      "name": "turles",
+      "displayName": "Turles",
       "baseLevel": 3,
       "baseStats": {"spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3},
       "type": "boss",
