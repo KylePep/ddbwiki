@@ -4,8 +4,19 @@ export default function page() {
   return (
     <main>
       <h1 className='mb-3 text-lg'>The world of Dungeons & DragonBalls. Here you can learn about locations such as planets and points of interest.</h1>
-      <div className='flex justify-around'>
+      <div className='mb-4'>
+        <h2 className='font-bold mb-2'>The Tree of Might</h2>
+        <ul>
+          <li>Forest</li>
+          <li>Camp Site</li>
+          <li>Ruined Forest</li>
+          <li>{`Goku's House`}</li>
+          <li>Foot of the Tree of Might</li>
+          <li>Crown of the Tree of Might</li>
+        </ul>
+      </div>
 
+      <div className='flex justify-around'>
         <div>
           <h2 className='font-bold text-md'>Locations</h2>
           <ul className='mb-3'>
