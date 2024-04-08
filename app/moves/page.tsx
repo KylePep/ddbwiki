@@ -17,15 +17,23 @@ export default function movesPage() {
           {list.map((move: any)=>(
           <div key={move.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
                 <h2 className="font-bold">{move.displayName}</h2>
-                <h3><span className="font-semibold">Type: </span>{move.type}</h3>
-                <h4><span className="font-semibold">Sub Type: </span> {move.subType}</h4>
-                <div className="flex justify-between">
-                  <p><span className="font-semibold">Damage: </span>{move.damage}</p>
-                  <p><span className="font-semibold">Cost: </span>{move.cost}</p>
-                  <p><span className="font-semibold">Accuracy: </span>{move.accuracy}</p>
+                  <p className="mb-2">{move.description}</p>
+                  <p className="mb-2 mx-8">{move.extraDescription}</p>
+
+                <div>
+                  <p className="border-solid border-2 border-b-black font-semibold">Details</p>
+                  <h3 className='my-2'><span className='font-semibold'>Type: </span>{move.type} <span> - {move.subType}</span></h3>
+                  <div className="flex justify-between">
+                    <p><span className="font-semibold">Damage: </span>{move.damage}</p>
+                    <p><span className="font-semibold">Cost: </span>{move.cost}</p>
+                    <p><span className="font-semibold">Accuracy: </span>{move.accuracy}</p>
+                  </div>
+                  <h3 className="font-semibold">Effect: </h3>
+                  <p>{move.effect}</p>
+                  <p>{move.descriptionParams}</p>
+
                 </div>
-                <p><span className="font-semibold">Effect: </span>{move.effect}</p>
-                <p><span className="font-semibold">Description: </span>{move.description}</p>
+
           </div>
               ))}
         </div>
