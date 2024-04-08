@@ -6,11 +6,14 @@
       "displayName": "Kamehameha",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "An energy wave. The signature attack of the students of the Turtle School."
+      "description": "Kamehameha is a mid to long range energy attack",
+      "descriptionParams": "If the target is withing mid to long range, and (1 cost) is available, the character can perform the Kamehameha energy attack.",
+      "extraDescription": "An energy wave. The signature attack of the students of the Turtle School."
     },
     {
       "id": 2,
@@ -18,11 +21,14 @@
       "displayName": "Special Beam Cannon",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "A concentrated beam attack that takes a long time to charge."
+      "description": "A concentrated beam attack that takes a long time to charge.",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 3,
@@ -30,11 +36,14 @@
       "displayName": "Taunt",
       "type": "support",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Making a funny face and a rude noise, draws the attention of the target."
+      "description": "Making a funny face and a rude noise, draws the attention of the target.",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 4,
@@ -42,11 +51,14 @@
       "displayName": "Meteor Combination",
       "type": "attack",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Goku's combination attack"
+      "description": "Goku's combination attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 5,
@@ -54,11 +66,14 @@
       "displayName": "Energy Wave",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "A basic energy wave attack"
+      "description": "A basic energy wave attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 6,
@@ -66,11 +81,14 @@
       "displayName": "After-image Technique",
       "type": "support",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Increases evasion for X turns"
+      "description": "Increases evasion for X turns",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 7,
@@ -78,11 +96,14 @@
       "displayName": "Spirit Bomb",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Takes a while to charge up but then unleashes a powerful attack"
+      "description": "Takes a while to charge up but then unleashes a powerful attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 8,
@@ -90,11 +111,14 @@
       "displayName": "Rush",
       "type": "attack",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "A quick melee attack"
+      "description": "A quick melee attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 9,
@@ -102,11 +126,14 @@
       "displayName": "Masenko",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Demon clan energy wave"
+      "description": "Demon clan energy wave",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 10,
@@ -114,11 +141,14 @@
       "displayName": "Blast Barrage",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Unleash a barrage of energy blasts at the opponent"
+      "description": "Unleash a barrage of energy blasts at the opponent",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 11,
@@ -126,11 +156,14 @@
       "displayName": "Anger",
       "type": "support",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Tap into dormant anger"
+      "description": "Tap into dormant anger",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 12,
@@ -142,7 +175,9 @@
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Rage filled combo attack"
+      "description": "Rage filled combo attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 13,
@@ -150,11 +185,14 @@
       "displayName": "Evil Assault",
       "type": "attack",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Demon clan melee attack"
+      "description": "Demon clan melee attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 14,
@@ -162,11 +200,14 @@
       "displayName": "Destructive Wave",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Demon clan energy wave"
+      "description": "Demon clan energy wave",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 15,
@@ -174,11 +215,14 @@
       "displayName": "Light Grenade",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Fire an explosive energy ball at the target"
+      "description": "Fire an explosive energy ball at the target",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 16,
@@ -186,11 +230,14 @@
       "displayName": "Super Explosive Wave",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Attack all enemies with an explosive wave."
+      "description": "Attack all enemies with an explosive wave.",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 17,
@@ -198,11 +245,14 @@
       "displayName": "Regeneration",
       "type": "support",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Regenerate limbs"
+      "description": "Regenerate limbs",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 18,
@@ -210,11 +260,14 @@
       "displayName": "Hellzone Grenade",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Bigger version of light grenade"
+      "description": "Bigger version of light grenade",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 19,
@@ -222,11 +275,14 @@
       "displayName": "Fierce Attack",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Tien Ki attack"
+      "description": "Tien Ki attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 20,
@@ -234,11 +290,14 @@
       "displayName": "Tri Beam",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "An energy beam fired in the shape of a triangle"
+      "description": "An energy beam fired in the shape of a triangle",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 21,
@@ -246,11 +305,14 @@
       "displayName": "Multi-Form Attack",
       "type": "attack",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Arms? or several selfs?"
+      "description": "Arms? or several selfs?",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 22,
@@ -258,11 +320,14 @@
       "displayName": "Solar Flare",
       "type": "support",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Emit a blinding light infront of self to blind a target at close range"
+      "description": "Emit a blinding light in front of self to blind a target at close range",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 23,
@@ -270,11 +335,14 @@
       "displayName": "Evil Containment Wave",
       "type": "support",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "attempt to capture an opponent inside of a container"
+      "description": "attempt to capture an opponent inside of a container",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 24,
@@ -282,11 +350,14 @@
       "displayName": "Rengeki",
       "type": "attack",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Krillin Melee attack"
+      "description": "Krillin Melee attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 25,
@@ -294,11 +365,14 @@
       "displayName": "Scatter Energy Wave",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Fire an energy wave that surprises the enemy by splitting apart into several projectiles"
+      "description": "Fire an energy wave that surprises the enemy by splitting apart into several projectiles",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 26,
@@ -306,11 +380,14 @@
       "displayName": "Destructo-Disc",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Release an energy disc capable of cutting anything at the opponent"
+      "description": "Release an energy disc capable of cutting anything at the opponent",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 27,
@@ -318,11 +395,14 @@
       "displayName": "Y-Yajirobe?!",
       "type": "support",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Yajirobe springs into action attack at the most opportune, least risky time for a devastating strike."
+      "description": "Yajirobe springs into action attack at the most opportune, least risky time for a devastating strike.",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 28,
@@ -330,11 +410,14 @@
       "displayName": "Wolf Hurricane",
       "type": "attack",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Yamcha melee attack"
+      "description": "Yamcha melee attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 29,
@@ -342,11 +425,14 @@
       "displayName": "Wolf Fang Fist",
       "type": "attack",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Embody a fierce wolf and unleash a barrage of strikes"
+      "description": "Embody a fierce wolf and unleash a barrage of strikes",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 30,
@@ -354,11 +440,14 @@
       "displayName": "Sprit Ball",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "An ball of energy the user has complete control over."
+      "description": "An ball of energy the user has complete control over.",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 31,
@@ -366,11 +455,14 @@
       "displayName": "Neo Wolf Fang Fist",
       "type": "attack",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Ultimate version of wolf fang fist"
+      "description": "Ultimate version of wolf fang fist",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 32,
@@ -378,11 +470,14 @@
       "displayName": "Guard",
       "type": "support",
       "subType": "physical",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Guard an incoming attack"
+      "description": "Guard an incoming attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     },
     {
       "id": 33,
@@ -390,11 +485,14 @@
       "displayName": "Neo Tri-Beam",
       "type": "attack",
       "subType": "energy",
+      "range": ["mid", "long"],
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
       "cost": 1,
-      "description": "Ultimate tri beam attack"
+      "description": "Ultimate tri beam attack",
+      "descriptionParams": "",
+      "extraDescription": ""
     }
   ]
 }

@@ -8,8 +8,9 @@
       "subType": "none",
       "effectTrigger": "passive",
       "effect": "effect",
+      "description": "No item",
       "descriptionParams": "No item",
-      "description": "No item"
+      "extraDescription": "No item"
     },
     {
       "id": 1,
