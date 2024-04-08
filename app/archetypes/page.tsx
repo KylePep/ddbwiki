@@ -16,7 +16,7 @@ export default function archetypesPage() {
       <div>
       {ARCHETYPE_TYPES.map((arch: any)=>(
           <div key={arch.id} className='bg-gray-100 rounded-md px-6 py-4 mb-2'>
-                <h2 className='font-bold text-lg'>{arch.title}</h2>
+                <h2 className='font-bold text-lg'>{arch.displayName}</h2>
                 <h3 className='mb-3'>{arch.examples}</h3>
                 <p className='mb-2'><span className='font-semibold'>Description: </span> {arch.description}</p>
                 { arch.moves.length != 0 && (

@@ -30,7 +30,7 @@ export default function originsPage() {
           <div>
           {ORIGIN_TYPES.map((origin: any)=>(
           <div key={origin.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
-                <h2 className='font-bold mb-1 text-lg'>{origin.title}</h2>
+                <h2 className='font-bold mb-1 text-lg'>{origin.displayName}</h2>
                 <p className='capitalize'><span className='font-semibold'>Description: </span> {origin.description}</p>
                 <h3 className='capitalize'><span className='font-semibold'>Origin traits: </span> + {origin.positiveTrait} | - {origin.negativeTrait}</h3>
                 { origin.forms.length != 0 ? (
