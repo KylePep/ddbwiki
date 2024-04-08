@@ -13,8 +13,8 @@ export default function Items({form, handleChange}:formProps) {
 
   useEffect(() =>{
     
-    const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
-    const archetype = ARCHETYPE_TYPES.find((a) => a.title === form.archetype)
+    const origin = ORIGIN_TYPES.find((o)=> o.displayName === form.origin)
+    const archetype = ARCHETYPE_TYPES.find((a) => a.displayName === form.archetype)
   
     const originItems = origin ? origin.startingItems : []
     const archItems = archetype ? archetype.startingItems : []
@@ -22,7 +22,7 @@ export default function Items({form, handleChange}:formProps) {
     const items = originItems.concat(archItems)
     
     const updatedItemsList = items.map((il) => {
-      const itemsById = ITEM_TYPES.find((i) => i.id === il)
+      const itemsById = ITEM_TYPES.find((i) => i.name === il)
       return itemsById
     })
     
@@ -69,7 +69,7 @@ export default function Items({form, handleChange}:formProps) {
     <div className='bg-white me-10 py-2 w-full'>
       <ul>
         {itemsList.map((item: any)=>(
-        <li className='group hover:text-gray-800'  key={item.id}> <span className={equippedList.includes(item.id) ? 'font-bold' : 'invisible' }>E</span> {item.title}
+        <li className='group hover:text-gray-800'  key={item.id}> <span className={equippedList.includes(item.id) ? 'font-bold' : 'invisible' }>E</span> {item.displayName}
 
         <span className='invisible group-hover:visible mx-2'>
           <button onClick={(e)=> {setToggle(true), setContent( item)}} className='bg-blue-200 hover:bg-blue-300 px-1 rounded'>Info</button>

@@ -17,7 +17,7 @@
 "ORIGIN_TYPES":[
   {
     "id": 1,
-    "name": "",
+    "name": "saiyan",
     "displayName": "Saiyan",
     "description": "A Race of space barbarians with the power to transform into Great Apes. Huge appetites.",
     "positiveTrait": "power",
@@ -29,7 +29,7 @@
   },
   {
     "id": 2,
-    "name": "",
+    "name": "halfSaiyan",
     "displayName": "Half Saiyan",
     "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with interest in battle. Huge Appetites.",
     "positiveTrait": "ki",
@@ -41,7 +41,7 @@
   },
   {
     "id": 3,
-    "name": "",
+    "name": "earthling",
     "displayName": "Earthling",
     "description": "Humans capable of harnessing Ki. Technology(item)",
     "positiveTrait": "spirit",
@@ -53,7 +53,7 @@
   },
   {
     "id": 4,
-    "name": "",
+    "name": "namekian",
     "displayName": "Namekian",
     "description": "Humanoids with plant and slug-like characteristics, including green skin and antennae. Can survive on only water. Regeneration",
     "positiveTrait": "toughness",
@@ -67,7 +67,7 @@
 "ARCHETYPE_TYPES":[
   {
     "id": 1,
-    "name": "",
+    "name": "warrior",
     "displayName": "Warrior",
     "examples": "Goku | Vegeta",
     "description": "The battle hungry archetype geared for high intensity combat.",
@@ -76,7 +76,7 @@
   },
   {
     "id": 2,
-    "name": "",
+    "name": "support",
     "displayName": "Support",
     "examples": "Hercule | Chiaotzu | Krillin",
     "description": "The comic relief archetype, helpful distractions and buff to the party.",
@@ -85,7 +85,7 @@
   },
   {
     "id": 3,
-    "name": "",
+    "name": "striker",
     "displayName": "Striker",
     "examples": "Gohan | Trunks",
     "description": "An archetype capable of altering the battlefield and negating villains abilities.",
@@ -94,7 +94,7 @@
   },
   {
     "id": 4,
-    "name": "",
+    "name": "tank",
     "displayName": "Tank",
     "examples": "Piccolo | Tien",
     "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others.",

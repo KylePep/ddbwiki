@@ -24,7 +24,7 @@ export default function Attributes({form, handleChange}:formProps) {
       <div>
         <select className='w-full' onChange={handleChange} value={form.origin} name="origin" id="origin">
           {ORIGIN_TYPES.map((origin: any)=> (
-        <option key={origin.title}>{origin.title}</option>
+        <option key={origin.displayName}>{origin.displayName}</option>
         ))}
         </select>
     </div>
@@ -36,7 +36,7 @@ export default function Attributes({form, handleChange}:formProps) {
       <div>
       <select className='w-full' onChange={handleChange} value={form.archetype} name="archetype" id="archetype">
           {ARCHETYPE_TYPES.map((arch: any)=> (
-        <option key={arch.title}>{arch.title}</option>
+        <option key={arch.displayName}>{arch.displayName}</option>
         ))}
         </select>
     </div>

@@ -11,12 +11,12 @@ export default function Forms({form, handleChange}:formProps) {
   const [content, setContent] = useState('')
 
   useEffect(()=>{
-    const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
+    const origin = ORIGIN_TYPES.find((o)=> o.displayName === form.origin)
   
     const originForms = origin ? origin.forms : []
   
     const formsList = originForms.map((fl)=> {
-        const formById = FORM_TYPES.find((f)=> f.id == fl)
+        const formById = FORM_TYPES.find((f)=> f.name == fl)
         return formById
     })
 
@@ -38,7 +38,7 @@ export default function Forms({form, handleChange}:formProps) {
   <div className='bg-white me-10 py-2 w-full'>
     <ul>
         {formsList.map((form: any)=>(
-          <li key={form.id} className='group hover:cursor-pointer hover:text-gray-800'  >{form.title}
+          <li key={form.id} className='group hover:cursor-pointer hover:text-gray-800'  >{form.displayName}
             <span className='invisible group-hover:visible text-black ms-2'><button onClick={(e)=> {setToggle(true), setContent( form)}} className='bg-blue-200 hover:bg-blue-300 px-1 rounded'>Info</button></span>
           </li>
         ))}

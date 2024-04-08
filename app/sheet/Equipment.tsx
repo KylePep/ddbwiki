@@ -10,12 +10,12 @@ export default function Equipment({form, handleChange}:formProps) {
   const [equipmentDisplay, setEquipmentDisplay] = useState([""])
 
   useEffect(()=> {
-  const origin = ORIGIN_TYPES.find((o)=>o.title === form.origin)
+  const origin = ORIGIN_TYPES.find((o)=>o.displayName === form.origin)
 
   const originEquipment = origin ? origin.startingEquipment : []
 
   const equipmentList = originEquipment.map((e: any) =>{
-      const itemById = ITEM_TYPES.find((i)=> i.id === e)
+      const itemById = ITEM_TYPES.find((i)=> i.name === e)
       return itemById?.id
     })
     
@@ -32,7 +32,7 @@ export default function Equipment({form, handleChange}:formProps) {
       const equipment = form.equipment
       const updatedList = equipment.map((e: any) =>{
           const itemById = ITEM_TYPES.find((i)=> i.id === e)
-          return itemById?.title
+          return itemById?.displayName
         })
         setEquipmentDisplay(updatedList)
     

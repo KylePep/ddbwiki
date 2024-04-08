@@ -13,8 +13,8 @@ export default function Moves({form, handleChange}:formProps) {
 
   useEffect(()=>{
 
-    const origin = ORIGIN_TYPES.find((o)=> o.title === form.origin)
-    const archetype = ARCHETYPE_TYPES.find((a) => a.title === form.archetype)
+    const origin = ORIGIN_TYPES.find((o)=> o.displayName === form.origin)
+    const archetype = ARCHETYPE_TYPES.find((a) => a.displayName === form.archetype)
   
     const originMoves = origin ? origin.moves : []
     const archMoves = archetype ? archetype.moves : []
@@ -22,7 +22,7 @@ export default function Moves({form, handleChange}:formProps) {
     const moves = originMoves.concat(archMoves)
     
     const updatedMovesList = moves.map((om) => {
-      const moveById = MOVE_TYPES.find((m) => m.id === om)
+      const moveById = MOVE_TYPES.find((m) => m.name === om)
       return moveById
     })
 
@@ -44,7 +44,7 @@ export default function Moves({form, handleChange}:formProps) {
   <ul>
     {movesList.map((move: any) => (
       <li key={move.id} className='group hover:cursor-pointer hover:text-gray-800'>
-        {move.title}
+        {move.displayName}
         <span className='invisible group-hover:visible text-black ms-2'>
           <button onClick={(e)=> {setToggle(true), setContent( move)}} className='bg-blue-200 hover:bg-blue-300 px-1 rounded'>Info</button>
         </span>
