@@ -71,7 +71,7 @@
     "displayName": "Warrior",
     "examples": "Goku | Vegeta",
     "description": "Warrior is an archetype with a focus on energy attacks.",
-    "extraDescritption": "",
+    "extraDescription": "Warriors have honed their abilities on the battlefield. They have a skills and abilities that aid their domination of the opposition.",
     "moves": ["energyWave"],
     "startingItems": []
   },
@@ -81,7 +81,7 @@
     "displayName": "Striker",
     "examples": "Gohan | Trunks",
     "description": "Striker is an archetype with a focus on physical attacks.",
-    "extraDescritption": "",
+    "extraDescription": "Strikers are trained by masters of their fighting style, Their techniques are practiced in tournaments and honored duels.",
     "moves": ["rush"],
     "startingItems": ["powerPole"]
   },
@@ -91,7 +91,7 @@
     "displayName": "Tank",
     "examples": "Piccolo | Tien",
     "description": "Tank is an archetype with a focus on absorbing damage and protection.",
-    "extraDescritption": "",
+    "extraDescription": "A Tanks resilience are a testament to their will-power, they can with stand because they have with stood.",
     "moves": ["guard"],
     "startingItems": []
   },
@@ -101,7 +101,7 @@
     "displayName": "Support",
     "examples": "Hercule | Chiaotzu | Krillin",
     "description": "Support is an archetype with a focus on boosting team members and distraction.",
-    "extraDescritption": "",
+    "extraDescription": "Delaying the inevitable and raising morale, Supports are the key to controlling the fight.",
     "moves": ["taunt"],
     "startingItems": ["senzuBean"]
   }

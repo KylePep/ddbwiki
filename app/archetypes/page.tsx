@@ -24,6 +24,7 @@ export default function archetypesPage() {
                 <h2 className='font-bold text-lg'>{arch.displayName} <span className='font-normal mb-3'>{arch.examples}</span></h2>
                 
                 <p className='mb-2'> {arch.description}</p>
+                <p className='mb-2 mx-8'>{arch.extraDescription}</p>
                 { arch.moves.length != 0 && (
                   <div className='mb-2'>
                   <h3 className='font-semibold mb-1'>Moves:</h3>
