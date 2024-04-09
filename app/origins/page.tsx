@@ -54,7 +54,7 @@ export default function originsPage() {
                 </ul>
                   </>
                 )}
-                { origin.startingItems != 0 ? (
+                {/* { origin.startingItems != 0 ? (
                   <h4><span className='font-semibold'>Starting Items: </span>
                   <ul>
                     {origin.startingItems.map((item: any) => (
@@ -63,16 +63,6 @@ export default function originsPage() {
                   </ul>
                   </h4>
                 ): ( <h4>No starting Items</h4> )
-              }
-                {/* { origin.startingEquipment != 0 ? (
-                  <h4><span className='font-semibold'>Starting Equipment: </span>
-                  <ul>
-                    {origin.startingEquipment.map((item: any) => (
-                      <li key={item}>{itemName(item)}</li>
-                    ))}
-                  </ul>
-                  </h4>
-                ): ( <h4>No starting Equipment</h4> )
               } */}
           </div>
               ))}

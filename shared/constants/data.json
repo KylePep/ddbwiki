@@ -78,7 +78,7 @@
     "extraDescription": "Strikers are trained by masters of their fighting style, Their techniques are practiced in tournaments and honored duels.",
     "moves": ["rush"],
     "startingItems": ["turleHermitGi", "powerPole"],
-    "startingEquipment": ["none","turleHermitGi","none"],
+    "startingEquipment": ["none","turleHermitGi","powerPole"],
     "training": []
   },
   {

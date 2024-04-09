@@ -1,4 +1,4 @@
-import { ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
+import { ARCHETYPE_TYPES, ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
 import React, { useEffect, useState } from 'react'
 
 interface formProps{
@@ -10,11 +10,11 @@ export default function Equipment({form, handleChange}:formProps) {
   const [equipmentDisplay, setEquipmentDisplay] = useState([""])
 
   useEffect(()=> {
-  const origin = ORIGIN_TYPES.find((o)=>o.displayName === form.origin)
+  const arch = ARCHETYPE_TYPES.find((a)=>a.displayName === form.archetype)
 
-  const originEquipment = origin ? origin.startingEquipment : []
+  const archEquipment = arch ? arch.startingEquipment : []
 
-  const equipmentList = originEquipment.map((e: any) =>{
+  const equipmentList = archEquipment.map((e: any) =>{
       const itemById = ITEM_TYPES.find((i)=> i.name === e)
       return itemById?.id
     })
@@ -26,7 +26,7 @@ export default function Equipment({form, handleChange}:formProps) {
         }
       } as React.ChangeEvent<any>);
 
-    },[form.origin])
+    },[form.archetype])
 
     useEffect(()=> {
       const equipment = form.equipment

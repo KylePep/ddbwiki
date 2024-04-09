@@ -16,10 +16,11 @@ export default function Items({form, handleChange}:formProps) {
     const origin = ORIGIN_TYPES.find((o)=> o.displayName === form.origin)
     const archetype = ARCHETYPE_TYPES.find((a) => a.displayName === form.archetype)
   
-    const originItems = origin ? origin.startingItems : []
-    const archItems = archetype ? archetype.startingItems : []
+    // const originItems = origin ? origin.startingItems : []
+    // const archItems = archetype ? archetype.startingItems : []
+    const items = archetype ? archetype.startingItems : []
   
-    const items = originItems.concat(archItems)
+    // const items = originItems.concat(archItems)
     
     const updatedItemsList = items.map((il) => {
       const itemsById = ITEM_TYPES.find((i) => i.name === il)
