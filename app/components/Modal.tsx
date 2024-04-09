@@ -42,7 +42,7 @@ export default function Modal({ type, content, setToggle}: ToggleProps){
           type === "describe" &&
           <div className="flex flex-col gap-2 p-6">
             <h1 className="font-bold">
-              Title: {content.title}
+              Title: {content.displayName}
             </h1>
             <h2>Type: {content.type}</h2>
             <h3>Sub Type: {content.subType}</h3>
