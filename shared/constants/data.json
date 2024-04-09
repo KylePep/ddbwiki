@@ -70,36 +70,40 @@
     "name": "warrior",
     "displayName": "Warrior",
     "examples": "Goku | Vegeta",
-    "description": "The battle hungry archetype geared for high intensity combat.",
+    "description": "Warrior is an archetype with a focus on energy attacks.",
+    "extraDescritption": "",
     "moves": ["energyWave"],
     "startingItems": []
   },
   {
     "id": 2,
-    "name": "support",
-    "displayName": "Support",
-    "examples": "Hercule | Chiaotzu | Krillin",
-    "description": "The comic relief archetype, helpful distractions and buff to the party.",
-    "moves": ["taunt"],
-    "startingItems": []
-  },
-  {
-    "id": 3,
     "name": "striker",
     "displayName": "Striker",
     "examples": "Gohan | Trunks",
-    "description": "An archetype capable of altering the battlefield and negating villains abilities.",
+    "description": "Striker is an archetype with a focus on physical attacks.",
+    "extraDescritption": "",
     "moves": ["rush"],
+    "startingItems": ["powerPole"]
+  },
+  {
+    "id": 3,
+    "name": "tank",
+    "displayName": "Tank",
+    "examples": "Piccolo | Tien",
+    "description": "Tank is an archetype with a focus on absorbing damage and protection.",
+    "extraDescritption": "",
+    "moves": ["guard"],
     "startingItems": []
   },
   {
     "id": 4,
-    "name": "tank",
-    "displayName": "Tank",
-    "examples": "Piccolo | Tien",
-    "description": "The sturdiest archetype, capable of absorbing large amounts of damage, regenerating from it or saving others.",
-    "moves": ["guard"],
-    "startingItems": []
+    "name": "support",
+    "displayName": "Support",
+    "examples": "Hercule | Chiaotzu | Krillin",
+    "description": "Support is an archetype with a focus on boosting team members and distraction.",
+    "extraDescritption": "",
+    "moves": ["taunt"],
+    "startingItems": ["senzuBean"]
   }
 ],
   "FORM_TYPES":[

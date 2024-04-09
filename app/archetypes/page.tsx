@@ -1,6 +1,6 @@
 'use client'
 
-import { ARCHETYPE_TYPES, MOVE_TYPES } from '@/shared/constants'
+import { ARCHETYPE_TYPES, ITEM_TYPES, MOVE_TYPES } from '@/shared/constants'
 import React from 'react'
 
 export default function archetypesPage() {
@@ -10,18 +10,23 @@ export default function archetypesPage() {
     return move?.displayName
   })
 
+  const itemName = ((itemName: string)=>{
+    const item =  ITEM_TYPES.find((i) => i.name == itemName)
+    return item?.displayName
+  })
+
   return (
     <main>
           <h1 className='mb-4 text-xl'>The classes of Dungeons & DragonBalls</h1>
       <div>
       {ARCHETYPE_TYPES.map((arch: any)=>(
           <div key={arch.id} className='bg-gray-100 rounded-md px-6 py-4 mb-2'>
-                <h2 className='font-bold text-lg'>{arch.displayName}</h2>
-                <h3 className='mb-3'>{arch.examples}</h3>
-                <p className='mb-2'><span className='font-semibold'>Description: </span> {arch.description}</p>
+                <h2 className='font-bold text-lg'>{arch.displayName} <span className='font-normal mb-3'>{arch.examples}</span></h2>
+                
+                <p className='mb-2'> {arch.description}</p>
                 { arch.moves.length != 0 && (
                   <div className='mb-2'>
-                  <h5 className='font-semibold mb-1'>Archetype Moves:</h5>
+                  <h3 className='font-semibold mb-1'>Moves:</h3>
                   <ul>
                     {arch.moves.map((move: any) => (
                       <li key={move}>{moveName(move)}</li>
@@ -29,6 +34,18 @@ export default function archetypesPage() {
                 </ul>
                   </div>
                 )}
+
+                { arch.startingItems.length != 0 && (
+                    <div className='mb-2'>
+                    <h3 className='font-semibold mb-1'>Items:</h3>
+                    <ul>
+                      {arch.startingItems.map((item: any) => (
+                        <li key={item}>{itemName(item)}</li>
+                      ))}
+                  </ul>
+                    </div>
+                  )}
+
           </div>
               ))}
       </div>
