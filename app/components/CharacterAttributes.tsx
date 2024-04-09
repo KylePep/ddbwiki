@@ -5,7 +5,7 @@ export default function CharacterAttributes() {
     <div className=' bg-white p-4 rounded'>
       <h1 className='text-lg font-bold mb-4'>CHARACTER ATTRIBUTES</h1>
 
-    <div className='grid gap-2 grid-cols-1'>
+    <div className='grid gap-4 grid-cols-1'>
 
       <div>
         <p className='font-bold mb-2'>Health:</p>
@@ -15,6 +15,13 @@ export default function CharacterAttributes() {
           <li>Health can be recovered by healing items, but {`can't`} be raised above {`it's`} max.</li>
         </ul>
       </div>
+
+      <div>
+        <p className='font-bold mb-2'>Health Points:</p>
+        <ul className='list-disc'>
+          <li></li>
+        </ul>
+      </div> 
 
       <div>
         <p className='font-bold mb-2'>Energy:</p>
@@ -52,12 +59,23 @@ export default function CharacterAttributes() {
       </div>
 
       <div>
-        <p className='font-bold mb-2'>Targeting:</p>
+        <p className='font-bold mb-2'>Archetype Counter:</p>
         <ul className='list-disc'>
-          <li>A character can target; other characters, opponents and themselves.</li>
-          <li>An entity can become a target if they are {`'targetable'`} and within range.</li>
+          <li>{`'Arch'`} counters are a limited resource, that allows characters to perform special moves or actions.</li>
+          <li>The moves performed with Arch counters usually interact with a characters Sparking Meter.</li>
+          <li>Arch counters are not often restored, using them wisely is key to efficiency.</li>
         </ul>
-      </div>
+      </div> 
+
+      <div>
+        <p className='font-bold mb-2'>Sparking Meter:</p>
+        <ul className='list-disc'>
+          <li>The sparking meter is a universal resource. Every entity in the game has a sparking value, enemies of higher levels have sparking meters that can change.</li>
+          <li>Sparking meter can be used to help smooth out the randomness of an action or an encounter through rerolls.</li>
+          <li>Sparking meter is a requirement for many transformations.</li>
+          <li>Reducing a villains sparking meter below your own or to zero is key to victory.</li>
+        </ul>
+      </div> 
 
     </div>
 
@@ -71,4 +89,5 @@ export default function CharacterAttributes() {
   <ul className='list-disc'>
     <li></li>
   </ul>
-</div> */}
+</div> 
+*/}
