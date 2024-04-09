@@ -1,11 +1,4 @@
 'use client'
-import Link from "next/link";
-import Board from "./tictactoe";
-import SpecialResources from "./components/SpecialResources";
-import CharacterStats from "./components/CharacterStats";
-import SparkingMeter from "./components/SparkingMeter";
-import CharacterAttributes from "./components/CharacterAttributes";
-import Dice from "./components/Dice";
 
 export default function Home() {
   return (
@@ -41,11 +34,6 @@ export default function Home() {
           {`Don't forget that you are so much happier when you are coding.`}
         </h5>
       </div>
-      <Dice/>
-      <CharacterStats/>
-      <SpecialResources/>
-      <SparkingMeter/>
-      <CharacterAttributes/>
       {/* <Board /> */}
     </main>
   );
