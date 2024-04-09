@@ -3,7 +3,9 @@ import React from 'react'
 export default function CharacterStats() {
   return (
     <div className=' bg-white p-4 rounded'>
+
       <h1 className='text-xl font-bold mb-2'>CHARACTER STATS</h1>
+      
       <div className='text-sm grid gap-4 grid-cols-1'>
 
         <p>Stats that are above 3 have a positive effect, stats that are below 3 have a negative effect and 3 is neutral.</p>
