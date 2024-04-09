@@ -21,7 +21,7 @@ export default function archetypesPage() {
       <div>
       {ARCHETYPE_TYPES.map((arch: any)=>(
           <div key={arch.id} className='bg-gray-100 rounded-md px-6 py-4 mb-2'>
-                <h2 className='font-bold text-lg'>{arch.displayName} <span className='font-normal mb-3'>{arch.examples}</span></h2>
+                <h2 className='font-bold text-lg'>{arch.displayName} <span className='text-base font-normal mb-3'>{arch.examples}</span></h2>
                 
                 <p className='mb-2'> {arch.description}</p>
                 <p className='mb-2 mx-8'>{arch.extraDescription}</p>

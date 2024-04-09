@@ -23,9 +23,7 @@
     "positiveTrait": "power",
     "negativeTrait": "spirit",
     "forms": ["greatApe"],
-    "moves": [],
-    "startingItems": ["scouter","saiyanArmor"],
-    "startingEquipment": ["scouter","saiyanArmor","none"]
+    "moves": []
   },
   {
     "id": 2,
@@ -35,9 +33,7 @@
     "positiveTrait": "ki",
     "negativeTrait": "toughness",
     "forms": ["greatApe"],
-    "moves": [],
-    "startingItems": ["turleHermitGi", "senzuBean"],
-    "startingEquipment": ["none","turleHermitGi","none"]
+    "moves": []
   },
   {
     "id": 3,
@@ -47,9 +43,7 @@
     "positiveTrait": "spirit",
     "negativeTrait": "kit",
     "forms": [],
-    "moves": [],
-    "startingItems": ["turleHermitGi", "senzuBean"],
-    "startingEquipment": ["none","turleHermitGi","none"]
+    "moves": []
   },
   {
     "id": 4,
@@ -59,9 +53,7 @@
     "positiveTrait": "toughness",
     "negativeTrait": "agility",
     "forms": [],
-    "moves": ["regeneration"],
-    "startingItems": ["demonClanClothes"],
-    "startingEquipment": ["none","demonClanClothes","none"]
+    "moves": ["regeneration"]
   }
 ],
 "ARCHETYPE_TYPES":[
@@ -73,7 +65,9 @@
     "description": "Warrior is an archetype with a focus on energy attacks.",
     "extraDescription": "Warriors have honed their abilities on the battlefield. They have a skills and abilities that aid their domination of the opposition.",
     "moves": ["energyWave"],
-    "startingItems": []
+    "startingItems": ["scouter","saiyanArmor"],
+    "startingEquipment": ["scouter","saiyanArmor","none"],
+    "training": []
   },
   {
     "id": 2,
@@ -83,7 +77,9 @@
     "description": "Striker is an archetype with a focus on physical attacks.",
     "extraDescription": "Strikers are trained by masters of their fighting style, Their techniques are practiced in tournaments and honored duels.",
     "moves": ["rush"],
-    "startingItems": ["powerPole"]
+    "startingItems": ["turleHermitGi", "powerPole"],
+    "startingEquipment": ["none","turleHermitGi","none"],
+    "training": []
   },
   {
     "id": 3,
@@ -93,7 +89,9 @@
     "description": "Tank is an archetype with a focus on absorbing damage and protection.",
     "extraDescription": "A Tanks resilience are a testament to their will-power, they can with stand because they have with stood.",
     "moves": ["guard"],
-    "startingItems": []
+    "startingItems": ["demonClanClothes"],
+    "startingEquipment": ["none","demonClanClothes","none"],
+    "training": []
   },
   {
     "id": 4,
@@ -103,7 +101,9 @@
     "description": "Support is an archetype with a focus on boosting team members and distraction.",
     "extraDescription": "Delaying the inevitable and raising morale, Supports are the key to controlling the fight.",
     "moves": ["taunt"],
-    "startingItems": ["senzuBean"]
+    "startingItems": ["turleHermitGi", "senzuBean"],
+    "startingEquipment": ["none","turleHermitGi","none"],
+    "training": []
   }
 ],
   "FORM_TYPES":[
