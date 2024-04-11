@@ -119,8 +119,8 @@
       "negatives": ["spirit0", "agility-1", "ki-1"],
       "moves": [],
       "moveBlacklist": ["base"],
-      "description": "A Saiyan or Half Saiyan tranforms during a full moon or similar conditions, Becoming the great Ape. This power is saved for particularly difficult to conquer planets.",
-      "extraDescription": ""
+      "description": "Great Ape is a full form transformation, When a Saiyan or half Saiyan looks at a full moon, whilst having a tail. They turn into a gigantic ape and lose control.",
+      "extraDescription": "Great Apes's are gigantic, covered in brown fur and a long tail. Anything other than Saiyan Armor is destroyed during transformation."
     },
     {
       "id": 2,
@@ -130,12 +130,12 @@
       "useable": ["saiyan", "halfSaiyan"],
       "reqParams": ["sparking6"],
       "upkeep": ["optional", "1SparkPerTurn", "sparkingGTL4"],
-      "positives": [],
-      "negatives": [],
-      "moves": [],
+      "positives": ["ki+1", "power+1"],
+      "negatives": ["spirit-1"],
+      "moves": ["angryKamehameha"],
       "moveBlacklist": ["spiritBomb"],
-      "description": "A Saiyan or Half Saiyan becomes a Super Saiyan. Their power is amplified many times over, their eyes become teal and their hair a spiky gold.",
-      "extraDescription": ""
+      "description": "Super Saiyan is an alteration transformation, achievable at sparking level 6 or higher. A Super Saiyan has increased power and ki.",
+      "extraDescription": "A Super Saiyan's hair stands on end and becomes a golden yellow, pulsing energy surrounds them."
     },
     {
       "id": 3,
@@ -145,12 +145,12 @@
       "useable": ["all"],
       "reqParams": ["sparking4"],
       "upkeep": ["none"],
-      "positives": [],
+      "positives": ["agility+1", "spirit+1"],
       "negatives": [],
       "moves": [],
       "moveBlacklist": ["none"],
-      "description": "Granted by an Elder Guru a characters latent ability is unlocked.",
-      "extraDescription": ""
+      "description": "Potential Unlocked is an aura transformation, increasing agility and spirit. Accessible at sparking level 4.",
+      "extraDescription": "When ones potential is unlocked, they feel power deep within them rise to the surface. Feeling taller and lighter."
     }
   ]
 }
