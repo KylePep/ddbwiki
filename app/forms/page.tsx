@@ -34,32 +34,37 @@ export default function formPage() {
                 <p className='border-solid border-2 border-b-black'><span className='font-semibold'>Details </span></p>
                 <h3 className='my-2'><span className='font-semibold'>Type: </span>{form.type}</h3>
 
-                <p><span className='font-semibold'>Achievable: </span> {form.useable.map((use: any) =>(
-                <span key={use} className='capitalize'>{use} </span>
+                <p>
+                <span className='font-semibold'>Achievable: </span>
+                {form.useable.map((use: any, index: number) => (
+                  <span key={use} className='capitalize'>
+                    {index === form.useable.length - 1 ? use : `${use}, `}
+                  </span>
+                ))}
+              </p>
+
+                <p><span className='font-semibold'>Requirements: </span>{form.reqParams.map((req: any, index: number) =>(
+                <span key={req} className='capitalize'>{ index === form.reqParams.length -1 ? req : `${req},`} </span>
                 ))}</p>
 
-                <p><span className='font-semibold'>Requirements: </span>{form.reqParams.map((req: any) =>(
-                <span key={req} className='capitalize'>{req} </span>
+                <p><span className='font-semibold'>Upkeep: </span>{form.upkeep.map((up: any, index: number) =>(
+                <span key={up} className='capitalize'>{ index === form.upkeep.length -1 ? up : `${up},`}  </span>
                 ))}</p>
 
-                <p><span className='font-semibold'>Upkeep: </span>{form.upkeep.map((up: any) =>(
-                <span key={up} className='capitalize'>{up} </span>
+                <p><span className='font-semibold'>Benefits: </span>{form.positives.map((posi: any, index: number) =>(
+                <span key={posi} className='capitalize'>{ index === form.positives.length -1 ? posi : `${posi},`}  </span>
                 ))}</p>
 
-                <p><span className='font-semibold'>Benefits: </span>{form.positives.map((posi: any) =>(
-                <span key={posi} className='capitalize'>{posi} </span>
+                <p><span className='font-semibold'>Draw backs: </span>{form.negatives.map((negi: any, index: number) =>(
+                <span key={negi} className='capitalize'>{ index === form.negatives.length -1 ? negi : `${negi},`}  </span>
                 ))}</p>
 
-                <p><span className='font-semibold'>Draw backs: </span>{form.negatives.map((negi: any) =>(
-                <span key={negi} className='capitalize'>{negi} </span>
+                <p><span className='font-semibold'>Moves: </span>{form.moves.map((move: any, index: number) =>(
+                <span key={move} className='capitalize'>{ index === form.moves.length -1 ? move : `${move},`}  </span>
                 ))}</p>
 
-                <p><span className='font-semibold'>Moves: </span>{form.moves.map((move: any) =>(
-                <span key={move} className='capitalize'>{move} </span>
-                ))}</p>
-
-                <p><span className='font-semibold'>Disabled Moves: </span>{form.moveBlacklist.map((blackList: any) =>(
-                <span key={blackList} className='capitalize'>{blackList} </span>
+                <p><span className='font-semibold'>Disabled Moves: </span>{form.moveBlacklist.map((blackList: any, index: number) =>(
+                <span key={blackList} className='capitalize'>{ index === form.moveBlacklist.length -1 ? blackList : `${blackList},`}  </span>
                 ))}</p>
 
 

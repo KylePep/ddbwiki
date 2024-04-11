@@ -129,7 +129,7 @@
       "type": "alteration",
       "useable": ["saiyan", "halfSaiyan"],
       "reqParams": ["sparking6"],
-      "upkeep": ["optional", "1SparkPerTurn", "sparkingGTL4"],
+      "upkeep": ["optional", "1SparkPerTurn", "sparkingGTE4"],
       "positives": ["ki+1", "power+1"],
       "negatives": ["spirit-1"],
       "moves": ["angryKamehameha"],
