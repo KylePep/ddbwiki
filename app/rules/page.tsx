@@ -14,8 +14,8 @@ export default function page() {
       {/* <Dice/> */}
       <CharacterStats/>
       <CharacterAttributes/>
-      <SparkingMeter/>
-      <SpecialResources/>
+      {/* <SparkingMeter/> */}
+      {/* <SpecialResources/> */}
       </div>
     </div>
   )
