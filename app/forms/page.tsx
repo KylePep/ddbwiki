@@ -9,7 +9,7 @@ export default function formPage() {
 
   return (
     <main>
-      <div className='mb-3'>
+      <div className='bg-white rounded p-4 mb-3'>
         <h1>Transformations are a change to a characters state that is reflected in the changing of stats or the manifestation of passive or active abilities</h1>
         <div>Transformations can be an aura, the alteration of a physical characteristic or a full body change</div>
         <h2 className='font-bold'>Auras</h2>

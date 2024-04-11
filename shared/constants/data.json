@@ -112,21 +112,42 @@
       "name": "greatApe",
       "displayName": "Great Ape",
       "type": "form",
-      "description": "A Saiyan or Half Saiyan tranforms during a full moon or similar conditions, Becoming the great Ape. This power is saved for particularly difficult to conquer planets."
+      "reqParams": ["fullMoon", "hasTail"],
+      "upkeep": ["hasTail", "isUp"],
+      "positives": ["gigantic","power6", "toughness6"],
+      "negatives": ["spirit0", "agility-1", "ki-1"],
+      "moves": [],
+      "moveBlacklist": [],
+      "description": "A Saiyan or Half Saiyan tranforms during a full moon or similar conditions, Becoming the great Ape. This power is saved for particularly difficult to conquer planets.",
+      "extraDescription": ""
     },
     {
       "id": 2,
       "name": "superSaiyan",
       "displayName": "Super Saiyan",
       "type": "alteration",
-      "description": "A Saiyan or Half Saiyan becomes a Super Saiyan. Their power is amplified many times over, their eyes become teal and their hair a spiky gold."
+      "reqParams": ["fullMoon", "hasTail"],
+      "upkeep": ["hasTail", "isUp"],
+      "positives": ["gigantic","power6", "toughness6"],
+      "negatives": ["spirit0", "agility-1", "ki-1"],
+      "moves": [],
+      "moveBlacklist": [],
+      "description": "A Saiyan or Half Saiyan becomes a Super Saiyan. Their power is amplified many times over, their eyes become teal and their hair a spiky gold.",
+      "extraDescription": ""
     },
     {
       "id": 3,
       "name": "potentialUnlocked",     
       "displayName": "Potential Unlocked",
       "type": "aura",
-      "description": "Granted by an Elder Guru a characters latent ability is unlocked."
+      "reqParams": ["fullMoon", "hasTail"],
+      "upkeep": ["hasTail", "isUp"],
+      "positives": ["gigantic","power6", "toughness6"],
+      "negatives": ["spirit0", "agility-1", "ki-1"],
+      "moves": [],
+      "moveBlacklist": [],
+      "description": "Granted by an Elder Guru a characters latent ability is unlocked.",
+      "extraDescription": ""
     }
   ]
 }
