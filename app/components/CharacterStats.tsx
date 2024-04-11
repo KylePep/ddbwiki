@@ -5,10 +5,20 @@ export default function CharacterStats() {
     <div className=' bg-white p-4 rounded'>
 
       <h1 className='text-xl font-bold mb-2'>CHARACTER STATS</h1>
-      
+
       <div className='text-sm grid gap-4 grid-cols-1'>
 
-        <p>Stats that are above 3 have a positive effect, stats that are below 3 have a negative effect and 3 is neutral.</p>
+        <p>At creation characters have 3s in all stats, with 3 assignable points. A given stat can only be raised as high as 5 or as low as 1, lower a stat will give you more points to assign else where.</p>
+        <p>It is possible for stats to reach 6 or 0, by item effects or equipment.</p>
+        <div>
+          <p>Stat level 6: +4 to its checks</p>
+          <p>Stat level 5: +2 to its checks</p>
+          <p>Stat level 4: +1 to its checks</p>
+          <p>Stat level 3: +0 to its checks</p>
+          <p>Stat level 2: -1 to its checks</p>
+          <p>Stat level 1: -2 to its checks</p>
+          <p>Stat level 0: -4 to its checks</p>
+        </div>
         
         <div>
           <p className='font-semibold text-base mb-1'>Power <span className='font-normal text-sm'>- A measure of a characters strength.</span></p>

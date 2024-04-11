@@ -15,7 +15,7 @@ export default function Home() {
               <p className="font-semibold my-2">Things like</p>
               <ul className="list-disc">
                 <li>Is it using {`'Dice'`}? If so which ones? | <span className="text-green-900"> A 6 Sided die</span> </li>
-                <li>Is it using an AC like system? - I feel original intent is the sparking system to play a role. | <span className="text-green-900">Sparking Meter will be used to determine if attacks hit or miss.</span></li>
+                <li>Is it using an AC like system? - I feel original intent is the sparking system to play a role. | <span className="text-green-900">Sparking Meter will be used to determine if attacks do damage.</span></li>
                 <li>What is the sparking system and why is it important. | <span className="text-green-900">The sparking system is the way the game describes to you how dangerous the situation is.</span></li>
                 <li>What happens when characters run out of HP | <span className="text-green-900">The character gets sidelined until healed or wished back in extreme cases.</span></li>
                 <li>What happens when an enemy runs out of HP | <span className="text-green-900">When an enemy -dies- if the conditions are met for combat to be over then the combat room resolution plays and the players either get rewarded or simply move on to the next room.</span></li>

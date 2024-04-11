@@ -70,6 +70,13 @@ export default function CharacterAttributes() {
       </div> 
 
       <div>
+        <p className='font-bold mb-1'>Origin Traits:</p>
+        <ul className='list-disc text-sm'>
+          <li>The pluses and minuses in an origin trait describe a permanent advantage or disadvantage to a type of role.</li>
+        </ul>
+      </div> 
+
+      <div>
         <p className='font-bold mb-1'>Sparking Meter:</p>
         <ul className='list-disc text-sm'>
           <li>The sparking meter is a universal resource. Every entity in the game has a sparking value, enemies of higher levels have sparking meters that can change.</li>
@@ -80,11 +87,29 @@ export default function CharacterAttributes() {
       </div> 
 
       <div>
+        <p className='font-bold mb-1'>Sparking Value:</p>
+        <ul className='list-disc text-sm'>
+          <li>The value of sparking functions as your saving throws.</li>
+          <li>ten minus your sparking value will determine how high your roles will need to be to resist an effect.</li>
+          <li>Your stats will give you bonuses to those roles based on their level.</li>
+          <li>Being attacked - attack has a knockdown effect, which is power related - your sparking meter is 3, you must now role a 7, which is impossible - but because you have high power you get a plus 1 now you must only role a 6 to prevent it.</li>
+          <li>This does mean that a character with full sparking meter is invulnerable to all effects, this is intended.</li>
+        </ul>
+      </div> 
+
+      <div>
         <p className='font-bold mb-1'>Movement:</p>
         <ul className='list-disc text-sm'>
           <li>In combat movement is assumed based on the same ranges specified by targeting.</li>
           <li>Distance is changed based on moves performed or actions taken.</li>
           <li>Movement or moving is therefore not an available action.</li>
+        </ul>
+      </div> 
+
+      <div>
+        <p className='font-bold mb-1'>Advantage & Disadvantage:</p>
+        <ul className='list-disc text-sm'>
+          <li>A status that describes wether or not you must role twice then pick the higher or lower role.</li>
         </ul>
       </div> 
 
