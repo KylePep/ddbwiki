@@ -25,11 +25,47 @@ export default function formPage() {
       <FilterList LIST_TYPE={FORM_TYPES} list={list} setList={setList} categoryFilterArr={["type.form", "type.alteration", "type.aura"]} />
       <div>
       {list.map((form: any)=>(
-          <div key={form.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
-                <h2 className='font-bold'>{form.displayName}</h2>
-                <h3><span className='font-semibold'>Type: </span>{form.type}</h3>
-                <p><span className='font-semibold'>Description: </span>{form.description}</p>
-          </div>
+            <div key={form.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
+            <h2 className="font-bold">{form.displayName}</h2>
+            <p className='mb-2'>{form.description}</p>
+            <p className='mb-2 mx-8'>{form.extraDescription}</p>
+
+            <div>
+                <p className='border-solid border-2 border-b-black'><span className='font-semibold'>Details </span></p>
+                <h3 className='my-2'><span className='font-semibold'>Type: </span>{form.type}</h3>
+
+                <p><span className='font-semibold'>Achievable: </span> {form.useable.map((use: any) =>(
+                <span key={use} className='capitalize'>{use} </span>
+                ))}</p>
+
+                <p><span className='font-semibold'>Requirements: </span>{form.reqParams.map((req: any) =>(
+                <span key={req} className='capitalize'>{req} </span>
+                ))}</p>
+
+                <p><span className='font-semibold'>Upkeep: </span>{form.upkeep.map((up: any) =>(
+                <span key={up} className='capitalize'>{up} </span>
+                ))}</p>
+
+                <p><span className='font-semibold'>Benefits: </span>{form.positives.map((posi: any) =>(
+                <span key={posi} className='capitalize'>{posi} </span>
+                ))}</p>
+
+                <p><span className='font-semibold'>Draw backs: </span>{form.negatives.map((negi: any) =>(
+                <span key={negi} className='capitalize'>{negi} </span>
+                ))}</p>
+
+                <p><span className='font-semibold'>Moves: </span>{form.moves.map((move: any) =>(
+                <span key={move} className='capitalize'>{move} </span>
+                ))}</p>
+
+                <p><span className='font-semibold'>Disabled Moves: </span>{form.moveBlacklist.map((blackList: any) =>(
+                <span key={blackList} className='capitalize'>{blackList} </span>
+                ))}</p>
+
+
+
+            </div>
+      </div>
               ))}
       </div>
     </main>

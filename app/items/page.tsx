@@ -34,6 +34,7 @@ export default function page() {
 
                 <div>
                     <p className='border-solid border-2 border-b-black'><span className='font-semibold'>Details </span></p>
+                    <h3 className='my-2'><span className='font-semibold'>Type: </span>{item.type} <span> - {item.subType}</span></h3>
                     
                     <h3 className='font-semibold'>Effect:</h3>
                     <p>{item.effect}</p>
