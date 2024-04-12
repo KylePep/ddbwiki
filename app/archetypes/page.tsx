@@ -18,6 +18,7 @@ export default function archetypesPage() {
   return (
     <main>
           <h1 className='mb-4 text-xl'>The classes of Dungeons & DragonBalls</h1>
+          <p> - Archetype Powers should just be made into moves - </p>
       <div>
       {ARCHETYPE_TYPES.map((arch: any)=>(
           <div key={arch.id} className='bg-gray-100 rounded-md px-6 py-4 mb-2'>
@@ -30,7 +31,7 @@ export default function archetypesPage() {
                   <h3 className='font-semibold mb-1'>Archetype Powers:</h3>
                   <ul>
                     {arch.archPower.map((aP: any, index: number) => (
-                      <li key={aP}> <span>Level {index + 1} </span>{aP}</li>
+                      <li key={aP}> <span>Level {index + 1}: </span>{aP.name} Cost: {aP.cost}</li>
                     ))}
                 </ul>
                   </div>
@@ -40,7 +41,7 @@ export default function archetypesPage() {
                   <h3 className='font-semibold mb-1'>Moves:</h3>
                   <ul>
                     {arch.moves.map((move: any, index: number) => (
-                      <li key={move}> <span>Level {index + 1} </span>{moveName(move)}</li>
+                      <li key={move}> <span>Level {index + 1}: </span>{moveName(move)}</li>
                     ))}
                 </ul>
                   </div>

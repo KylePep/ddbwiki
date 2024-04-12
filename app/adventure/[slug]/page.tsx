@@ -63,6 +63,12 @@ export default function page(url:URL) {
                 </ul>
               </div>
               <p className='font-bold'>Player Count: <span className='font-normal'>{data.players}</span></p>
+              <p className='font-bold'>Roles: 
+              <span className='font-normal'>{` ( A role is a narrative device players pick to organize them into the story )`}</span>
+              </p>
+              <p>{data.roles.map((role: any) =>(
+                <span key={role} className='font-normal'> {role} </span>
+              ))}</p>
               <p className='font-bold'>Villain: <span className='font-normal'>{enemyName(data.villain)}</span></p>
 
               <p className='font-bold'>Opponents:</p>
