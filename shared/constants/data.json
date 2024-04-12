@@ -114,7 +114,7 @@
       "type": "form",
       "useable": ["saiyan", "halfSaiyan"],
       "reqParams": ["fullMoon", "hasTail"],
-      "upkeep": ["hasTail", "isUp", "fullMoon"],
+      "upkeep": ["hasTail", "fullMoon"],
       "positives": ["gigantic","power6", "toughness6"],
       "negatives": ["spirit0", "agility-1", "ki-1"],
       "moves": [],
@@ -134,7 +134,7 @@
       "negatives": ["spirit-1"],
       "moves": ["angryKamehameha"],
       "moveBlacklist": ["spiritBomb"],
-      "description": "Super Saiyan is an alteration transformation, achievable at sparking level 6 or higher. A Super Saiyan has increased power and ki.",
+      "description": "Super Saiyan is an alteration transformation, accessible at sparking level 6 or higher. A Super Saiyan has increased power and ki. Costs 1 Sparking per turn.",
       "extraDescription": "A Super Saiyan's hair stands on end and becomes a golden yellow, pulsing energy surrounds them."
     },
     {
@@ -151,6 +151,21 @@
       "moveBlacklist": ["none"],
       "description": "Potential Unlocked is an aura transformation, increasing agility and spirit. Accessible at sparking level 4.",
       "extraDescription": "When ones potential is unlocked, they feel power deep within them rise to the surface. Feeling taller and lighter."
+    },
+    {
+      "id": 4,
+      "name": "kaioKen",     
+      "displayName": "Kaio-ken",
+      "type": "aura",
+      "useable": ["all"],
+      "reqParams": [],
+      "upkeep": ["1SparkingPerTurn", "sparkingGTE1"],
+      "positives": ["agility+Sparking", "power+Sparking", "ki+Sparking"],
+      "negatives": ["toughness-Sparking", "spirit-Sparking", "bodilyRecoil"],
+      "moves": ["kaiKenAttack"],
+      "moveBlacklist": ["none"],
+      "description": "Kaio-Ken is an aura transformation, Increasing agility, power and ki by the current level of Sparking and decreasing toughness and spirit by the current level of Sparking. Costs 1 Sparking per turn.",
+      "extraDescription": "A technique invented by King Kai. it multiplies the user's ki for a heartbeat and turns their aura crimson - amplifying their power and speed to overcome previously stronger foes at the cost of extreme bodily recoil."
     }
   ]
 }
