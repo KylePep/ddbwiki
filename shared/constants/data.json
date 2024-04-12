@@ -64,8 +64,8 @@
     "examples": "Goku | Vegeta",
     "description": "Warrior is an archetype with a focus on energy attacks.",
     "extraDescription": "Warriors have honed their abilities on the battlefield. They have a skills and abilities that aid their domination of the opposition.",
-    "archPower": ["intimidation"],
-    "moves": ["energyWave"],
+    "archPower": ["intimidation", "launchEnemy", "beamStruggle"],
+    "moves": ["energyWave", "energyWave", "energyWave"],
     "startingItems": ["scouter","saiyanArmor"],
     "startingEquipment": ["scouter","saiyanArmor","none"],
     "training": []
@@ -77,8 +77,8 @@
     "examples": "Gohan | Trunks",
     "description": "Striker is an archetype with a focus on physical attacks.",
     "extraDescription": "Strikers are trained by masters of their fighting style, Their techniques are practiced in tournaments and honored duels.",
-    "archPower": ["strategize"],
-    "moves": ["rush"],
+    "archPower": ["strategize", "turnAdvantage", "decisiveStrike"],
+    "moves": ["rush", "energyWave", "energyWave"],
     "startingItems": ["turleHermitGi", "powerPole"],
     "startingEquipment": ["none","turleHermitGi","powerPole"],
     "training": []
@@ -90,8 +90,8 @@
     "examples": "Piccolo | Tien",
     "description": "Tank is an archetype with a focus on absorbing damage and protection.",
     "extraDescription": "A Tanks resilience are a testament to their will-power, they can with stand because they have with stood.",
-    "archPower": ["meditation"],
-    "moves": ["guard"],
+    "archPower": ["meditation", "protection", "doItNow"],
+    "moves": ["guard", "energyWave", "energyWave"],
     "startingItems": ["demonClanClothes"],
     "startingEquipment": ["none","demonClanClothes","none"],
     "training": []
@@ -103,8 +103,8 @@
     "examples": "Hercule | Chiaotzu | Krillin",
     "description": "Support is an archetype with a focus on boosting team members and distraction.",
     "extraDescription": "Delaying the inevitable and raising morale, Supports are the key to controlling the fight.",
-    "archPower": ["jokes"],
-    "moves": ["taunt"],
+    "archPower": ["jokes", "illStayHere", "hesLearningAsHeFights"],
+    "moves": ["taunt", "energyWave", "energyWave"],
     "startingItems": ["turleHermitGi", "senzuBean"],
     "startingEquipment": ["none","turleHermitGi","none"],
     "training": []

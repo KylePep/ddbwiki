@@ -27,10 +27,20 @@ export default function archetypesPage() {
                 <p className='mb-2 mx-8'>{arch.extraDescription}</p>
                 { arch.moves.length != 0 && (
                   <div className='mb-2'>
+                  <h3 className='font-semibold mb-1'>Archetype Powers:</h3>
+                  <ul>
+                    {arch.archPower.map((aP: any, index: number) => (
+                      <li key={aP}> <span>Level {index + 1} </span>{aP}</li>
+                    ))}
+                </ul>
+                  </div>
+                )}
+                { arch.moves.length != 0 && (
+                  <div className='mb-2'>
                   <h3 className='font-semibold mb-1'>Moves:</h3>
                   <ul>
-                    {arch.moves.map((move: any) => (
-                      <li key={move}>{moveName(move)}</li>
+                    {arch.moves.map((move: any, index: number) => (
+                      <li key={move}> <span>Level {index + 1} </span>{moveName(move)}</li>
                     ))}
                 </ul>
                   </div>
