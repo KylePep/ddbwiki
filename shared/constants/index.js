@@ -8,7 +8,7 @@ export const {
   CHARACTER_TYPES,
   ORIGIN_TYPES,
   ARCHETYPE_TYPES,
-  FORM_TYPES
+  AWAKEN_TYPES
 } = data;
 
 export const { MOVE_TYPES } = moveData

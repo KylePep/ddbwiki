@@ -22,7 +22,9 @@ function FilterList({LIST_TYPE, categoryFilterArr, setList, list} : filterListPr
   
   const filterLables = categoryFilterArr.map(str=> {
     const words = str.split('.')
-    const word = words[1].charAt(0).toUpperCase() + words[1].slice(1)
+    const word = {displayName: "", search: ""}
+    word.displayName = words[1].charAt(0).toUpperCase() + words[1].slice(1)
+    word.search = words[1]
     return word
   })  
   
@@ -40,7 +42,7 @@ function FilterList({LIST_TYPE, categoryFilterArr, setList, list} : filterListPr
         const words = str.split('.')
         const category = words[0] as keyof object;
         const filter = words[1]
-      if (sortBy.toLowerCase() === filter){
+      if (sortBy === filter){
           newList = LIST_TYPE.filter((l) => l[category] == filter)
           setList(newList)
         }
@@ -53,13 +55,13 @@ function FilterList({LIST_TYPE, categoryFilterArr, setList, list} : filterListPr
   return (
     <div>
       <div className="flex justify-around my-3 font-bold bg-blue-400 px-4 py-2 rounded-md ">
-      {filterLables.map((sort: string, i) => (
+      {filterLables.map((sort: any, i) => (
         <button 
-        className={`hover:text-white ${sortedBy === sort ? 'capitalize' : ''}`}
-        onClick={()=>sortBy(sort)} 
+        className={`hover:text-white ${sortedBy === sort.displayName ? 'capitalize' : ''}`}
+        onClick={()=>sortBy(sort.search)} 
         key={i}
         >
-          {sortedBy != `${sort}` ? `${sort}` : `${sort.toUpperCase()}`}
+          {sortedBy != `${sort.search}` ? `${sort.displayName}` : `${sort.displayName.toUpperCase()}`}
           </button>
       ))}
       </div>

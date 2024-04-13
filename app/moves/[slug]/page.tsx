@@ -26,7 +26,7 @@ export default function page(url:URL) {
   return (
     <div>
       <div className='my-4'>
-      <Link href={"/moves"} className="bg-gray-400 rounded font-semibold hover:text-white px-2 py-1 my-3">Back</Link>
+      <Link href={"/moves"} className="bg-gray-400 rounded font-semibold hover:text-white px-2 py-1 my-3">Moves List</Link>
       </div>
           {move ? 
         <div>

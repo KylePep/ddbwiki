@@ -1,11 +1,11 @@
 'use client'
 
-import { FORM_TYPES } from '@/shared/constants'
+import { AWAKEN_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 import FilterList from '../components/FilterList'
 
 export default function formPage() {
-  const [list, setList] = useState(FORM_TYPES)
+  const [list, setList] = useState(AWAKEN_TYPES)
 
   return (
     <main>
@@ -22,7 +22,7 @@ export default function formPage() {
         <p>Great Ape</p>
         <p>Forms are at the high end. These changes have the most risk for reward, if the user {`can't`} keep up with the demand for a resource, exhaustion can set in fast and leave the user vulnerable.</p> */}
       </div>
-      <FilterList LIST_TYPE={FORM_TYPES} list={list} setList={setList} categoryFilterArr={["type.form", "type.alteration", "type.aura"]} />
+      <FilterList LIST_TYPE={AWAKEN_TYPES} list={list} setList={setList} categoryFilterArr={["type.transformation", "type.form", "type.powerUp"]} />
       <div>
       {list.map((form: any)=>(
             <div key={form.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>

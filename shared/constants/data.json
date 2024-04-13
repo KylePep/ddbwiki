@@ -114,12 +114,12 @@
     "training": []
   }
 ],
-  "FORM_TYPES":[
+  "AWAKEN_TYPES":[
     {
       "id": 1,
       "name": "greatApe",
       "displayName": "Great Ape",
-      "type": "form",
+      "type": "transformation",
       "useable": ["saiyan", "halfSaiyan"],
       "reqParams": ["fullMoon", "hasTail"],
       "upkeep": ["hasTail", "fullMoon"],
@@ -134,7 +134,7 @@
       "id": 2,
       "name": "superSaiyan",
       "displayName": "Super Saiyan",
-      "type": "alteration",
+      "type": "form",
       "useable": ["saiyan", "halfSaiyan"],
       "reqParams": ["sparking6"],
       "upkeep": ["optional", "1SparkPerTurn", "sparkingGTE4"],
@@ -142,14 +142,14 @@
       "negatives": ["spirit-1"],
       "moves": ["angryKamehameha"],
       "moveBlacklist": ["spiritBomb"],
-      "description": "Super Saiyan is an alteration transformation, accessible at sparking level 6 or higher. A Super Saiyan has increased power and ki. Costs 1 Sparking per turn.",
+      "description": "Super Saiyan is an form transformation, accessible at sparking level 6 or higher. A Super Saiyan has increased power and ki. Costs 1 Sparking per turn.",
       "extraDescription": "A Super Saiyan's hair stands on end and becomes a golden yellow, pulsing energy surrounds them."
     },
     {
       "id": 3,
       "name": "potentialUnlocked",     
       "displayName": "Potential Unlocked",
-      "type": "aura",
+      "type": "powerUp",
       "useable": ["all"],
       "reqParams": ["sparking4"],
       "upkeep": ["none"],
@@ -157,14 +157,14 @@
       "negatives": [],
       "moves": [],
       "moveBlacklist": ["none"],
-      "description": "Potential Unlocked is an aura transformation, increasing agility and spirit. Accessible at sparking level 4.",
+      "description": "Potential Unlocked is a power up transformation, increasing agility and spirit. Accessible at sparking level 4.",
       "extraDescription": "When ones potential is unlocked, they feel power deep within them rise to the surface. Feeling taller and lighter."
     },
     {
       "id": 4,
       "name": "kaioKen",     
       "displayName": "Kaio-ken",
-      "type": "aura",
+      "type": "powerUp",
       "useable": ["all"],
       "reqParams": [],
       "upkeep": ["1SparkingPerTurn", "sparkingGTE1"],
@@ -172,7 +172,7 @@
       "negatives": ["toughness-Sparking", "spirit-Sparking", "bodilyRecoil"],
       "moves": ["kaiKenAttack"],
       "moveBlacklist": ["none"],
-      "description": "Kaio-Ken is an aura transformation, Increasing agility, power and ki by the current level of Sparking and decreasing toughness and spirit by the current level of Sparking. Costs 1 Sparking per turn.",
+      "description": "Kaio-Ken is a power up transformation, Increasing agility, power and ki by the current level of Sparking and decreasing toughness and spirit by the current level of Sparking. Costs 1 Sparking per turn.",
       "extraDescription": "A technique invented by King Kai. it multiplies the user's ki for a heartbeat and turns their aura crimson - amplifying their power and speed to overcome previously stronger foes at the cost of extreme bodily recoil."
     }
   ]
