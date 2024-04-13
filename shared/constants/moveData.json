@@ -10,7 +10,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Kamehameha is a mid to long range energy attack",
       "descriptionParams": "If the target is withing mid to long range, and (1 cost) is available, the character can perform the Kamehameha energy attack.",
       "extraDescription": "An energy wave. The signature attack of the students of the Turtle School."
@@ -25,7 +25,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "A concentrated beam attack that takes a long time to charge.",
       "descriptionParams": "",
       "extraDescription": ""
@@ -40,7 +40,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Making a funny face and a rude noise, draws the attention of the target.",
       "descriptionParams": "",
       "extraDescription": ""
@@ -55,7 +55,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Goku's combination attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -70,7 +70,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "A basic energy wave attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -85,7 +85,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Increases evasion for X turns",
       "descriptionParams": "",
       "extraDescription": ""
@@ -100,7 +100,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Takes a while to charge up but then unleashes a powerful attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -115,7 +115,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "A quick melee attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -130,7 +130,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Demon clan energy wave",
       "descriptionParams": "",
       "extraDescription": ""
@@ -145,7 +145,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Unleash a barrage of energy blasts at the opponent",
       "descriptionParams": "",
       "extraDescription": ""
@@ -160,7 +160,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Tap into dormant anger",
       "descriptionParams": "",
       "extraDescription": ""
@@ -174,7 +174,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Rage filled combo attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -189,7 +189,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Demon clan melee attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -204,7 +204,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Demon clan energy wave",
       "descriptionParams": "",
       "extraDescription": ""
@@ -219,7 +219,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Fire an explosive energy ball at the target",
       "descriptionParams": "",
       "extraDescription": ""
@@ -234,7 +234,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Attack all enemies with an explosive wave.",
       "descriptionParams": "",
       "extraDescription": ""
@@ -249,7 +249,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Regenerate limbs",
       "descriptionParams": "",
       "extraDescription": ""
@@ -264,7 +264,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Bigger version of light grenade",
       "descriptionParams": "",
       "extraDescription": ""
@@ -279,7 +279,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Tien Ki attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -294,7 +294,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "An energy beam fired in the shape of a triangle",
       "descriptionParams": "",
       "extraDescription": ""
@@ -309,7 +309,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Arms? or several selfs?",
       "descriptionParams": "",
       "extraDescription": ""
@@ -324,7 +324,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Emit a blinding light in front of self to blind a target at close range",
       "descriptionParams": "",
       "extraDescription": ""
@@ -339,7 +339,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "attempt to capture an opponent inside of a container",
       "descriptionParams": "",
       "extraDescription": ""
@@ -354,7 +354,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Krillin Melee attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -369,7 +369,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Fire an energy wave that surprises the enemy by splitting apart into several projectiles",
       "descriptionParams": "",
       "extraDescription": ""
@@ -384,7 +384,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Release an energy disc capable of cutting anything at the opponent",
       "descriptionParams": "",
       "extraDescription": ""
@@ -399,7 +399,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Yajirobe springs into action attack at the most opportune, least risky time for a devastating strike.",
       "descriptionParams": "",
       "extraDescription": ""
@@ -414,7 +414,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Yamcha melee attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -429,7 +429,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Embody a fierce wolf and unleash a barrage of strikes",
       "descriptionParams": "",
       "extraDescription": ""
@@ -444,7 +444,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "An ball of energy the user has complete control over.",
       "descriptionParams": "",
       "extraDescription": ""
@@ -459,7 +459,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Ultimate version of wolf fang fist",
       "descriptionParams": "",
       "extraDescription": ""
@@ -474,7 +474,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Guard an incoming attack",
       "descriptionParams": "",
       "extraDescription": ""
@@ -489,7 +489,7 @@
       "damage": 1,
       "accuracy": 1,
       "effect": "damage",
-      "cost": 1,
+      "cost": {"value": 1, "type": "ki"},
       "description": "Ultimate tri beam attack",
       "descriptionParams": "",
       "extraDescription": ""

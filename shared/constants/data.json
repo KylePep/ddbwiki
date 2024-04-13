@@ -30,7 +30,7 @@
     "id": 2,
     "name": "halfSaiyan",
     "displayName": "Half Saiyan",
-    "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with interest in battle.",
+    "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with less interest in battle.",
     "extraDescription": "",
     "positiveTrait": "ki",
     "negativeTrait": "toughness",
