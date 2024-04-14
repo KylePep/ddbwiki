@@ -3,6 +3,7 @@ import { ITEM_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 import FilterList from '../components/FilterList'
 import Link from 'next/link'
+import PreviewCard from '../components/PreviewCard'
 
 export default function page() {
   const items = [...ITEM_TYPES].filter((i) => i.id != 0)
@@ -29,17 +30,19 @@ export default function page() {
           {/* Min view */}
         <div>
         {list.map((item: any)=>(
-          <div key={item.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
-            <div>
-                <h2 className="font-bold">{item.displayName}</h2>
-                  <h3 className='my-2'><span className='font-semibold'>Type: </span>{item.type} <span> - {item.subType}</span></h3>
-            </div>
-                  <p className="mb-2">{item.description}</p>
-                  <div className="flex justify-center items-center">
-                  <Link href={`items/${item.name}`} className="font-semibold hover:text-white bg-gray-400 rounded p-1"> Details</Link>
-                  </div>
+        <PreviewCard key={item.id} content={item} pathName='items'/>
 
-          </div>
+          // <div key={item.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
+          //   <div>
+          //       <h2 className="font-bold">{item.displayName}</h2>
+          //         <h3 className='my-2'><span className='font-semibold'>Type: </span>{item.type} <span> - {item.subType}</span></h3>
+          //   </div>
+          //         <p className="mb-2">{item.description}</p>
+          //         <div className="flex justify-center items-center">
+          //         <Link href={`items/${item.name}`} className="font-semibold hover:text-white bg-gray-400 rounded p-1"> Details</Link>
+          //         </div>
+
+          // </div>
               ))}
         </div>
       </div>

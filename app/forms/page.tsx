@@ -4,6 +4,7 @@ import { AWAKEN_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 import FilterList from '../components/FilterList'
 import Link from 'next/link'
+import PreviewCard from '../components/PreviewCard'
 
 export default function formPage() {
   const [list, setList] = useState(AWAKEN_TYPES)
@@ -27,17 +28,19 @@ export default function formPage() {
       <FilterList LIST_TYPE={AWAKEN_TYPES} list={list} setList={setList} categoryFilterArr={["type.transformation", "type.form", "type.powerUp"]} />
       <div>
       {list.map((form: any)=>(
-        <div key={form.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
-          <div>
-              <h2 className="font-bold">{form.displayName}</h2>
-                <h3 className='my-2'><span className='font-semibold'>Type: </span>{form.type} <span> - {form.archetype}</span></h3>
-          </div>
-                <p className="mb-2">{form.description}</p>
-                <div className="flex justify-center items-center">
-                <Link href={`forms/${form.name}`} className="font-semibold hover:text-white bg-gray-400 rounded p-1"> Details</Link>
-                </div>
+        <PreviewCard key={form.id} content={form} pathName='enemies'/>
+
+        // <div key={form.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
+        //   <div>
+        //       <h2 className="font-bold">{form.displayName}</h2>
+        //         <h3 className='my-2'><span className='font-semibold'>Type: </span>{form.type} <span> - {form.archetype}</span></h3>
+        //   </div>
+        //         <p className="mb-2">{form.description}</p>
+        //         <div className="flex justify-center items-center">
+        //         <Link href={`forms/${form.name}`} className="font-semibold hover:text-white bg-gray-400 rounded p-1"> Details</Link>
+        //         </div>
       
-        </div>
+        // </div>
             ))}
       </div>
     </div>

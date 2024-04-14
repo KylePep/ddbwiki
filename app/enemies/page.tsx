@@ -3,7 +3,7 @@ import { ENEMY_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 import FilterList from '../components/FilterList'
 import Link from 'next/link'
-import PreviewCard from '../components/previewCard'
+import PreviewCard from '../components/PreviewCard'
 
 export default function page() {
   const [list, setList] = useState(ENEMY_TYPES)
@@ -24,22 +24,22 @@ export default function page() {
 
   return (
       <div>
-        <PreviewCard content={list[0]} pathName='enemies'/>
         <h1 className='mb-3'>A list of enemies in D&DB</h1>
         <FilterList LIST_TYPE={ENEMY_TYPES} list={list} setList={setList} categoryFilterArr={["type.henchmen", "type.boss"]}/>
         <div>
         {list.map((enemy: any)=>(
-          <div key={enemy.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
-            <div>
-                <h2 className="font-bold">{enemy.displayName}</h2>
-                  <h3 className='my-2'><span className='font-semibold'>Type: </span>{enemy.type} <span> - {enemy.archetype}</span></h3>
-            </div>
-                  <p className="mb-2">{enemy.description}</p>
-                  <div className="flex justify-center items-center">
-                  <Link href={`enemies/${enemy.name}`} className="font-semibold hover:text-white bg-gray-400 rounded p-1"> Details</Link>
-                  </div>
+        <PreviewCard key={enemy.id} content={enemy} pathName='enemies'/>
+          // <div key={enemy.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
+          //   <div>
+          //       <h2 className="font-bold">{enemy.displayName}</h2>
+          //         <h3 className='my-2'><span className='font-semibold'>Type: </span>{enemy.type} <span> - {enemy.archetype}</span></h3>
+          //   </div>
+          //         <p className="mb-2">{enemy.description}</p>
+          //         <div className="flex justify-center items-center">
+          //         <Link href={`enemies/${enemy.name}`} className="font-semibold hover:text-white bg-gray-400 rounded p-1"> Details</Link>
+          //         </div>
 
-          </div>
+          // </div>
               ))}
         </div>
       </div>
