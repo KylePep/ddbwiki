@@ -2,6 +2,7 @@
 import { ITEM_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 import FilterList from '../components/FilterList'
+import Link from 'next/link'
 
 export default function page() {
   const items = [...ITEM_TYPES].filter((i) => i.id != 0)
@@ -25,21 +26,19 @@ export default function page() {
         </div>
         <FilterList LIST_TYPE={items} list={list} setList={setList} categoryFilterArr={[ "type.equipment", "type.item", "subType.head", "subType.body", "subType.weapon", "subType.consumable"
           ]} />
+          {/* Min view */}
         <div>
-          {list.map((item: any)=>(
-            <div key={item.id} className='bg-gray-100 rounded-md px-4 py-2 mb-2'>
+        {list.map((item: any)=>(
+          <div key={item.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
+            <div>
                 <h2 className="font-bold">{item.displayName}</h2>
-                <p className='mb-2'>{item.description}</p>
-                <p className='mb-2 mx-8'>{item.extraDescription}</p>
+                  <h3 className='my-2'><span className='font-semibold'>Type: </span>{item.type} <span> - {item.subType}</span></h3>
+            </div>
+                  <p className="mb-2">{item.description}</p>
+                  <div className="flex justify-center items-center">
+                  <Link href={`items/${item.name}`} className="font-semibold hover:text-white bg-gray-400 rounded p-1"> Details</Link>
+                  </div>
 
-                <div>
-                    <p className='border-solid border-2 border-b-black'><span className='font-semibold'>Details </span></p>
-                    <h3 className='my-2'><span className='font-semibold'>Type: </span>{item.type} <span> - {item.subType}</span></h3>
-                    
-                    <h3 className='font-semibold'>Effect:</h3>
-                    <p>{item.effect}</p>
-                    <p>{item.descriptionParams}</p>
-                </div>
           </div>
               ))}
         </div>

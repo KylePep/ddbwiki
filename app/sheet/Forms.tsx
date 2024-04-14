@@ -1,4 +1,4 @@
-import { FORM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
+import { AWAKEN_TYPES, ORIGIN_TYPES } from '@/shared/constants'
 import React, { useEffect, useState } from 'react'
 import Modal from '../components/Modal'
 interface formProps{
@@ -16,7 +16,7 @@ export default function Forms({form, handleChange}:formProps) {
     const originForms = origin ? origin.forms : []
   
     const formsList = originForms.map((fl)=> {
-        const formById = FORM_TYPES.find((f)=> f.name == fl)
+        const formById = AWAKEN_TYPES.find((f)=> f.name == fl)
         return formById
     })
 
