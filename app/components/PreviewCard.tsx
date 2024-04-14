@@ -16,7 +16,7 @@ export default function PreviewCard({content, pathName}:previewProps ) {
 
   return (
     <Link href={`${pathName}/${content.name}`}>
-      <div key={content.id} className='grid grid-cols-2 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
+      <div key={content.id} className='grid grid-cols-2 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2 hover:bg-white'>
 
         <div>
           <h2 className="font-bold">{content.displayName}</h2>
