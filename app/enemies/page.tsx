@@ -30,7 +30,7 @@ export default function page() {
           <div key={enemy.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
             <div>
                 <h2 className="font-bold">{enemy.displayName}</h2>
-                  <h3 className='my-2'><span className='font-semibold'>Type: </span>{enemy.type}</h3>
+                  <h3 className='my-2'><span className='font-semibold'>Type: </span>{enemy.type} <span> - {enemy.archetype}</span></h3>
             </div>
                   <p className="mb-2">{enemy.background}</p>
                   <div className="flex justify-center items-center">
