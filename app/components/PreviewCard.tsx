@@ -10,8 +10,9 @@ export default function PreviewCard({content, pathName}:previewProps ) {
 
 
   const typeFilter = (
-    (pathName !== "enemies") ? content.subType : content.archetype
+    (pathName != "enemies") ? content.subType : content.archetype
   )
+  console.log(typeFilter)
 
   return (
     <Link href={`${pathName}/${content.name}`}>

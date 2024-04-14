@@ -28,7 +28,7 @@ export default function formPage() {
       <FilterList LIST_TYPE={AWAKEN_TYPES} list={list} setList={setList} categoryFilterArr={["type.transformation", "type.form", "type.powerUp"]} />
       <div>
       {list.map((form: any)=>(
-        <PreviewCard key={form.id} content={form} pathName='enemies'/>
+        <PreviewCard key={form.id} content={form} pathName='forms'/>
 
         // <div key={form.id} className='grid grid-cols-3 gap-2 bg-gray-100 rounded-md px-4 py-2 mb-2'>
         //   <div>
