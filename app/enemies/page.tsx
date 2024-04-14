@@ -3,6 +3,7 @@ import { ENEMY_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 import FilterList from '../components/FilterList'
 import Link from 'next/link'
+import PreviewCard from '../components/previewCard'
 
 export default function page() {
   const [list, setList] = useState(ENEMY_TYPES)
@@ -23,6 +24,7 @@ export default function page() {
 
   return (
       <div>
+        <PreviewCard content={list[0]} pathName='enemies'/>
         <h1 className='mb-3'>A list of enemies in D&DB</h1>
         <FilterList LIST_TYPE={ENEMY_TYPES} list={list} setList={setList} categoryFilterArr={["type.henchmen", "type.boss"]}/>
         <div>
@@ -32,7 +34,7 @@ export default function page() {
                 <h2 className="font-bold">{enemy.displayName}</h2>
                   <h3 className='my-2'><span className='font-semibold'>Type: </span>{enemy.type} <span> - {enemy.archetype}</span></h3>
             </div>
-                  <p className="mb-2">{enemy.background}</p>
+                  <p className="mb-2">{enemy.description}</p>
                   <div className="flex justify-center items-center">
                   <Link href={`enemies/${enemy.name}`} className="font-semibold hover:text-white bg-gray-400 rounded p-1"> Details</Link>
                   </div>

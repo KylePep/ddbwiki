@@ -26,7 +26,7 @@ export default function page() {
           Think of it like a series of rooms. The simplest of adventures would be a one room that leads to a single room that then leads to a single room.
         </p>
         <h4 className='font-bold mt-3'>Adventures</h4>
-        <p>Although this is an expectable way to play it {`wouldn't`} be the most fun.</p>
+        <p>Although this is an acceptable way to play it {`wouldn't`} be the most fun.</p>
         <p>A more complex adventure can feature rooms with multiple doors, that lead to rooms with even more doors.</p>
         <h4 className='font-bold mt-3'>Rooms</h4>
         <p>Within a room there will be events such as; battles, investigations, dilemmas and resource opportunities!</p>
