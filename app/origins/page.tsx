@@ -1,6 +1,6 @@
 'use client'
 
-import { FORM_TYPES, ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
+import { AWAKEN_TYPES, ITEM_TYPES, ORIGIN_TYPES } from '@/shared/constants'
 import { MOVE_TYPES } from '@/shared/constants'
 import React from 'react'
 
@@ -12,7 +12,7 @@ export default function originsPage() {
   })
 
   const formName = ((formName: string)=>{
-    const form =  FORM_TYPES.find((f) => f.name == formName)
+    const form =  AWAKEN_TYPES.find((f) => f.name == formName)
     return form?.displayName
   })
 

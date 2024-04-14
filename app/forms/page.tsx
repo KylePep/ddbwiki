@@ -10,8 +10,8 @@ export default function formPage() {
   return (
     <main>
       <div className='bg-white rounded p-4 mb-3'>
-        <h1>Transformations are a change to a characters state that is reflected in the changing of stats or the manifestation of passive or active abilities</h1>
-        <div>Transformations can be an aura, the alteration of a physical characteristic or a full body change</div>
+        <h1>Awakenings are skills that cause a change to a characters state that is reflected in the changing of stats or the manifestation of passive or active abilities</h1>
+        <div>Awakenings can be Transformations, a new form, or a power up.</div>
         {/* <h2 className='font-bold'>Auras</h2>
         <p>potential unlocked</p>
         <p>Mostly consist of a slight boost in power at the cost of being slightly more taxing on a stat or resource</p>

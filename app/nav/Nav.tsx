@@ -21,7 +21,7 @@ export default function Nav() {
           <Link href={"/archetypes"}>{pathName !=="/archetypes" ? `Archetypes` : `ARCHETYPES`}</Link>
           <Link href={"/moves"}>{pathName !=="/moves" ? `Moves` : `MOVES`}</Link>
           <Link href={"/items"}>{pathName !=="/items" ? `Items` : `ITEMS`}</Link>
-          <Link href={"/forms"}>{pathName !=="/forms" ? `Forms` : `FORMS`}</Link>
+          <Link href={"/forms"}>{pathName !=="/forms" ? `Awakenings` : `AWAKENINGS`}</Link>
         </div>
         <div className='flex justify-around'>
           <Link href={"/rules"}>{pathName !=="/rules" ? `Rules` : `RULES`}</Link>
