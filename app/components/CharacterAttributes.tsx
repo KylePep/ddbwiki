@@ -113,6 +113,38 @@ export default function CharacterAttributes() {
         </ul>
       </div> 
 
+      <div>
+        <p className='font-bold mb-1'>Leveling up:</p>
+        <ul className='list-disc text-sm'>
+          <li>There are two different kinds of level ups, which are decided by the type of adventure.</li>
+          <li>Milestone- Where at predetermined points of the adventure the characters are given a level up. Exp may still be tracked but is not a factor.</li>
+          <li>Experience points- When the individual players defeat enemies or complete parts of the story or specific actions, Exp can be rewarded and at predetermined thresholds a level up occurs. </li>
+        </ul>
+      </div> 
+
+      <div>
+        <p className='font-bold mb-1'>Levels:</p>
+        <ul className='list-disc text-sm'>
+          <li>Levels raise the max of your sparking meter and give you access to new moves.</li>
+        </ul>
+      </div> 
+
+      <div>
+        <p className='font-bold mb-1'>Equip:</p>
+        <ul className='list-disc text-sm'>
+          <li>Equipment Items can be equipped, this can only happen outside of combat.</li>
+          <li>When an item is equipped, the effects that it has can now be applied to the character.</li>
+          <li>UnEquipping can only happen outside of combat and ultimately makes the item <i>not</i> equipped.</li>
+        </ul>
+      </div> 
+
+      <div>
+        <p className='font-bold mb-1'>:</p>
+        <ul className='list-disc text-sm'>
+          <li></li>
+        </ul>
+      </div> 
+
     </div>
 
     </div>
