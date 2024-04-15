@@ -45,6 +45,16 @@ export default function CharacterStats() {
           <p>A characters spirit directly affects the effectiveness of support moves and resilience to being affected by opponent support moves.</p>
         </div>
 
+        <div>
+          <p className='font-semibold text-base'>Character descriptors</p>
+          <p className='mb-1'>values used to help describe a character.</p>
+          <div>
+            <p><span className='font-semibold'>Pronouns</span> - He | Him - She | Her - They | Them</p>
+            <p><span className='font-semibold'>Body Type</span> - Masculine - Feminine - Neither</p>
+            <p><span className='font-semibold'>Height</span> - Very Tall - Tall - Average - Short - Very Short</p>
+          </div>
+        </div>
+
       </div>
       
     </div>

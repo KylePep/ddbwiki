@@ -139,9 +139,9 @@ export default function CharacterAttributes() {
       </div> 
 
       <div>
-        <p className='font-bold mb-1'>:</p>
+        <p className='font-bold mb-1'>Appearance:</p>
         <ul className='list-disc text-sm'>
-          <li></li>
+          <li>Appearance is both a saved description on the character and the visual representation of the characters name as it shows up during play.</li>
         </ul>
       </div> 
 
