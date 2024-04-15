@@ -4,6 +4,7 @@ import React from 'react'
 import CharacterStats from '../components/CharacterStats'
 import CharacterAttributes from '../components/CharacterAttributes'
 import CharacterActions from '../components/CharacterActions'
+import CharacterEffects from '../components/CharacterEffects'
 
 export default function page() {
   return (
@@ -12,6 +13,7 @@ export default function page() {
       <CharacterStats/>
       <CharacterAttributes/>
       <CharacterActions />
+      <CharacterEffects/>
       </div>
     </div>
   )
