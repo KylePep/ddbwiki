@@ -49,6 +49,19 @@ export default function CharacterEffects() {
         </ul>
       </div>
  
+      <div>
+        <p className='font-bold mb-1'>Fear:</p>
+        <ul className='list-disc text-sm'>
+          <li></li>
+        </ul>
+      </div> 
+
+      <div>
+        <p className='font-bold mb-1'>Pride:</p>
+        <ul className='list-disc text-sm'>
+          <li></li>
+        </ul>
+      </div> 
 
 </div>
 
