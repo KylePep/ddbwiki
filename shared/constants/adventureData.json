@@ -12,7 +12,8 @@
       "act1Summary":"Turles and his team show up on Earth.",
       "act2Summary":"Tree Grows while everyone fights.",
       "act3Summary":"Turles gets super strong from the fruit and appears unbeatable.",
-      "battles": ["Rasin and Lakasei", "Amond", "Cacao", "Daiz and Cacao", "Rasin", "Lakasei", "Turles part1", "Turles part2", "Great Ape Gohan", "Great Ape Gohan resolution", "Amond, Daiz, Cacao, Rasin, Lakasei", "Turles part3", "Turles part4", "Turles part5", "Turles part6"]
+      "battles": ["Rasin and Lakasei", "Amond", "Cacao", "Daiz and Cacao", "Rasin", "Lakasei", "Turles part1", "Turles part2", "Great Ape Gohan", "Great Ape Gohan resolution", "Amond, Daiz, Cacao, Rasin, Lakasei", "Turles part3", "Turles part4", "Turles part5", "Turles part6"],
+      "story": "<TreeOfMight/>"
     },
     {
       "id": "worldsStrongest",

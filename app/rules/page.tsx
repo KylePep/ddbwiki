@@ -1,10 +1,6 @@
 'use client'
 
 import React from 'react'
-import CharacterStats from '../components/CharacterStats'
-import CharacterAttributes from '../components/CharacterAttributes'
-import CharacterActions from '../components/CharacterActions'
-import CharacterEffects from '../components/CharacterEffects'
 import Link from 'next/link'
 
 export default function page() {
@@ -18,11 +14,8 @@ export default function page() {
       </div>
 
       <div className='bg-white rounded p-4 mb-2'>
-        <p>Lean about the keywords and rules in Dungeons & DragonBalls</p>
-      </div>
-
-      <div className='grid gap-4 grid-cols-1'>
-
+        <h1 className='font-semibold'>The rules of Dungeons & DragonBalls</h1>
+        <p>Here you can learn more about all of the different aspects of D&DB.</p>
       </div>
     </div>
   )

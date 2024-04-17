@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import { ADVENTURE_TYPES, ENEMY_TYPES } from '@/shared/constants'
+import TreeOfMight from '@/app/enemies/[slug]/TreeOfMight'
 
 type URL = {
   params: {
@@ -52,6 +53,10 @@ export default function page(url:URL) {
           <h1 className='font-bold text-xl text-center bg-white rounded p-4'>
             {data.title}
             </h1>
+            
+            {data.id === "treeOfMight" ? <TreeOfMight/> : ""}
+
+
             <div className='bg-white rounded p-4 my-2'>
               <div>
                 <p className='font-bold'>summary:</p>
