@@ -61,7 +61,7 @@ export default function page(url:URL) {
     const Component = componentToRender(data)
   return (
     <div>
-      {Component}
+      
       <div className='bg-blue-200 rounded-t p-2 font-bold text-center'>
         <Link href={`/adventure`}>
           <button className='hover:text-white'>Return to adventures</button>
@@ -119,11 +119,12 @@ export default function page(url:URL) {
               </ul>
               <p className='font-bold'>Location: <span className='font-normal'>{data.primaryLocation}</span></p>
               <p className='font-bold'>Battles:</p>
-              <ul>
+              <ul className='mb-3'>
                 {data.battles.map((battle: any) => (
                   <li key={battle}>{battle}</li>
                 ))}
               </ul>
+              {Component}
             </div>
           </div>
           :
