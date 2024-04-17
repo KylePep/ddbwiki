@@ -9,6 +9,26 @@ type URL = {
   }
 }
 
+type Data = {
+    id: string;
+    title: string;
+    summary: string;
+    players: string;
+    roles: string[];
+    villain: string;
+    opponents: string[];
+    primaryLocation: string;
+    act1Summary: string;
+    act2Summary: string;
+    act3Summary: string;
+    battles: string[];
+    story: string;
+}
+
+type ComponentMap = {
+  [key: string]: React.ReactNode;
+}
+
 const fetchDetails = (slug:string) => {
   const data = ADVENTURE_TYPES.find((a) => a.id == slug)
   if (!data){
@@ -22,10 +42,26 @@ const enemyName = ((enemyName: string)=>{
   return enemy?.displayName
 })
 
+const componentToRender = ((data: Data | any) => {
+  if(!data){
+    return null
+  }
+
+  const componentMap: ComponentMap = {
+    treeOfMight: <TreeOfMight />
+  }
+
+  const ComponentToRender = componentMap[data.id] || null
+
+  return ComponentToRender
+})
+
 export default function page(url:URL) {
   const data = fetchDetails(url.params.slug)
+    const Component = componentToRender(data)
   return (
     <div>
+      {Component}
       <div className='bg-blue-200 rounded-t p-2 font-bold text-center'>
         <Link href={`/adventure`}>
           <button className='hover:text-white'>Return to adventures</button>
@@ -54,7 +90,6 @@ export default function page(url:URL) {
             {data.title}
             </h1>
             
-            {data.id === "treeOfMight" ? <TreeOfMight/> : ""}
 
 
             <div className='bg-white rounded p-4 my-2'>
