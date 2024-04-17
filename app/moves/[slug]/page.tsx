@@ -16,11 +16,6 @@ const fetchDetails = (slug:string) => {
   return data
 }
 
-// const enemyName = ((enemyName: string)=>{
-//   const enemy =  ENEMY_TYPES.find((e) => e.name == enemyName)
-//   return enemy?.displayName
-// })
-
 export default function page(url:URL) {
   const move = fetchDetails(url.params.slug)
   return (
