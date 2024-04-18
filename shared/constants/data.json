@@ -1,6 +1,7 @@
 {
   "DEMO_DATA":{
     "player":{
+      "id": "1A",
       "name": "Aspara", 
       "level": 1, 
       "origin": "saiyan", 
@@ -8,15 +9,72 @@
       "pronouns":"he|him",
       "bodyType": "masculine", 
       "height": "average", 
-      "description": "Demo Character", 
+      "description": "-Demo Character- Aspara is a Goku approximation and will be fighting against Turles, the main villain of the Tree of Might.", 
       "stats":{"mod": 0, "spirit": 2, "ki": 4, "power": 5, "agility": 3, "toughness": 4}, 
       "equipment":["none","turleHermitGi","none"], 
-      "moves":["kamehameha", "meteorCombo"], 
+      "moves":["kamehameha", "meteorCombo", "energyWave", "rush"], 
       "inventory":["senzuBean"], 
       "forms":["kaioKen"]
     },
     "enemy": "turles",
-    "roomType": "bossBattle"
+    "adventurePlayer": {
+      "playerId": "1A",
+      "playerRole": "Goku",
+      "adventureId": "treeOfMight",
+      "room": 1,
+      "roomType": "bossBattle",
+      "playerState":{
+        "hp": "10/10",
+        "sparkingMeter": "1/6",
+        "archCounter": "5/5",
+        "statusEffects": []
+      }
+    },
+    "adventureInstance":{
+      "adventureRooms": ["1A", "2A", "3A", "4A", "1B"]
+    },
+    "rooms": [
+      {
+        "id": "1A",
+        "doors": ["2A", "1B"],
+        "dialogue": "1ADial",
+        "eventType": "bossBattle",
+        "setting": "treeOfMightBase",
+        "NPC": ["turles", "Iggus"]
+    },
+      {
+        "id": "2A",
+        "doors": ["3A", "1B"],
+        "dialogue": "2ADial",
+        "eventType": "bossBattle",
+        "setting": "treeOfMightCrown",
+        "NPC": ["turles", "Iggus"]
+    },
+      {
+        "id": "3A",
+        "doors": ["4A"],
+        "dialogue": "3ADial",
+        "eventType": "bossBattle",
+        "setting": "treeOfMightCrown",
+        "NPC": ["turles", "Iggus"]
+    },
+      {
+        "id": "4A",
+        "doors": ["exit"],
+        "dialogue": "4ADial",
+        "eventType": "battleWin",
+        "setting": "treeOfMightCrown",
+        "NPC": ["turles", "Iggus"]
+    },
+      {
+        "id": "1B",
+        "doors": ["exit"],
+        "dialogue": "1ADial",
+        "eventType": "battleLose",
+        "setting": "treeOfMightCrown",
+        "NPC": ["turles", "Iggus"]
+    }
+    ]
   },
   "CHARACTER_TYPES":{
     "name": "Aspara", 
