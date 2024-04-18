@@ -72,7 +72,7 @@
       {
         "id": "1B",
         "doors": ["exit"],
-        "dialogue": "1ADial",
+        "dialogue": "1BDial",
         "eventType": "battleLose",
         "setting": "treeOfMightCrown",
         "NPC": ["turles", "Iggus"]
@@ -83,19 +83,19 @@
         "id": "1ADial",
         "chapterData": [
           {
-            "id": 0,
+            "id": "0D",
             "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
             "responseId": "0R",
             "responseDoors": ["1D", "2D"]
           },
           {
-            "id": 1,
+            "id": "1D",
             "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
             "responseId": "1R",
             "responseDoors": ["2D"]
           },
           {
-            "id": 2,
+            "id": "2D",
             "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
             "responseId": "2R",
             "responseDoors": ["exit"]
@@ -111,20 +111,20 @@
         "id": "2ADial",
         "chapterData": [
           {
-            "id": 0,
-            "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
+            "id": "0D",
+            "content": {"speaker": "turles", "dialogue": "Snack Time!"},
             "responseId": "0R",
             "responseDoors": ["1D", "2D"]
           },
           {
-            "id": 1,
-            "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
+            "id": "1D",
+            "content": {"speaker": "turles", "dialogue": "I am so full of power!"},
             "responseId": "1R",
             "responseDoors": ["2D"]
           },
           {
-            "id": 2,
-            "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
+            "id": "2D",
+            "content": {"speaker": "turles", "dialogue": "Let the battle Continue"},
             "responseId": "2R",
             "responseDoors": ["exit"]
           }
@@ -139,47 +139,47 @@
         "id": "3ADial",
         "chapterData": [
           {
-            "id": 0,
-            "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
+            "id": "0D",
+            "content": {"speaker": "turles", "dialogue": "How can you have so much power!?"},
             "responseId": "0R",
-            "responseDoors": ["1D", "2D"]
+            "responseDoors": ["1D"]
           },
           {
-            "id": 1,
+            "id": "1D",
             "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
             "responseId": "1R",
             "responseDoors": ["2D"]
           },
           {
-            "id": 2,
+            "id": "2D",
             "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
             "responseId": "2R",
-            "responseDoors": ["exit"]
+            "responseDoors": ["exit", "restart"]
           }
         ],
         "responsesData": [
-          {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
-          {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
-          {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
+          {"id": "0R", "responses": ["Continue|1D"]},
+          {"id": "1R", "responses": ["Continue|2D"]},
+          {"id": "2R", "responses": ["Quit?|exit", "Restart?|restart"]}
         ]
       },
       {
         "id": "4ADial",
         "chapterData": [
           {
-            "id": 0,
+            "id": "0D",
             "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
             "responseId": "0R",
             "responseDoors": ["1D", "2D"]
           },
           {
-            "id": 1,
+            "id": "1D",
             "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
             "responseId": "1R",
             "responseDoors": ["2D"]
           },
           {
-            "id": 2,
+            "id": "2D",
             "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
             "responseId": "2R",
             "responseDoors": ["exit"]
@@ -192,11 +192,11 @@
         ]
       },
       {
-        "id": "2ADial",
+        "id": "1BDial",
         "chapterData": [
           {
-            "id": 0,
-            "content": {"speaker": "turles", "dialogue": "You are a weakling %playerName%, you and this planet die together."},
+            "id": "0D",
+            "content": {"speaker": "turles", "dialogue": "You are a weakling %playerName%, you and this planet die together!"},
             "responseId": "0R",
             "responseDoors": ["exit", "restart"]
           }
