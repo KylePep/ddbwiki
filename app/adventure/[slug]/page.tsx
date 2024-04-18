@@ -98,11 +98,15 @@ export default function page(url:URL) {
                 <div>
                   <p className='font-bold'>Summary:</p>
                   <p>{data.summary}</p>
-                  <ul>
-                    <li><span className='font-semibold'>Act 1: </span>{data.act1Summary}</li>
-                    <li><span className='font-semibold'>Act 2: </span> {data.act2Summary}</li>
-                    <li><span className='font-semibold'>Act 3: </span> {data.act3Summary}</li>
-                  </ul>
+                  <div className='grid grid-cols-4'>
+                    <p className='font-semibold'>Act 1:</p>
+                    <p className='grid-cols-subgrid col-span-3'>{data.act1Summary}</p>
+                    <p className='font-semibold'>Act 2:</p>
+                    <p className='grid-cols-subgrid col-span-3'>{data.act2Summary}</p>
+                    <p className='font-semibold'>Act 3:</p>
+                    <p className='grid-cols-subgrid col-span-3'>{data.act3Summary}</p>
+
+                  </div>
                 </div>
 
                 <div>
