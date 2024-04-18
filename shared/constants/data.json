@@ -1,4 +1,23 @@
 {
+  "DEMO_DATA":{
+    "player":{
+      "name": "Aspara", 
+      "level": 1, 
+      "origin": "saiyan", 
+      "archetype": "striker", 
+      "pronouns":"he|him",
+      "bodyType": "masculine", 
+      "height": "average", 
+      "description": "Demo Character", 
+      "stats":{"mod": 0, "spirit": 2, "ki": 4, "power": 5, "agility": 3, "toughness": 4}, 
+      "equipment":["none","turleHermitGi","none"], 
+      "moves":["kamehameha", "meteorCombo"], 
+      "inventory":["senzuBean"], 
+      "forms":["kaioKen"]
+    },
+    "enemy": "turles",
+    "roomType": "bossBattle"
+  },
   "CHARACTER_TYPES":{
     "name": "Aspara", 
     "level": 1, 
