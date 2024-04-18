@@ -92,38 +92,59 @@ export default function page(url:URL) {
             
 
 
-            <div className='bg-white rounded p-4 my-2'>
+            <div className='bg-white rounded p-4 my-2 grid grid-cols-2 gap-2'>
+
+              <div className='grid grid-cols-1 gap-2'>
+                <div>
+                  <p className='font-bold'>Summary:</p>
+                  <p>{data.summary}</p>
+                  <ul>
+                    <li><span className='font-semibold'>Act 1: </span>{data.act1Summary}</li>
+                    <li><span className='font-semibold'>Act 2: </span> {data.act2Summary}</li>
+                    <li><span className='font-semibold'>Act 3: </span> {data.act3Summary}</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p className='font-bold'>Location: <span className='font-normal'>{data.primaryLocation}</span></p>
+                </div>
+
+                <div>
+                  <p className='font-bold'>Player Count: <span className='font-normal'>{data.players}</span></p>
+                  <p className='font-bold'>Roles: 
+                  <span className='font-normal'>{` ( A role is a narrative device players pick to organize them into the story )`}</span>
+                  </p>
+                <p>{data.roles.map((role: any) =>(
+                  <span key={role} className='font-normal'> {role} </span>
+                ))}</p>
+                </div>
+
+                <div>
+                  <p className='font-bold'>Villain: <span className='font-normal'>{enemyName(data.villain)}</span></p>
+
+                  <p className='font-bold'>Opponents:</p>
+                  <ul>
+                    {data.opponents?.map((opponent: any) => (
+                      <li key={opponent}>{enemyName(opponent)}</li>
+                    ))}
+                  </ul>
+                </div>
+
+              </div>
+
+
+
               <div>
-                <p className='font-bold'>summary:</p>
-                <p>{data.summary}</p>
-                <ul>
-                  <li>Act 1: {data.act1Summary}</li>
-                  <li>Act 2: {data.act2Summary}</li>
-                  <li>Act 3: {data.act3Summary}</li>
+                <p className='font-bold'>Battles:</p>
+                <ul className='mb-3'>
+                  {data.battles.map((battle: any) => (
+                    <li key={battle}>{battle}</li>
+                  ))}
                 </ul>
               </div>
-              <p className='font-bold'>Player Count: <span className='font-normal'>{data.players}</span></p>
-              <p className='font-bold'>Roles: 
-              <span className='font-normal'>{` ( A role is a narrative device players pick to organize them into the story )`}</span>
-              </p>
-              <p>{data.roles.map((role: any) =>(
-                <span key={role} className='font-normal'> {role} </span>
-              ))}</p>
-              <p className='font-bold'>Villain: <span className='font-normal'>{enemyName(data.villain)}</span></p>
+            </div>
 
-              <p className='font-bold'>Opponents:</p>
-              <ul>
-                {data.opponents?.map((opponent: any) => (
-                  <li key={opponent}>{enemyName(opponent)}</li>
-                ))}
-              </ul>
-              <p className='font-bold'>Location: <span className='font-normal'>{data.primaryLocation}</span></p>
-              <p className='font-bold'>Battles:</p>
-              <ul className='mb-3'>
-                {data.battles.map((battle: any) => (
-                  <li key={battle}>{battle}</li>
-                ))}
-              </ul>
+            <div className='bg-white rounded p-4'>
               {Component}
             </div>
           </div>
