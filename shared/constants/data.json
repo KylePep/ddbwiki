@@ -16,7 +16,7 @@
       "inventory":["senzuBean"], 
       "forms":["kaioKen"]
     },
-    "enemy": "turles",
+
     "adventurePlayer": {
       "playerId": "1A",
       "playerRole": "Goku",
@@ -30,9 +30,12 @@
         "statusEffects": []
       }
     },
+
     "adventureInstance":{
+      "adventureId": "treeOfMight",
       "adventureRooms": ["1A", "2A", "3A", "4A", "1B"]
     },
+
     "rooms": [
       {
         "id": "1A",
@@ -74,6 +77,134 @@
         "setting": "treeOfMightCrown",
         "NPC": ["turles", "Iggus"]
     }
+    ],
+    "dialogue": [
+      {
+        "id": "1ADial",
+        "chapterData": [
+          {
+            "id": 0,
+            "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
+            "responseId": "0R",
+            "responseDoors": ["1D", "2D"]
+          },
+          {
+            "id": 1,
+            "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
+            "responseId": "1R",
+            "responseDoors": ["2D"]
+          },
+          {
+            "id": 2,
+            "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
+            "responseId": "2R",
+            "responseDoors": ["exit"]
+          }
+        ],
+        "responsesData": [
+          {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
+          {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
+          {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
+        ]
+      },
+      {
+        "id": "2ADial",
+        "chapterData": [
+          {
+            "id": 0,
+            "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
+            "responseId": "0R",
+            "responseDoors": ["1D", "2D"]
+          },
+          {
+            "id": 1,
+            "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
+            "responseId": "1R",
+            "responseDoors": ["2D"]
+          },
+          {
+            "id": 2,
+            "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
+            "responseId": "2R",
+            "responseDoors": ["exit"]
+          }
+        ],
+        "responsesData": [
+          {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
+          {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
+          {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
+        ]
+      },
+      {
+        "id": "3ADial",
+        "chapterData": [
+          {
+            "id": 0,
+            "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
+            "responseId": "0R",
+            "responseDoors": ["1D", "2D"]
+          },
+          {
+            "id": 1,
+            "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
+            "responseId": "1R",
+            "responseDoors": ["2D"]
+          },
+          {
+            "id": 2,
+            "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
+            "responseId": "2R",
+            "responseDoors": ["exit"]
+          }
+        ],
+        "responsesData": [
+          {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
+          {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
+          {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
+        ]
+      },
+      {
+        "id": "4ADial",
+        "chapterData": [
+          {
+            "id": 0,
+            "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
+            "responseId": "0R",
+            "responseDoors": ["1D", "2D"]
+          },
+          {
+            "id": 1,
+            "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
+            "responseId": "1R",
+            "responseDoors": ["2D"]
+          },
+          {
+            "id": 2,
+            "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
+            "responseId": "2R",
+            "responseDoors": ["exit"]
+          }
+        ],
+        "responsesData": [
+          {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
+          {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
+          {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
+        ]
+      },
+      {
+        "id": "2ADial",
+        "chapterData": [
+          {
+            "id": 0,
+            "content": {"speaker": "turles", "dialogue": "You are a weakling %playerName%, you and this planet die together."},
+            "responseId": "0R",
+            "responseDoors": ["exit", "restart"]
+          }
+        ],
+        "responsesData": [
+          {"id": "0R", "responses": ["Quit|exit", "Restart|restart"]}
+        ]
+      }
     ]
   },
   "CHARACTER_TYPES":{
