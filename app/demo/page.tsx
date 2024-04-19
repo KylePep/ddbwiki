@@ -3,6 +3,7 @@ import { DEMO_DATA, ENEMY_TYPES } from '@/shared/constants'
 import React from 'react'
 
 const data = DEMO_DATA
+
 const boss = () => {
   const base = ENEMY_TYPES.find((b)=>b.name === data.adventureInstance.enemyData[0].name)
 
@@ -41,16 +42,30 @@ export default function page() {
       <div className='my-4 bg-white rounded p-4 grid grid-cols-1 '>
         <div className='bg-gray-500 border border-solid border-black rounded p-4'>
           <div className='text-lg font-bold text-center bg-gray-400 border border-solid border-black p-2'>
-            <p className='mb-4'>
+            <p className='mb-4 text-xl'>
             {Boss.base?.displayName}
             </p>
             <p className='font-semibold text-l mb-4'>Enemy state description.</p>
-            <div className='flex flex-col items-center'>
+            <div className='grid grid-cols-3 gap-2 mb-10'>
+                <div>
+                  <p className='text-center'>Sparking</p>
+                  <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                      {Boss.sparkingMeter}
+                    </p>
+                </div>
+                <div>
                     <p className='text-center'>Health</p>
-                    <p className='bg-gray-700 border border-white text-white rounded w-fit px-2 py-1'>
+                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
                       {Boss.hp}
                     </p>
                 </div>
+                <div>
+                  <p className='text-center capitalize'>{Player.base.archetype} Counter</p>
+                  <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                      {Boss.archCounter}
+                    </p>
+                </div>
+            </div>
           </div>
           <div className='my-2 text-center font-bold text-xl text-white'>
             <div className='bg-black border border-white rounded px-2 py-2'>
@@ -66,17 +81,17 @@ export default function page() {
           </div>
           <div className='text-lg font-bold text-center mt-4 bg-gray-300 border border-solid border-black p-2'>
             <p className='mb-4'>{Player.base.name}</p>
-                <div>
-                    <p className='text-center'>Health</p>
-                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1 mx-2'>
-                      {Player.hp}
-                    </p>
-                </div>
-            <div className='flex justify-around mb-10'>
+            <div className='grid grid-cols-3 gap-2 mb-10'>
                 <div>
                   <p className='text-center'>Sparking</p>
                   <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
                       {Player.sparkingMeter}
+                    </p>
+                </div>
+                <div>
+                    <p className='text-center'>Health</p>
+                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                      {Player.hp}
                     </p>
                 </div>
                 <div>
@@ -86,16 +101,20 @@ export default function page() {
                     </p>
                 </div>
             </div>
-            <div className='flex justify-around'>
-              <div>
-                <button className='mb-2 bg-blue-400 px-2 py-1 rounded hover:text-white'>ACTIONS</button>
+            <div className='grid grid-cols-3 gap-2'>
+
+              <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
+                <button className=' hover:text-white'>ACTIONS</button>
               </div>
-              <div>
-                <button className='mb-2 bg-blue-400 px-2 py-1 rounded hover:text-white'>ITEMS</button>
+
+              <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
+                <button className='hover:text-white'>ITEMS</button>
               </div>
-              <div>
-                <button className='mb-2 bg-blue-400 px-2 py-1 rounded hover:text-white'>ALLIES</button>
+
+              <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
+                <button className='hover:text-white'>ALLIES</button>
               </div>
+
             </div>
           </div>
         </div>
