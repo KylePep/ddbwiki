@@ -43,20 +43,20 @@ export default function page() {
                 <div>
                     <p className='text-center'>Health</p>
                     <p className='bg-gray-700 border border-white text-white rounded px-2 py-1 mx-2'>
-                      {`[|] [|] [|] [|] [|] [|] [|]`}
+                      {data.adventurePlayer.playerState.hp}
                     </p>
                 </div>
             <div className='flex justify-around mb-10'>
                 <div>
                   <p className='text-center'>Sparking</p>
                   <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      {`[|] [ ] [ ] [ ] [ ]`}
+                      {data.adventurePlayer.playerState.sparkingMeter}
                     </p>
                 </div>
                 <div>
                   <p className='text-center'>archCounter</p>
                   <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      {`[|] [|] [|]`}
+                      {data.adventurePlayer.playerState.archCounter}
                     </p>
                 </div>
             </div>

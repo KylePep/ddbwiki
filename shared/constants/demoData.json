@@ -33,7 +33,18 @@
 
     "adventureInstance":{
       "adventureId": "treeOfMight",
-      "adventureRooms": ["1A", "2A", "3A", "4A", "1B"]
+      "adventureRooms": ["1A", "2A", "3A", "4A", "1B"],
+      "enemyData": [
+        {
+          "name": "turles",
+          "level": 2,
+          "stats": {"spirit": 2, "ki": 4, "power": 5, "agility": 3, "toughness": 4},
+          "hp": "10/10",
+          "sparkingMeter": "3/6",
+          "archCounter": "3/5",
+          "statusEffects": []
+        }
+      ]
     },
 
     "rooms": [
