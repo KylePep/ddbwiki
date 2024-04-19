@@ -42,7 +42,7 @@
         "doors": ["2A", "1B"],
         "dialogue": "1ADial",
         "eventType": "bossBattle",
-        
+        "clearCondition": "bossHp75",
         "setting": "treeOfMightBase",
         "NPC": ["turles", "Iggus"]
     },
@@ -51,6 +51,7 @@
         "doors": ["3A", "1B"],
         "dialogue": "2ADial",
         "eventType": "bossBattle",
+        "clearCondition": "bossHp50",
         "setting": "treeOfMightCrown",
         "NPC": ["turles", "Iggus"]
     },
@@ -59,6 +60,7 @@
         "doors": ["4A"],
         "dialogue": "3ADial",
         "eventType": "bossBattle",
+        "clearCondition": "bossHp0",
         "setting": "treeOfMightCrown",
         "NPC": ["turles", "Iggus"]
     },
@@ -67,6 +69,7 @@
         "doors": ["exit"],
         "dialogue": "4ADial",
         "eventType": "battleWin",
+        "clearCondition": "resolveDialogue",
         "setting": "treeOfMightCrown",
         "NPC": ["turles", "Iggus"]
     },
@@ -75,6 +78,7 @@
         "doors": ["exit"],
         "dialogue": "1BDial",
         "eventType": "battleLose",
+        "clearCondition": "resolveDialogue",
         "setting": "treeOfMightCrown",
         "NPC": ["turles", "Iggus"]
     }
