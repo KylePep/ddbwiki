@@ -1,12 +1,38 @@
-import { DEMO_DATA } from '@/shared/constants'
+'use client'
+import { DEMO_DATA, ENEMY_TYPES } from '@/shared/constants'
 import React from 'react'
 
 const data = DEMO_DATA
+const boss = () => {
+  const base = ENEMY_TYPES.find((b)=>b.name === data.adventureInstance.enemyData[0].name)
+
+  const combinedObject = {
+    ...data.adventureInstance.enemyData[0],
+    base: base
+  }
+
+  console.log("boss", combinedObject)
+  return combinedObject
+  }
+
+  const player = () => {
+    const base = DEMO_DATA.player
+  
+    const combinedObject = {
+      ...data.adventurePlayer.playerState,
+      base: base,
+      role: data.adventurePlayer.playerRole
+    }
+  
+    console.log("player", combinedObject)
+    return combinedObject
+    }
 
 export default function page() {
+  const Boss = boss()
+  const Player = player()
   return (
     <div>
-
       <div className='bg-gray-100 rounded p-8'>
         <p className='text-lg font-semibold text-center mb-4'>The Dungeons & DragonBalls Demo</p>
         <p className='text-center'>Experience a one on one battle between the character Aspara and Turles!</p>
@@ -16,13 +42,13 @@ export default function page() {
         <div className='bg-gray-500 border border-solid border-black rounded p-4'>
           <div className='text-lg font-bold text-center bg-gray-400 border border-solid border-black p-2'>
             <p className='mb-4'>
-            enemyName
+            {Boss.base?.displayName}
             </p>
             <p className='font-semibold text-l mb-4'>Enemy state description.</p>
             <div className='flex flex-col items-center'>
                     <p className='text-center'>Health</p>
                     <p className='bg-gray-700 border border-white text-white rounded w-fit px-2 py-1'>
-                      {`[|] [|] [|] [|] [|] [|] [|] [|] [ ] [ ]`}
+                      {Boss.hp}
                     </p>
                 </div>
           </div>
@@ -39,24 +65,24 @@ export default function page() {
             </div>
           </div>
           <div className='text-lg font-bold text-center mt-4 bg-gray-300 border border-solid border-black p-2'>
-            <p className='mb-4'>{data.player.name}</p>
+            <p className='mb-4'>{Player.base.name}</p>
                 <div>
                     <p className='text-center'>Health</p>
                     <p className='bg-gray-700 border border-white text-white rounded px-2 py-1 mx-2'>
-                      {data.adventurePlayer.playerState.hp}
+                      {Player.hp}
                     </p>
                 </div>
             <div className='flex justify-around mb-10'>
                 <div>
                   <p className='text-center'>Sparking</p>
                   <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      {data.adventurePlayer.playerState.sparkingMeter}
+                      {Player.sparkingMeter}
                     </p>
                 </div>
                 <div>
-                  <p className='text-center'>archCounter</p>
+                  <p className='text-center capitalize'>{Player.base.archetype} Counter</p>
                   <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      {data.adventurePlayer.playerState.archCounter}
+                      {Player.archCounter}
                     </p>
                 </div>
             </div>
