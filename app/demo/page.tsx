@@ -29,10 +29,81 @@ const boss = () => {
     return combinedObject
     }
 
+
+
 export default function page() {
   const [selectMenu, setSelectMenu] = useState("base")
   const Boss = boss()
   const Player = player()
+
+  function PlayerMenu (){
+    return (
+      <>
+            <p className='mb-4'>{Player.base.name}</p>
+
+            <div className='grid grid-cols-3 gap-2 mb-10'>
+                {selectMenu === "base" && 
+                <>
+                  <div>
+                    <p className='text-center'>Sparking</p>
+                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                        {Player.sparkingMeter}
+                      </p>
+                  </div>
+
+                  <div>
+                      <p className='text-center'>Health</p>
+                      <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                        {Player.hp}
+                      </p>
+                  </div>
+
+                  <div>
+                    <p className='text-center capitalize'>{Player.base.archetype} Counter</p>
+                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                        {Player.archCounter}
+                      </p>
+                  </div>
+                </>
+                }
+                {selectMenu === "action" && 
+                <>
+                  <p>ACTION</p>
+                </>
+                }
+                {selectMenu === "item" && 
+                <>
+                  <p>Item</p>
+                </>
+                }
+                {selectMenu === "ally" && 
+                <>
+                  <p>Ally</p>
+                </>
+                }
+
+            </div>
+
+            <div className='grid grid-cols-3 gap-2'>
+
+                <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
+                  {selectMenu === "action" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("action")} className='hover:text-white'>ACTIONS</button> }
+                  
+                </div>
+
+                <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
+                {selectMenu === "item" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("item")} className='hover:text-white'>ITEMS</button>}
+                </div>
+
+                <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
+                {selectMenu === "ally" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("ally")} className='hover:text-white'>ALLIES</button>}
+                </div>
+
+            </div>
+      </>
+    )
+  }
+
   return (
     <div>
       <div className='bg-gray-100 rounded p-8'>
@@ -81,44 +152,9 @@ export default function page() {
             </div>
           </div>
           <div className='text-lg font-bold text-center mt-4 bg-gray-300 border border-solid border-black p-2'>
-            <p className='mb-4'>{Player.base.name}</p>
-            <p>{selectMenu}</p>
-            <div className='grid grid-cols-3 gap-2 mb-10'>
-                <div>
-                  <p className='text-center'>Sparking</p>
-                  <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      {Player.sparkingMeter}
-                    </p>
-                </div>
-                <div>
-                    <p className='text-center'>Health</p>
-                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      {Player.hp}
-                    </p>
-                </div>
-                <div>
-                  <p className='text-center capitalize'>{Player.base.archetype} Counter</p>
-                  <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      {Player.archCounter}
-                    </p>
-                </div>
-            </div>
-            <div className='grid grid-cols-3 gap-2'>
-
-              <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-                {selectMenu === "action" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("action")} className='hover:text-white'>ACTIONS</button> }
-                
-              </div>
-
-              <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-              {selectMenu === "item" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("item")} className='hover:text-white'>ITEMS</button>}
-              </div>
-
-              <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-              {selectMenu === "ally" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("ally")} className='hover:text-white'>ALLIES</button>}
-              </div>
-
-            </div>
+          
+            <PlayerMenu/>
+            
           </div>
         </div>
       </div>
