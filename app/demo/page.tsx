@@ -36,6 +36,16 @@ export default function page() {
   const Boss = boss()
   const Player = player()
 
+  function MenuButton ({content}: {content: string}){
+    return(
+      <>
+      <button className='bg-blue-300 rounded px-2 py-1 hover:text-white'>
+        {content}
+      </button>
+      </>
+    )
+  }
+
   function PlayerMenu (){
     return (
       <>
@@ -63,7 +73,7 @@ export default function page() {
                       </p>
                   </div>
             </div>
-            <div className='grid grid-cols-3 gap-2 min-h-24'>
+            <div className='grid grid-cols-3 grid-rows-3 gap-2 min-h-36 mb-4'>
 
                 {selectMenu === "base" && 
                 <>
@@ -72,21 +82,22 @@ export default function page() {
                 {selectMenu === "action" && 
                 <>
                   {Player.base.moves.map((move, index) => (
-                    <p key={index}>{move}</p>
+                    <MenuButton key={index} content={move}/>
                   ))}
                 </>
                 }
                 {selectMenu === "item" && 
                 <>
                   {Player.base.inventory.map((item, index) => (
-                    <p key={index}>{item}</p>
-                  ))}
+                    <MenuButton key={index} content={item}/>
+                    ))}
                 </>
                 }
                 {selectMenu === "ally" && 
                 <>
                   {data.adventureInstance.players.map((ally, index) => (
-                    Player.base.name!= ally && <p key={index}>{ ally}</p>
+                    Player.base.name!= ally && <MenuButton key={index} content={ally}/>
+
                   ))}
                 </>
                 }
