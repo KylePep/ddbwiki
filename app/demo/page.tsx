@@ -1,6 +1,6 @@
 'use client'
 import { DEMO_DATA, ENEMY_TYPES } from '@/shared/constants'
-import React from 'react'
+import React, { useState } from 'react'
 
 const data = DEMO_DATA
 
@@ -30,6 +30,7 @@ const boss = () => {
     }
 
 export default function page() {
+  const [selectMenu, setSelectMenu] = useState("base")
   const Boss = boss()
   const Player = player()
   return (
@@ -81,6 +82,7 @@ export default function page() {
           </div>
           <div className='text-lg font-bold text-center mt-4 bg-gray-300 border border-solid border-black p-2'>
             <p className='mb-4'>{Player.base.name}</p>
+            <p>{selectMenu}</p>
             <div className='grid grid-cols-3 gap-2 mb-10'>
                 <div>
                   <p className='text-center'>Sparking</p>
@@ -104,15 +106,16 @@ export default function page() {
             <div className='grid grid-cols-3 gap-2'>
 
               <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-                <button className=' hover:text-white'>ACTIONS</button>
+                {selectMenu === "action" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("action")} className='hover:text-white'>ACTIONS</button> }
+                
               </div>
 
               <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-                <button className='hover:text-white'>ITEMS</button>
+              {selectMenu === "item" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("item")} className='hover:text-white'>ITEMS</button>}
               </div>
 
               <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-                <button className='hover:text-white'>ALLIES</button>
+              {selectMenu === "ally" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("ally")} className='hover:text-white'>ALLIES</button>}
               </div>
 
             </div>
