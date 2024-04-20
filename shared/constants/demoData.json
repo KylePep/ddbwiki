@@ -13,7 +13,7 @@
       "stats":{"mod": 0, "spirit": 2, "ki": 4, "power": 5, "agility": 3, "toughness": 4}, 
       "equipment":["none","turleHermitGi","none"], 
       "moves":["kamehameha", "meteorCombo", "energyWave", "rush"], 
-      "inventory":["senzuBean"], 
+      "inventory":["senzuBean", "turtleHermitGi"], 
       "forms":["kaioKen"]
     },
 
@@ -35,6 +35,7 @@
       "adventureId": "treeOfMight",
       "adventureRooms": ["1A", "2A", "3A", "4A", "1B"],
       "roomsProgress":[],
+      "players": ["Aspara", "Iggus"],
       "enemyData": [
         {
           "id": "1E",

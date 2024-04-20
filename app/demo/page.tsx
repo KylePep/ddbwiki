@@ -42,8 +42,6 @@ export default function page() {
             <p className='mb-4'>{Player.base.name}</p>
 
             <div className='grid grid-cols-3 gap-2 mb-10'>
-                {selectMenu === "base" && 
-                <>
                   <div>
                     <p className='text-center'>Sparking</p>
                     <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
@@ -64,40 +62,46 @@ export default function page() {
                         {Player.archCounter}
                       </p>
                   </div>
+            </div>
+            <div className='grid grid-cols-3 gap-2 min-h-24'>
+
+                {selectMenu === "base" && 
+                <>
                 </>
                 }
                 {selectMenu === "action" && 
                 <>
-                  <p>ACTION</p>
+                  {Player.base.moves.map((move, index) => (
+                    <p key={index}>{move}</p>
+                  ))}
                 </>
                 }
                 {selectMenu === "item" && 
                 <>
-                  <p>Item</p>
+                  {Player.base.inventory.map((item, index) => (
+                    <p key={index}>{item}</p>
+                  ))}
                 </>
                 }
                 {selectMenu === "ally" && 
                 <>
-                  <p>Ally</p>
+                  {data.adventureInstance.players.map((ally, index) => (
+                    Player.base.name!= ally && <p key={index}>{ ally}</p>
+                  ))}
                 </>
                 }
-
             </div>
 
+
             <div className='grid grid-cols-3 gap-2'>
-
-                <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-                  {selectMenu === "action" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("action")} className='hover:text-white'>ACTIONS</button> }
-                  
-                </div>
-
-                <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-                {selectMenu === "item" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("item")} className='hover:text-white'>ITEMS</button>}
-                </div>
-
-                <div className='bg-blue-400 mb-2 px-2 py-1 rounded'>
-                {selectMenu === "ally" ? <button onClick={() => setSelectMenu("base")} className='hover:text-white'>Close</button> : <button onClick={() => setSelectMenu("ally")} className='hover:text-white'>ALLIES</button>}
-                </div>
+                
+                {selectMenu === "base" && <button onClick={() => setSelectMenu("action")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ACTIONS</button> }
+                
+                {selectMenu === "base" && <button onClick={() => setSelectMenu("item")} className='bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ITEMS</button>}
+                
+                {selectMenu === "base" && <button onClick={() => setSelectMenu("ally")} className='bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ALLIES</button>}
+                
+                {selectMenu != "base" && <button onClick={() => setSelectMenu("base")} className=' col-span-3 bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>Close</button>}
 
             </div>
       </>
