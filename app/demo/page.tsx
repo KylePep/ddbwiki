@@ -73,10 +73,14 @@ export default function page() {
                       </p>
                   </div>
             </div>
-            <div className='grid grid-cols-3 grid-rows-3 gap-2 min-h-36 mb-4'>
+
+            <div className='grid grid-cols-3 gap-2'>
+
+            <div className='grid grid-cols-2 col-span-2 grid-rows-3 gap-2 min-h-36 mb-4'>
 
                 {selectMenu === "base" && 
                 <>
+                  <p className='text-xl col-span-2'>What will you do?</p>
                 </>
                 }
                 {selectMenu === "action" && 
@@ -104,16 +108,17 @@ export default function page() {
             </div>
 
 
-            <div className='grid grid-cols-3 gap-2'>
+            <div className='grid grid-cols-1 gap-2'>
                 
-                {selectMenu === "base" && <button onClick={() => setSelectMenu("action")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ACTIONS</button> }
+                {selectMenu != "action" ? <button onClick={() => setSelectMenu("action")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ACTIONS</button> : <button onClick={() => setSelectMenu("base")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                 
-                {selectMenu === "base" && <button onClick={() => setSelectMenu("item")} className='bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ITEMS</button>}
+                {selectMenu != "item" ? <button onClick={() => setSelectMenu("item")} className='bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ITEMS</button> :<button onClick={() => setSelectMenu("base")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                 
-                {selectMenu === "base" && <button onClick={() => setSelectMenu("ally")} className='bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ALLIES</button>}
+                {selectMenu != "ally" ? <button onClick={() => setSelectMenu("ally")} className='bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ALLIES</button> : <button onClick={() => setSelectMenu("base")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                 
-                {selectMenu != "base" && <button onClick={() => setSelectMenu("base")} className=' col-span-3 bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>Close</button>}
+                {/* {selectMenu != "base" && <button onClick={() => setSelectMenu("base")} className=' col-span-3 bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>Close</button>} */}
 
+            </div>
             </div>
       </>
     )
@@ -121,10 +126,10 @@ export default function page() {
 
   return (
     <div>
-      <div className='bg-gray-100 rounded p-8'>
+      {/* <div className='bg-gray-100 rounded p-8'>
         <p className='text-lg font-semibold text-center mb-4'>The Dungeons & DragonBalls Demo</p>
         <p className='text-center'>Experience a one on one battle between the character Aspara and Turles!</p>
-      </div>
+      </div> */}
 
       <div className='my-4 bg-white rounded p-4 grid grid-cols-1 '>
         <div className='bg-gray-500 border border-solid border-black rounded p-4'>
