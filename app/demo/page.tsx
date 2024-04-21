@@ -49,7 +49,7 @@ export default function page() {
   function PlayerMenu (){
     return (
       <>
-            <p className='mb-4'>{Player.base.name}</p>
+            <p className=''>{Player.base.name}</p>
 
                   <div>
                       <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
@@ -74,7 +74,7 @@ export default function page() {
 
             <div className='grid grid-cols-3 gap-1'>
 
-            <div className='grid grid-cols-2 col-span-2 grid-rows-3 gap-1 min-h-36 mb-4'>
+            <div className='grid grid-cols-2 col-span-2 grid-rows-3 gap-1 min-h-36'>
 
                 {selectMenu === "base" && 
                 <>
@@ -103,16 +103,18 @@ export default function page() {
                   ))}
                 </>
                 }
+                <div>{`<`}</div>
+                <div>{`>`}</div>
             </div>
 
 
               <div className='grid grid-cols-1 gap-1'>
                   
-                  {selectMenu != "action" ? <button onClick={() => setSelectMenu("action")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ACTIONS</button> : <button onClick={() => setSelectMenu("base")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>RETURN</button>}
+                  {selectMenu != "action" ? <button onClick={() => setSelectMenu("action")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>ACTIONS</button> : <button onClick={() => setSelectMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                   
-                  {selectMenu != "item" ? <button onClick={() => setSelectMenu("item")} className='bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ITEMS</button> :<button onClick={() => setSelectMenu("base")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>RETURN</button>}
+                  {selectMenu != "item" ? <button onClick={() => setSelectMenu("item")} className='bg-blue-400 px-2 py-1 rounded hover:text-white'>ITEMS</button> :<button onClick={() => setSelectMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                   
-                  {selectMenu != "ally" ? <button onClick={() => setSelectMenu("ally")} className='bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>ALLIES</button> : <button onClick={() => setSelectMenu("base")} className=' bg-blue-400 mb-2 px-2 py-1 rounded hover:text-white'>RETURN</button>}
+                  {selectMenu != "ally" ? <button onClick={() => setSelectMenu("ally")} className='bg-blue-400 px-2 py-1 rounded hover:text-white'>ALLIES</button> : <button onClick={() => setSelectMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
 
               </div>
             </div>
@@ -127,10 +129,10 @@ export default function page() {
         <p className='text-center'>Experience a one on one battle between the character Aspara and Turles!</p>
       </div> */}
 
-      <div className='my-4 bg-white rounded p-4 grid grid-cols-1 '>
-        <div className='bg-gray-500 border border-solid border-black rounded p-4'>
-          <div className=' text-center bg-gray-400 border border-solid border-black p-2'>
-            <p className='mb-4'>
+      <div className='flex bg-white rounded p-2'>
+        <div className=' w-3/5 bg-gray-500 border border-solid border-black rounded p-2'>
+          <div className=' text-center bg-gray-400 border border-solid border-black p-1'>
+            <p className=''>
             {Boss.base?.displayName}
             </p>
                 <div>
@@ -154,10 +156,10 @@ export default function page() {
               <p>Distance: Far</p>
             </div>
           </div>
-          <div className='my-2 text-center text-white'>
-            <div className='bg-black border border-white rounded px-2 py-2'>
+          <div className=' text-center text-white'>
+            <div className='bg-black border border-white rounded'>
               <p className=''>characterName: Action</p>
-              <p className='my-2'>
+              <p className=''>
                 {`-[ Roll ]-`}
               </p>
               <p className=''>Action Result: </p>
@@ -166,11 +168,17 @@ export default function page() {
               </p>
             </div>
           </div>
-          <div className=' text-center mt-4 bg-gray-300 border border-solid border-black p-2'>
+          <div className=' text-center bg-gray-300 border border-solid border-black '>
           
             <PlayerMenu/>
             
           </div>
+        </div>
+        <div className='w-2/5 p-2'>
+          <p>Tutorial Content</p>
+          <p>This stat means this</p>
+          <p>That stat means that</p>
+          <p>Press buttons to do stuff.</p>
         </div>
       </div>
 
