@@ -33,8 +33,19 @@ const boss = () => {
 
 export default function page() {
   const [selectMenu, setSelectMenu] = useState("base")
+  const [pagination, setPagination] = useState(0)
   const Boss = boss()
   const Player = player()
+
+  
+
+  const updatePagination = (change: number) => {
+    let newPagination = pagination
+    newPagination += change
+    if (newPagination < 0) 
+      return
+    setPagination(newPagination)
+  }
 
   function MenuButton ({content}: {content: string}){
     return(
@@ -103,8 +114,13 @@ export default function page() {
                   ))}
                 </>
                 }
-                <div>{`<`}</div>
-                <div>{`>`}</div>
+                {selectMenu != "base" &&
+                  <div className='col-span-2 flex justify-between'>
+                    <button onClick={() => updatePagination(-4)} className='bg-blue-100 rounded px-2 py-1'>{`<`}</button>
+                    <div className='bg-blue-100 rounded px-2 py-1'>Page: {pagination}</div>
+                    <button onClick={() => updatePagination(4)} className='bg-blue-100 rounded px-2 py-1'>{`>`}</button>
+                  </div>
+                }
             </div>
 
 
