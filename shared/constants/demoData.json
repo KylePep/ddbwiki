@@ -12,7 +12,7 @@
       "description": "-Demo Character- Aspara is a Goku approximation and will be fighting against Turles, the main villain of the Tree of Might.", 
       "stats":{"mod": 0, "spirit": 2, "ki": 4, "power": 5, "agility": 3, "toughness": 4}, 
       "equipment":["none","turleHermitGi","none"], 
-      "moves":["kamehameha", "meteorCombo", "energyWave", "rush"], 
+      "moves":["kamehameha", "meteorCombo", "energyWave", "rush", "blastBarrage", "anger"], 
       "inventory":["senzuBean", "turtleHermitGi"], 
       "forms":["kaioKen"]
     },

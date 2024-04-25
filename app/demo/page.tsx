@@ -12,7 +12,6 @@ const boss = () => {
     base: base
   }
 
-  console.log("boss", combinedObject)
   return combinedObject
   }
 
@@ -24,8 +23,7 @@ const boss = () => {
       base: base,
       role: data.adventurePlayer.playerRole
     }
-  
-    console.log("player", combinedObject)
+
     return combinedObject
     }
 
@@ -33,25 +31,34 @@ const boss = () => {
 
 export default function page() {
   const [selectMenu, setSelectMenu] = useState("base")
-  const [pagination, setPagination] = useState(0)
+  const basePage = [0,3]
+  const [pagination, setPagination] = useState(basePage)
   const Boss = boss()
   const Player = player()
 
-  
+  const updateMenu = (destination: string) => {
+    if (destination === selectMenu)
+    return
 
-  const updatePagination = (change: number) => {
-    let newPagination = pagination
-    newPagination += change
-    if (newPagination < 0) 
-      return
-    setPagination(newPagination)
+    setPagination(basePage)
+    setSelectMenu(destination)
   }
 
-  function MenuButton ({content}: {content: string}){
+  const updatePagination = (change: number) => {
+    let newPagination = [...pagination]
+    newPagination[0] += change
+    if (newPagination[0] < 0) 
+      return
+    newPagination[1] += change
+    setPagination(newPagination)
+    console.log(newPagination, pagination)
+  }
+
+  function MenuButton ({content, number}: {content: string, number: number}){
     return(
       <>
       <button className='bg-blue-300 rounded px-2 py-1 hover:text-white'>
-        {content}
+        {number}. {content}
       </button>
       </>
     )
@@ -83,54 +90,71 @@ export default function page() {
                   </div>
             </div>
 
-            <div className='grid grid-cols-3 gap-1'>
+            <div className='grid grid-cols-3 gap-1 min-h-36'>
 
-            <div className='grid grid-cols-2 col-span-2 grid-rows-3 gap-1 min-h-36'>
-
-                {selectMenu === "base" && 
-                <>
-                  <p className=' col-span-2'>What will you do?</p>
-                </>
-                }
-                {selectMenu === "action" && 
-                <>
-                  {Player.base.moves.map((move, index) => (
-                    <MenuButton key={index} content={move}/>
+            <div className='grid grid-rows-3 col-span-2'>
+              <div className='row-span-2'>
+                <div className='grid grid-cols-2 grid-rows-2 gap-1'>
+                  {selectMenu === "base" && 
+                  <>
+                  <p className=''>What will you do?</p>
+                  {[...Array(3)].map((_, index) => (
+                    <div key={index} className="bg-gray-500 rounded">{}</div>
                   ))}
                 </>
-                }
-                {selectMenu === "item" && 
-                <>
-                  {Player.base.inventory.map((item, index) => (
-                    <MenuButton key={index} content={item}/>
+                  }
+                  {selectMenu === "action" && 
+                    <>
+                    {Player.base.moves.map((move, index) => (
+                      (index >= pagination[0] && index <= pagination[1]) &&
+                      <MenuButton key={index} content={move} number={index}/>
                     ))}
-                </>
-                }
-                {selectMenu === "ally" && 
-                <>
-                  {data.adventureInstance.players.map((ally, index) => (
-                    Player.base.name!= ally && <MenuButton key={index} content={ally}/>
-
-                  ))}
-                </>
-                }
-                {selectMenu != "base" &&
+                    {[...Array(Player.base.moves.length > pagination[0] && Player.base.moves.length < pagination[1] ? 4 -  (Player.base.moves.length % 4)  : 0 )].map((_, index) => (
+                      <div key={index} className="bg-gray-500 rounded">{index}</div>
+                    ))}
+                  </>
+                  }
+                  {selectMenu === "item" && 
+                  <>
+                    {Player.base.inventory.map((item, index) => (
+                      <MenuButton key={index} content={item} number={index}/>
+                      ))}
+                      {[...Array(Player.base.inventory.length > pagination[0] && Player.base.inventory.length < pagination[1] ? 4 -  (Player.base.inventory.length % 4)  : 0 )].map((_, index) => (
+                      <div key={index} className="bg-gray-500 rounded">{index}</div>
+                    ))}
+                  </>
+                  }
+                  {selectMenu === "ally" && 
+                  <>
+                    {data.adventureInstance.players.map((ally, index) => (
+                      Player.base.name!= ally && <MenuButton key={index} content={ally} number={index}/>
+                    ))}
+                    {[...Array(5 - data.adventureInstance.players.length)].map((_, index) => (
+                      <div key={index} className="bg-gray-500 rounded">{index}</div>
+                    ))}
+                  </>
+                  }
+                </div>
+              </div>
+              <div className=''>
+                {selectMenu != "base" && selectMenu != "ally" &&
                   <div className='col-span-2 flex justify-between'>
                     <button onClick={() => updatePagination(-4)} className='bg-blue-100 rounded px-2 py-1'>{`<`}</button>
-                    <div className='bg-blue-100 rounded px-2 py-1'>Page: {pagination}</div>
+                    <div className='bg-blue-100 rounded px-2 py-1'>Page: {pagination[0]}{pagination[1]}</div>
                     <button onClick={() => updatePagination(4)} className='bg-blue-100 rounded px-2 py-1'>{`>`}</button>
                   </div>
                 }
+              </div>
             </div>
 
 
               <div className='grid grid-cols-1 gap-1'>
                   
-                  {selectMenu != "action" ? <button onClick={() => setSelectMenu("action")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>ACTIONS</button> : <button onClick={() => setSelectMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
+                  {selectMenu != "action" ? <button onClick={() => updateMenu("action")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>ACTIONS</button> : <button onClick={() => updateMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                   
-                  {selectMenu != "item" ? <button onClick={() => setSelectMenu("item")} className='bg-blue-400 px-2 py-1 rounded hover:text-white'>ITEMS</button> :<button onClick={() => setSelectMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
+                  {selectMenu != "item" ? <button onClick={() => updateMenu("item")} className='bg-blue-400 px-2 py-1 rounded hover:text-white'>ITEMS</button> :<button onClick={() => updateMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                   
-                  {selectMenu != "ally" ? <button onClick={() => setSelectMenu("ally")} className='bg-blue-400 px-2 py-1 rounded hover:text-white'>ALLIES</button> : <button onClick={() => setSelectMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
+                  {selectMenu != "ally" ? <button onClick={() => updateMenu("ally")} className='bg-blue-400 px-2 py-1 rounded hover:text-white'>ALLIES</button> : <button onClick={() => updateMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
 
               </div>
             </div>
