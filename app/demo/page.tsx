@@ -58,7 +58,8 @@ export default function page() {
     return(
       <>
       <button className='bg-blue-300 rounded px-2 py-1 hover:text-white'>
-        {number}. {content}
+        {/* {number}. */}
+        {content}
       </button>
       </>
     )
@@ -93,8 +94,8 @@ export default function page() {
             <div className='grid grid-cols-3 gap-1 min-h-36'>
 
             <div className='grid grid-rows-3 col-span-2'>
-              <div className='row-span-2'>
-                <div className='grid grid-cols-2 grid-rows-2 gap-1'>
+              <div className='grid grid-cols-subgrid row-span-2'>
+                <div className='grid  grid-cols-2 grid-rows-2 gap-1'>
                   {selectMenu === "base" && 
                   <>
                   <p className=''>What will you do?</p>
@@ -117,6 +118,7 @@ export default function page() {
                   {selectMenu === "item" && 
                   <>
                     {Player.base.inventory.map((item, index) => (
+                      (index >= pagination[0] && index <= pagination[1]) &&
                       <MenuButton key={index} content={item} number={index}/>
                       ))}
                       {[...Array(Player.base.inventory.length > pagination[0] && Player.base.inventory.length < pagination[1] ? 4 -  (Player.base.inventory.length % 4)  : 0 )].map((_, index) => (
@@ -130,18 +132,18 @@ export default function page() {
                       Player.base.name!= ally && <MenuButton key={index} content={ally} number={index}/>
                     ))}
                     {[...Array(5 - data.adventureInstance.players.length)].map((_, index) => (
-                      <div key={index} className="bg-gray-500 rounded">{index}</div>
+                      <div key={index} className="bg-gray-500 rounded"></div>
                     ))}
                   </>
                   }
                 </div>
               </div>
-              <div className=''>
+              <div className='grid grid-cols-subgrid'>
                 {selectMenu != "base" && selectMenu != "ally" &&
-                  <div className='col-span-2 flex justify-between'>
-                    <button onClick={() => updatePagination(-4)} className='bg-blue-100 rounded px-2 py-1'>{`<`}</button>
-                    <div className='bg-blue-100 rounded px-2 py-1'>Page: {pagination[0]}{pagination[1]}</div>
-                    <button onClick={() => updatePagination(4)} className='bg-blue-100 rounded px-2 py-1'>{`>`}</button>
+                  <div className='grid grid-cols-3 grid-rows-1'>
+                    <button onClick={() => updatePagination(-4)} className='bg-blue-400 rounded px-2 py-1'>{`<`}</button>
+                    <div className='bg-blue-300 rounded px-2 py-1'>Page: {(pagination[1] +1)/4}</div>
+                    <button onClick={() => updatePagination(4)} className='bg-blue-400 rounded px-2 py-1'>{`>`}</button>
                   </div>
                 }
               </div>
