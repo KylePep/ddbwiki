@@ -31,6 +31,7 @@ const boss = () => {
 
 export default function page() {
   const [selectMenu, setSelectMenu] = useState("base")
+  const [list, setList] = useState<string[]>([])
   const basePage = [0,3]
   const [pagination, setPagination] = useState(basePage)
   const Boss = boss()
@@ -41,13 +42,21 @@ export default function page() {
     return
 
     setPagination(basePage)
+    if (destination === "action"){
+      setList(Player.base.moves)
+    } else if (destination === "item"){
+      setList(Player.base.inventory)
+    } else {
+      setList(data.adventureInstance.players)
+    }
     setSelectMenu(destination)
   }
 
-  const updatePagination = (change: number) => {
+  const updatePagination = (change: number, listLength: number) => {
     let newPagination = [...pagination]
+
     newPagination[0] += change
-    if (newPagination[0] < 0) 
+    if (newPagination[0] < 0 || newPagination[0] > listLength) 
       return
     newPagination[1] += change
     setPagination(newPagination)
@@ -98,9 +107,9 @@ export default function page() {
                 <div className='grid  grid-cols-2 grid-rows-2 gap-1'>
                   {selectMenu === "base" && 
                   <>
-                  <p className=''>What will you do?</p>
-                  {[...Array(3)].map((_, index) => (
-                    <div key={index} className="bg-gray-500 rounded">{}</div>
+                  <p className='col-span-2'>What will you do?</p>
+                  {[...Array(2)].map((_, index) => (
+                    <div key={index} className="bg-gray-200 rounded">{}</div>
                   ))}
                 </>
                   }
@@ -111,7 +120,7 @@ export default function page() {
                       <MenuButton key={index} content={move} number={index}/>
                     ))}
                     {[...Array(Player.base.moves.length > pagination[0] && Player.base.moves.length < pagination[1] ? 4 -  (Player.base.moves.length % 4)  : 0 )].map((_, index) => (
-                      <div key={index} className="bg-gray-500 rounded">{index}</div>
+                      <div key={index} className="bg-gray-200 rounded"></div>
                     ))}
                   </>
                   }
@@ -122,7 +131,7 @@ export default function page() {
                       <MenuButton key={index} content={item} number={index}/>
                       ))}
                       {[...Array(Player.base.inventory.length > pagination[0] && Player.base.inventory.length < pagination[1] ? 4 -  (Player.base.inventory.length % 4)  : 0 )].map((_, index) => (
-                      <div key={index} className="bg-gray-500 rounded">{index}</div>
+                      <div key={index} className="bg-gray-200 rounded"></div>
                     ))}
                   </>
                   }
@@ -132,7 +141,7 @@ export default function page() {
                       Player.base.name!= ally && <MenuButton key={index} content={ally} number={index}/>
                     ))}
                     {[...Array(5 - data.adventureInstance.players.length)].map((_, index) => (
-                      <div key={index} className="bg-gray-500 rounded"></div>
+                      <div key={index} className="bg-gray-200 rounded"></div>
                     ))}
                   </>
                   }
@@ -141,9 +150,9 @@ export default function page() {
               <div className='grid grid-cols-subgrid'>
                 {selectMenu != "base" && selectMenu != "ally" &&
                   <div className='grid grid-cols-3 grid-rows-1'>
-                    <button onClick={() => updatePagination(-4)} className='bg-blue-400 rounded px-2 py-1'>{`<`}</button>
+                    <button onClick={() => updatePagination(-4, list.length)} className={"rounded px-2 py-1 " + (pagination[0] == 0 ? "bg-gray-400 hover:cursor-default" : "bg-blue-400" )}>{`<`}</button>
                     <div className='bg-blue-300 rounded px-2 py-1'>Page: {(pagination[1] +1)/4}</div>
-                    <button onClick={() => updatePagination(4)} className='bg-blue-400 rounded px-2 py-1'>{`>`}</button>
+                    <button onClick={() => updatePagination(4, list.length)} className={"rounded px-2 py-1 " + (pagination[1] > list.length ? "bg-gray-400 hover:cursor-default" : "bg-blue-400" )}>{`>`}</button>
                   </div>
                 }
               </div>
