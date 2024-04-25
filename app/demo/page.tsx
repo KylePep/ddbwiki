@@ -71,10 +71,14 @@ export default function page() {
     console.log(newPagination, pagination)
   }
 
-  const updateRoom = (roomId: string | undefined, dialId:string, dialProgressId: string)=> {
+  const updateRoom = (roomId: string | undefined, dialId:string | undefined, dialProgressId: string)=> {
     if (roomId == undefined || dialId == undefined || dialProgressId == undefined) {
       return
     } else {
+
+      if (dialProgressId == "exit"){
+        data.adventureInstance.roomsProgress = "battle"
+      }
 
       if (roomId === room?.id) {}
       else {
@@ -106,6 +110,18 @@ export default function page() {
         setCurrentResponse(newResponse)
       } 
     }
+  }
+
+  function replacePlayerName(str: string | undefined) {
+    if (str == undefined) return
+    // Regular expression to match %playerName%
+    // Replace %playerName% with Player.base.name
+    str = str.replace(/%playerName%/g, Player.base.name);
+      
+    // Replace %PLAYERNAME% with Player.base.name in all caps
+    str = str.replace(/%PLAYERNAME%/g, Player.base.name.toUpperCase());
+
+    return str;
   }
 
   const getFocusedItem = (name:string) =>{
@@ -325,7 +341,7 @@ export default function page() {
                     ))}
                   </p>
                   <p>{dialProgress}</p>
-                  <p>{currentChapter?.content.speaker}: {currentChapter?.content.dialogue}</p>
+                  <p>{currentChapter?.content.speaker}: { replacePlayerName(currentChapter?.content.dialogue) }</p>
                 </div>
               }
 
