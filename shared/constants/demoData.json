@@ -34,7 +34,8 @@
     "adventureInstance":{
       "adventureId": "treeOfMight",
       "adventureRooms": ["1A", "2A", "3A", "4A", "1B"],
-      "roomsProgress":[],
+      "roomCurrent": "1A",
+      "roomsProgress":"start",
       "players": ["Aspara", "Iggus"],
       "enemyData": [
         {
@@ -45,7 +46,8 @@
           "hp": "10/10",
           "sparkingMeter": "3/6",
           "archCounter": "3/5",
-          "statusEffects": []
+          "statusEffects": [],
+          "distance": "Close"
         }
       ]
     },

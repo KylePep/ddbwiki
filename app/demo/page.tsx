@@ -65,7 +65,7 @@ export default function page() {
     console.log(newPagination, pagination)
   }
 
-  const getfocusedItem = (name:string) =>{
+  const getFocusedItem = (name:string) =>{
     let item 
     if (selectMenu === "action"){
       item = MOVE_TYPES.find((m) => m.name == name)
@@ -82,7 +82,7 @@ export default function page() {
   function MenuButton ({content, number}: {content: string, number: number}){
     return(
       <>
-      <button onClick={()=>getfocusedItem(content)} className='bg-blue-300 rounded px-2 py-1 hover:text-white'>
+      <button onClick={()=>getFocusedItem(content)} className='bg-blue-300 rounded px-2 py-1 hover:text-white'>
         {content}
       </button>
       </>
@@ -116,17 +116,33 @@ export default function page() {
             </div>
 
             <div className='grid grid-cols-3 gap-1 min-h-36'>
-
+            {
+              data.adventureInstance.roomsProgress == "start" &&
+              <>
+                <div className='grid grid-rows-3 col-span-2'>
+                  <div className='grid grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2'>
+                      <div>Dialogue Responses</div>
+                    </div>
+                </div>
+                <div className='grid grid-cols-1 gap-1'>
+                  <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>HOLD1</button>
+                  <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>HOLD2</button>
+                  <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>HOLD3</button>
+              </div>
+              </>
+            }
+  
+            { data.adventureInstance.roomsProgress == "battle" &&
+            <>
             { menuFocus === "none" &&          
             <div className='grid grid-rows-3 col-span-2'>
               <div className='grid grid-cols-subgrid row-span-2'>
                 <div className='grid  grid-cols-2 grid-rows-2 gap-1'>
                   {selectMenu === "base" && 
                   <>
-                  <p className='col-span-2'>What will you do?</p>
-                  {[...Array(2)].map((_, index) => (
-                    <div key={index} className="bg-gray-200 rounded">{}</div>
-                  ))}
+                  <div className='col-span-2 row-span-2'>
+                    <p>What will you do?</p>
+                  </div>
                 </>
                   }
                   {selectMenu === "action" && 
@@ -210,6 +226,8 @@ export default function page() {
                   </>
                   }
               </div>
+              </>
+              }
             </div>
       </>
     )
@@ -242,23 +260,32 @@ export default function page() {
                 </div>
             </div>
             <div className='flex justify-center'>
-              <p>Distance: Far</p>
+              <p>Distance: {data.adventureInstance.enemyData[0].distance}</p>
             </div>
           </div>
-          <div className=' text-center text-white'>
-            <div className='bg-black border border-white rounded'>
-              <p className=''>characterName: Action</p>
+          <div className=' text-center text-white '>
+            <div className='bg-black border border-white rounded min-h-24'>
+              { data.adventureInstance.roomsProgress == "start" &&
+                <div>
+                  Dialogue!
+                </div>
+              }
+
+              { data.adventureInstance.roomsProgress == "battle" &&
+                <p>{Boss.base?.displayName} is {data.adventureInstance.enemyData[0].distance}. He {`won't`} show any mercy.</p>
+              }
+              {/* <p className=''>characterName: Action</p>
               <p className=''>
                 {`-[ Roll ]-`}
               </p>
               <p className=''>Action Result: </p>
               <p className='text-sm'>
                   Action result description
-              </p>
+              </p> */}
             </div>
           </div>
           <div className=' text-center bg-gray-300 border border-solid border-black '>
-          
+
             <PlayerMenu/>
             
           </div>
