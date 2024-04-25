@@ -1,5 +1,5 @@
 'use client'
-import { DEMO_DATA, ENEMY_TYPES } from '@/shared/constants'
+import { DEMO_DATA, ENEMY_TYPES, ITEM_TYPES, MOVE_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 
 const data = DEMO_DATA
@@ -32,6 +32,8 @@ const boss = () => {
 export default function page() {
   const [selectMenu, setSelectMenu] = useState("base")
   const [list, setList] = useState<string[]>([])
+  const [menuFocus, setMenuFocus] = useState("none")
+  const [focusedItem, setFocusedItem] = useState<{displayName: string; description: string}>()
   const basePage = [0,3]
   const [pagination, setPagination] = useState(basePage)
   const Boss = boss()
@@ -63,11 +65,24 @@ export default function page() {
     console.log(newPagination, pagination)
   }
 
+  const getfocusedItem = (name:string) =>{
+    let item 
+    if (selectMenu === "action"){
+      item = MOVE_TYPES.find((m) => m.name == name)
+    } else if (selectMenu === "item"){
+      item = ITEM_TYPES.find((i) => i.name == name)
+    } else {
+      item = {displayName: name, description: 'ally'}
+
+    }
+    setFocusedItem(item)
+    setMenuFocus(name)
+  }
+
   function MenuButton ({content, number}: {content: string, number: number}){
     return(
       <>
-      <button className='bg-blue-300 rounded px-2 py-1 hover:text-white'>
-        {/* {number}. */}
+      <button onClick={()=>getfocusedItem(content)} className='bg-blue-300 rounded px-2 py-1 hover:text-white'>
         {content}
       </button>
       </>
@@ -102,6 +117,7 @@ export default function page() {
 
             <div className='grid grid-cols-3 gap-1 min-h-36'>
 
+            { menuFocus === "none" &&          
             <div className='grid grid-rows-3 col-span-2'>
               <div className='grid grid-cols-subgrid row-span-2'>
                 <div className='grid  grid-cols-2 grid-rows-2 gap-1'>
@@ -156,17 +172,43 @@ export default function page() {
                   </div>
                 }
               </div>
-            </div>
+            </div>}
+
+            {menuFocus != "none" && 
+              <div className='grid grid-rows-3 col-span-2'>
+                <div className='grid grid-cols-subgrid row-span-2 col-span-2'>
+                    {focusedItem && <>
+                      <p>
+                      {focusedItem.displayName}
+                      </p>
+                      <p>
+                      {focusedItem.description}
+                      </p>
+                    </>
+                    }
+
+                </div>
+              </div>
+            }
 
 
               <div className='grid grid-cols-1 gap-1'>
-                  
+                  { menuFocus === "none" &&
+                  <>
                   {selectMenu != "action" ? <button onClick={() => updateMenu("action")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>ACTIONS</button> : <button onClick={() => updateMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                   
                   {selectMenu != "item" ? <button onClick={() => updateMenu("item")} className='bg-blue-400 px-2 py-1 rounded hover:text-white'>ITEMS</button> :<button onClick={() => updateMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
                   
                   {selectMenu != "ally" ? <button onClick={() => updateMenu("ally")} className='bg-blue-400 px-2 py-1 rounded hover:text-white'>ALLIES</button> : <button onClick={() => updateMenu("base")} className=' bg-blue-400 px-2 py-1 rounded hover:text-white'>RETURN</button>}
-
+                  </>
+                  }
+                  { menuFocus !== "none" &&
+                  <>
+                  <button onClick={()=>setMenuFocus("none")} className='bg-blue-400 rounded px-2 py-1 hover:text-white'>RETURN</button>
+                  <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>USE</button>
+                  <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>OPTION</button>
+                  </>
+                  }
               </div>
             </div>
       </>
@@ -175,10 +217,6 @@ export default function page() {
 
   return (
     <div className=''>
-      {/* <div className='bg-gray-100 rounded p-8'>
-        <p className=' font-semibold text-center mb-4'>The Dungeons & DragonBalls Demo</p>
-        <p className='text-center'>Experience a one on one battle between the character Aspara and Turles!</p>
-      </div> */}
 
       <div className='flex bg-white rounded p-2'>
         <div className=' w-3/5 bg-gray-500 border border-solid border-black rounded p-2'>
