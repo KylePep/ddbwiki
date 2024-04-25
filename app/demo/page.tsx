@@ -30,6 +30,8 @@ const boss = () => {
 
 
 export default function page() {
+  const [room, setRoom] = useState(data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent))
+  const [dial, setDial] = useState(data.dialogue.find((d)=> d.id == room?.dialogue))
   const [selectMenu, setSelectMenu] = useState("base")
   const [list, setList] = useState<string[]>([])
   const [menuFocus, setMenuFocus] = useState("none")
@@ -121,7 +123,12 @@ export default function page() {
               <>
                 <div className='grid grid-rows-3 col-span-2'>
                   <div className='grid grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2'>
-                      <div>Dialogue Responses</div>
+                    <div>{dial?.chapterData.map((r, index) => (
+                        <span key={index}>{r.id} </span>
+                      ))}</div>
+                      {dial?.responsesData[0].responses.map((r, index) => (
+                        <button key={index}>{r}</button>
+                      ))}
                     </div>
                 </div>
                 <div className='grid grid-cols-1 gap-1'>
@@ -267,7 +274,12 @@ export default function page() {
             <div className='bg-black border border-white rounded min-h-24'>
               { data.adventureInstance.roomsProgress == "start" &&
                 <div>
-                  Dialogue!
+                  <p>{room?.id} {room?.setting} - 
+                    {room?.doors.map((d, index)=>(
+                      <span key={index}>{d} </span>
+                    ))}
+                  </p>
+                  <p>{dial?.chapterData[0].content.speaker}: {dial?.chapterData[0].content.dialogue}</p>
                 </div>
               }
 
