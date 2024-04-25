@@ -36,6 +36,7 @@
       "adventureRooms": ["1A", "2A", "3A", "4A", "1B"],
       "roomCurrent": "1A",
       "roomsProgress":"start",
+      "doorProgress":"0D",
       "players": ["Aspara", "Iggus"],
       "enemyData": [
         {

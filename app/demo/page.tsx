@@ -32,6 +32,10 @@ const boss = () => {
 export default function page() {
   const [room, setRoom] = useState(data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent))
   const [dial, setDial] = useState(data.dialogue.find((d)=> d.id == room?.dialogue))
+  const [dialProgress, setDialProgress] = useState(data.adventureInstance.doorProgress)
+  const [currentChapter, setCurrentChapter] = useState(dial?.chapterData.find((cd)=> cd.id == dialProgress))
+  const [currentResponse, setCurrentResponse] = useState(dial?.responsesData[0])
+
   const [selectMenu, setSelectMenu] = useState("base")
   const [list, setList] = useState<string[]>([])
   const [menuFocus, setMenuFocus] = useState("none")
@@ -65,6 +69,43 @@ export default function page() {
     newPagination[1] += change
     setPagination(newPagination)
     console.log(newPagination, pagination)
+  }
+
+  const updateRoom = (roomId: string | undefined, dialId:string, dialProgressId: string)=> {
+    if (roomId == undefined || dialId == undefined || dialProgressId == undefined) {
+      return
+    } else {
+
+      if (roomId === room?.id) {}
+      else {
+        const newRoom = data.rooms.find((r)=> r.id == roomId)
+        const newDial = data.dialogue.find((d)=> d.id == newRoom?.dialogue)
+        setRoom(newRoom)
+        setDial(newDial)
+        if (newRoom)
+          setDialProgress(newRoom?.dialogue)
+        setCurrentChapter(newDial?.chapterData[0])
+        setCurrentResponse(newDial?.responsesData[0])
+        return
+      } 
+
+      if (dialId === dial?.id) {}
+      else {
+        const newDial = data.dialogue.find((d)=> d.id == dialId)
+        setDial(newDial)
+        setCurrentChapter(newDial?.chapterData[0])
+        setCurrentResponse(newDial?.responsesData[0])
+        return
+      } 
+
+      if (dialProgressId === dialProgress) {}
+      else {
+        const newChapter = dial.chapterData.find((cd)=> cd.id == dialProgressId)
+        const newResponse = dial.responsesData.find(((rd)=> rd.id == newChapter?.responseId))
+        setCurrentChapter(newChapter)
+        setCurrentResponse(newResponse)
+      } 
+    }
   }
 
   const getFocusedItem = (name:string) =>{
@@ -122,13 +163,17 @@ export default function page() {
               data.adventureInstance.roomsProgress == "start" &&
               <>
                 <div className='grid grid-rows-3 col-span-2'>
-                  <div className='grid grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2'>
-                    <div>{dial?.chapterData.map((r, index) => (
-                        <span key={index}>{r.id} </span>
-                      ))}</div>
-                      {dial?.responsesData[0].responses.map((r, index) => (
-                        <button key={index}>{r}</button>
+                  <div className='grid grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2 gap-1'>
+                      {currentResponse?.responses.map((r, index) => (
+                        <button onClick={()=>updateRoom(room?.id, dial?.id, r.split('|')[1])} key={index} className='bg-blue-200 rounded hover:text-white'>{r.split('|')[0]}--{r.split('|')[1]}</button>
                       ))}
+                    </div>
+                    <div>
+                      <div>{dial?.chapterData.map((r, index) => (
+                          <span key={index}>{r.id} </span>
+                        ))}
+                        </div>
+
                     </div>
                 </div>
                 <div className='grid grid-cols-1 gap-1'>
@@ -279,7 +324,8 @@ export default function page() {
                       <span key={index}>{d} </span>
                     ))}
                   </p>
-                  <p>{dial?.chapterData[0].content.speaker}: {dial?.chapterData[0].content.dialogue}</p>
+                  <p>{dialProgress}</p>
+                  <p>{currentChapter?.content.speaker}: {currentChapter?.content.dialogue}</p>
                 </div>
               }
 
