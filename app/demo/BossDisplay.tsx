@@ -10,9 +10,12 @@ export default function BossDisplay({Boss, data}:BossDisplayProps) {
     <>
           <div className=' text-center bg-gray-400 border border-solid border-black p-1'>
             <p className=''>
-            {Boss.base?.displayName}
+              {Boss.base?.displayName}
             </p>
-                <div>
+            <p>
+              {Boss.base.displayName}, appears to be full of energy. He looks ready to fight.
+            </p>
+                {/* <div>
                     <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
                       Health: {Boss.hp}
                     </p>
@@ -31,7 +34,7 @@ export default function BossDisplay({Boss, data}:BossDisplayProps) {
             </div>
             <div className='flex justify-center'>
               <p>Distance: {data.adventureInstance.enemyData[0].distance}</p>
-            </div>
+            </div> */}
           </div>
     </>
   )

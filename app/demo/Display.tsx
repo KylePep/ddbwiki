@@ -1,3 +1,4 @@
+import { ENEMY_TYPES } from '@/shared/constants';
 import React from 'react'
 
 interface DisplayProps{
@@ -9,7 +10,17 @@ interface DisplayProps{
   Player: any
 }
 
-export default function Display({data, room, dialProgress, currentChapter, Boss, Player}: DisplayProps) {
+export default function Display({data, room, dialProgress, currentChapter, Boss, Player}: 
+DisplayProps) {
+
+const getEnemyByName = (name: string | undefined) => {
+    if (name == undefined) return
+    let character = ENEMY_TYPES.find((enemy) => enemy.name === name)
+    // if (!character){
+    //   character = data.adventureInsatance.players.find((player) => player === name)
+    // }
+    return character
+  }
 
   function replacePlayerName(str: string | undefined) {
     if (str == undefined) return
@@ -35,7 +46,7 @@ export default function Display({data, room, dialProgress, currentChapter, Boss,
                     ))}
                   </p>
                   <p>{dialProgress}</p>
-                  <p>{currentChapter?.content.speaker}: { replacePlayerName(currentChapter?.content.dialogue) }</p>
+                  <p>{getEnemyByName(currentChapter?.content.speaker)?.displayName}: { replacePlayerName(currentChapter?.content.dialogue) }</p>
                 </div>
               }
 
