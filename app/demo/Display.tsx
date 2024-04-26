@@ -10,7 +10,7 @@ interface DisplayProps{
 }
 
 export default function Display({data, room, dialProgress, currentChapter, Boss, Player}: DisplayProps) {
-  
+
   function replacePlayerName(str: string | undefined) {
     if (str == undefined) return
     // Regular expression to match %playerName%
@@ -30,7 +30,7 @@ export default function Display({data, room, dialProgress, currentChapter, Boss,
               { data.adventureInstance.roomsProgress == "start" &&
                 <div>
                   <p>{room?.id} {room?.setting} - 
-                    {room?.doors.map((d, index)=>(
+                    {room?.doors.map((d:any, index:number)=>(
                       <span key={index}>{d} </span>
                     ))}
                   </p>

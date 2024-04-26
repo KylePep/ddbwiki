@@ -102,12 +102,12 @@ function MenuButton ({content, number}: {content: string, number: number}){
               <>
                 <div className='grid grid-rows-3 col-span-2'>
                   <div className='grid grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2 gap-1'>
-                      {currentResponse?.responses.map((r, index) => (
+                      {currentResponse?.responses.map((r:any, index:number) => (
                         <button onClick={()=>updateRoom(room?.id, dial?.id, r.split('|')[1])} key={index} className='bg-blue-200 rounded hover:text-white'>{r.split('|')[0]}--{r.split('|')[1]}</button>
                       ))}
                     </div>
                     <div>
-                      <div>{dial?.chapterData.map((r, index) => (
+                      <div>{dial?.chapterData.map((r:any, index:number) => (
                           <span key={index}>{r.id} </span>
                         ))}
                         </div>
@@ -137,7 +137,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   }
                   {selectMenu === "action" && 
                     <>
-                    {Player.base.moves.map((move, index) => (
+                    {Player.base.moves.map((move:any, index:number) => (
                       (index >= pagination[0] && index <= pagination[1]) &&
                       <MenuButton key={index} content={move} number={index}/>
                     ))}
@@ -148,7 +148,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   }
                   {selectMenu === "item" && 
                   <>
-                    {Player.base.inventory.map((item, index) => (
+                    {Player.base.inventory.map((item:any, index:number) => (
                       (index >= pagination[0] && index <= pagination[1]) &&
                       <MenuButton key={index} content={item} number={index}/>
                       ))}
@@ -159,7 +159,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   }
                   {selectMenu === "ally" && 
                   <>
-                    {data.adventureInstance.players.map((ally, index) => (
+                    {data.adventureInstance.players.map((ally:any, index:number) => (
                       Player.base.name!= ally && <MenuButton key={index} content={ally} number={index}/>
                     ))}
                     {[...Array(5 - data.adventureInstance.players.length)].map((_, index) => (

@@ -1,5 +1,5 @@
 'use client'
-import { DEMO_DATA, ENEMY_TYPES, ITEM_TYPES, MOVE_TYPES } from '@/shared/constants'
+import { DEMO_DATA, ENEMY_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 import PlayerMenu from './PlayerMenu'
 import Display from './Display'
@@ -89,10 +89,12 @@ export default function page() {
   }
 
   return (
-    <div className=''>
+    <div>
 
       <div className='flex bg-white rounded p-2'>
+
         <div className=' w-3/5 bg-gray-500 border border-solid border-black rounded p-2'>
+
             <BossDisplay Boss={Boss} data={data}/>
 
               <Display data={data} room={room} dialProgress={dialProgress} currentChapter={currentChapter} Boss={Boss} Player={Player}/>
@@ -103,7 +105,9 @@ export default function page() {
             
           </div>
         </div>
+
         <div className='w-2/5 p-2'>
+          
           <Tutorial/>
         </div>
       </div>
