@@ -36,7 +36,7 @@ const getEnemyByName = (name: string | undefined) => {
 
   return (
     <>
-              <div className=' text-center text-white '>
+          <div className=' text-center text-white '>
             <div className='bg-black border border-white rounded min-h-24'>
               { data.adventureInstance.roomsProgress == "start" &&
                 <div>
@@ -45,8 +45,7 @@ const getEnemyByName = (name: string | undefined) => {
                       <span key={index}>{d} </span>
                     ))}
                   </p>
-                  <p>{dialProgress}</p>
-                  <p>{getEnemyByName(currentChapter?.content.speaker)?.displayName}: { replacePlayerName(currentChapter?.content.dialogue) }</p>
+                  <p>{dialProgress} - {getEnemyByName(currentChapter?.content.speaker)?.displayName}: { replacePlayerName(currentChapter?.content.dialogue) }</p>
                 </div>
               }
 

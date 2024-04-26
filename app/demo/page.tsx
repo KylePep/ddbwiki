@@ -73,6 +73,7 @@ export default function page() {
       else {
         const newDial = data.dialogue.find((d)=> d.id == dialId)
         setDial(newDial)
+        setDialProgress("0D")
         setCurrentChapter(newDial?.chapterData[0])
         setCurrentResponse(newDial?.responsesData[0])
         return
@@ -82,6 +83,7 @@ export default function page() {
       else {
         const newChapter = dial.chapterData.find((cd)=> cd.id == dialProgressId)
         const newResponse = dial.responsesData.find(((rd)=> rd.id == newChapter?.responseId))
+        setDialProgress(dialProgressId)
         setCurrentChapter(newChapter)
         setCurrentResponse(newResponse)
       } 
@@ -107,7 +109,7 @@ export default function page() {
         </div>
 
         <div className='w-2/5 p-2'>
-          
+
           <Tutorial/>
         </div>
       </div>
