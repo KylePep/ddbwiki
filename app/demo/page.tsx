@@ -3,6 +3,7 @@ import { DEMO_DATA, ENEMY_TYPES, ITEM_TYPES, MOVE_TYPES } from '@/shared/constan
 import React, { useState } from 'react'
 import PlayerMenu from './PlayerMenu'
 import Display from './Display'
+import Tutorial from './Tutorial'
 
 const data = DEMO_DATA
 
@@ -126,10 +127,7 @@ export default function page() {
           </div>
         </div>
         <div className='w-2/5 p-2'>
-          <p>Tutorial Content</p>
-          <p>This stat means this</p>
-          <p>That stat means that</p>
-          <p>Press buttons to do stuff.</p>
+          <Tutorial/>
         </div>
       </div>
 
