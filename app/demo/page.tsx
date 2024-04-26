@@ -2,6 +2,7 @@
 import { DEMO_DATA, ENEMY_TYPES, ITEM_TYPES, MOVE_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
 import PlayerMenu from './PlayerMenu'
+import Display from './Display'
 
 const data = DEMO_DATA
 
@@ -85,18 +86,6 @@ export default function page() {
     }
   }
 
-  function replacePlayerName(str: string | undefined) {
-    if (str == undefined) return
-    // Regular expression to match %playerName%
-    // Replace %playerName% with Player.base.name
-    str = str.replace(/%playerName%/g, Player.base.name);
-      
-    // Replace %PLAYERNAME% with Player.base.name in all caps
-    str = str.replace(/%PLAYERNAME%/g, Player.base.name.toUpperCase());
-
-    return str;
-  }
-
   return (
     <div className=''>
 
@@ -127,26 +116,9 @@ export default function page() {
               <p>Distance: {data.adventureInstance.enemyData[0].distance}</p>
             </div>
           </div>
-          <div className=' text-center text-white '>
-            <div className='bg-black border border-white rounded min-h-24'>
-              { data.adventureInstance.roomsProgress == "start" &&
-                <div>
-                  <p>{room?.id} {room?.setting} - 
-                    {room?.doors.map((d, index)=>(
-                      <span key={index}>{d} </span>
-                    ))}
-                  </p>
-                  <p>{dialProgress}</p>
-                  <p>{currentChapter?.content.speaker}: { replacePlayerName(currentChapter?.content.dialogue) }</p>
-                </div>
-              }
 
-              { data.adventureInstance.roomsProgress == "battle" &&
-                <p>{Boss.base?.displayName} is {data.adventureInstance.enemyData[0].distance}. He {`won't`} show any mercy.</p>
-              }
+              <Display data={data} room={room} dialProgress={dialProgress} currentChapter={currentChapter} Boss={Boss} Player={Player}/>
 
-            </div>
-          </div>
           <div className=' text-center bg-gray-300 border border-solid border-black '>
 
             <PlayerMenu Player={Player} data={data} updateRoom={updateRoom} currentResponse={currentResponse} dial={dial} room={room}/>
