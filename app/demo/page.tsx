@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import PlayerMenu from './PlayerMenu'
 import Display from './Display'
 import Tutorial from './Tutorial'
+import BossDisplay from './BossDisplay'
 
 const data = DEMO_DATA
 
@@ -92,31 +93,7 @@ export default function page() {
 
       <div className='flex bg-white rounded p-2'>
         <div className=' w-3/5 bg-gray-500 border border-solid border-black rounded p-2'>
-          <div className=' text-center bg-gray-400 border border-solid border-black p-1'>
-            <p className=''>
-            {Boss.base?.displayName}
-            </p>
-                <div>
-                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      Health: {Boss.hp}
-                    </p>
-                </div>
-            <div className='grid grid-cols-2 gap-1'>
-                <div>
-                  <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                      Sparking: {Boss.sparkingMeter}
-                    </p>
-                </div>
-                <div>
-                  <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
-                  {Player.base.archetype} Counter: {Boss.archCounter}
-                    </p>
-                </div>
-            </div>
-            <div className='flex justify-center'>
-              <p>Distance: {data.adventureInstance.enemyData[0].distance}</p>
-            </div>
-          </div>
+            <BossDisplay Boss={Boss} data={data}/>
 
               <Display data={data} room={room} dialProgress={dialProgress} currentChapter={currentChapter} Boss={Boss} Player={Player}/>
 
