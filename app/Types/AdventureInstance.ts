@@ -1,9 +1,9 @@
-export type AventureInstance = {
+export type AdventureInstance = {
   adventureId: string;
-  adventureRooms: string[];
+  adventureRooms?: string[];
   roomCurrent: string;
   doorProgress: string;
-  players: string[];
+  players?: string[];
   enemyData?: {
     id: string;
     name: string;
@@ -18,7 +18,7 @@ export type AventureInstance = {
     hp: string;
     sparkingMeter: string;
     archCounter: string;
-    statusEffects: string[];
+    statusEffects?: string[];
     distance: string;
   }[]
 }

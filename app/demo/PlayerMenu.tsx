@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { ActivePlayer } from '../Types/ActivePlayer'
 import { Dialogue, Response } from '../Types/Dialogue'
 import { Room } from '../Types/Room'
+import { Player } from '../Types/Player'
 
 interface PlayerMenuProps{
   Player: ActivePlayer,
@@ -56,7 +57,7 @@ const getFocusedItem = (name:string) =>{
   } else if (selectMenu === "item"){
     item = ITEM_TYPES.find((i) => i.name == name)
   } else {
-    item = data.allyList.find((a: any)=> a.name == name)
+    item = data.allyList.find((a: Player)=> a.name == name)
   }
   setFocusedItem(item)
   setMenuFocus(name)
@@ -79,21 +80,21 @@ function MenuButton ({content, number}: {content: string, number: number}){
 
                   <div>
                       <p className='bg-neutral-700 border border-white text-white rounded px-2 py-1'>
-                        Health: {Player.hp}
+                        Health: {Player.playerState.hp}
                       </p>
                   </div>
 
             <div className='grid grid-cols-2 gap-1'>
                   <div>
                     <p className='bg-neutral-700 border border-white text-white rounded px-2 py-1'>
-                        Sparking: {Player.sparkingMeter}
+                        Sparking: {Player.playerState.sparkingMeter}
                       </p>
                   </div>
 
 
                   <div>
                     <p className='bg-neutral-700 border border-white text-white rounded px-2 py-1'>
-                    {Player.base.archetype} Counter: {Player.archCounter}
+                    {Player.base.archetype} Counter: {Player.playerState.archCounter}
                       </p>
                   </div>
             </div>
@@ -187,11 +188,12 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   
                     {focusedItem ? 
                     (<div className='grid grid-cols-subgrid row-span-2'>
-                    {focusedItem.displayName ? 
+                      {focusedItem.displayName}
+                    {/* {focusedItem.displayName ? 
                       (<p>{focusedItem.displayName}</p>) : (
                         <p>{focusedItem.name}</p>
                       )
-                    }
+                    } */}
                       <p className='text-xs'>{focusedItem.description}</p>
                     </div>) : (
                       <div className='grid grid-cols-subgrid row-span-2 col-span-2'>

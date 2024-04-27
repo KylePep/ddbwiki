@@ -1,9 +1,9 @@
 export type Enemy = {
   id: number;
-  adventure: string[];
+  adventure?: string[];
   name: string;
   displayName: string;
-  baseLevel: 3;
+  baseLevel: number;
   baseStats: {
     spirit: number;
     ki: number;
@@ -20,6 +20,6 @@ export type Enemy = {
   allegiance: string;
   description: string;
   appearance: string;
-  uniqueMoves: string[];
-  equipment: string[];
+  uniqueMoves?: string[];
+  equipment?: string[];
 }

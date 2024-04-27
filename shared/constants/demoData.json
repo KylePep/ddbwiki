@@ -14,7 +14,7 @@
       "equipment":["none","turleHermitGi","none"], 
       "moves":["kamehameha", "meteorCombo", "energyWave", "rush", "blastBarrage", "anger"], 
       "inventory":["senzuBean", "turtleHermitGi"], 
-      "forms":["kaioKen"]
+      "awakenings":["kaioKen"]
     },
     "playerList":[
       {
@@ -31,7 +31,7 @@
       "equipment":["none","demonClanClothes","none"], 
       "moves":["specialBeamCannon", "meteorCombo", "energyWave", "rush", "masenko", "regeneration"], 
       "inventory":["demonClanClothes"], 
-      "forms":[]
+      "awakenings":[]
     }
   ],
   "allyList":[
@@ -49,7 +49,7 @@
         "equipment":["none","demonClanClothes","none"], 
         "moves":["specialBeamCannon", "meteorCombo", "energyWave", "rush", "masenko", "regeneration"], 
         "inventory":["demonClanClothes"], 
-        "forms":[]
+        "awakenings":[]
     }
   ],
 
@@ -57,7 +57,7 @@
       "playerId": "1A",
       "playerRole": "Goku",
       "adventureId": "treeOfMight",
-      "room": 1,
+      "room": "1",
       "roomType": "bossBattle",
       "playerState":{
         "hp": "10/10",
@@ -76,7 +76,7 @@
       "players": ["Aspara", "Iggus"],
       "enemyData": [
         {
-          "id": "1E",
+          "enemyId": "1E",
           "name": "turles",
           "level": 2,
           "stats": {"spirit": 2, "ki": 4, "power": 5, "agility": 3, "toughness": 4},

@@ -1,6 +1,4 @@
-import { Player } from "./Player";
-
-export type ActivePlayer = Player &{
+export type AdventurePlayerData = {
   playerId: string;
   playerRole: string;
   adventureId: string;

@@ -5,30 +5,44 @@ import PlayerMenu from './PlayerMenu'
 import Display from './Display'
 import Tutorial from './Tutorial'
 import BossDisplay from './BossDisplay'
+import { ActivePlayer } from '../Types/ActivePlayer'
+import { ActiveEnemy } from '../Types/ActiveEnemy'
+import { Player } from '../Types/Player'
+import { AdventurePlayerData,  } from '../Types/AdventurePlayerData'
+import { AdventureInstance } from '../Types/AdventureInstance'
+import { Enemy } from '../Types/Enemy'
 
 const data = DEMO_DATA
 
-const boss = () => {
-  const base = ENEMY_TYPES.find((b)=>b.name === data.adventureInstance.enemyData[0].name)
-
-  const combinedObject = {
-    ...data.adventureInstance.enemyData[0],
-    base: base
-  }
-
-  return combinedObject
-  }
-
-  const player = () => {
-    const base = DEMO_DATA.player
+export function createActiveEnemy(): ActiveEnemy {
   
-    const combinedObject = {
-      ...data.adventurePlayer,
-      base: base,
-    }
+  const enemy= (): Enemy => {
+    let foundEnemy:Enemy | undefined =  ENEMY_TYPES.find((b)=>b.name === data.adventureInstance.enemyData[0].name)
+    if (!foundEnemy){ foundEnemy = ENEMY_TYPES[0] }
+    return foundEnemy
+  }
 
-    return combinedObject
-    }
+  const adventureEnemy = data.adventureInstance.enemyData[0]
+
+  const activeEnemy: ActiveEnemy = {
+    ...adventureEnemy,
+    ...enemy(),
+  };
+  console.log('activeEnemy', activeEnemy)
+  return activeEnemy
+}
+
+  export function createActivePlayer(): ActivePlayer {
+    const adventurePlayer = data.adventurePlayer
+    const player = data.player
+
+    const activePlayer: ActivePlayer = {
+      ...adventurePlayer,
+      ...player,
+    };
+    console.log('activePlayer', activePlayer)
+    return activePlayer
+  }
 
 
 
@@ -36,11 +50,11 @@ export default function page() {
   const [room, setRoom] = useState(data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent))
   const [dial, setDial] = useState(data.dialogue.find((d)=> d.id == room?.dialogue))
   const [dialProgress, setDialProgress] = useState(data.adventureInstance.doorProgress)
-  const [currentChapter, setCurrentChapter] = useState(dial?.chapterData.find((cd)=> cd.id == dialProgress))
+  const [currentPrompt, setCurrentPrompt] = useState(dial?.promptData .find((cd)=> cd.id == dialProgress))
   const [currentResponse, setCurrentResponse] = useState(dial?.responsesData[0])
 
-  const Boss = boss()
-  const Player = player()
+  const Boss = createActiveEnemy()
+  const Player = createActivePlayer()
 
 
 
@@ -63,7 +77,7 @@ export default function page() {
         setDial(newDial)
         if (newRoom)
         setDialProgress(newRoom?.dialogue)
-        setCurrentChapter(newDial?.chapterData[0])
+        setCurrentPrompt(newDial?.promptData[0])
         setCurrentResponse(newDial?.responsesData[0])
         return
       } 
@@ -73,17 +87,17 @@ export default function page() {
         const newDial = data.dialogue.find((d)=> d.id == dialId)
         setDial(newDial)
         setDialProgress("0D")
-        setCurrentChapter(newDial?.chapterData[0])
+        setCurrentPrompt(newDial?.promptData[0])
         setCurrentResponse(newDial?.responsesData[0])
         return
       } 
 
       if (dialProgressId === dialProgress) {}
       else {
-        const newChapter = dial.chapterData.find((cd)=> cd.id == dialProgressId)
+        const newChapter = dial.promptData.find((cd)=> cd.id == dialProgressId)
         const newResponse = dial.responsesData.find(((rd)=> rd.id == newChapter?.responseId))
         setDialProgress(dialProgressId)
-        setCurrentChapter(newChapter)
+        setCurrentPrompt(newChapter)
         setCurrentResponse(newResponse)
       } 
     }
@@ -98,7 +112,7 @@ export default function page() {
 
             <BossDisplay Boss={Boss} data={data}/>
 
-              <Display data={data} room={room} dialProgress={dialProgress} currentChapter={currentChapter} Boss={Boss} Player={Player}/>
+              <Display data={data} room={room} dialProgress={dialProgress} currentChapter={currentPrompt} Boss={Boss} Player={Player}/>
 
           <div className=' text-center bg-gray-300 border border-solid border-black '>
 
