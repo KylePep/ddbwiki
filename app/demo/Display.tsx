@@ -16,9 +16,12 @@ DisplayProps) {
 const getEnemyByName = (name: string | undefined) => {
     if (name == undefined) return
     let character = ENEMY_TYPES.find((enemy) => enemy.name === name)
-    // if (!character){
-    //   character = data.adventureInsatance.players.find((player) => player === name)
-    // }
+    if (!character){
+      character = data.allyList.find((ally: any) => ally === name)
+    }
+    if(!character){
+      return
+    }
     return character
   }
 

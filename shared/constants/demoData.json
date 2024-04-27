@@ -16,6 +16,42 @@
       "inventory":["senzuBean", "turtleHermitGi"], 
       "forms":["kaioKen"]
     },
+    "playerList":[
+      {
+      "id": "2A",
+      "name": "Iggus", 
+      "level": 1, 
+      "origin": "namekian", 
+      "archetype": "tank", 
+      "pronouns":"he|him",
+      "bodyType": "masculine", 
+      "height": "tall", 
+      "description": "-Demo Character- Iggus is a Piccolo approximation and will be fighting against Turles, the main villain of the Tree of Might.", 
+      "stats":{"mod": 0, "spirit": 3, "ki": 3, "power": 4, "agility": 3, "toughness": 5}, 
+      "equipment":["none","demonClanClothes","none"], 
+      "moves":["specialBeamCannon", "meteorCombo", "energyWave", "rush", "masenko", "regeneration"], 
+      "inventory":["demonClanClothes"], 
+      "forms":[]
+    }
+  ],
+  "allyList":[
+    {
+        "id": "2A",
+        "name": "Iggus", 
+        "level": 1, 
+        "origin": "namekian", 
+        "archetype": "tank", 
+        "pronouns":"he|him",
+        "bodyType": "masculine", 
+        "height": "tall", 
+        "description": "-Demo Character- Iggus is a Piccolo approximation and will be fighting against Turles, the main villain of the Tree of Might.", 
+        "stats":{"mod": 0, "spirit": 3, "ki": 3, "power": 4, "agility": 3, "toughness": 5}, 
+        "equipment":["none","demonClanClothes","none"], 
+        "moves":["specialBeamCannon", "meteorCombo", "energyWave", "rush", "masenko", "regeneration"], 
+        "inventory":["demonClanClothes"], 
+        "forms":[]
+    }
+  ],
 
     "adventurePlayer": {
       "playerId": "1A",
