@@ -53,8 +53,7 @@ const getFocusedItem = (name:string) =>{
   } else if (selectMenu === "item"){
     item = ITEM_TYPES.find((i) => i.name == name)
   } else {
-    item = {displayName: name, description: 'ally'}
-
+    item = data.allyList.find((a: any)=> a.name == name)
   }
   setFocusedItem(item)
   setMenuFocus(name)
@@ -182,19 +181,27 @@ function MenuButton ({content, number}: {content: string, number: number}){
 
             {menuFocus != "none" && 
               <div className='grid grid-rows-3 col-span-2'>
-                <div className='grid grid-cols-subgrid row-span-2 col-span-2'>
-                    {focusedItem && <>
-                      <p>
+                  
+                    {focusedItem ? 
+                    (<div className='grid grid-cols-subgrid row-span-2 col-span-2'>
+                    {focusedItem.displayName ? 
+                      (<p>
                       {focusedItem.displayName}
-                      </p>
+                      </p>) : (
+                        <p>{focusedItem.name}</p>
+                      )
+                    }
                       <p>
                       {focusedItem.description}
                       </p>
-                    </>
+                    </div>) : (
+                      <div className='grid grid-cols-subgrid row-span-2 col-span-2'>
+                        <p>Error</p>
+                      </div>
+                    )
                     }
-
+                    <div>Bottom Tray</div>
                 </div>
-              </div>
             }
 
 
