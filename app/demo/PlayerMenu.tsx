@@ -9,9 +9,9 @@ interface PlayerMenuProps{
   Player: ActivePlayer,
   data: any,
   updateRoom: any,
-  currentResponse: Response,
-  dial: Dialogue,
-  room: Room
+  currentResponse?: Response,
+  dial?: Dialogue,
+  room?: Room
 }
 
 
@@ -30,9 +30,9 @@ const updateMenu = (destination: string) => {
 
   setPagination(basePage)
   if (destination === "action"){
-    setList(Player.base.moves)
+    setList(Player.moves)
   } else if (destination === "item"){
-    setList(Player.base.inventory)
+    setList(Player.inventory)
   } else {
     setList(data.adventureInstance.players)
   }
@@ -76,7 +76,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
 
   return (
       <>
-            <p className=''>{Player.base.name}</p>
+            <p className=''>{Player.name}</p>
 
                   <div>
                       <p className='bg-neutral-700 border border-white text-white rounded px-2 py-1'>
@@ -94,7 +94,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
 
                   <div>
                     <p className='bg-neutral-700 border border-white text-white rounded px-2 py-1'>
-                    {Player.base.archetype} Counter: {Player.playerState.archCounter}
+                    {Player.archetype} Counter: {Player.playerState.archCounter}
                       </p>
                   </div>
             </div>
@@ -140,22 +140,22 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   }
                   {selectMenu === "action" && 
                     <>
-                    {Player.base.moves.map((move:any, index:number) => (
+                    {Player.moves.map((move:any, index:number) => (
                       (index >= pagination[0] && index <= pagination[1]) &&
                       <MenuButton key={index} content={move} number={index}/>
                     ))}
-                    {[...Array(Player.base.moves.length > pagination[0] && Player.base.moves.length < pagination[1] ? 4 -  (Player.base.moves.length % 4)  : 0 )].map((_, index) => (
+                    {[...Array(Player.moves.length > pagination[0] && Player.moves.length < pagination[1] ? 4 -  (Player.moves.length % 4)  : 0 )].map((_, index) => (
                       <div key={index} className="bg-neutral-400 rounded"></div>
                     ))}
                   </>
                   }
                   {selectMenu === "item" && 
                   <>
-                    {Player.base.inventory.map((item:any, index:number) => (
+                    {Player.inventory.map((item:any, index:number) => (
                       (index >= pagination[0] && index <= pagination[1]) &&
                       <MenuButton key={index} content={item} number={index}/>
                       ))}
-                      {[...Array(Player.base.inventory.length > pagination[0] && Player.base.inventory.length < pagination[1] ? 4 -  (Player.base.inventory.length % 4)  : 0 )].map((_, index) => (
+                      {[...Array(Player.inventory.length > pagination[0] && Player.inventory.length < pagination[1] ? 4 -  (Player.inventory.length % 4)  : 0 )].map((_, index) => (
                       <div key={index} className="bg-neutral-400 rounded"></div>
                     ))}
                   </>
@@ -163,7 +163,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   {selectMenu === "ally" && 
                   <>
                     {data.adventureInstance.players.map((ally:any, index:number) => (
-                      Player.base.name!= ally && <MenuButton key={index} content={ally} number={index}/>
+                      Player.name!= ally && <MenuButton key={index} content={ally} number={index}/>
                     ))}
                     {[...Array(5 - data.adventureInstance.players.length)].map((_, index) => (
                       <div key={index} className="bg-neutral-400 rounded"></div>
@@ -188,8 +188,8 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   
                     {focusedItem ? 
                     (<div className='grid grid-cols-subgrid row-span-2'>
-                      {focusedItem.displayName}
-                    {/* {focusedItem.displayName ? 
+                      {/* {focusedItem.displayName}
+                    {focusedItem.displayName ? 
                       (<p>{focusedItem.displayName}</p>) : (
                         <p>{focusedItem.name}</p>
                       )

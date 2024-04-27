@@ -159,7 +159,7 @@
             "responseDoors": ["exit"]
           }
         ],
-        "responsesData": [
+        "responseData": [
           {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
           {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
           {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
@@ -187,7 +187,7 @@
             "responseDoors": ["exit"]
           }
         ],
-        "responsesData": [
+        "responseData": [
           {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
           {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
           {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
@@ -215,7 +215,7 @@
             "responseDoors": ["exit", "restart"]
           }
         ],
-        "responsesData": [
+        "responseData": [
           {"id": "0R", "responses": ["Continue|1D"]},
           {"id": "1R", "responses": ["Continue|2D"]},
           {"id": "2R", "responses": ["Quit?|exit", "Restart?|restart"]}
@@ -243,7 +243,7 @@
             "responseDoors": ["exit"]
           }
         ],
-        "responsesData": [
+        "responseData": [
           {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
           {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
           {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
@@ -259,7 +259,7 @@
             "responseDoors": ["exit", "restart"]
           }
         ],
-        "responsesData": [
+        "responseData": [
           {"id": "0R", "responses": ["Quit|exit", "Restart|restart"]}
         ]
       }

@@ -3,8 +3,8 @@ export type AdventureInstance = {
   adventureRooms?: string[];
   roomCurrent: string;
   doorProgress: string;
-  players?: string[];
-  enemyData?: {
+  players: string[] | [];
+  enemyData: {
     id: string;
     name: string;
     level: number;
@@ -20,5 +20,5 @@ export type AdventureInstance = {
     archCounter: string;
     statusEffects?: string[];
     distance: string;
-  }[]
+  }[] | []
 }

@@ -10,10 +10,10 @@ export default function BossDisplay({Boss, data}:BossDisplayProps) {
     <>
           <div className=' text-center bg-gray-400 border border-solid border-black p-1'>
             <p className=''>
-              {Boss.base?.displayName}
+              {Boss.displayName}
             </p>
             <p>
-              {Boss.base.displayName}, appears to be full of energy. He looks ready to fight.
+              {Boss.displayName}, appears to be full of energy. He looks ready to fight.
             </p>
                 {/* <div>
                     <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>

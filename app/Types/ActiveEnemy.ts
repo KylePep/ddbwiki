@@ -14,6 +14,6 @@ export type ActiveEnemy = Enemy & {
   hp: string;
   sparkingMeter: string;
   archCounter: string;
-  statusEffects?: string[];
+  statusEffects: string[] | [];
   distance: string;
 }

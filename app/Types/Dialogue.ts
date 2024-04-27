@@ -5,7 +5,7 @@ export type Prompt = {
     context: string;
   }
   responseId: string;
-  responseDoors: string;
+  responseDoors: string[];
 }
 
 export type Response = {

@@ -7,10 +7,9 @@ import Tutorial from './Tutorial'
 import BossDisplay from './BossDisplay'
 import { ActivePlayer } from '../Types/ActivePlayer'
 import { ActiveEnemy } from '../Types/ActiveEnemy'
-import { Player } from '../Types/Player'
-import { AdventurePlayerData,  } from '../Types/AdventurePlayerData'
-import { AdventureInstance } from '../Types/AdventureInstance'
 import { Enemy } from '../Types/Enemy'
+import { Dialogue, Prompt, Response } from '../Types/Dialogue'
+import { Room } from '../Types/Room'
 
 const data = DEMO_DATA
 
@@ -47,11 +46,11 @@ export function createActiveEnemy(): ActiveEnemy {
 
 
 export default function page() {
-  const [room, setRoom] = useState(data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent))
-  const [dial, setDial] = useState(data.dialogue.find((d)=> d.id == room?.dialogue))
-  const [dialProgress, setDialProgress] = useState(data.adventureInstance.doorProgress)
-  const [currentPrompt, setCurrentPrompt] = useState(dial?.promptData .find((cd)=> cd.id == dialProgress))
-  const [currentResponse, setCurrentResponse] = useState(dial?.responsesData[0])
+  const [room, setRoom] = useState<Room>()
+  const [dial, setDial] = useState<Dialogue>()
+  const [dialProgress, setDialProgress] = useState<string>(data.adventureInstance.doorProgress)
+  const [currentPrompt, setCurrentPrompt] = useState<Prompt>()
+  const [currentResponse, setCurrentResponse] = useState<Response>()
 
   const Boss = createActiveEnemy()
   const Player = createActivePlayer()
@@ -71,33 +70,40 @@ export default function page() {
 
       if (roomId === room?.id) {}
       else {
-        const newRoom = data.rooms.find((r)=> r.id == roomId)
-        const newDial = data.dialogue.find((d)=> d.id == newRoom?.dialogue)
-        setRoom(newRoom)
-        setDial(newDial)
-        if (newRoom)
-        setDialProgress(newRoom?.dialogue)
-        setCurrentPrompt(newDial?.promptData[0])
-        setCurrentResponse(newDial?.responsesData[0])
+        const newRoom: Room | undefined = data.rooms.find((r)=> r.id == roomId)
+        const newDial: Dialogue | undefined = data.dialogue.find((d)=> d.id == newRoom?.dialogue)
+        if (newRoom){
+          setRoom(newRoom)
+          setDialProgress(newRoom.dialogue)
+          if (newDial){
+              setDial(newDial)
+              setCurrentPrompt(newDial?.promptData[0])
+              setCurrentResponse(newDial?.responseData[0])
+            }
+        }
         return
       } 
 
       if (dialId === dial?.id) {}
       else {
-        const newDial = data.dialogue.find((d)=> d.id == dialId)
+        const newDial: Dialogue | undefined = data.dialogue.find((d)=> d.id == dialId)
         setDial(newDial)
         setDialProgress("0D")
-        setCurrentPrompt(newDial?.promptData[0])
-        setCurrentResponse(newDial?.responsesData[0])
+        if(newDial) {
+          setCurrentPrompt(newDial?.promptData[0])
+          setCurrentResponse(newDial?.responseData[0])
+        }
         return
       } 
 
       if (dialProgressId === dialProgress) {}
       else {
-        const newChapter = dial.promptData.find((cd)=> cd.id == dialProgressId)
-        const newResponse = dial.responsesData.find(((rd)=> rd.id == newChapter?.responseId))
+        const newPrompt = dial.promptData.find((cd)=> cd.id == dialProgressId)
+        const newResponse: Response | undefined = dial.responseData.find(((rd)=> rd.id == newPrompt?.responseId))
         setDialProgress(dialProgressId)
-        setCurrentPrompt(newChapter)
+        if(newPrompt)
+        setCurrentPrompt(newPrompt)
+        if (newResponse)
         setCurrentResponse(newResponse)
       } 
     }
