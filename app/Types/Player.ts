@@ -16,7 +16,8 @@ export type Player = {
     agility: number;
     toughness: number;
   }
+  moves: string[];
   equipment: string[];
   inventory: string[];
-  forms: string[];
+  awakenings: string[];
 }

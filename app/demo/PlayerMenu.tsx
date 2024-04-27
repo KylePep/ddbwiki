@@ -1,13 +1,16 @@
 import { ITEM_TYPES, MOVE_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
+import { ActivePlayer } from '../Types/ActivePlayer'
+import { Dialogue, Response } from '../Types/Dialogue'
+import { Room } from '../Types/Room'
 
 interface PlayerMenuProps{
-  Player: any,
+  Player: ActivePlayer,
   data: any,
   updateRoom: any,
-  currentResponse: any,
-  dial: any,
-  room: any
+  currentResponse: Response,
+  dial: Dialogue,
+  room: Room
 }
 
 
@@ -106,7 +109,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                       ))}
                     </div>
                     <div>
-                      <div>{dial?.chapterData.map((r:any, index:number) => (
+                      <div>{dial?.promptData.map((r:any, index:number) => (
                           <span key={index}>{r.id} </span>
                         ))}
                         </div>

@@ -10,11 +10,11 @@ export type Prompt = {
 
 export type Response = {
   id: string;
-  response: string[];
+  responses: string[];
 }
 
 export type Dialogue = {
   id: string;
-  promptData: Prompt;
-  responseData: Response;
+  promptData: Prompt[];
+  responseData: Response[];
 }
