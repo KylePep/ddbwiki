@@ -46,11 +46,11 @@ export function createActiveEnemy(): ActiveEnemy {
 
 
 export default function page() {
-  const [room, setRoom] = useState<Room>()
-  const [dial, setDial] = useState<Dialogue>()
+  const [room, setRoom] = useState<Room>(data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent))
+  const [dial, setDial] = useState<Dialogue>(data.dialogue.find((d)=> d.id == room?.dialogue))
   const [dialProgress, setDialProgress] = useState<string>(data.adventureInstance.doorProgress)
-  const [currentPrompt, setCurrentPrompt] = useState<Prompt>()
-  const [currentResponse, setCurrentResponse] = useState<Response>()
+  const [currentPrompt, setCurrentPrompt] = useState<Prompt>(dial?.promptData .find((cd)=> cd.id == dialProgress))
+  const [currentResponse, setCurrentResponse] = useState<Response>(dial?.responseData[0])
 
   const Boss = createActiveEnemy()
   const Player = createActivePlayer()
