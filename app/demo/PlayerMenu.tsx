@@ -75,21 +75,21 @@ function MenuButton ({content, number}: {content: string, number: number}){
             <p className=''>{Player.base.name}</p>
 
                   <div>
-                      <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                      <p className='bg-neutral-700 border border-white text-white rounded px-2 py-1'>
                         Health: {Player.hp}
                       </p>
                   </div>
 
             <div className='grid grid-cols-2 gap-1'>
                   <div>
-                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                    <p className='bg-neutral-700 border border-white text-white rounded px-2 py-1'>
                         Sparking: {Player.sparkingMeter}
                       </p>
                   </div>
 
 
                   <div>
-                    <p className='bg-gray-700 border border-white text-white rounded px-2 py-1'>
+                    <p className='bg-neutral-700 border border-white text-white rounded px-2 py-1'>
                     {Player.base.archetype} Counter: {Player.archCounter}
                       </p>
                   </div>
@@ -141,7 +141,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                       <MenuButton key={index} content={move} number={index}/>
                     ))}
                     {[...Array(Player.base.moves.length > pagination[0] && Player.base.moves.length < pagination[1] ? 4 -  (Player.base.moves.length % 4)  : 0 )].map((_, index) => (
-                      <div key={index} className="bg-gray-200 rounded"></div>
+                      <div key={index} className="bg-neutral-400 rounded"></div>
                     ))}
                   </>
                   }
@@ -152,7 +152,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                       <MenuButton key={index} content={item} number={index}/>
                       ))}
                       {[...Array(Player.base.inventory.length > pagination[0] && Player.base.inventory.length < pagination[1] ? 4 -  (Player.base.inventory.length % 4)  : 0 )].map((_, index) => (
-                      <div key={index} className="bg-gray-200 rounded"></div>
+                      <div key={index} className="bg-neutral-400 rounded"></div>
                     ))}
                   </>
                   }
@@ -162,7 +162,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                       Player.base.name!= ally && <MenuButton key={index} content={ally} number={index}/>
                     ))}
                     {[...Array(5 - data.adventureInstance.players.length)].map((_, index) => (
-                      <div key={index} className="bg-gray-200 rounded"></div>
+                      <div key={index} className="bg-neutral-400 rounded"></div>
                     ))}
                   </>
                   }
@@ -170,10 +170,10 @@ function MenuButton ({content, number}: {content: string, number: number}){
               </div>
               <div className='grid grid-cols-subgrid'>
                 {selectMenu != "base" && selectMenu != "ally" &&
-                  <div className='grid grid-cols-3 grid-rows-1'>
-                    <button onClick={() => updatePagination(-4, list.length)} className={"rounded px-2 py-1 " + (pagination[0] == 0 ? "bg-gray-400 hover:cursor-default" : "bg-blue-400" )}>{`<`}</button>
+                  <div className='grid grid-cols-3 grid-rows-1 gap-1 mt-1'>
+                    <button onClick={() => updatePagination(-4, list.length)} className={"rounded px-2 py-1 " + (pagination[0] == 0 ? "bg-neutral-400 hover:cursor-default" : "bg-blue-400" )}>{`<`}</button>
                     <div className='bg-blue-300 rounded px-2 py-1'>Page: {(pagination[1] +1)/4}</div>
-                    <button onClick={() => updatePagination(4, list.length)} className={"rounded px-2 py-1 " + (pagination[1] > list.length ? "bg-gray-400 hover:cursor-default" : "bg-blue-400" )}>{`>`}</button>
+                    <button onClick={() => updatePagination(4, list.length)} className={"rounded px-2 py-1 " + (pagination[1] > list.length ? "bg-neutral-400 hover:cursor-default" : "bg-blue-400" )}>{`>`}</button>
                   </div>
                 }
               </div>
@@ -183,24 +183,24 @@ function MenuButton ({content, number}: {content: string, number: number}){
               <div className='grid grid-rows-3 col-span-2'>
                   
                     {focusedItem ? 
-                    (<div className='grid grid-cols-subgrid row-span-2 col-span-2'>
+                    (<div className='grid grid-cols-subgrid row-span-2'>
                     {focusedItem.displayName ? 
-                      (<p>
-                      {focusedItem.displayName}
-                      </p>) : (
+                      (<p>{focusedItem.displayName}</p>) : (
                         <p>{focusedItem.name}</p>
                       )
                     }
-                      <p>
-                      {focusedItem.description}
-                      </p>
+                      <p className='text-xs'>{focusedItem.description}</p>
                     </div>) : (
                       <div className='grid grid-cols-subgrid row-span-2 col-span-2'>
                         <p>Error</p>
                       </div>
                     )
                     }
-                    <div>Bottom Tray</div>
+                    <div className='grid grid-cols-3 grid-rows-1 gap-1 mt-1'>
+                      <button className='bg-blue-300 rounded hover:text-white'>OPT1</button>
+                      <button className='bg-blue-300 rounded hover:text-white'>OPT2</button>
+                      <button className='bg-blue-300 rounded hover:text-white'>OPT3</button>
+                    </div>
                 </div>
             }
 
