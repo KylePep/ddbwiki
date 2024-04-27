@@ -139,22 +139,22 @@
     "dialogue": [
       {
         "id": "1ADial",
-        "chapterData": [
+        "promptData": [
           {
             "id": "0D",
-            "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
+            "content": {"speaker": "turles", "context": "Join Me %playerName%."},
             "responseId": "0R",
             "responseDoors": ["1D", "2D"]
           },
           {
             "id": "1D",
-            "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
+            "content": {"speaker": "turles", "context": "Are you sure about that?"},
             "responseId": "1R",
             "responseDoors": ["2D"]
           },
           {
             "id": "2D",
-            "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
+            "content": {"speaker": "turles", "context": "Then DIE %PLAYERNAME%!!"},
             "responseId": "2R",
             "responseDoors": ["exit"]
           }
@@ -167,22 +167,22 @@
       },
       {
         "id": "2ADial",
-        "chapterData": [
+        "promptData": [
           {
             "id": "0D",
-            "content": {"speaker": "turles", "dialogue": "Snack Time!"},
+            "content": {"speaker": "turles", "context": "Snack Time!"},
             "responseId": "0R",
             "responseDoors": ["1D", "2D"]
           },
           {
             "id": "1D",
-            "content": {"speaker": "turles", "dialogue": "I am so full of power!"},
+            "content": {"speaker": "turles", "context": "I am so full of power!"},
             "responseId": "1R",
             "responseDoors": ["2D"]
           },
           {
             "id": "2D",
-            "content": {"speaker": "turles", "dialogue": "Let the battle Continue"},
+            "content": {"speaker": "turles", "context": "Let the battle Continue"},
             "responseId": "2R",
             "responseDoors": ["exit"]
           }
@@ -195,22 +195,22 @@
       },
       {
         "id": "3ADial",
-        "chapterData": [
+        "promptData": [
           {
             "id": "0D",
-            "content": {"speaker": "turles", "dialogue": "How can you have so much power!?"},
+            "content": {"speaker": "turles", "context": "How can you have so much power!?"},
             "responseId": "0R",
             "responseDoors": ["1D"]
           },
           {
             "id": "1D",
-            "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
+            "content": {"speaker": "turles", "context": "Are you sure about that?"},
             "responseId": "1R",
             "responseDoors": ["2D"]
           },
           {
             "id": "2D",
-            "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
+            "content": {"speaker": "turles", "context": "Then DIE %PLAYERNAME%!!"},
             "responseId": "2R",
             "responseDoors": ["exit", "restart"]
           }
@@ -223,22 +223,22 @@
       },
       {
         "id": "4ADial",
-        "chapterData": [
+        "promptData": [
           {
             "id": "0D",
-            "content": {"speaker": "turles", "dialogue": "Join Me %playerName%."},
+            "content": {"speaker": "turles", "context": "Join Me %playerName%."},
             "responseId": "0R",
             "responseDoors": ["1D", "2D"]
           },
           {
             "id": "1D",
-            "content": {"speaker": "turles", "dialogue": "Are you sure about that?"},
+            "content": {"speaker": "turles", "context": "Are you sure about that?"},
             "responseId": "1R",
             "responseDoors": ["2D"]
           },
           {
             "id": "2D",
-            "content": {"speaker": "turles", "dialogue": "Then DIE %PLAYERNAME%!!"},
+            "content": {"speaker": "turles", "context": "Then DIE %PLAYERNAME%!!"},
             "responseId": "2R",
             "responseDoors": ["exit"]
           }
@@ -251,10 +251,10 @@
       },
       {
         "id": "1BDial",
-        "chapterData": [
+        "promptData": [
           {
             "id": "0D",
-            "content": {"speaker": "turles", "dialogue": "You are a weakling %playerName%, you and this planet die together!"},
+            "content": {"speaker": "turles", "context": "You are a weakling %playerName%, you and this planet die together!"},
             "responseId": "0R",
             "responseDoors": ["exit", "restart"]
           }
