@@ -23,7 +23,7 @@
     "extraDescription": "",
     "positiveTrait": "power",
     "negativeTrait": "spirit",
-    "forms": ["greatApe"],
+    "awakenings": ["greatApe"],
     "moves": []
   },
   {
@@ -34,7 +34,7 @@
     "extraDescription": "",
     "positiveTrait": "ki",
     "negativeTrait": "toughness",
-    "forms": ["greatApe"],
+    "awakenings": ["greatApe"],
     "moves": []
   },
   {
@@ -45,7 +45,7 @@
     "extraDescription": "",
     "positiveTrait": "spirit",
     "negativeTrait": "kit",
-    "forms": [],
+    "awakenings": [],
     "moves": []
   },
   {
@@ -56,7 +56,7 @@
     "extraDescription": "",
     "positiveTrait": "toughness",
     "negativeTrait": "agility",
-    "forms": [],
+    "awakenings": [],
     "moves": ["regeneration"]
   }
 ],
