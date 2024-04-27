@@ -23,9 +23,8 @@ const boss = () => {
     const base = DEMO_DATA.player
   
     const combinedObject = {
-      ...data.adventurePlayer.playerState,
+      ...data.adventurePlayer,
       base: base,
-      role: data.adventurePlayer.playerRole
     }
 
     return combinedObject
