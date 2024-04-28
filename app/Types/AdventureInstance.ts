@@ -1,8 +1,10 @@
 export type AdventureInstance = {
   adventureId: string;
   adventureRooms?: string[];
-  roomCurrent: string;
-  doorProgress: string;
+  roomId: string;
+  dialogueId: string;
+  promptId: string;
+  responseId: string;
   players: string[] | [];
   enemyData: {
     id: string;

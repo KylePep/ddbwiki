@@ -44,27 +44,27 @@ export function createActiveEnemy(): ActiveEnemy {
     return activePlayer
   }
 
-  const getInitialData = () => {
+  export const getInitialData = () => {
     interface InitialData {
       room: Room;
       prompt: Prompt;
       response: Response;
       dial: Dialogue;
     }
-
+  
     const initData: InitialData = {
       room: {} as Room,
       dial: {} as Dialogue,
       prompt: {} as Prompt,
       response: {} as Response
   };
-
-
+  
+  
     initData.room = data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent) ?? data.rooms[0]
     initData.dial = data.dialogue.find((d) => d.id == initData.room.dialogue) ?? data.dialogue[0]
     initData.prompt = initData.dial.promptData[0] ?? data.dialogue[0].promptData
     initData.response = initData.dial.responseData[0] ?? data.dialogue[0].responseData;
-
+  
     return initData
   }
 
@@ -81,81 +81,6 @@ export default function page() {
 
   const Boss = createActiveEnemy()
   const Player = createActivePlayer()
-
-  const updateRoom = (roomId: string | undefined, dialId:string | undefined, dialProgressId: string)=> {
-    if (roomId == undefined || dialId == undefined || dialProgressId == undefined) {
-      return
-    } else {
-
-      if (dialProgressId == "exit"){
-        data.adventureInstance.roomsProgress = "battle"
-      }
-
-      if (roomId === room?.id) {}
-      else {
-        const newRoom: Room | undefined = data.rooms.find((r)=> r.id == roomId)
-        const newDial: Dialogue | undefined = data.dialogue.find((d)=> d.id == newRoom?.dialogue)
-        if (newRoom){
-          setRoom(newRoom)
-          setDialProgress(newRoom.dialogue)
-          if (newDial){
-              setDial(newDial)
-              setCurrentPrompt(newDial?.promptData[0])
-              setCurrentResponse(newDial?.responseData[0])
-            }
-        }
-        return
-      } 
-
-    const updateTurn = (turnProgressId: string) => {
-
-      // "turnData": {
-      //   "totalTurns": 0,
-      //   "turnOrder": [],
-      //   "currentCharactersTurn": "",
-      //   "turnPhase": ""
-      // }
-
-        if (turnProgressId == "init"){
-          //Create turn if there isnt one, zero it out
-          // if (!turnData) - create turnData
-        } else if(turnProgressId == "setup") {
-          // Perform upkeep and cleanup
-          // (+/-) stats based on awakenings etc
-          // refill actions based on ki etc
-        } else if (turnProgressId == "idle") {
-          // This is where players will be in control or where the enemy 'AI' makes its choices.
-        } else if (turnProgressId == "action"){
-          // Perform selected actions, either return to idle or to resolution
-        } else if (turnProgressId == "resolution"){
-          // assign damage, perform status affects, totalTurns += 1, currentCharacterTurn = next character in turnOrder, turnPhase = setup
-        }
-    }
-
-      if (dialId === dial?.id) {}
-      else {
-        const newDial: Dialogue = data.dialogue.find((d)=> d.id == dialId) ?? data.dialogue[0]
-        setDial(newDial)
-        setDialProgress("0D")
-        if(newDial) {
-          setCurrentPrompt(newDial?.promptData[0])
-          setCurrentResponse(newDial?.responseData[0])
-        }
-        return
-      } 
-
-      if (dialProgressId === dialProgress) {}
-      else {
-        const newPrompt = dial.promptData.find((cd)=> cd.id == dialProgressId)
-        const newResponse: Response = dial.responseData.find(((rd)=> rd.id == newPrompt?.responseId)) ?? data.dialogue[0].responseData[0]
-        setDialProgress(dialProgressId)
-        if(newPrompt)
-        setCurrentPrompt(newPrompt)
-        if (newResponse)
-        setCurrentResponse(newResponse)
-      } 
-    }
-  }
 
   return (
     <div>

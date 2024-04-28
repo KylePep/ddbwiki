@@ -76,9 +76,10 @@
     "adventureInstance":{
       "adventureId": "treeOfMight",
       "adventureRooms": ["1A", "2A", "3A", "4A", "1B"],
-      "roomCurrent": "1A",
-      "roomsProgress":"start",
-      "doorProgress":"0D",
+      "roomId": "1A",
+      "dialogueId": "1ADial",
+      "promptId": "0D",
+      "responseId": "0R",
       "players": ["Aspara", "Iggus"],
       "enemyData": [
         {
