@@ -2,9 +2,9 @@
   "DEMO_DATA":{
     "turnData": {
       "totalTurns": 0,
-      "turnOrder": [],
-      "currentCharactersTurn": "",
-      "turnPhase": ""
+      "turnOrder": ["Turles", "Aspara"],
+      "currentCharactersTurn": "Turles",
+      "turnPhase": "init"
     },
     "player":{
       "id": "1A",

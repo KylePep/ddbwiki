@@ -23,6 +23,7 @@ const [menuFocus, setMenuFocus] = useState("none")
 const [focusedItem, setFocusedItem] = useState<{displayName: string; description: string}>()
 const basePage = [0,3]
 const [pagination, setPagination] = useState(basePage)
+const [currentCharactersTurn, setCurrentCharacterTurn] = useState("Aspara")
 
 const prepareRoomUpdate = (roomId: string, roomState: string, dialogueId: string, promptId: string) =>{
     const newAdventureInstance = data.adventureInstance;
@@ -83,6 +84,10 @@ function MenuButton ({content, number}: {content: string, number: number}){
   )
 }
 
+const endTurn = (character: string) => {
+  data.turnData.totalTurns++
+  setCurrentCharacterTurn(character)
+}
 
   return (
       <>
@@ -113,18 +118,18 @@ function MenuButton ({content, number}: {content: string, number: number}){
             {
               data.adventureInstance.roomState == "start" &&
               <>
+                
                 <div className='grid grid-rows-3 col-span-2'>
                   <div className='grid grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2 gap-1'>
                       {currentResponse?.responses.map((r:any, index:number) => (
-                        // (roomId: string, roomState: string, dialogueId: string, promptId: string, responseId: string)
-                        <button onClick={()=>prepareRoomUpdate(room?.id, data.adventureInstance.roomState, data.adventureInstance.dialogueId, r.split('|')[1])} key={index} className='bg-blue-200 rounded hover:text-white'>{r.split('|')[0]}--{r.split('|')[1]}</button>
+                        // (roomId: string, roomState: string, dialogueId: string, promptId: string)
+                        <button onClick={()=>prepareRoomUpdate(room?.id, data.adventureInstance.roomState, data.adventureInstance.dialogueId, r.split('|')[1])} key={index} className='bg-blue-200 rounded hover:text-white' title={r.split('|')[1]}>{r.split('|')[0]}</button>
                       ))}
                     </div>
-                    <div>
-                      <div>{dial?.promptData.map((r:any, index:number) => (
-                          <span key={index}>{r.id} </span>
-                        ))}
-                        </div>
+                    <div className='grid col-span-2 gap-1'>
+                      <button className='grid col-span-2 bg-blue-200 rounded mt-1 px-2 py-1 hover:text-white'>
+                        HOLD4
+                      </button>
 
                     </div>
                 </div>
@@ -138,7 +143,10 @@ function MenuButton ({content, number}: {content: string, number: number}){
   
             { data.adventureInstance.roomState == "battle" &&
             <>
-            { menuFocus === "none" &&          
+              {
+                currentCharactersTurn == Player.name && 
+                <>
+                  { menuFocus === "none" &&          
             <div className='grid grid-rows-3 col-span-2'>
               <div className='grid grid-cols-subgrid row-span-2'>
                 <div className='grid  grid-cols-2 grid-rows-2 gap-1'>
@@ -146,6 +154,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   <>
                   <div className='col-span-2 row-span-2'>
                     <p>What will you do?</p>
+                    <button onClick={()=>endTurn("Turles")} className='bg-blue-400 rounded px-2 py-1 hover:text-white'>END TURN {data.turnData.totalTurns}</button>
                   </div>
                 </>
                   }
@@ -233,12 +242,21 @@ function MenuButton ({content, number}: {content: string, number: number}){
                   }
                   { menuFocus !== "none" &&
                   <>
-                  <button onClick={()=>setMenuFocus("none")} className='bg-blue-400 rounded px-2 py-1 hover:text-white'>RETURN</button>
+                  <button onClick={()=>setMenuFocus("none")} className='bg-blue-400 rounded px-2 py-1 hover:text-white'>Back</button>
                   <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>USE</button>
                   <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>OPTION</button>
                   </>
                   }
               </div>
+                </> }
+                {
+                  currentCharactersTurn != Player.name &&
+                  <>
+                    <p>{currentCharactersTurn} is taking action.</p>
+                    <button onClick={() => endTurn("Aspara")} className='bg-blue-400 rounded px-2 py-1 hover:text-white'>My turn {data.turnData.totalTurns}</button>
+                  </>
+                }
+            
               </>
               }
             </div>
