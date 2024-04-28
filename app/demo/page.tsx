@@ -74,7 +74,7 @@ export default function page() {
 
   const [room, setRoom] = useState<Room>(roomData.room)
   const [dial, setDial] = useState<Dialogue>(roomData.dial)
-  const [dialProgress, setDialProgress] = useState<string>(data.adventureInstance.roomState)
+  const [roomState, setRoomState] = useState<string>(data.adventureInstance.roomState)
   const [currentPrompt, setCurrentPrompt] = useState<Prompt>(roomData.prompt)
   const [currentResponse, setCurrentResponse] = useState<Response>(roomData.response)
 
@@ -85,7 +85,7 @@ export default function page() {
       if (updatedRoom.newRoom.id)
       setRoom(updatedRoom?.newRoom)
       if (updatedRoom.newRoomState != "")
-      setDialProgress(updatedRoom.newRoomState)
+      setRoomState(updatedRoom.newRoomState)
       if (updatedRoom.newDial.id)
       setDial(updatedRoom?.newDial)
       if (updatedRoom.newPrompt.id)
@@ -107,7 +107,7 @@ export default function page() {
 
             <BossDisplay Boss={Boss} data={data}/>
 
-              <Display data={data} room={room} dialProgress={dialProgress} currentChapter={currentPrompt} Boss={Boss} Player={Player}/>
+              <Display data={data} room={room} roomState={roomState} currentPrompt={currentPrompt} Boss={Boss} Player={Player}/>
 
           <div className=' text-center bg-gray-300 border border-solid border-black '>
 

@@ -1,16 +1,20 @@
 import { ENEMY_TYPES } from '@/shared/constants';
 import React from 'react'
+import { Room } from '../Types/Room';
+import { Prompt } from '../Types/Dialogue';
+import { ActiveEnemy } from '../Types/ActiveEnemy';
+import { ActivePlayer } from '../Types/ActivePlayer';
 
 interface DisplayProps{
   data: any,
-  room: any,
-  dialProgress: any,
-  currentChapter: any,
-  Boss: any,
-  Player: any
+  room: Room,
+  roomState: string,
+  currentPrompt: Prompt,
+  Boss: ActiveEnemy,
+  Player: ActivePlayer
 }
 
-export default function Display({data, room, dialProgress, currentChapter, Boss, Player}: 
+export default function Display({data, room, roomState, currentPrompt, Boss, Player}: 
 DisplayProps) {
 
 const getEnemyByName = (name: string | undefined) => {
@@ -29,10 +33,10 @@ const getEnemyByName = (name: string | undefined) => {
     if (str == undefined) return
     // Regular expression to match %playerName%
     // Replace %playerName% with Player.base.name
-    str = str.replace(/%playerName%/g, Player.base.name);
+    str = str.replace(/%playerName%/g, Player.name);
       
     // Replace %PLAYERNAME% with Player.base.name in all caps
-    str = str.replace(/%PLAYERNAME%/g, Player.base.name.toUpperCase());
+    str = str.replace(/%PLAYERNAME%/g, Player.name.toUpperCase());
 
     return str;
   }
@@ -41,19 +45,19 @@ const getEnemyByName = (name: string | undefined) => {
     <>
           <div className=' text-center text-white '>
             <div className='bg-black border border-white rounded min-h-24'>
-              { data.adventureInstance.roomsProgress == "start" &&
+              { roomState == "start" &&
                 <div>
                   <p>{room?.id} {room?.setting} - 
                     {room?.doors.map((d:any, index:number)=>(
                       <span key={index}>{d} </span>
                     ))}
                   </p>
-                  <p>{dialProgress} - {getEnemyByName(currentChapter?.content.speaker)?.displayName}: { replacePlayerName(currentChapter?.content.dialogue) }</p>
+                  <p>{roomState} - {getEnemyByName(currentPrompt?.content.speaker)?.displayName}: { replacePlayerName(currentPrompt?.content.context) }</p>
                 </div>
               }
 
-              { data.adventureInstance.roomsProgress == "battle" &&
-                <p>{Boss.base?.displayName} is {data.adventureInstance.enemyData[0].distance}. He {`won't`} show any mercy.</p>
+              { roomState == "battle" &&
+                <p>{Boss.displayName} is {data.adventureInstance.enemyData[0].distance}. He {`won't`} show any mercy.</p>
               }
 
             </div>
