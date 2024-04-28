@@ -33,10 +33,10 @@ export default function originsPage() {
                 <h2 className='font-bold mb-1 text-lg'>{origin.displayName}</h2>
                 <p><span className='font-semibold'>Description: </span> {origin.description}</p>
                 <h3 className='capitalize'><span className='font-semibold'>Origin traits: </span> + {origin.positiveTrait} | - {origin.negativeTrait}</h3>
-                { origin.forms.length != 0 ? (
+                { origin.awakenings.length != 0 ? (
                   
                   <h4><span className='font-semibold'>Transformations: </span> 
-                  {origin.forms.map((form: any)=>(
+                  {origin.awakenings.map((form: any)=>(
                     <span key={form}>{formName(form)}</span>
                   ))}
                   </h4>
