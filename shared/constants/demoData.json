@@ -1,5 +1,11 @@
 {
   "DEMO_DATA":{
+    "turnData": {
+      "totalTurns": 0,
+      "turnOrder": [],
+      "currentCharactersTurn": "",
+      "turnPhase": ""
+    },
     "player":{
       "id": "1A",
       "name": "Aspara", 
