@@ -46,11 +46,37 @@ export function createActiveEnemy(): ActiveEnemy {
 
 
 export default function page() {
-  const [room, setRoom] = useState<Room>(data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent))
-  const [dial, setDial] = useState<Dialogue>(data.dialogue.find((d)=> d.id == room?.dialogue))
+
+  const getInitialData = () => {
+    interface InitialData {
+      room: Room;
+      prompt: Prompt;
+      response: Response;
+      dial: Dialogue;
+    }
+
+    const initData: InitialData = {
+      room: {} as Room,
+      dial: {} as Dialogue,
+      prompt: {} as Prompt,
+      response: {} as Response
+  };
+
+
+    initData.room = data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent) ?? data.rooms[0]
+    initData.dial = data.dialogue.find((d) => d.id == initData.room.dialogue) ?? data.dialogue[0]
+    initData.prompt = initData.dial.promptData[0] ?? data.dialogue[0].promptData
+    initData.response = initData.dial.responseData[0] ?? data.dialogue[0].responseData;
+
+    return initData
+  }
+  const roomData = getInitialData()
+
+  const [room, setRoom] = useState<Room>(roomData.room)
+  const [dial, setDial] = useState<Dialogue>(roomData.dial)
   const [dialProgress, setDialProgress] = useState<string>(data.adventureInstance.doorProgress)
-  const [currentPrompt, setCurrentPrompt] = useState<Prompt>(dial?.promptData .find((cd)=> cd.id == dialProgress))
-  const [currentResponse, setCurrentResponse] = useState<Response>(dial?.responseData[0])
+  const [currentPrompt, setCurrentPrompt] = useState<Prompt>(roomData.prompt)
+  const [currentResponse, setCurrentResponse] = useState<Response>(roomData.response)
 
   const Boss = createActiveEnemy()
   const Player = createActivePlayer()
