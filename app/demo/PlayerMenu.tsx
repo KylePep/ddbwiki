@@ -10,8 +10,8 @@ interface PlayerMenuProps{
   data: any,
   updateRoom: any,
   currentResponse?: Response,
-  dial?: Dialogue,
-  room?: Room
+  dial: Dialogue,
+  room: Room
 }
 
 
@@ -23,6 +23,16 @@ const [menuFocus, setMenuFocus] = useState("none")
 const [focusedItem, setFocusedItem] = useState<{displayName: string; description: string}>()
 const basePage = [0,3]
 const [pagination, setPagination] = useState(basePage)
+
+const prepareRoomUpdate = (roomId: string, roomState: string, dialogueId: string, promptId: string) =>{
+    const newAdventureInstance = data.adventureInstance;
+    newAdventureInstance.roomId = roomId;
+    newAdventureInstance.roomState = roomState;
+    newAdventureInstance.dialogueId = dialogueId;
+    newAdventureInstance.promptId = promptId;
+    console.log(newAdventureInstance)
+    updateRoom(newAdventureInstance)
+}
 
 const updateMenu = (destination: string) => {
   if (destination === selectMenu)
@@ -101,12 +111,13 @@ function MenuButton ({content, number}: {content: string, number: number}){
 
             <div className='grid grid-cols-3 gap-1 min-h-36'>
             {
-              data.adventureInstance.roomsProgress == "start" &&
+              data.adventureInstance.roomState == "start" &&
               <>
                 <div className='grid grid-rows-3 col-span-2'>
                   <div className='grid grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2 gap-1'>
                       {currentResponse?.responses.map((r:any, index:number) => (
-                        <button onClick={()=>updateRoom(room?.id, dial?.id, r.split('|')[1])} key={index} className='bg-blue-200 rounded hover:text-white'>{r.split('|')[0]}--{r.split('|')[1]}</button>
+                        // (roomId: string, roomState: string, dialogueId: string, promptId: string, responseId: string)
+                        <button onClick={()=>prepareRoomUpdate(room?.id, data.adventureInstance.roomState, data.adventureInstance.dialogueId, r.split('|')[1])} key={index} className='bg-blue-200 rounded hover:text-white'>{r.split('|')[0]}--{r.split('|')[1]}</button>
                       ))}
                     </div>
                     <div>
@@ -125,7 +136,7 @@ function MenuButton ({content, number}: {content: string, number: number}){
               </>
             }
   
-            { data.adventureInstance.roomsProgress == "battle" &&
+            { data.adventureInstance.roomState == "battle" &&
             <>
             { menuFocus === "none" &&          
             <div className='grid grid-rows-3 col-span-2'>

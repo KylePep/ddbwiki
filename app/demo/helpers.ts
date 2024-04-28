@@ -28,10 +28,11 @@ export const updateTurn = (turnProgressId: string) => {
     }
 }
 
-export const updateRoom = (currentAdventureInstance: AdventureInstance, NewAdventureInstance: AdventureInstance, progressId: string, data: any)=> {
+export const updateRoomByAdventureStatus = (data: any, currentAdventureInstance: AdventureInstance, newAdventureInstance: AdventureInstance)=> {
 
   interface transformedRoomData {
     newRoom: Room;
+    newRoomState: string;
     newDial: Dialogue;
     newPrompt: Prompt;
     newResponse: Response;
@@ -39,75 +40,38 @@ export const updateRoom = (currentAdventureInstance: AdventureInstance, NewAdven
 
   const transformedRoomStatus: transformedRoomData = {
     newRoom: {} as Room,
+    newRoomState: "",
     newDial: {} as Dialogue,
     newPrompt: {} as Prompt,
     newResponse: {} as Response
   }
     //Change room mode
-    if (progressId){
-      if (progressId == "exit"){
-        data.adventureInstance.roomsProgress = "battle"
-        return
-      }
+      if (newAdventureInstance.promptId == "exit"){
+        data.adventureInstance.roomState = "battle"
+        newAdventureInstance.promptId = "0D"
+      } 
 
-    } else {
-      if (currentAdventureInstance.roomId != NewAdventureInstance.roomId){
-        transformedRoomStatus.newRoom = data.rooms.find((r: Room)=> r.id == NewAdventureInstance.roomId) ?? data.rooms[0]
-      }
-      if (currentAdventureInstance.dialogueId != NewAdventureInstance.dialogueId){
-        transformedRoomStatus.newDial = data.dialogue.find((d: Dialogue)=> d.id == NewAdventureInstance.dialogueId) ?? data.dialogue[0]
+      if (currentAdventureInstance.roomId != newAdventureInstance.roomId){
+        transformedRoomStatus.newRoom = data.rooms.find((r: Room)=> r.id == newAdventureInstance.roomId) ?? data.rooms[0]
+      } else transformedRoomStatus.newRoom = data.rooms.find((r: Room)=> r.id == currentAdventureInstance.roomId) ?? data.rooms[0]
+
+      if (currentAdventureInstance.roomState != newAdventureInstance.roomState){
+        transformedRoomStatus.newRoomState = newAdventureInstance.roomState
+      } else transformedRoomStatus.newRoomState = currentAdventureInstance.roomState
+
+      if (currentAdventureInstance.dialogueId != newAdventureInstance.dialogueId){
+        transformedRoomStatus.newDial = data.dialogue.find((d: Dialogue)=> d.id == newAdventureInstance.dialogueId) ?? data.dialogue[0]
+      } else transformedRoomStatus.newDial = data.dialogue.find((d: Dialogue)=> d.id == currentAdventureInstance.dialogueId) ?? data.dialogue[0]
+      
+      if (currentAdventureInstance.promptId != newAdventureInstance.promptId){
+        transformedRoomStatus.newPrompt = transformedRoomStatus.newDial.promptData.find((pd: Prompt)=> pd.id == newAdventureInstance.promptId) ?? data.dialogue.promptData[0]
+        transformedRoomStatus.newResponse = transformedRoomStatus.newDial.responseData.find(((rd: Response)=> rd.id == transformedRoomStatus.newPrompt.responseId)) ?? data.dialogue[0].responseData[0]
+      } else {
+        transformedRoomStatus.newPrompt = transformedRoomStatus.newDial.promptData.find((pd: Prompt)=> pd.id == currentAdventureInstance.promptId) ?? data.dialogue.promptData[0]
+        transformedRoomStatus.newResponse = transformedRoomStatus.newDial.responseData.find(((rd: Response)=> rd.id == transformedRoomStatus.newPrompt.responseId)) ?? data.dialogue[0].responseData[0]
       }
       
-      if (currentAdventureInstance.promptId != NewAdventureInstance.promptId){
-        transformedRoomStatus.newPrompt = data.promptData.find((pd: Prompt)=> pd.id == NewAdventureInstance.promptId) ?? data.dialogue.promptData[0]
-      }
-
-      if (currentAdventureInstance.responseId != NewAdventureInstance.responseId){
-        transformedRoomStatus.newResponse = data.responseData.find(((rd: Response)=> rd.id == NewAdventureInstance.responseId)) ?? data.dialogue[0].responseData[0]
-      }
-      
-      return transformedRoomStatus;
-
-    }
-
-
-
-    //Change Room
-    // else {
-    //   const newRoom: Room = data.rooms.find((r)=> r.id == roomId) ?? data.rooms[0]
-    //   const newDial: Dialogue = data.dialogue.find((d)=> d.id == newRoom?.dialogue) ?? data.dialogue[0]
-    //   if (newRoom){
-    //     setRoom(newRoom)
-    //     setDialProgress(newRoom.dialogue)
-    //     if (newDial){
-    //         setDial(newDial)
-    //         setCurrentPrompt(newDial?.promptData[0])
-    //         setCurrentResponse(newDial?.responseData[0])
-    //       }
-    //   }
-    // } 
-
-    // if (dialId === dial?.id) {}
-    // else {
-    //   const newDial: Dialogue = data.dialogue.find((d)=> d.id == dialId) ?? data.dialogue[0]
-    //   setDial(newDial)
-    //   setDialProgress("0D")
-    //   if(newDial) {
-    //     setCurrentPrompt(newDial?.promptData[0])
-    //     setCurrentResponse(newDial?.responseData[0])
-    //   }
-    // } 
-
-    // if (dialProgressId === dialProgress) {}
-    // else {
-    //   const newPrompt = dial.promptData.find((cd)=> cd.id == dialProgressId)
-    //   const newResponse: Response = dial.responseData.find(((rd)=> rd.id == newPrompt?.responseId)) ?? data.dialogue[0].responseData[0]
-    //   setDialProgress(dialProgressId)
-    //   if(newPrompt)
-    //   setCurrentPrompt(newPrompt)
-    //   if (newResponse)
-    //   setCurrentResponse(newResponse)
-    // } 
+    return transformedRoomStatus;
 
 }
 

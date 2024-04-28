@@ -2,12 +2,12 @@ export type AdventureInstance = {
   adventureId: string;
   adventureRooms?: string[];
   roomId: string;
+  roomState: string;
   dialogueId: string;
   promptId: string;
-  responseId: string;
   players: string[] | [];
   enemyData: {
-    id: string;
+    enemyId: string;
     name: string;
     level: number;
     stats: {
@@ -20,7 +20,7 @@ export type AdventureInstance = {
     hp: string;
     sparkingMeter: string;
     archCounter: string;
-    statusEffects?: string[];
+    statusEffects: string[] | [];
     distance: string;
   }[] | []
 }

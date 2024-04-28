@@ -10,6 +10,7 @@ import { ActiveEnemy } from '../Types/ActiveEnemy'
 import { Enemy } from '../Types/Enemy'
 import { Dialogue, Prompt, Response } from '../Types/Dialogue'
 import { Room } from '../Types/Room'
+import { updateRoomByAdventureStatus } from './helpers'
 
 const data = DEMO_DATA
 const turnData = data.turnData
@@ -28,7 +29,6 @@ export function createActiveEnemy(): ActiveEnemy {
     ...adventureEnemy,
     ...enemy(),
   };
-  console.log('activeEnemy', activeEnemy)
   return activeEnemy
 }
 
@@ -40,7 +40,6 @@ export function createActiveEnemy(): ActiveEnemy {
       ...adventurePlayer,
       ...player,
     };
-    console.log('activePlayer', activePlayer)
     return activePlayer
   }
 
@@ -60,7 +59,7 @@ export function createActiveEnemy(): ActiveEnemy {
   };
   
   
-    initData.room = data.rooms.find((r) => r.id == data.adventureInstance.roomCurrent) ?? data.rooms[0]
+    initData.room = data.rooms.find((r) => r.id == data.adventureInstance.roomId) ?? data.rooms[0]
     initData.dial = data.dialogue.find((d) => d.id == initData.room.dialogue) ?? data.dialogue[0]
     initData.prompt = initData.dial.promptData[0] ?? data.dialogue[0].promptData
     initData.response = initData.dial.responseData[0] ?? data.dialogue[0].responseData;
@@ -75,9 +74,26 @@ export default function page() {
 
   const [room, setRoom] = useState<Room>(roomData.room)
   const [dial, setDial] = useState<Dialogue>(roomData.dial)
-  const [dialProgress, setDialProgress] = useState<string>(data.adventureInstance.doorProgress)
+  const [dialProgress, setDialProgress] = useState<string>(data.adventureInstance.roomState)
   const [currentPrompt, setCurrentPrompt] = useState<Prompt>(roomData.prompt)
   const [currentResponse, setCurrentResponse] = useState<Response>(roomData.response)
+
+  const updateRoom = (newAdventureInstance: any) => {
+    const updatedRoom = updateRoomByAdventureStatus(data, data.adventureInstance, newAdventureInstance) 
+    console.log(updatedRoom)
+    if (updatedRoom) {
+      if (updatedRoom.newRoom.id)
+      setRoom(updatedRoom?.newRoom)
+      if (updatedRoom.newRoomState != "")
+      setDialProgress(updatedRoom.newRoomState)
+      if (updatedRoom.newDial.id)
+      setDial(updatedRoom?.newDial)
+      if (updatedRoom.newPrompt.id)
+      setCurrentPrompt(updatedRoom?.newPrompt)
+      if (updatedRoom.newResponse.id)
+      setCurrentResponse(updatedRoom?.newResponse)
+    }
+  }
 
   const Boss = createActiveEnemy()
   const Player = createActivePlayer()
