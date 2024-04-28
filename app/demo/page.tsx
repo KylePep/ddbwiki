@@ -112,7 +112,7 @@ export default function page() {
 
       if (dialId === dial?.id) {}
       else {
-        const newDial: Dialogue | undefined = data.dialogue.find((d)=> d.id == dialId)
+        const newDial: Dialogue = data.dialogue.find((d)=> d.id == dialId) ?? data.dialogue[0]
         setDial(newDial)
         setDialProgress("0D")
         if(newDial) {
@@ -125,7 +125,7 @@ export default function page() {
       if (dialProgressId === dialProgress) {}
       else {
         const newPrompt = dial.promptData.find((cd)=> cd.id == dialProgressId)
-        const newResponse: Response | undefined = dial.responseData.find(((rd)=> rd.id == newPrompt?.responseId))
+        const newResponse: Response = dial.responseData.find(((rd)=> rd.id == newPrompt?.responseId)) ?? data.dialogue[0].responseData[0]
         setDialProgress(dialProgressId)
         if(newPrompt)
         setCurrentPrompt(newPrompt)
