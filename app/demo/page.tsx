@@ -12,6 +12,7 @@ import { Dialogue, Prompt, Response } from '../Types/Dialogue'
 import { Room } from '../Types/Room'
 
 const data = DEMO_DATA
+const turnData = data.turnData
 
 export function createActiveEnemy(): ActiveEnemy {
   
@@ -43,10 +44,6 @@ export function createActiveEnemy(): ActiveEnemy {
     return activePlayer
   }
 
-
-
-export default function page() {
-
   const getInitialData = () => {
     interface InitialData {
       room: Room;
@@ -70,6 +67,10 @@ export default function page() {
 
     return initData
   }
+
+export default function page() {
+
+
   const roomData = getInitialData()
 
   const [room, setRoom] = useState<Room>(roomData.room)
@@ -80,10 +81,6 @@ export default function page() {
 
   const Boss = createActiveEnemy()
   const Player = createActivePlayer()
-
-
-
-
 
   const updateRoom = (roomId: string | undefined, dialId:string | undefined, dialProgressId: string)=> {
     if (roomId == undefined || dialId == undefined || dialProgressId == undefined) {
@@ -109,6 +106,31 @@ export default function page() {
         }
         return
       } 
+
+    const updateTurn = (turnProgressId: string) => {
+
+      // "turnData": {
+      //   "totalTurns": 0,
+      //   "turnOrder": [],
+      //   "currentCharactersTurn": "",
+      //   "turnPhase": ""
+      // }
+
+        if (turnProgressId == "init"){
+          //Create turn if there isnt one, zero it out
+          // if (!turnData) - create turnData
+        } else if(turnProgressId == "setup") {
+          // Perform upkeep and cleanup
+          // (+/-) stats based on awakenings etc
+          // refill actions based on ki etc
+        } else if (turnProgressId == "idle") {
+          // This is where players will be in control or where the enemy 'AI' makes its choices.
+        } else if (turnProgressId == "action"){
+          // Perform selected actions, either return to idle or to resolution
+        } else if (turnProgressId == "resolution"){
+          // assign damage, perform status affects, totalTurns += 1, currentCharacterTurn = next character in turnOrder, turnPhase = setup
+        }
+    }
 
       if (dialId === dial?.id) {}
       else {
