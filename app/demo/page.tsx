@@ -111,7 +111,7 @@ export default function page() {
 
           <div className=' text-center bg-gray-300 border border-solid border-black '>
 
-            <PlayerMenu Player={Player} data={data} updateRoom={updateRoom} currentResponse={currentResponse} dial={dial} room={room}/>
+            <PlayerMenu Player={Player} data={data} updateRoom={updateRoom} currentResponse={currentResponse} room={room}/>
             
           </div>
         </div>

@@ -12,38 +12,38 @@ interface ActiveProps {
 
 export default function PlayerMenuActive({endTurn, data, Player }: ActiveProps
 ) {
-const [list, setList] = useState<string[]>([])
-const [menuFocus, setMenuFocus] = useState("none")
-const [focusedItem, setFocusedItem] = useState<{displayName: string; description: string}>()
-const basePage = [0,3]
-const [pagination, setPagination] = useState(basePage)
-const [selectMenu, setSelectMenu] = useState("base")
+  const basePage = [0,3]
+  const [list, setList] = useState<string[]>([])
+  const [menuFocus, setMenuFocus] = useState("none")
+  const [focusedItem, setFocusedItem] = useState<{displayName: string; description: string}>()
+  const [pagination, setPagination] = useState(basePage)
+  const [selectMenu, setSelectMenu] = useState("base")
 
-const updateMenu = (destination: string) => {
-  if (destination === selectMenu)
-  return
-
-  setPagination(basePage)
-  if (destination === "action"){
-    setList(Player.moves)
-  } else if (destination === "item"){
-    setList(Player.inventory)
-  } else {
-    setList(data.adventureInstance.players)
-  }
-  setSelectMenu(destination)
-}
-
-const updatePagination = (change: number, listLength: number) => {
-  let newPagination = [...pagination]
-
-  newPagination[0] += change
-  if (newPagination[0] < 0 || newPagination[0] > listLength) 
+  const updateMenu = (destination: string) => {
+    if (destination === selectMenu)
     return
-  newPagination[1] += change
-  setPagination(newPagination)
-  console.log(newPagination, pagination)
-}
+
+    setPagination(basePage)
+    if (destination === "action"){
+      setList(Player.moves)
+    } else if (destination === "item"){
+      setList(Player.inventory)
+    } else {
+      setList(data.adventureInstance.players)
+    }
+    setSelectMenu(destination)
+  }
+
+  const updatePagination = (change: number, listLength: number) => {
+    let newPagination = [...pagination]
+
+    newPagination[0] += change
+    if (newPagination[0] < 0 || newPagination[0] > listLength) 
+      return
+    newPagination[1] += change
+    setPagination(newPagination)
+    console.log(newPagination, pagination)
+  }
 
   const getFocusedItem = (name:string) =>{
     let item 
