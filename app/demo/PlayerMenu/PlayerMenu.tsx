@@ -1,16 +1,18 @@
 import { ITEM_TYPES, MOVE_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
-import { ActivePlayer } from '../Types/ActivePlayer'
-import { Dialogue, Response } from '../Types/Dialogue'
-import { Room } from '../Types/Room'
-import { Player } from '../Types/Player'
+import { ActivePlayer } from '../../Types/ActivePlayer'
+import { Dialogue, Response } from '../../Types/Dialogue'
+import { Room } from '../../Types/Room'
+import { Player } from '../../Types/Player'
 import PlayerMenuHeader from './PlayerMenuHeader'
+import PlayerMenuDialogue from './PlayerMenuDialogue'
+import PlayerMenuWaiting from './PlayerMenuWaiting'
 
 interface PlayerMenuProps{
   Player: ActivePlayer,
   data: any,
   updateRoom: any,
-  currentResponse?: Response,
+  currentResponse: Response,
   dial: Dialogue,
   room: Room
 }
@@ -97,28 +99,7 @@ const endTurn = (character: string) => {
             <div className='grid grid-cols-3 gap-1 min-h-36'>
             {
               data.adventureInstance.roomState == "start" &&
-              <>
-                
-                <div className='grid grid-rows-3 col-span-2'>
-                  <div className='grid grid-cols-subgrid grid-rows-subgrid row-span-2 col-span-2 gap-1'>
-                      {currentResponse?.responses.map((r:any, index:number) => (
-                        // (roomId: string, roomState: string, dialogueId: string, promptId: string)
-                        <button onClick={()=>prepareRoomUpdate(room?.id, data.adventureInstance.roomState, data.adventureInstance.dialogueId, r.split('|')[1])} key={index} className='bg-blue-400 rounded hover:text-white' title={r.split('|')[1]}>{r.split('|')[0]}</button>
-                      ))}
-                    </div>
-                    <div className='grid col-span-2 gap-1'>
-                      <button className='grid col-span-2 bg-blue-400 rounded mt-1 px-2 py-1 hover:text-white'>
-                        HOLD4
-                      </button>
-
-                    </div>
-                </div>
-                <div className='grid grid-cols-1 gap-1'>
-                  <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>HOLD1</button>
-                  <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>HOLD2</button>
-                  <button className='bg-blue-400 rounded px-2 py-1 hover:text-white'>HOLD3</button>
-              </div>
-              </>
+              <PlayerMenuDialogue currentResponse={currentResponse} prepareRoomUpdate={prepareRoomUpdate} room={room} data={data}/>
             }
   
             { data.adventureInstance.roomState == "battle" &&
@@ -231,10 +212,7 @@ const endTurn = (character: string) => {
                 </> }
                 {
                   currentCharactersTurn != Player.name &&
-                  <>
-                    <p>{currentCharactersTurn} is taking action.</p>
-                    <button onClick={() => endTurn("Aspara")} className='bg-blue-400 rounded px-2 py-1 hover:text-white'>My turn {data.turnData.totalTurns}</button>
-                  </>
+                  <PlayerMenuWaiting currentCharactersTurn={currentCharactersTurn} endTurn={endTurn} data={data} />
                 }
             
               </>

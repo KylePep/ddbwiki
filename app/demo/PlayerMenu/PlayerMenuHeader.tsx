@@ -1,5 +1,5 @@
 import React from 'react'
-import { ActivePlayer } from '../Types/ActivePlayer'
+import { ActivePlayer } from '../../Types/ActivePlayer'
 
 interface PlayerMenuHeaderProps {
   Player: ActivePlayer

@@ -1,7 +1,7 @@
 'use client'
 import { DEMO_DATA, ENEMY_TYPES } from '@/shared/constants'
 import React, { useState } from 'react'
-import PlayerMenu from './PlayerMenu'
+import PlayerMenu from './PlayerMenu/PlayerMenu'
 import Display from './Display'
 import Tutorial from './Tutorial'
 import BossDisplay from './BossDisplay'
@@ -83,7 +83,7 @@ export default function page() {
     console.log(updatedRoom)
     if (updatedRoom) {
       if (updatedRoom.newRoom.id)
-      setRoom(updatedRoom?.newRoom)
+      setRoom(updatedRoom.newRoom)
       if (updatedRoom.newRoomState != "")
       setRoomState(updatedRoom.newRoomState)
       if (updatedRoom.newDial.id)
@@ -91,7 +91,7 @@ export default function page() {
       if (updatedRoom.newPrompt.id)
       setCurrentPrompt(updatedRoom?.newPrompt)
       if (updatedRoom.newResponse.id)
-      setCurrentResponse(updatedRoom?.newResponse)
+      setCurrentResponse(updatedRoom.newResponse)
     }
   }
 
