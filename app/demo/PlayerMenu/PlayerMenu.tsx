@@ -73,6 +73,7 @@ const getFocusedItem = (name:string) =>{
   } else {
     item = data.allyList.find((a: Player)=> a.name == name)
   }
+  if (!item.displayName) {item.displayName = item.name}
   setFocusedItem(item)
   setMenuFocus(name)
 }
@@ -169,12 +170,7 @@ const endTurn = (character: string) => {
                   
                     {focusedItem ? 
                     (<div className='grid grid-cols-subgrid row-span-2'>
-                      {/* {focusedItem.displayName}
-                    {focusedItem.displayName ? 
-                      (<p>{focusedItem.displayName}</p>) : (
-                        <p>{focusedItem.name}</p>
-                      )
-                    } */}
+                      {focusedItem.displayName}
                       <p className='text-xs'>{focusedItem.description}</p>
                     </div>) : (
                       <div className='grid grid-cols-subgrid row-span-2 col-span-2'>
