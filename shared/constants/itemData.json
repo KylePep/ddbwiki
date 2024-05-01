@@ -1,0 +1,89 @@
+{
+  "ITEM_TYPES":[
+    {
+      "id": 0,
+      "name": "none",
+      "displayName": "None",
+      "type": "none",
+      "subType": "none",
+      "effectTrigger": "passive",
+      "effect": "effect",
+      "description": "No item",
+      "descriptionParams": "No item",
+      "extraDescription": "No item"
+    },
+    {
+      "id": 1,
+      "name": "saiyanArmor",
+      "displayName": "Saiyan Armor",
+      "type": "equipment",
+      "subType": "body",
+      "effectTrigger": "passive",
+      "effect": "Defense +1",
+      "useCost": "",
+      "description": "Saiyan Armor is a body equipment the increases defense.",
+      "descriptionParams": "When equipped, the character gets a +1 to defense.",
+      "extraDescription": "Armor worn by Saiyan Warriors, featuring broad shoulder pads and pointed fauld."
+    },
+    {
+      "id": 2,
+      "name": "scouter",
+      "displayName": "Scouter",
+      "type": "equipment",
+      "subType": "head",
+      "effectTrigger": "passive",
+      "effect": "Accuracy +1, Spirit -1",
+      "description": "Scouter is a head equipment the increases accuracy and lowers spirit.",
+      "descriptionParams": "When equipped, the character gets a +1 to accuracy and a -1 to spirit.",
+      "extraDescription": "A device worn on the ear by Saiyan Warriors. A piece of colored glass covers an eye and a metal housing covers the ear. Used to identify power levels but is notoriously faulty."
+    },
+    {
+      "id": 3,
+      "name": "senzuBean",
+      "displayName": "Senzu Bean",
+      "type": "item",
+      "subType": "consumable",
+      "effectTrigger": "use",
+      "effect": "Health Max, Arch Counter Max",
+      "description": "Senzu Bean is a consumable item that restores health and archetype counters.",
+      "descriptionParams": "Hp becomes set to full, archetype counters become set to max.",
+      "extraDescription": "A mystical bean cultivated by Korin atop Korin, especially rare and helpful during battles for the fate of the earth."
+    },
+    {
+      "id": 4,
+      "name": "turtleHermitGi",
+      "displayName": "Turtle Hermit Gi",
+      "type": "equipment",
+      "subType": "body",
+      "effectTrigger": "passive",
+      "effect": "Agility +1",
+      "description": "Turtle Hermit Gi is a body equipment the increases agility.",
+      "descriptionParams": "When equipped, the character gets a +1 to agility.",
+      "extraDescription": "An orange gi worn by the students of the Turtle School, trained by Master Roshi."
+    },
+    {
+      "id": 5,
+      "name": "powerPole",
+      "displayName": "Power Pole",
+      "type": "equipment",
+      "subType": "weapon",
+      "effectTrigger": "use",
+      "effect": "PowerPoleMove",
+      "description": "Power Pole is a weapon equipment that grants its wielder the PowerPoleMove move.",
+      "descriptionParams": "When equipped, the character can use the -PowerPoleMove- move.",
+      "extraDescription": "A simple red pole contained by a red sheathe worn on the back, when called upon the Power Pole can extend to extreme heights."
+    },
+    {
+      "id": 6,
+      "name": "demonClanClothes",
+      "displayName": "Demon Clan Clothes",
+      "type": "equipment",
+      "subType": "body",
+      "effectTrigger": "passive",
+      "effect": "Defense +2, agility -1",
+      "description": "Demon Clan CLothes is a body equipment the increases defense and lowers agility.",
+      "descriptionParams": "When equipped, the character gets a +2 to defense and a -1 to agility.",
+      "extraDescription": "The outfit worn by the demon clan. A purple gi, pointed brown shoes and a weighted cape with broad shoulder pads. The increased weight is said to aid in training."
+    }
+  ]
+}

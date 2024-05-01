@@ -16,16 +16,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={` bg-gray-300`}>
-        <Nav/>
-        <div className="mx-4 md:mx-48 xl:mx-96 px-10">
-        {children}
-        </div>
-        <footer className="min-h-20 mt-16 bg-gray-400 grid justify-items-center items-center"><div>
+<html lang="en">
+  <body className="relative flex flex-col min-h-screen bg-gray-300">
+    <Nav />
+    <div className="flex-grow mx-4 md:mx-32 xl:mx-48 px-10 overflow-y-auto">
+      {children}
+    </div>
+    <footer className="mt-auto">
+      <div className="bg-gray-400 mt-16 min-h-10 flex justify-center items-center">
+        <div>
           Kyle Peppersack
-          </div> </footer>
-        </body>
-    </html>
+        </div>
+        <p className="ml-4">R.I.P Akira Toriyama</p>
+      </div>
+    </footer>
+  </body>
+</html>
   );
 }

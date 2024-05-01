@@ -1,0 +1,183 @@
+{
+  "CHARACTER_TYPES":{
+    "name": "Aspara", 
+    "level": 1, 
+    "origin": "Saiyan", 
+    "archetype": "Warrior", 
+    "pronouns":"he|him",
+    "bodyType": "Masculine", 
+    "height": "average", 
+    "description": "", 
+    "stats":{"mod": 3, "spirit": 3, "ki": 3, "power": 3, "agility": 3, "toughness": 3}, 
+    "equipment":[0, 0, 0], 
+    "moves":[], 
+    "inventory":[], 
+    "forms":[]
+  },
+"ORIGIN_TYPES":[
+  {
+    "id": 1,
+    "name": "saiyan",
+    "displayName": "Saiyan",
+    "description": "A race of space barbarians with the power to transform into Great Apes.",
+    "extraDescription": "",
+    "positiveTrait": "power",
+    "negativeTrait": "spirit",
+    "awakenings": ["greatApe"],
+    "moves": []
+  },
+  {
+    "id": 2,
+    "name": "halfSaiyan",
+    "displayName": "Half Saiyan",
+    "description": "The result of a human and a saiyan, boasting many of the same strengths as a saiyan but with less interest in battle.",
+    "extraDescription": "",
+    "positiveTrait": "ki",
+    "negativeTrait": "toughness",
+    "awakenings": ["greatApe"],
+    "moves": []
+  },
+  {
+    "id": 3,
+    "name": "earthling",
+    "displayName": "Earthling",
+    "description": "Humans capable of harnessing Ki. Technology(item)",
+    "extraDescription": "",
+    "positiveTrait": "spirit",
+    "negativeTrait": "kit",
+    "awakenings": [],
+    "moves": []
+  },
+  {
+    "id": 4,
+    "name": "namekian",
+    "displayName": "Namekian",
+    "description": "Humanoids with plant and slug-like characteristics, including green skin and antennae. Regeneration",
+    "extraDescription": "",
+    "positiveTrait": "toughness",
+    "negativeTrait": "agility",
+    "awakenings": [],
+    "moves": ["regeneration"]
+  }
+],
+"ARCHETYPE_TYPES":[
+  {
+    "id": 1,
+    "name": "warrior",
+    "displayName": "Warrior",
+    "examples": "Goku | Vegeta",
+    "description": "Warrior is an archetype with a focus on energy attacks.",
+    "extraDescription": "Warriors have honed their abilities on the battlefield. They have a skills and abilities that aid their domination of the opposition.",
+    "archPower": [{"name":"intimidation", "cost": 1}, {"name": "launchEnemy", "cost": 1}, {"name": "beamStruggle", "cost": 2}],
+    "moves": ["energyWave", "energyWave", "energyWave"],
+    "startingItems": ["scouter","saiyanArmor"],
+    "startingEquipment": ["scouter","saiyanArmor","none"],
+    "training": []
+  },
+  {
+    "id": 2,
+    "name": "striker",
+    "displayName": "Striker",
+    "examples": "Gohan | Trunks",
+    "description": "Striker is an archetype with a focus on physical attacks.",
+    "extraDescription": "Strikers are trained by masters of their fighting style, Their techniques are practiced in tournaments and honored duels.",
+    "archPower": [{"name":"strategize", "cost": 1}, {"name": "turnAdvantage", "cost": 1}, {"name": "decisiveStrike", "cost": 2}],
+    "moves": ["rush", "energyWave", "energyWave"],
+    "startingItems": ["turleHermitGi", "powerPole"],
+    "startingEquipment": ["none","turleHermitGi","powerPole"],
+    "training": []
+  },
+  {
+    "id": 3,
+    "name": "tank",
+    "displayName": "Tank",
+    "examples": "Piccolo | Tien",
+    "description": "Tank is an archetype with a focus on absorbing damage and protection.",
+    "extraDescription": "A Tanks resilience are a testament to their will-power, they can with stand because they have with stood.",
+    "archPower": [{"name":"meditation", "cost": 1}, {"name": "protection", "cost": 1}, {"name": "doItNow", "cost": 2}],
+    "moves": ["guard", "energyWave", "energyWave"],
+    "startingItems": ["demonClanClothes"],
+    "startingEquipment": ["none","demonClanClothes","none"],
+    "training": []
+  },
+  {
+    "id": 4,
+    "name": "support",
+    "displayName": "Support",
+    "examples": "Hercule | Chiaotzu | Krillin",
+    "description": "Support is an archetype with a focus on boosting team members and distraction.",
+    "extraDescription": "Delaying the inevitable and raising morale, Supports are the key to controlling the fight.",
+    "archPower": [{"name":"jokes", "cost": 1}, {"name": "illStayHere", "cost": 1}, {"name": "hesLearningAsHeFights", "cost": 2}],
+    "moves": ["taunt", "energyWave", "energyWave"],
+    "startingItems": ["turleHermitGi", "senzuBean"],
+    "startingEquipment": ["none","turleHermitGi","none"],
+    "training": []
+  }
+],
+  "AWAKEN_TYPES":[
+    {
+      "id": 1,
+      "name": "greatApe",
+      "displayName": "Great Ape",
+      "type": "transformation",
+      "subType": "saiyan",
+      "useable": ["saiyan", "halfSaiyan"],
+      "reqParams": ["fullMoon", "hasTail"],
+      "upkeep": ["hasTail", "fullMoon"],
+      "positives": ["gigantic","power6", "toughness6"],
+      "negatives": ["spirit0", "agility-1", "ki-1"],
+      "moves": [],
+      "moveBlacklist": ["base"],
+      "description": "Great Ape is a full form transformation, When a Saiyan or half Saiyan looks at a full moon, whilst having a tail. They turn into a gigantic ape and lose control.",
+      "extraDescription": "Great Apes's are gigantic, covered in brown fur and a long tail. Anything other than Saiyan Armor is destroyed during transformation."
+    },
+    {
+      "id": 2,
+      "name": "superSaiyan",
+      "displayName": "Super Saiyan",
+      "type": "form",
+      "subType": "saiyan",
+      "useable": ["saiyan", "halfSaiyan"],
+      "reqParams": ["sparking6"],
+      "upkeep": ["optional", "1SparkPerTurn", "sparkingGTE4"],
+      "positives": ["ki+1", "power+1"],
+      "negatives": ["spirit-1"],
+      "moves": ["angryKamehameha"],
+      "moveBlacklist": ["spiritBomb"],
+      "description": "Super Saiyan is an form transformation, accessible at sparking level 6 or higher. A Super Saiyan has increased power and ki. Costs 1 Sparking per turn.",
+      "extraDescription": "A Super Saiyan's hair stands on end and becomes a golden yellow, pulsing energy surrounds them."
+    },
+    {
+      "id": 3,
+      "name": "potentialUnlocked",     
+      "displayName": "Potential Unlocked",
+      "type": "powerUp",
+      "subType": "namekian",
+      "useable": ["all"],
+      "reqParams": ["sparking4"],
+      "upkeep": ["none"],
+      "positives": ["agility+1", "spirit+1"],
+      "negatives": [],
+      "moves": [],
+      "moveBlacklist": ["none"],
+      "description": "Potential Unlocked is a power up transformation, increasing agility and spirit. Accessible at sparking level 4.",
+      "extraDescription": "When ones potential is unlocked, they feel power deep within them rise to the surface. Feeling taller and lighter."
+    },
+    {
+      "id": 4,
+      "name": "kaioKen",     
+      "displayName": "Kaio-ken",
+      "type": "powerUp",
+      "subType": "kai",
+      "useable": ["all"],
+      "reqParams": [],
+      "upkeep": ["1SparkingPerTurn", "sparkingGTE1"],
+      "positives": ["agility+Sparking", "power+Sparking", "ki+Sparking"],
+      "negatives": ["toughness-Sparking", "spirit-Sparking", "bodilyRecoil"],
+      "moves": ["kaiKenAttack"],
+      "moveBlacklist": ["none"],
+      "description": "Kaio-Ken is a power up transformation, Increasing agility, power and ki by the current level of Sparking and decreasing toughness and spirit by the current level of Sparking. Costs 1 Sparking per turn.",
+      "extraDescription": "A technique invented by King Kai. it multiplies the user's ki for a heartbeat and turns their aura crimson - amplifying their power and speed to overcome previously stronger foes at the cost of extreme bodily recoil."
+    }
+  ]
+}

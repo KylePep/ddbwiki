@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SpecialResources() {
   return (
-    <div>
+    <div className=' bg-white p-4 rounded'>
       <h1 className='font-bold'>Special Resources:</h1>
       <h1>Characters have access to special resources depending on archetypes and stats. The universal resource is the <i>SPARKING METER</i> </h1>
       <h2> Archetype Resources:</h2>

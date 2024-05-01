@@ -1,0 +1,275 @@
+{
+  "DEMO_DATA":{
+    "turnData": {
+      "totalTurns": 0,
+      "turnOrder": ["Turles", "Aspara"],
+      "currentCharactersTurn": "Turles",
+      "turnPhase": "init"
+    },
+    "player":{
+      "id": "1A",
+      "name": "Aspara", 
+      "level": 1, 
+      "origin": "saiyan", 
+      "archetype": "striker", 
+      "pronouns":"he|him",
+      "bodyType": "masculine", 
+      "height": "average", 
+      "description": "-Demo Character- Aspara is a Goku approximation and will be fighting against Turles, the main villain of the Tree of Might.", 
+      "stats":{"mod": 0, "spirit": 2, "ki": 4, "power": 5, "agility": 3, "toughness": 4}, 
+      "equipment":["none","turleHermitGi","none"], 
+      "moves":["kamehameha", "meteorCombo", "energyWave", "rush", "blastBarrage", "anger"], 
+      "inventory":["senzuBean", "turtleHermitGi"], 
+      "awakenings":["kaioKen"]
+    },
+    "playerList":[
+      {
+      "id": "2A",
+      "name": "Iggus", 
+      "level": 1, 
+      "origin": "namekian", 
+      "archetype": "tank", 
+      "pronouns":"he|him",
+      "bodyType": "masculine", 
+      "height": "tall", 
+      "description": "-Demo Character- Iggus is a Piccolo approximation and will be fighting against Turles, the main villain of the Tree of Might.", 
+      "stats":{"mod": 0, "spirit": 3, "ki": 3, "power": 4, "agility": 3, "toughness": 5}, 
+      "equipment":["none","demonClanClothes","none"], 
+      "moves":["specialBeamCannon", "meteorCombo", "energyWave", "rush", "masenko", "regeneration"], 
+      "inventory":["demonClanClothes"], 
+      "awakenings":[]
+    }
+  ],
+  "allyList":[
+    {
+        "id": "2A",
+        "name": "Iggus", 
+        "level": 1, 
+        "origin": "namekian", 
+        "archetype": "tank", 
+        "pronouns":"he|him",
+        "bodyType": "masculine", 
+        "height": "tall", 
+        "description": "-Demo Character- Iggus is a Piccolo approximation and will be fighting against Turles, the main villain of the Tree of Might.", 
+        "stats":{"mod": 0, "spirit": 3, "ki": 3, "power": 4, "agility": 3, "toughness": 5}, 
+        "equipment":["none","demonClanClothes","none"], 
+        "moves":["specialBeamCannon", "meteorCombo", "energyWave", "rush", "masenko", "regeneration"], 
+        "inventory":["demonClanClothes"], 
+        "awakenings":[]
+    }
+  ],
+
+    "adventurePlayer": {
+      "playerId": "1A",
+      "playerRole": "Goku",
+      "adventureId": "treeOfMight",
+      "room": "1",
+      "roomType": "bossBattle",
+      "playerState":{
+        "hp": "10/10",
+        "sparkingMeter": "1/6",
+        "archCounter": "5/5",
+        "statusEffects": []
+      }
+    },
+
+    "adventureInstance":{
+      "adventureId": "treeOfMight",
+      "adventureRooms": ["1A", "2A", "3A", "4A", "1B"],
+      "roomId": "1A",
+      "roomState": "start",
+      "dialogueId": "1ADial",
+      "promptId": "0D",
+      "players": ["Aspara", "Iggus"],
+      "enemyData": [
+        {
+          "enemyId": "1E",
+          "name": "turles",
+          "level": 2,
+          "stats": {"spirit": 2, "ki": 4, "power": 5, "agility": 3, "toughness": 4},
+          "hp": "10/10",
+          "sparkingMeter": "3/6",
+          "archCounter": "3/5",
+          "statusEffects": [],
+          "distance": "Close"
+        }
+      ]
+    },
+
+    "rooms": [
+      {
+        "id": "1A",
+        "doors": ["2A", "1B"],
+        "dialogue": "1ADial",
+        "eventType": "bossBattle",
+        "clearCondition": "bossHp75",
+        "setting": "treeOfMightBase",
+        "NPC": ["turles", "Iggus"]
+    },
+      {
+        "id": "2A",
+        "doors": ["3A", "1B"],
+        "dialogue": "2ADial",
+        "eventType": "bossBattle",
+        "clearCondition": "bossHp50",
+        "setting": "treeOfMightCrown",
+        "NPC": ["turles", "Iggus"]
+    },
+      {
+        "id": "3A",
+        "doors": ["4A"],
+        "dialogue": "3ADial",
+        "eventType": "bossBattle",
+        "clearCondition": "bossHp0",
+        "setting": "treeOfMightCrown",
+        "NPC": ["turles", "Iggus"]
+    },
+      {
+        "id": "4A",
+        "doors": ["exit"],
+        "dialogue": "4ADial",
+        "eventType": "battleWin",
+        "clearCondition": "resolveDialogue",
+        "setting": "treeOfMightCrown",
+        "NPC": ["turles", "Iggus"]
+    },
+      {
+        "id": "1B",
+        "doors": ["exit"],
+        "dialogue": "1BDial",
+        "eventType": "battleLose",
+        "clearCondition": "resolveDialogue",
+        "setting": "treeOfMightCrown",
+        "NPC": ["turles", "Iggus"]
+    }
+    ],
+    "dialogue": [
+      {
+        "id": "1ADial",
+        "promptData": [
+          {
+            "id": "0D",
+            "content": {"speaker": "turles", "context": "Join Me %playerName%."},
+            "responseId": "0R",
+            "responseDoors": ["1D", "2D"]
+          },
+          {
+            "id": "1D",
+            "content": {"speaker": "turles", "context": "Are you sure about that?"},
+            "responseId": "1R",
+            "responseDoors": ["2D"]
+          },
+          {
+            "id": "2D",
+            "content": {"speaker": "turles", "context": "Then DIE %PLAYERNAME%!!"},
+            "responseId": "2R",
+            "responseDoors": ["exit"]
+          }
+        ],
+        "responseData": [
+          {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
+          {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
+          {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
+        ]
+      },
+      {
+        "id": "2ADial",
+        "promptData": [
+          {
+            "id": "0D",
+            "content": {"speaker": "turles", "context": "Snack Time!"},
+            "responseId": "0R",
+            "responseDoors": ["1D", "2D"]
+          },
+          {
+            "id": "1D",
+            "content": {"speaker": "turles", "context": "I am so full of power!"},
+            "responseId": "1R",
+            "responseDoors": ["2D"]
+          },
+          {
+            "id": "2D",
+            "content": {"speaker": "turles", "context": "Let the battle Continue"},
+            "responseId": "2R",
+            "responseDoors": ["exit"]
+          }
+        ],
+        "responseData": [
+          {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
+          {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
+          {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
+        ]
+      },
+      {
+        "id": "3ADial",
+        "promptData": [
+          {
+            "id": "0D",
+            "content": {"speaker": "turles", "context": "How can you have so much power!?"},
+            "responseId": "0R",
+            "responseDoors": ["1D"]
+          },
+          {
+            "id": "1D",
+            "content": {"speaker": "turles", "context": "Are you sure about that?"},
+            "responseId": "1R",
+            "responseDoors": ["2D"]
+          },
+          {
+            "id": "2D",
+            "content": {"speaker": "turles", "context": "Then DIE %PLAYERNAME%!!"},
+            "responseId": "2R",
+            "responseDoors": ["exit", "restart"]
+          }
+        ],
+        "responseData": [
+          {"id": "0R", "responses": ["Continue|1D"]},
+          {"id": "1R", "responses": ["Continue|2D"]},
+          {"id": "2R", "responses": ["Quit?|exit", "Restart?|restart"]}
+        ]
+      },
+      {
+        "id": "4ADial",
+        "promptData": [
+          {
+            "id": "0D",
+            "content": {"speaker": "turles", "context": "Join Me %playerName%."},
+            "responseId": "0R",
+            "responseDoors": ["1D", "2D"]
+          },
+          {
+            "id": "1D",
+            "content": {"speaker": "turles", "context": "Are you sure about that?"},
+            "responseId": "1R",
+            "responseDoors": ["2D"]
+          },
+          {
+            "id": "2D",
+            "content": {"speaker": "turles", "context": "Then DIE %PLAYERNAME%!!"},
+            "responseId": "2R",
+            "responseDoors": ["exit"]
+          }
+        ],
+        "responseData": [
+          {"id": "0R", "responses": ["No.|1D", "Shut up and fight me!|2D", "Remain Silent|1D"]},
+          {"id": "1R", "responses": ["Yeah, I'm sure.|2D", "Bring it on!|2D"]},
+          {"id": "2R", "responses": ["You won't win!|exit", "No! YOU!|exit"]}
+        ]
+      },
+      {
+        "id": "1BDial",
+        "promptData": [
+          {
+            "id": "0D",
+            "content": {"speaker": "turles", "context": "You are a weakling %playerName%, you and this planet die together!"},
+            "responseId": "0R",
+            "responseDoors": ["exit", "restart"]
+          }
+        ],
+        "responseData": [
+          {"id": "0R", "responses": ["Quit|exit", "Restart|restart"]}
+        ]
+      }
+    ]
+  }
+}
